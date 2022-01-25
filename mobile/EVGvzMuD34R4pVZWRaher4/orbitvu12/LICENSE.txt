@@ -1,0 +1,6 @@
+ORBITVU VIEWER software uses the following thirdparty libraries to provide certain features:
+
+- JSTweener - released under the MIT license (http://opensource.org/licenses/MIT), Copyright Yuichi Tateno, http://rails2u.com/
+- CryptoJS - released under New BSD License (http://opensource.org/licenses/BSD-3-Clause)
+- Hint.css - released under the MIT license (http://opensource.org/licenses/MIT), Copyright (c) 2013 Kushagra Gour, http://kushagragour.in/lab/hint/
+
