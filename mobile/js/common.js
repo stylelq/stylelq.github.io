@@ -200,20 +200,20 @@ jQuery(function () {
     //상품상세 상단 배너슬라이드
 
     if ($('.detail-thumb').length > 0) {
-      var _ref;
+      var _Swiper;
 
-      var detailThumbSlide = new Swiper('.detail-thumb__container', (_ref = {
+      var detailThumbSlide = new Swiper('.detail-thumb__container', (_Swiper = {
         observer: true,
         observeParents: true,
         watchOverflow: true,
         slidesPerView: 1
-      }, _defineProperty(_ref, "slidesPerView", 1), _defineProperty(_ref, "pagination", {
+      }, _defineProperty(_Swiper, "slidesPerView", 1), _defineProperty(_Swiper, "pagination", {
         el: ".detail-thumb__pagination",
         type: "fraction"
-      }), _defineProperty(_ref, "navigation", {
+      }), _defineProperty(_Swiper, "navigation", {
         nextEl: ".detail-thumb--next",
         prevEl: ".detail-thumb--prev"
-      }), _ref));
+      }), _Swiper));
     } //상품상세 쉐어 버튼 열기/닫기
 
 
@@ -390,18 +390,18 @@ jQuery(function () {
 
     if ($('.collection-more-slide').length > 0) {
       var eventSliderTouch = false;
-      var collectionSlide = new Swiper('.collection-more__container', {
+      var collectionMoreSlide = new Swiper('.collection-more__container', {
         observer: true,
         observeParents: true,
         watchOverflow: true,
         slidesPerView: 1,
         centeredSlides: true,
         rewind: true,
-        speed: 10000,
+        speed: 8000,
         loop: true,
         autoplay: {
           delay: 0,
-          disableOnInteraction: true
+          disableOnInteraction: false
         },
         navigation: {
           nextEl: ".more-next-btn",
@@ -424,17 +424,24 @@ jQuery(function () {
             if (eventSliderTouch) {
               eventSliderTouch = false;
               this.params.speed = 500;
+              this.params.autoplay.delay = 1000;
             }
           },
           transitionEnd: function transitionEnd() {
-            this.params.speed = 10000;
+            this.params.speed = 8000;
+            this.params.autoplay.delay = 0;
+          },
+          sliderFirstMove: function sliderFirstMove() {
+            console.log('dd : ', this.activeIndex);
           }
         }
       });
       /*슬라이드 온클릭 시 자동슬라이드 정지*/
 
       $(document).on('click', collectionMoreSlide, function () {
-        collectionMoreSlide.autoplay.stop();
+        // collectionMoreSlide.autoplay.stop();
+        collectionMoreSlide.autoplay.delay = 1000;
+        console.log(collectionMoreSlide.autoplay);
       });
     } // 컬렉션 모델슬라이드(상단)
 
@@ -837,7 +844,7 @@ jQuery(function () {
                       $('body').removeClass('is-white');
                       $('body').addClass('is-black');
                   }
-                    $('.main-banner__progressbar').removeClass("animate");
+                   $('.main-banner__progressbar').removeClass("animate");
                   $('.main-banner__progressbar').removeClass("active");
                   $('.main-banner__progressbar').eq(0).addClass("animate");
                   $('.main-banner__progressbar').eq(0).addClass("active");
@@ -1387,4 +1394,21 @@ var copyBtn = document.querySelector('.js-url-copy');
 
 if (copyBtn) {
   copyBtn.addEventListener('click', CopyUrlToClipboard);
-}
+} // mobile 디바이스 브라우저 네비게이션 바 계산
+
+
+var vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', vh + 'px');
+$(document).ready(function () {
+  vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', vh + 'px');
+});
+window.addEventListener('resize', function () {
+  var vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', vh + 'px');
+});
+window.addEventListener('touchmove', function () {
+  var vh = window.innerHeight * 0.01; //window.innerHeight/100;
+
+  document.documentElement.style.setProperty('--vh', vh + 'px');
+});
