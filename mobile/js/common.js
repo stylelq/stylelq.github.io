@@ -200,20 +200,20 @@ jQuery(function () {
     //상품상세 상단 배너슬라이드
 
     if ($('.detail-thumb').length > 0) {
-      var _Swiper;
+      var _ref;
 
-      var detailThumbSlide = new Swiper('.detail-thumb__container', (_Swiper = {
+      var detailThumbSlide = new Swiper('.detail-thumb__container', (_ref = {
         observer: true,
         observeParents: true,
         watchOverflow: true,
         slidesPerView: 1
-      }, _defineProperty(_Swiper, "slidesPerView", 1), _defineProperty(_Swiper, "pagination", {
+      }, _defineProperty(_ref, "slidesPerView", 1), _defineProperty(_ref, "pagination", {
         el: ".detail-thumb__pagination",
         type: "fraction"
-      }), _defineProperty(_Swiper, "navigation", {
+      }), _defineProperty(_ref, "navigation", {
         nextEl: ".detail-thumb--next",
         prevEl: ".detail-thumb--prev"
-      }), _Swiper));
+      }), _ref));
     } //상품상세 쉐어 버튼 열기/닫기
 
 
@@ -491,6 +491,43 @@ jQuery(function () {
           prevEl: ".model-prev-btn"
         }
       });
+    } // 프로모션 모델슬라이드(상단)
+
+
+    if ($('.promotion-model-slide').length > 0) {
+      var promotionModelSlide = new Swiper('.promotion-model__container', {
+        effect: 'fade',
+        observer: true,
+        observeParents: true,
+        watchOverflow: true,
+        slidesPerView: 1,
+        loop: true,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false
+        }
+      });
+    } // 컬렉션,프로모션 비디오 재생버튼 액션추가
+
+
+    if ($('.promotion-view__visual--play').length > 0) {
+      var videoPlay = function videoPlay(e) {
+        e.preventDefault();
+        videoElem.play();
+        videoThum.classList.add('is-hide');
+      };
+
+      var videoPause = function videoPause() {
+        videoElem.pause();
+        videoThum.classList.remove('is-hide');
+        videoThum.classList.add('is-nobg');
+      };
+
+      var playBtn = document.querySelector('.promotion-view__visual--btn');
+      var videoElem = document.querySelector('.promotion-view__videoNew');
+      var videoThum = document.querySelector('.promotion-view__visual--thumb');
+      playBtn.addEventListener('click', videoPlay);
+      videoElem.addEventListener('click', videoPause);
     } // 컬렉션 썸네일 슬라이드
 
 
@@ -844,7 +881,7 @@ jQuery(function () {
                       $('body').removeClass('is-white');
                       $('body').addClass('is-black');
                   }
-                   $('.main-banner__progressbar').removeClass("animate");
+                    $('.main-banner__progressbar').removeClass("animate");
                   $('.main-banner__progressbar').removeClass("active");
                   $('.main-banner__progressbar').eq(0).addClass("animate");
                   $('.main-banner__progressbar').eq(0).addClass("active");
@@ -1394,21 +1431,28 @@ var copyBtn = document.querySelector('.js-url-copy');
 
 if (copyBtn) {
   copyBtn.addEventListener('click', CopyUrlToClipboard);
-} // mobile 디바이스 브라우저 네비게이션 바 계산
+} // --------------------------
+// [2021-01-25] 
+// mobile 디바이스 브라우저 네비게이션 바 계산
 
 
-var vh = window.innerHeight * 0.01;
-document.documentElement.style.setProperty('--vh', vh + 'px');
-$(document).ready(function () {
-  vh = window.innerHeight * 0.01;
-  document.documentElement.style.setProperty('--vh', vh + 'px');
-});
-window.addEventListener('resize', function () {
+$('.page-main').each(function () {
   var vh = window.innerHeight * 0.01;
   document.documentElement.style.setProperty('--vh', vh + 'px');
-});
-window.addEventListener('touchmove', function () {
-  var vh = window.innerHeight * 0.01; //window.innerHeight/100;
-
-  document.documentElement.style.setProperty('--vh', vh + 'px');
-});
+}); // // 디바이스별 풀사이즈 조정
+// var mobile = (/iphone|ipad|ipod|android/i.test(navigator.userAgent.toLowerCase()));
+// var agt = navigator.userAgent.toLowerCase();
+// var mobileType = ['android','iphone'];
+// if( mobile &&  agt.indexOf(mobileType[1]) > -1 ){
+// }else{
+//     //안드로이드 일 경우
+//     // window.addEventListener('touchmove', function(){
+//     //     var vh = window.innerHeight * 0.01 //window.innerHeight/100;
+//     //     document.documentElement.style.setProperty('--vh', vh+'px');
+//     // });
+//     window.addEventListener('resize', function(){
+//         var vh = window.innerHeight * 0.01;
+//         document.documentElement.style.setProperty('--vh', vh+'px');
+//     });
+// }
+// --------------------------
