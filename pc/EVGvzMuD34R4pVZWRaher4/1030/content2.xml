@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<orbitvu>
+ <properties>
+  <property name="name" type="text">1030</property>
+  <property name="author" type="text"></property>
+  <property name="description" type="text"></property>
+  <property name="date" type="text">2020-10-29 16:19:41</property>
+  <property name="sku" type="text">1030</property>
+  <property name="Category 1" type="text"></property>
+  <property name="Category 2" type="text"></property>
+ </properties>
+ <sequence3d name="a_" hangles="30" vangles="1">
+  <scales>
+   <scale cols="2" tile_height="750" rows="2" width="1500" height="1500" tile_width="750" value="100.0"/>
+   <scale cols="1" tile_height="1024" rows="1" width="1024" height="1024" tile_width="1024" value="68.3"/>
+   <scale cols="1" tile_height="768" rows="1" width="768" height="768" tile_width="768" value="51.2"/>
+   <scale cols="1" tile_height="512" rows="1" width="512" height="512" tile_width="512" value="34.1"/>
+   <scale cols="1" tile_height="256" rows="1" width="256" height="256" tile_width="256" value="17.1"/>
+   <scale cols="1" tile_height="128" rows="1" width="128" height="128" tile_width="128" value="8.5"/>
+  </scales>
+  <images name="a_" maxWidth="1500" maxHeight="1500" ext="jpg"/>
+ </sequence3d>
+</orbitvu>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>퍼블리싱 UI가이드</title>
+    <link type="text/css" rel="stylesheet" href="ui_lq.css" />
+</head>
+<body>
+    <div class="tit">
+        <h1>component UI</h1>
+    </div>
+
+    <article class="select-custom__right">
+        <h2>1. select custom</h2>
+        <div class="wrap">
+            <div class="filter__meta">
+                <!-- Select -->
+                <div class="filter__meta--select">
+                    <input type="text" value="" class="hidden-input is-hide">
+                    <p class="filter-custom__selected"><span class="selected_text">Sorting</span></p>
+                    <ul class="filter-custom__select">
+                        <li class="filter-custom__option"><a href="" class="filter-custom__link">New in</a></li>
+                        <li class="filter-custom__option"><a href="" class="filter-custom__link">Best</a></li>
+                        <li class="filter-custom__option"><a href="" class="filter-custom__link">Price low to high</a></li>
+                        <li class="filter-custom__option"><a href="" class="filter-custom__link">Price high to low</a></li>
+                    </ul>
+                </div>
+                <!-- .Select -->
+            </div>
+    
+            <div class="lq-code">
+                <textarea >
+<!-- Select -->
+<div class="filter__meta">
+    <div class="filter__meta--select">
+        <input type="text" value="" class="hidden-input is-hide">
+        <p class="filter-custom__selected"><span class="selected_text">Sorting</span></p>
+        <ul class="filter-custom__select">
+            <li class="filter-custom__option"><a href="" class="filter-custom__link">New in</a></li>
+            <li class="filter-custom__option"><a href="" class="filter-custom__link">Best</a></li>
+            <li class="filter-custom__option"><a href="" class="filter-custom__link">Price low to high</a></li>
+            <li class="filter-custom__option"><a href="" class="filter-custom__link">Price high to low</a></li>
+        </ul>
+    </div>
+</div>
+<!-- .Select -->
+
+//filter Select - custom
+.filter__meta {
+    position: relative;
+} 
+.filter-custom{
+    $this:&;
+    &__selected {
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: 0.06em;
+        text-align: right;
+        margin-bottom: 10px;
+        cursor: pointer;
+        &:after{
+            content: '';
+            display: inline-block;
+            width: 7px;height: 4px;
+            background: url('../../images/common/select_arrow.png') no-repeat center center / contain;
+            background-size: 100%;
+        }
+        &.is-active:after{
+            transform: rotateZ(180deg);
+        }
+        .selected_text{margin-right: 10px;}
+    }
+    
+    &__select{
+        font-size: 12px;
+        padding: 20px;
+        position: absolute;
+        top: 53px;
+        right: 0;
+        z-index: 100;
+        border: 1px solid $gray2;
+        width: 140px;
+        box-sizing: border-box;
+        background:$whiteColor;
+        display: none;
+    }
+    &__option{
+        &:not(:last-child){
+            margin-bottom: 15px;
+        }
+        #{$this}__link{
+            color: #000;
+            line-height: 19px;
+            position: relative;        
+            &:after{
+                content: '';
+                position:absolute;
+                bottom:-4px;left: 0;
+                width: 0;
+                height: 1px;
+                background:#000;
+                transition: all 0.5s;
+            }
+        }
+
+        &:hover,
+        &.is-current{
+            font-weight: $medium;
+            
+            #{$this}__link:after{
+                width: 100%; 
+            }
+        }
+    }
+        
+}
+                </textarea>
+            </div>
+        </div>
+    </article>
+
+
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script type="text/javascript">
+    function customSelect(){
+        // sorting btn
+        if( $(this).hasClass('is-active') ){
+            $(this).removeClass('is-active');
+            $(this).next().stop().slideUp();
+        }else{
+            $(this).addClass('is-active');
+            $(this).next().stop().slideDown();
+        }
+      
+        // select option view
+        function selectView(){
+            var link = '[class $= __link]',
+                value = $(this).find(link).text(),
+                selectedLabel = $(this).parent().siblings('.filter-custom__selected'),
+                select = $(this).parent();
+            $('.filter-custom__option').removeClass('is-current')
+            $(this).addClass('is-current');
+            $(this).parent().siblings('.hidden-input').val(value);
+            selectedLabel.find('.selected_text').text(value);
+            selectedLabel.removeClass('is-active');
+            select.stop().slideUp();
+            
+            return false;
+        }
+        $(document).on('click','.filter-custom__option',selectView);
+
+        return false;
+    }
+    $(document).on('click','.filter-custom__selected',customSelect);
+
+    
+</script>    
+</body>
+</html>
