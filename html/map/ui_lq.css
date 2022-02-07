@@ -1,0 +1,108 @@
+*{margin:0;padding:0;}
+body{
+    color: #363636;
+}
+li{list-style: none;}
+a{text-decoration: none;}
+
+/***********
+* 공통 
+***********/
+.sr-only{
+    position: absolute; text-indent: -9999px; z-index: -1; display: inline-block; 
+    clip: rect(0 0 0 0); width: 1px; height: 1px; overflow: hidden; margin: -1px; padding: 0;
+    word-break: keep-all; white-space: nowrap; border: 0;color: transparent; font: 0/0 a;
+}
+.is-hide{display:none;}
+
+.tit h1{
+    font-size: 22px;
+    text-align: left;
+}
+article h2{ 
+    font-size: 19px;
+    margin-bottom: 20px; 
+}
+
+/************ 
+* UI
+***********/
+.select-custom__right{
+    margin: 20px;
+}
+/* .select-custom__right .wrap{
+    display: flex;
+} */
+.select-custom__right .wrap > div:first-child{
+    width: 200px;
+    /* margin-right: 50px; */
+}
+.lq-code textarea{
+    height: 150px;
+    width: 100%;
+    margin-top: 50px;
+}
+
+/* select - custom */
+.filter__meta{
+    /* float:right; */
+    position: relative;
+}
+.filter-custom__selected{
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    text-align: right;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.selected_text{margin-right: 10px;}
+.filter-custom__selected:after{
+    content: '';
+    display: inline-block;
+    width: 7px;height: 4px;
+    background: url('../../images/common/select_arrow.png') no-repeat center center / contain;
+    background-size: 100%;
+}
+.filter-custom__selected.is-active:after{
+    transform: rotateZ(180deg);
+}
+.filter-custom__select{
+    font-size: 12px;
+    padding: 20px;
+    position: absolute;
+    top: 30px;
+    right: 0;
+    z-index: 100;
+    border: 1px solid #CBCBCB;
+    width: 150px;
+    box-sizing: border-box;
+    background:#fff;
+    display: none;
+}
+.filter-custom__option:not(:last-child){
+    margin-bottom: 15px;
+}
+.filter-custom__link{
+    color: #000;
+    line-height: 19px;
+    position: relative;
+}
+.filter-custom__link:after{
+    content: '';
+    position:absolute;
+    bottom:-4px;left: 0;
+    width: 0;
+    height: 1px;
+    background:#000;
+    transition: all 0.5s;
+}
+.filter-custom__option:hover,
+.filter-custom__option.is-current{ 
+    font-weight: 600; 
+}
+.filter-custom__option:hover .filter-custom__link:after,
+.filter-custom__option.is-current .filter-custom__link:after{
+    width: 100%;
+}
+

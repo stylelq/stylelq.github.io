@@ -1,0 +1,1412 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>퍼블리싱 작업현황표</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" target-densitydpi="device-dpi" />
+    <link type="text/css" rel="stylesheet" href="coding.css" />
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script type="text/javascript">
+        //<![CDATA[
+        //테이블 tr over효과
+        $(document).ready(function() {
+            $("table tr:gt(0)").hover(
+                function() { $(this).addClass("hover"); },
+                function() { $(this).removeClass("hover"); }
+            );
+            $("table tr:not(.del)").each(function(index){
+                $("td:first-child", this).text(index);
+            });
+            $("table tr.del td:first-child").text("삭제");
+            $tr = $("tbody tr:not(.del)");
+            $("#rate").html("( 총:"+$tr.length+" / 잔여:"+$("td.date:empty",$tr).length+" / 진행:"+parseInt((($tr.length-$("td.date:empty",$tr).length)/$tr.length*100))+"% )");
+
+            //날짜 출력
+            var date = new Date();
+            var year = date.getFullYear();
+            var month = new String(date.getMonth()+1);
+            var day = new String(date.getDate());
+
+            $(".today").text(year + "년 " + month + "월 " + day + "일");
+        });
+        //'table tr:gt(0) 0보다 큰것만 마우스 오버 효과가 나타남
+        //]]>
+    </script>
+</head>
+<body>
+<div id="wrap">
+    <div class="tit">
+        <h1>루이가또즈 - PC</h1>
+        <p>
+            <span class="today red bold"></span>
+            <span id="rate"></span><br />
+        </p>
+    </div>
+    <!-- <div class="txt">
+        <ul>
+            <li>웹접근 준수, HTML5, 절대경로, UTF-8</li>
+            <li>브라우저범위 : ie 7~ 10, 크롬, 파이어폭스</li>
+         </ul>
+    </div> -->
+
+    <table class="list">
+        <colgroup>
+            <col width="3%" />
+            <col width="12%" />
+            <col width="12%" />
+            <col width="12%" />
+            <col width="12%" />
+            <col width="8%" />
+            <col width="8%" />
+            <col width="5%" />
+            <col width="5%" />
+            <col width="5%" />
+            <col width="18%" />
+        </colgroup>
+        <thead>
+        <tr>
+            <th>No</th>
+            <th>1depth</th>
+            <th>2depth</th>
+            <th>3depth</th>
+            <th>4depth</th>
+            <th>directory</th>
+            <th>html</th>
+            <th>코딩완료일</th>
+            <th>개발완료일</th>
+            <th>수정일</th>
+            <th>비고</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut">에러페이지</td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">error</td>
+            <td class="cut"><a href="../error/error.html" target="_blank">error.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut">메인</td>
+            <td class="cut">메인페이지</td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">main</td>
+            <td class="cut"><a href="../main/main.html" target="_blank">main.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut">검색결과페이지</td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">main</td>
+            <td class="cut"><a href="../main/main_search.html" target="_blank">main_search.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut">최근본상품페이지</td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">main</td>
+            <td class="cut"><a href="../main/recently_viewed.html" target="_blank">recently_viewed.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut">회원가입</td>
+            <td class="cut">회원가입 홈</td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">join</td>
+            <td class="cut"><a href="../join/join_step_1.html" target="_blank">jon_step_1.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut">SNS</td>
+            <td class="cut">본인인증 전</td>
+            <td class="cut"></td>
+            <td class="cut">join</td>
+            <td class="cut"><a href="../join/join_step_2_1.html" target="_blank">jon_step_2_1.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">본인인증 후</td>
+            <td class="cut"></td>
+            <td class="cut">join</td>
+            <td class="cut"><a href="../join/join_step_2_2.html" target="_blank">jon_step_2_2.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut">email</td>
+            <td class="cut">본인인증 전</td>
+            <td class="cut"></td>
+            <td class="cut">join</td>
+            <td class="cut"><a href="../join/join_step_3_1.html" target="_blank">jon_step_3_1.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">본인인증 후</td>
+            <td class="cut"></td>
+            <td class="cut">join</td>
+            <td class="cut"><a href="../join/join_step_3_2.html" target="_blank">jon_step_3_2.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut">회원가입 완료</td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">join</td>
+            <td class="cut"><a href="../join/join_step_4.html" target="_blank">join_step_4.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut">기존회원정보 존재할경우</td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">join</td>
+            <td class="cut"><a href="../join/join_step_5.html" target="_blank">join_step_5.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut">로그인</td>
+            <td class="cut">로그인 홈</td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">join</td>
+            <td class="cut"><a href="../join/login_step_1.html" target="_blank">login_step_1.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut">로그인 홈</td>
+            <td class="cut">버튼2타입</td>
+            <td class="cut"></td>
+            <td class="cut">join</td>
+            <td class="cut"><a href="../join/login_step_1_0.html" target="_blank">login_step_1_0.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut">비회원 주문조회</td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">join</td>
+            <td class="cut"><a href="../join/login_step_1_1.html" target="_blank">login_step_1_1.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut">비회원 주문하기</td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">join</td>
+            <td class="cut"><a href="../join/login_step_2_1.html" target="_blank">login_step_2_1.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut">아이디 찾기</td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">join</td>
+            <td class="cut"><a href="../join/id_find.html" target="_blank">id_find.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut">아이디 찾기 결과</td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">join</td>
+            <td class="cut"><a href="../join/id_find_result.html" target="_blank">id_find_result.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut">비밀번호 찾기</td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">join</td>
+            <td class="cut"><a href="../join/pw_find.html" target="_blank">pw_find.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut">카테고리</td>
+            <td class="cut">New arrival</td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">product</td>
+            <td class="cut"><a href="../product/new_arrival_list.html" target="_blank">new_arrival_list.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut">숄더백</td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">product</td>
+            <td class="cut"><a href="../product/shoulder_bag_list.html" target="_blank">shoulder_bag_list.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut">이미지 있는버전</td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">product</td>
+            <td class="cut"><a href="../product/product_list_img.html" target="_blank">product_list_img.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut">비디오 있는버전</td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">product</td>
+            <td class="cut"><a href="../product/product_list_video.html" target="_blank">product_list_video.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut">상품 상세페이지</td>
+            <td class="cut">숄더백(리뷰, qna 전체 등록된 버전)</td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">product</td>
+            <td class="cut"><a href="../product/product_single.html" target="_blank">product_single.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut">숄더백(리뷰 미등록, 품절)</td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">product</td>
+            <td class="cut"><a href="../product/product_single_2.html" target="_blank">product_single_2.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut">네이버 제휴 할인</td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">product</td>
+            <td class="cut"><a href="../product/product_single.html?PRD_MST_CD=LLSK2AL76FF7BL0010&CHN_CODE=10" target="_blank">product_single.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut">장바구니</td>
+            <td class="cut">제품1개일때</td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">cart</td>
+            <td class="cut"><a href="../cart/cart_product1.html" target="_blank">cart_product1.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut">제품2개일때</td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">cart</td>
+            <td class="cut"><a href="../cart/cart_product2.html" target="_blank">cart_product2.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut">비회원 장바구니 없을경우</td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">cart</td>
+            <td class="cut"><a href="../cart/cart_product.html" target="_blank">cart_product.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut">비회원 장바구니 있을 경우</td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">cart</td>
+            <td class="cut"><a href="../cart/cart_product0.html" target="_blank">cart_product0.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut">주문결제</td>
+            <td class="cut">배송지정보 없을경우</td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">payment</td>
+            <td class="cut"><a href="../payment/payment1.html" target="_blank">payment1.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut">배송지정보 있을경우/쿠폰적용 후</td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">payment</td>
+            <td class="cut"><a href="../payment/payment2.html" target="_blank">payment2.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut">비회원 주문시</td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">payment</td>
+            <td class="cut"><a href="../payment/payment3.html" target="_blank">payment3.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut">주문완료</td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">payment</td>
+            <td class="cut"><a href="../payment/payment4.html" target="_blank">payment4.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut">프로젝트</td>
+            <td class="cut">FIND YOUR RIGHT - SPECTRUM</td>
+            <td class="cut">ABOUT</td>
+            <td class="cut"></td>
+            <td class="cut">project</td>
+            <td class="cut"><a href="../project/project.html" target="_blank">project.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">연솔</td>
+            <td class="cut"></td>
+            <td class="cut">project</td>
+            <td class="cut"><a href="../project/project1.html" target="_blank">project1.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">김정섭</td>
+            <td class="cut"></td>
+            <td class="cut">project</td>
+            <td class="cut"><a href="../project/project2.html" target="_blank">project2.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">스튜디오 차차</td>
+            <td class="cut"></td>
+            <td class="cut">project</td>
+            <td class="cut"><a href="../project/project3.html" target="_blank">project3.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">김현희</td>
+            <td class="cut"></td>
+            <td class="cut">project</td>
+            <td class="cut"><a href="../project/project4.html" target="_blank">project4.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">이학민</td>
+            <td class="cut"></td>
+            <td class="cut">project</td>
+            <td class="cut"><a href="../project/project5.html" target="_blank">project5.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">이시산</td>
+            <td class="cut"></td>
+            <td class="cut">project</td>
+            <td class="cut"><a href="../project/project6.html" target="_blank">project6.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">이채영</td>
+            <td class="cut"></td>
+            <td class="cut">project</td>
+            <td class="cut"><a href="../project/project7.html" target="_blank">project7.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">신다인</td>
+            <td class="cut"></td>
+            <td class="cut">project</td>
+            <td class="cut"><a href="../project/project8.html" target="_blank">project8.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">제로랩</td>
+            <td class="cut"></td>
+            <td class="cut">project</td>
+            <td class="cut"><a href="../project/project9.html" target="_blank">project9.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">김은학</td>
+            <td class="cut"></td>
+            <td class="cut">project</td>
+            <td class="cut"><a href="../project/project10.html" target="_blank">project10.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut">FIND YOUR LIGHT - GROOVYROOM</td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">project</td>
+            <td class="cut"><a href="../project/project_groovyroom.html" target="_blank">project_groovyroom.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut">COLLABORATION</td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">project</td>
+            <td class="cut"><a href="../project/collaboration.html" target="_blank">collaboration.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut">고객센터</td>
+            <td class="cut">공지사항</td>
+            <td class="cut">리스트</td>
+            <td class="cut"></td>
+            <td class="cut">center</td>
+            <td class="cut"><a href="../center/center.html" target="_blank">center.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">상세페이지</td>
+            <td class="cut"></td>
+            <td class="cut">center</td>
+            <td class="cut"><a href="../center/center_single.html" target="_blank">center_single.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut">FAQ</td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">center</td>
+            <td class="cut"><a href="../center/faq.html" target="_blank">faq.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut">1:1문의</td>
+            <td class="cut">리스트</td>
+            <td class="cut"></td>
+            <td class="cut">center</td>
+            <td class="cut"><a href="../center/inquiry.html" target="_blank">inquiry.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">상세페이지</td>
+            <td class="cut"></td>
+            <td class="cut">center</td>
+            <td class="cut"><a href="../center/inquiry_single.html" target="_blank">inquiry_single.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">작성(등록아무것도 안한상태)</td>
+            <td class="cut"></td>
+            <td class="cut">center</td>
+            <td class="cut"><a href="../center/inquiry_write.html" target="_blank">inquiry_write.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">작성(주문,상품검색, 이미지 첨부한 상태)</td>
+            <td class="cut"></td>
+            <td class="cut">center</td>
+            <td class="cut"><a href="../center/inquiry_write1.html" target="_blank">inquiry_write1.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut">멤버쉽</td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">center</td>
+            <td class="cut"><a href="../center/membership.html" target="_blank">membership.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut">대량구매/입점문의</td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">center</td>
+            <td class="cut"><a href="../center/center_store_inquiry.html" target="_blank">center_store_inquiry.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut">STORES</td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">center</td>
+            <td class="cut"><a href="../center/center_stores.html" target="_blank">center_stores.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">Special</td>
+            <td class="cut">상세페이지(PARIS FLAGSHIP STORE)</td>
+            <td class="cut">center</td>
+            <td class="cut"><a href="../center/center_special_single1.html" target="_blank">center_special_single1.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">상세페이지(PLATFORM-L)</td>
+            <td class="cut">center</td>
+            <td class="cut"><a href="../center/center_special_single2.html" target="_blank">center_special_single2.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut">콜렉션</td>
+            <td class="cut">메인</td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">collection</td>
+            <td class="cut"><a href="../collection/collection.html" target="_blank">collection.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut">상세(룩북포함)</td>
+            <td class="cut">MINI MONTÉ BAG</td>
+            <td class="cut"></td>
+            <td class="cut">collection</td>
+            <td class="cut"><a href="../collection/collection_detail.html" target="_blank">collection_detail.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">1980 MONOGRAM</td>
+            <td class="cut"></td>
+            <td class="cut">collection</td>
+            <td class="cut"><a href="../collection/collection_monogram.html" target="_blank">collection_monogram.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">D-Quilting</td>
+            <td class="cut"></td>
+            <td class="cut">collection</td>
+            <td class="cut"><a href="../collection/collection_dquilting.html" target="_blank">collection_dquilting.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">BIG & BOLD SYMBOL</td>
+            <td class="cut"></td>
+            <td class="cut">collection</td>
+            <td class="cut"><a href="../collection/collection_boldsymbol.html" target="_blank">collection_boldsymbol.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">NEW GRAPHIC</td>
+            <td class="cut"></td>
+            <td class="cut">collection</td>
+            <td class="cut"><a href="../collection/collection_graphic.html" target="_blank">collection_graphic.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">CHEESE BAG</td>
+            <td class="cut"></td>
+            <td class="cut">collection</td>
+            <td class="cut"><a href="../collection/collection_cheesebag.html" target="_blank">collection_cheesebag.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">L-QUILTING</td>
+            <td class="cut"></td>
+            <td class="cut">collection</td>
+            <td class="cut"><a href="../collection/collection_lquilting.html" target="_blank">collection_lquilting.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">SURREAL CLASSIC</td>
+            <td class="cut"></td>
+            <td class="cut">collection</td>
+            <td class="cut"><a href="../collection/collection_classic.html" target="_blank">collection_classic.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">MONTÉ BAG</td>
+            <td class="cut"></td>
+            <td class="cut">collection</td>
+            <td class="cut"><a href="../collection/collection_montebag.html" target="_blank">collection_montebag.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut">프로모션</td>
+            <td class="cut">리스트</td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">promotion</td>
+            <td class="cut"><a href="../promotion/promotion_list.html" target="_blank">promotion_list.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut">상세</td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">promotion</td>
+            <td class="cut"><a href="../promotion/promotion_view.html" target="_blank">promotion_view.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut">플랫폼L</td>
+            <td class="cut">All Works</td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">platform</td>
+            <td class="cut"><a href="../platform/platform1.html" target="_blank">platform1.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut">L Edition</td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">platform</td>
+            <td class="cut"><a href="../platform/platform2.html" target="_blank">platform2.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut">Art Furniture</td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">platform</td>
+            <td class="cut"><a href="../platform/platform3.html" target="_blank">platform3.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut">Art Object</td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">platform</td>
+            <td class="cut"><a href="../platform/platform4.html" target="_blank">platform4.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut">Textile & Fashion</td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">platform</td>
+            <td class="cut"><a href="../platform/platform5.html" target="_blank">platform5.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut">Printed Matter</td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">platform</td>
+            <td class="cut"><a href="../platform/platform6.html" target="_blank">platform6.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut">마이페이지</td>
+            <td class="cut">MY LOUIS</td>
+            <td class="cut">멤버쉽 회원</td>
+            <td class="cut"></td>
+            <td class="cut">mypage</td>
+            <td class="cut"><a href="../mypage/myLouis.html" target="_blank">myLouis.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">멤버쉽 비회원</td>
+            <td class="cut"></td>
+            <td class="cut">mypage</td>
+            <td class="cut"><a href="../mypage/myLouis_not_member.html" target="_blank">myLouis_not_member.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut">주문배송 조회</td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">mypage</td>
+            <td class="cut"><a href="../mypage/myPage_orderList.html" target="_blank">myPage_orderList.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut">주문배송 조회 상세</td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">mypage</td>
+            <td class="cut"><a href="../mypage/myPage_orderList_detail.html" target="_blank">myPage_orderList_detail.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut">취소/반품</td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">mypage</td>
+            <td class="cut"><a href="../mypage/myPage_returnOrder.html" target="_blank">myPage_returnOrder.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut">쿠폰</td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">mypage</td>
+            <td class="cut"><a href="../mypage/myPage_coupon.html" target="_blank">myPage_coupon.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut">적립금</td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">mypage</td>
+            <td class="cut"><a href="../mypage/myPage_reserves.html" target="_blank">myPage_reserves.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut">상품리뷰</td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">mypage</td>
+            <td class="cut"><a href="../mypage/myPage_review.html" target="_blank">myPage_review.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut">Wish List</td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">mypage</td>
+            <td class="cut"><a href="../mypage/wishList.html" target="_blank">wishList.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut">상품 Q&A</td>
+            <td class="cut">리스트/답변없는경우,있는경우</td>
+            <td class="cut"></td>
+            <td class="cut">mypage</td>
+            <td class="cut"><a href="../mypage/myPage_qna.html" target="_blank">myPage_qna.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut">재입고 알림 신청내역</td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">mypage</td>
+            <td class="cut"><a href="../mypage/myPage_allim.html" target="_blank">myPage_allim.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut">이벤트 참여현황</td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">mypage</td>
+            <td class="cut"><a href="../mypage/myPage_event.html" target="_blank">myPage_event.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut">회원정보수정</td>
+            <td class="cut">인증</td>
+            <td class="cut"></td>
+            <td class="cut">mypage</td>
+            <td class="cut"><a href="../mypage/myPage_myInfo.html" target="_blank">myPage_myInfo.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">수정</td>
+            <td class="cut"></td>
+            <td class="cut">mypage</td>
+            <td class="cut"><a href="../mypage/myPage_myInfoModify.html" target="_blank">myPage_myInfoModify.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut">배송지관리</td>
+            <td class="cut">리스트</td>
+            <td class="cut"></td>
+            <td class="cut">mypage</td>
+            <td class="cut"><a href="../mypage/myPage_address.html" target="_blank">myPage_address.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">수정</td>
+            <td class="cut"></td>
+            <td class="cut">mypage</td>
+            <td class="cut"><a href="../mypage/myPage_addressModify.html" target="_blank">myPage_addressModify.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">등록</td>
+            <td class="cut"></td>
+            <td class="cut">mypage</td>
+            <td class="cut"><a href="../mypage/myPage_addressWrite.html" target="_blank">myPage_addressWrite.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut">회원탈퇴</td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">mypage</td>
+            <td class="cut"><a href="../mypage/myPage_memberRemove.html" target="_blank">myPage_memberRemove.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut">데이터 없는 페이지들</td>
+            <td class="cut">주문배송조회</td>
+            <td class="cut"></td>
+            <td class="cut">mypage</td>
+            <td class="cut"><a href="../mypage/myPage_orderList_not.html" target="_blank">myPage_orderList_not.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">취소/반품</td>
+            <td class="cut"></td>
+            <td class="cut">mypage</td>
+            <td class="cut"><a href="../mypage/myPage_returnOrder_not.html" target="_blank">myPage_returnOrder_not.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">쿠폰</td>
+            <td class="cut"></td>
+            <td class="cut">mypage</td>
+            <td class="cut"><a href="../mypage/myPage_coupon_not.html" target="_blank">myPage_coupon_not.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">적립금</td>
+            <td class="cut"></td>
+            <td class="cut">mypage</td>
+            <td class="cut"><a href="../mypage/myPage_reserves_not.html" target="_blank">myPage_reserves_not.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">1:1문의</td>
+            <td class="cut"></td>
+            <td class="cut">mypage</td>
+            <td class="cut"><a href="../center/inquiry_not.html" target="_blank">inquiry_not.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">wishList</td>
+            <td class="cut"></td>
+            <td class="cut">mypage</td>
+            <td class="cut"><a href="../mypage/wishList_not.html" target="_blank">wishList_not.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">상품Q&A</td>
+            <td class="cut"></td>
+            <td class="cut">mypage</td>
+            <td class="cut"><a href="../mypage/myPage_qna_not.html" target="_blank">myPage_qna_not.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        <tr id="layout" class="cut">
+            <td class="cut center"></td>
+            <td class="cut">GIFT</td>
+            <td class="cut">기프트페이지</td>
+            <td class="cut"></td>
+            <td class="cut"></td>
+            <td class="cut">gift</td>
+            <td class="cut"><a href="../gift/gift.html" target="_blank">gift.html</a></td>
+            <td class="date"></td>
+            <td class="dev"></td>
+            <td class="bigo"></td>
+            <td class="memo"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
