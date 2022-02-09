@@ -19,18 +19,17 @@ jQuery(function () {
 
     $('#' + el).addClass('is-active');
     $('.popup__body').scrollTop(0); // mobile 디바이스 하단 네비게이션 버튼 바
-
-    var vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty('--vh', vh + 'px');
-    window.addEventListener('resize', function () {
-      var vh = window.innerHeight * 0.01;
-      document.documentElement.style.setProperty('--vh', vh + 'px');
-    });
-    window.addEventListener('touchmove', function () {
-      var vh = window.innerHeight * 0.01; //window.innerHeight/100;
-
-      document.documentElement.style.setProperty('--vh', vh + 'px');
-    }); // // 전체 팝업 body scroll 없앰
+    // var vh = window.innerHeight * 0.01;  
+    // document.documentElement.style.setProperty('--vh', vh+'px');
+    // window.addEventListener('resize', function(){
+    //     var vh = window.innerHeight * 0.01;
+    //     document.documentElement.style.setProperty('--vh', vh+'px');
+    // });
+    // window.addEventListener('touchmove', function(){
+    //     var vh = window.innerHeight * 0.01 //window.innerHeight/100;
+    //     document.documentElement.style.setProperty('--vh', vh+'px');
+    // });
+    // // 전체 팝업 body scroll 없앰
     // $('html').addClass('is-hidden'); 
     // 예외 modal-pop
 
