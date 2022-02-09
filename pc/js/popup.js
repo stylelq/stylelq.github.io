@@ -3,14 +3,47 @@
 jQuery(function () {
   //팝업열기(공통)
   function openPopup() {
-    var el = $(this).attr('href').replace("#", "");
+    var el = '';
+
+    if (this.tagName === 'BUTTON') {
+      el = this.dataset.popup;
+    }
+
+    if (this.tagName === "A") {
+      el = $(this).attr('href').replace('#', '');
+    }
 
     if ($('.popup.is-active').length <= 1) {} else {
       $('.popup').removeClass('is-active');
     }
 
     $('#' + el).addClass('is-active');
-    $('html').addClass('is-hidden');
+    $('.popup__body').scrollTop(0); // mobile 디바이스 하단 네비게이션 버튼 바
+
+    var vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', vh + 'px');
+    window.addEventListener('resize', function () {
+      var vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', vh + 'px');
+    });
+    window.addEventListener('touchmove', function () {
+      var vh = window.innerHeight * 0.01; //window.innerHeight/100;
+
+      document.documentElement.style.setProperty('--vh', vh + 'px');
+    }); // // 전체 팝업 body scroll 없앰
+    // $('html').addClass('is-hidden'); 
+    // 예외 modal-pop
+
+    var typeModal = ['small-popup', 'button-popup', 'modal-pop'];
+    var popId = $('#' + el);
+    typeModal.forEach(function (name) {
+      if (popId.hasClass(name)) {
+        $('html').removeClass('is-hidden');
+        $('.popup__body').scrollTop(0);
+      }
+
+      return false;
+    });
     return false;
   }
 
