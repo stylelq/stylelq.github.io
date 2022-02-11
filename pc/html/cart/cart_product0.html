@@ -374,14 +374,14 @@
 
             <!-- list -->
             <div class="cart-list">
-                <table class="basic-table" summary="장바구니">
+                <table class="list-table" summary="장바구니">
                     <caption>장바구니</caption>
                     <colgroup>
                         <col width="5%"><col width="50%"><col><col><col><col><col>
                     </colgroup>
                     <thead>
                         <tr>
-                            <th>
+                            <th class="type-chk">
                                 <div class="checkbox-point">
                                     <input class="checkbox-point__input sr-only js-table-checkAll" type="checkbox" name="cart" id="cartAll" >
                                     <label for="cartAll" class="checkbox-point__label"><span class="sr-only">체크</span></label>
@@ -397,13 +397,17 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>
+                            <td class="type-chk">
                                 <div class="checkbox-point">
                                     <input class="checkbox-point__input sr-only" type="checkbox" name="cart" id="cart1" >
                                     <label for="cart1" class="checkbox-point__label"><span class="sr-only">체크</span></label>
                                 </div>
                             </td>
                             <td>
+                                <div class="detail-Meta">
+                                    <h2 class="detail-Meta__title">루이까또즈 MINI CAVIAR(미니캐비어) 사첼백 HO1PM21IV</h2>
+                                    
+                                </div>
                                 <!-- Select -->
                                 <div class="selBox__meta--select">
                                     <input type="text" value="" class="hidden-input is-hide">
@@ -417,14 +421,31 @@
                                 </div>
                                 <!-- .Select -->
                             </td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td>
+                                <div class="detail-Meta__price">
+                                    <span class="detail-Meta__price--current">289,290원</span>
+                                    <span class="detail-Meta__price--sale">328,000원</span>
+                                    <a href="#benefitsPop" class="detail-Meta__benefit js-popup-open">benefit</a>
+                                </div>
+                            </td>
+                            <td>
+                                <!-- quantity -->
+                                <div class="quantity">
+                                    <a href="#;" classw="quantity__minus js-minus"><span class="sr-only">minus</span></a>
+                                    <input class="quantity__text--current" type="number" value="1" min="1" max="999" maxlength="3" inputmode="numeric" pattern="[0-9]*" readonly="readonly" />
+                                    <a href="#;" class="quantity__plus js-plus"><span class="sr-only">plus</span></a>
+                                </div>
+                                <!-- quantity -->
+                            </td>
+                            <td><span class="detail-Meta__price--current">289,290원</span></td>
+                            <td><span>무료배송</span></td>
+                            <td>
+                                <a href="" class="btn-v3 btn-v3--small type-primary">로그인</a>
+                                <a href="" class="btn-v3 btn-v3--small type-white">로그인</a>
+                            </td>
                         </tr>
                         <tr>
-                            <td>
+                            <td class="type-chk">
                                 <div class="checkbox-point">
                                     <input class="checkbox-point__input sr-only" type="checkbox" name="cart" id="cart2">
                                     <label for="cart2" class="checkbox-point__label"><span class="sr-only">체크</span></label>
@@ -438,7 +459,7 @@
                             <td></td>
                         </tr>
                         <tr>
-                            <td>
+                            <td class="type-chk">
                                 <div class="checkbox-point">
                                     <input class="checkbox-point__input sr-only" type="checkbox" name="cart" id="cart3" >
                                     <label for="cart3" class="checkbox-point__label"><span class="sr-only">체크</span></label>
@@ -455,6 +476,47 @@
                 </table>
             </div>
             <!-- .list -->
+            <div class="cart-list2">
+                <div class="cart-btn">
+                    <a href="" class="btn-v3 btn-v3--small type-white">선택상품 삭제</a>
+                    <a href="" class="btn-v3 btn-v3--small type-white">품절상품 삭제</a>
+                </div>
+
+                <div class="cart-total">
+                    <div class="cart-total__list">
+						<ul class="cart-total__list--inner">
+							<li class="cart-total__list--item">
+								<dl class="cart-total--inner">
+									<dt class="cart-total__title">총 상품 금액</dt>
+									<dd class="cart-total__text" id="strong_total_price">93,000원</dd>
+								</dl>
+							</li>
+							<li class="cart-total__list--item">
+								<dl class="cart-total--inner">
+									<dt class="cart-total__title">총 할인 금액</dt>
+									<dd class="cart-total__text" id="strong_total_discount_price">-10,980원</dd>
+								</dl>
+							</li>
+							<li class="cart-total__list--item">
+								<dl class="cart-total--inner">
+									<dt class="cart-total__title">배송비</dt>
+									<dd class="cart-total__text" id="strong_total_deli_price">0 원</dd>
+								</dl>
+							</li>
+						</ul>
+					</div>
+					<div class="cart-total-sum">
+						<dl class="cart-total--inner">
+							<dt class="cart-total__title">총 주문 금액</dt>
+							<dd class="cart-total__text" id="strong_total_apply_price">82,020원</dd>
+						</dl>
+					</div>
+                    <div class="cart-total__btn">
+                        <a href="" class="btn-v3 type-white">선택상품 주문</a>
+                        <a href="" class="btn-v3 type-primary">전체상품 주문</a>
+                    </div>
+                </div>
+            </div>
 
             <!-- recommended -->
             <div class="recommended">
@@ -723,6 +785,57 @@
     <div class="cart-fix__top js-scrollTop"><span class="sr-only">맨위로</span></div>
 </div>
 <!-- .cart-fix -->
+<!-- Benefits popup -->
+<section id="benefitsPop" class="small-popup modal-pop">
+    <div class="small-popup__dim"></div>
+    <section class="small-popup__body">
+        <a class="small-popup__close js-popup-close" href="#;"><span class="sr-only">닫기</span></a>
+        <div class="small-popup__header">
+            <h3 class="small-popup__header--title">혜택가 안내</h3>
+        </div>
+        <div class="small-popup__cont">
+            <!-- Benefits cont -->
+            <div class="pop-benefits">
+                <ul class="pop-benefits__list">
+                    <li class="pop-benefits__item">
+                        <dl class="pop-benefits__inner">
+                            <dt class="pop-benefits__title">소비자가</dt>
+                            <dd class="pop-benefits__text">498,000원</dd>
+                        </dl>
+                    </li>
+                    <li class="pop-benefits__item">
+                        <dl class="pop-benefits__inner">
+                            <dt class="pop-benefits__title">판매가</dt>
+                            <dd class="pop-benefits__text">250,000원</dd>
+                        </dl>
+                    </li>
+                    <li class="pop-benefits__item">
+                        <dl class="pop-benefits__inner">
+                            <dt class="pop-benefits__title">상품 쿠폰할인</dt>
+                            <dd class="pop-benefits__text">-25,000원</dd>
+                        </dl>
+                    </li>
+                    <li class="pop-benefits__item">
+                        <dl class="pop-benefits__inner">
+                            <dt class="pop-benefits__title">적립금 즉시할인</dt>
+                            <dd class="pop-benefits__text">-4,500원</dd>
+                        </dl>
+                    </li>
+                    <li class="pop-benefits__item pop-benefits__item--total">
+                        <dl class="pop-benefits__inner">
+                            <dt class="pop-benefits__title">혜택가</dt>
+                            <dd class="pop-benefits__text">220,500원<span class="pop-benefits__text--sale">56%할인</span></dd>
+                        </dl>
+                    </li>
+                </ul>
+                <p class="pop-benefits__info--text">혜택가는 고객님께서 최대 할인 받을수 있는<br />예상 금액 입니다.</p>
+            </div>
+            <!-- .Benefits cont -->
+        </div>
+    </section>
+</section>
+<!-- Benefits popup -->
+
 
 <script src="../../js/libs/jquery-3.6.0.min.js"></script>
 
@@ -731,6 +844,8 @@
 
 <script src="../../js/common.js"></script>
 
+
+    <script src="../../js/popup.js"></script>
 
 
 
