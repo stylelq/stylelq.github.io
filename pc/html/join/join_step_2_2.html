@@ -22,8 +22,8 @@
 
     
     
+        <link rel="stylesheet" href="../../css/pages/join.css">
     
-        <link rel="stylesheet" href="../../css/pages/product.css">
     
     
     
@@ -357,322 +357,82 @@
 </div>
 
 <!-- contents start -->
-
 <div class="container">
     <div class="site-main">
-	    <section class="product">
-            <!-- 탭 -->
-            <div class="product-tab">
-                <ul class="product-tab__fix">
-                    <li class="product-tab__item is-current">
-                        <a href="#" class="product-tab__link js-basic-tab-link">ALL</a>
-                    </li>
-                    <li class="product-tab__item">
-                        <a href="#" class="product-tab__link js-basic-tab-link">숄더백 </a>
-                    </li>
-                    <li class="product-tab__item">
-                        <a href="#" class="product-tab__link js-basic-tab-link">토트백</a>
-                    </li>
-                    <li class="product-tab__item">
-                        <a href="#" class="product-tab__link js-basic-tab-link">크로스백</a>
-                    </li>
-                    <li class="product-tab__item">
-                        <a href="#" class="product-tab__link js-basic-tab-link">미니백/클러치백</a>
-                    </li>
-                    <li class="product-tab__item">
-                        <a href="#" class="product-tab__link js-basic-tab-link">백팩</a>
-                    </li>
-                </ul>
+        <section class="join">
+            <div class="join__title">회원가입</div>
+            <div class="holder">
+                <section class="join">
+                        <div class="join__wrap">
+                            <section class="join__box2">
+                                <p class="join__info type-naver">
+                                    네이버계정으로 가입합니다.<br>
+                                    <span class="join__point">abcdefg@gmail.com</span>
+                                </p>
+                                <p class="join__finish finish-txt">
+                                    <span class="finish-txt__check">본인인증 완료</span>
+                                </p>
+                                <div class="join__area">
+                                    <div class="input-list">
+                                        <ul class="input-list__list">
+                                            <li class="input-list__item">
+                                                <input type="text" class="input-v1" value="홍길동" disabled="">
+                                            </li>
+                                            <li class="input-list__item">
+                                                <input type="text" class="input-v1" value="010-1234-5678" disabled="">
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="join__box2">
+                                <h3 class="join-box__tit">이용약관 및 정보수집</h3>
+                                <div class="terms">
+                                    <ul class="terms__list">
+                                        <li class="terms__item">
+                                            <a href="" class="terms__btn js-accordion">open/close</a>
+                                            <input type="checkbox" name="terms" class="checkbox-v1 js-check-all" id="checkAll">
+                                            <label for="checkAll"> <span class="color-point1">[필수]</span> 이용약관 및 개인정보 수집/이용/취급</label>
+                                            <ul class="terms__depth2-list">
+                                                <li class="terms__depth2-item">
+                                                    <input type="checkbox" name="terms" class="checkbox-v1" id="terms1">
+                                                    <label for="terms1">통합 이용약관</label>
+                                                    <a href="#termsPop" class="terms__depth2-link btn-v2 js-popup-open">보기</a>
+                                                </li>
+                                                <li class="terms__depth2-item">
+                                                    <input type="checkbox" name="terms" class="checkbox-v1" id="terms2">
+                                                    <label for="terms2">개인정보 수집 및 이용</label>
+                                                    <a href="#termsPop2" class="terms__depth2-link btn-v2 js-popup-open">보기</a>
+                                                </li>
+                                                <li class="terms__depth2-item">
+                                                    <input type="checkbox" name="terms" class="checkbox-v1" id="terms3">
+                                                    <label for="terms3">개인정보 취급 위탁</label>
+                                                    <a href="" class="terms__depth2-link btn-v2">보기</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="terms__item">
+                                            <a href="" class="terms__btn js-accordion">open/close</a>
+                                            <input type="checkbox" name="info" class="checkbox-v1 js-check-all" id="infoAll">
+                                            <label for="infoAll"> [선택] 정보수신동의</label>
+                                            <ul class="terms__depth2-list type-inline">
+                                                <li class="terms__depth2-item">
+                                                    <input type="checkbox" name="info" class="checkbox-v1" id="info1">
+                                                    <label for="info1">이메일</label>
+                                                </li>
+                                                <li class="terms__depth2-item">
+                                                    <input type="checkbox" name="info" class="checkbox-v1" id="info2">
+                                                    <label for="info2">문자</label>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a onclick="infoSnsJoinStep2.checkPlusAccreditation();" class="join-box__btn btn-v1 type-primary">가입하기</a>
+                            </section>
+                        </div>
+                    </section>
             </div>
-            <!-- //탭 -->
-
-            <!-- 컨텐츠 -->
-            <div class="product-tab__cont">
-                <!-- Product List Filter -->
-
-<div class="list-filter ">
-    <div class="wrap">
-        <div class="filter__state">
-            <span class="filter__state--tit">ALL</span> [<strong class="filter__state--data">50</strong>]
-        </div>
-        <div class="filter__meta">
-            <!-- Select -->
-            <div class="filter__meta--select">
-                <input type="text" value="" class="hidden-input is-hide">
-                <p class="filter-custom__selected"><span class="selected_text">Sorting</span></p>
-                <ul class="filter-custom__select">
-                    <li class="filter-custom__option"><a href="" class="filter-custom__link">New in</a></li>
-                    <li class="filter-custom__option"><a href="" class="filter-custom__link">Best</a></li>
-                    <li class="filter-custom__option"><a href="" class="filter-custom__link">Price low to high</a></li>
-                    <li class="filter-custom__option"><a href="" class="filter-custom__link">Price high to low</a></li>
-                </ul>
-            </div>
-            <!-- .Select -->
-        </div>
-    </div>
-</div>
-<!-- .Product List Filter -->
-
-                <!-- tab contents -->
-                <div class="product-tab__info">
-                    <!-- product post -->
-                    <div class="product-post product-post--post">
-                        <ul class="product-post__list">
-                            <li class="product-post__item">
-                                <!-- item -->
-                                <div class="product-item">
-                                    <a href="" class="product-item__link">
-                                        <div class="product-item__state">SOLD OUT</div>
-                                        <div class="product-item__thumb">
-                                            <img class="product-item__img" src="../../images/dummy/product_img3.png" alt="" />
-                                            <img class="product-item__img" src="../../images/dummy/product_img3_3.png" alt="" />
-                                        </div>
-                                        <div class="product-item__cont">
-                                            <div class="product-item__title">루이까또즈 L-Quilting Mini(엘퀼팅 미니) 여성크로스백 HP3QT06OR</div>
-                                            <div class="product-item__price">
-                                                <span class="product-item__price--sale">328,000원</span>
-                                                <span class="product-item__price--current">289,290원</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <!-- hover -->
-<div class="product-icon ">
-    <ul class="product-icon__hover ">
-        <li class="product-icon__item type-basket">
-            <a href="" class="product-icon__link">
-                <img src="../../images/common/basket.svg" class="product-icon__link--img" alt="">
-            </a>
-        </li>
-        <li class="product-icon__item type-like">
-            <a href="" class="product-icon__link">
-                <span class="sr-only">좋아요</span>
-            </a>
-        </li>
-    </ul>
-</div>
-<!-- //hover -->
-                                </div>
-                                <!-- .item -->
-                            </li>
-                            <li class="product-post__item">
-                                <!-- item -->
-                                <div class="product-item">
-                                    <a href="" class="product-item__link">
-                                        <div class="product-item__state">NEW</div>
-                                        <div class="product-item__thumb">
-                                            <img class="product-item__img" src="../../images/dummy/product_img4.png" alt="" />
-                                            <img class="product-item__img" src="../../images/dummy/product_img4_3.png" alt="" />
-                                        </div>
-                                        <div class="product-item__cont">
-                                            <div class="product-item__title">루이까또즈 L-Quilting Mini(엘퀼팅 미니) 여성크로스백 HP3QT06OR</div>
-                                            <div class="product-item__price">
-                                                <span class="product-item__price--sale">328,000원</span>
-                                                <span class="product-item__price--current">289,290원</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <!-- hover -->
-<div class="product-icon ">
-    <ul class="product-icon__hover ">
-        <li class="product-icon__item type-basket">
-            <a href="" class="product-icon__link">
-                <img src="../../images/common/basket.svg" class="product-icon__link--img" alt="">
-            </a>
-        </li>
-        <li class="product-icon__item type-like">
-            <a href="" class="product-icon__link">
-                <span class="sr-only">좋아요</span>
-            </a>
-        </li>
-    </ul>
-</div>
-<!-- //hover -->
-                                </div>
-                                <!-- .item -->
-                            </li>
-                            <li class="product-post__item">
-                                <!-- item -->
-                                <div class="product-item">
-                                    <a href="" class="product-item__link">
-                                        <div class="product-item__thumb">
-                                            <img class="product-item__img" src="../../images/dummy/product_img1.jpg" alt="" />
-                                        </div>
-                                        <div class="product-item__cont">
-                                            <div class="product-item__title">루이까또즈 L-Quilting Mini(엘퀼팅 미니) 여성크로스백 HP3QT06OR</div>
-                                            <div class="product-item__price">
-                                                <span class="product-item__price--sale">328,000원</span>
-                                                <span class="product-item__price--current">289,290원</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <!-- hover -->
-<div class="product-icon ">
-    <ul class="product-icon__hover ">
-        <li class="product-icon__item type-basket">
-            <a href="" class="product-icon__link">
-                <img src="../../images/common/basket.svg" class="product-icon__link--img" alt="">
-            </a>
-        </li>
-        <li class="product-icon__item type-like">
-            <a href="" class="product-icon__link">
-                <span class="sr-only">좋아요</span>
-            </a>
-        </li>
-    </ul>
-</div>
-<!-- //hover -->
-                                </div>
-                                <!-- .item -->
-                            </li>
-                            <li class="product-post__item">
-                                <!-- item -->
-                                <div class="product-item">
-                                    <a href="" class="product-item__link">
-                                        <div class="product-item__thumb">
-                                            <img class="product-item__img" src="../../images/dummy/product_img2.png" alt="" />
-                                            <img class="product-item__img" src="../../images/dummy/product_img1.png" alt="" />
-                                        </div>
-                                        <div class="product-item__cont">
-                                            <div class="product-item__title">루이까또즈 L-Quilting Mini(엘퀼팅 미니) 여성크로스백 HP3QT06OR</div>
-                                            <div class="product-item__price">
-                                                <span class="product-item__price--sale">328,000원</span>
-                                                <span class="product-item__price--current">289,290원</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <!-- hover -->
-<div class="product-icon ">
-    <ul class="product-icon__hover ">
-        <li class="product-icon__item type-basket">
-            <a href="" class="product-icon__link">
-                <img src="../../images/common/basket.svg" class="product-icon__link--img" alt="">
-            </a>
-        </li>
-        <li class="product-icon__item type-like">
-            <a href="" class="product-icon__link">
-                <span class="sr-only">좋아요</span>
-            </a>
-        </li>
-    </ul>
-</div>
-<!-- //hover -->
-                                </div>
-                                <!-- .item -->
-                            </li>
-                            <li class="product-post__item">
-                                <!-- item -->
-                                <div class="product-item">
-                                    <a href="" class="product-item__link">
-                                        <div class="product-item__thumb">
-                                            <img class="product-item__img" src="../../images/dummy/product_img1.jpg" alt="" />
-                                            <img class="product-item__img" src="../../images/dummy/product_img3.png" alt="" />
-                                        </div>
-                                        <div class="product-item__cont">
-                                            <div class="product-item__title">루이까또즈 L-Quilting Mini(엘퀼팅 미니) 여성크로스백 HP3QT06OR</div>
-                                            <div class="product-item__price">
-                                                <span class="product-item__price--sale">328,000원</span>
-                                                <span class="product-item__price--current">289,290원</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <!-- hover -->
-<div class="product-icon ">
-    <ul class="product-icon__hover ">
-        <li class="product-icon__item type-basket">
-            <a href="" class="product-icon__link">
-                <img src="../../images/common/basket.svg" class="product-icon__link--img" alt="">
-            </a>
-        </li>
-        <li class="product-icon__item type-like">
-            <a href="" class="product-icon__link">
-                <span class="sr-only">좋아요</span>
-            </a>
-        </li>
-    </ul>
-</div>
-<!-- //hover -->
-                                </div>
-                                <!-- .item -->
-                            </li>
-                            <li class="product-post__item">
-                                <!-- item -->
-                                <div class="product-item">
-                                    <a href="" class="product-item__link">
-                                        <div class="product-item__thumb">
-                                            <img class="product-item__img" src="../../images/dummy/product_img2.png" alt="" />
-                                        </div>
-                                        <div class="product-item__cont">
-                                            <div class="product-item__title">루이까또즈 L-Quilting Mini(엘퀼팅 미니) 여성크로스백 HP3QT06OR</div>
-                                            <div class="product-item__price">
-                                                <span class="product-item__price--sale">328,000원</span>
-                                                <span class="product-item__price--current">289,290원</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <!-- hover -->
-<div class="product-icon ">
-    <ul class="product-icon__hover ">
-        <li class="product-icon__item type-basket">
-            <a href="" class="product-icon__link">
-                <img src="../../images/common/basket.svg" class="product-icon__link--img" alt="">
-            </a>
-        </li>
-        <li class="product-icon__item type-like">
-            <a href="" class="product-icon__link">
-                <span class="sr-only">좋아요</span>
-            </a>
-        </li>
-    </ul>
-</div>
-<!-- //hover -->
-                                </div>
-                                <!-- .item -->
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- .product post -->
-                    <!-- paging -->
-<div class="paging">
-    <ul class="paging__list">
-        <li class="paging__item paging__item--prev"><a class="paging__link" href="#;"><span class="sr-only">prev</span></a></li>
-        <li class="paging__item is-current"><span class="paging__link">1</span></li>
-        <li class="paging__item"><a class="paging__link" href="#;">2</a></li>
-        <li class="paging__item"><a class="paging__link" href="#;">3</a></li>
-        <li class="paging__item"><a class="paging__link" href="#;">4</a></li>
-        <li class="paging__item"><a class="paging__link" href="#;">5</a></li>
-        <li class="paging__item paging__item--next"><a class="paging__link" href="#;"><span class="sr-only">next</span></a></li>
-    </ul>
-</div>
-<!-- .paging -->
-                </div>
-                <!-- //tab contents -->
-            </div>
-            <!-- .컨텐츠 -->
-
-            <!-- 하단 배너 -->
-            <div class="product-banner-btm">
-                <ul class="product-banner-btm__list">
-                    <li class="product-banner-btm__item">
-                        <a href="" class="product-banner-btm__link">
-                            <div class="product-banner-btm__img"><img src="../../images/dummy/list_banner1.png" alt=""></div>
-                            <p class="product-banner-btm__txt">Adieu 2021, 20%</p>
-                        </a>
-                    </li>
-                    <li class="product-banner-btm__item">
-                        <a href="" class="product-banner-btm__link">
-                            <div class="product-banner-btm__img"><img src="../../images/dummy/list_banner2.png" alt=""></div>
-                            <p class="product-banner-btm__txt">D-Quilting</p>
-                        </a>
-                    </li>
-                    <li class="product-banner-btm__item">
-                        <a href="" class="product-banner-btm__link">
-                            <div class="product-banner-btm__img"><img src="../../images/dummy/list_banner3.png" alt=""></div>
-                            <p class="product-banner-btm__txt">Present For Men</p>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <!-- //하단 배너 -->
         </section>
     </div>
 </div>
@@ -749,12 +509,6 @@
         </div>
     </div>
 </footer>
-<!-- cart-fix -->
-<div class="cart-fix">
-    <a href="#;" class="cart-fix__add"><span class="cart-fix__add--count">2</span></a>
-    <div class="cart-fix__top js-scrollTop"><span class="sr-only">맨위로</span></div>
-</div>
-<!-- .cart-fix -->
 
 <script src="../../js/libs/jquery-3.6.0.min.js"></script>
 
@@ -764,6 +518,8 @@
 <script src="../../js/common.js"></script>
 
 
+    <script src="../../js/popup.js"></script>
+
 
 
 
@@ -772,4 +528,3 @@
 </body>
 </html>
 <!--footer끝-->
-
