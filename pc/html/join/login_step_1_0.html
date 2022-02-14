@@ -46,7 +46,8 @@
             <div class="header-wrap__top">
             <!--로고-->
             <a href="main.html" class="header-wrap__logo">
-                <img src="../../images/common/logo.png" alt="louis quatorze" class="img-w100 header__black">
+                <h2 class="header-wrap__background">louisquatorze</h2>
+                <!--<img src="../../images/common/logo.png" alt="louis quatorze" class="img-w100 header__black">-->
             </a>
             <!--//로고-->
 
@@ -314,7 +315,7 @@
 
             <div class="search">
                 <div class="search__wrap">
-                    <a href="" class="search__close js-search-close">close</a>
+                    <!-- <a href="" class="search__close js-search-close">close</a> -->
                     <form id="" name="" class="form-inline" method="post" action="">
                         <div class="search__group">
                             <label class="sr-only" for="keyword">검색</label>
@@ -361,25 +362,71 @@
 <div class="container">
     <div class="site-main">
         <section class="join">
-            <div class="join__title">비회원 주문하기</div>
+            <div class="join__title">로그인</div>
             <div class="wrap">
-                <div class="join__area">
+                <section class="join__box2">
                     <div class="input-list">
                         <ul class="input-list__list">
                             <li class="input-list__item">
-                                <input type="text" class="input-v1" placeholder="주문번호 입력">
+                                <input type="text" class="input-v1" placeholder="아이디">
                             </li>
                             <li class="input-list__item">
-                                <input type="password" class="input-v1" placeholder="휴대폰번호 ‘-’ 없이 입력">
+                                <input type="password" class="input-v1" placeholder="비밀번호 입력">
                             </li>
                         </ul>
-                        <button class="join-box__btn btn-v1 type-primary">확인</button>
-                        <p class="login__txt">
-                            비회원 주문/배송 정보를 잊으셨다면<br>
-                            고객센터 080-599-1414로 전화 주시기 바랍니다.
-                        </p>
+                        <div class="join__check">
+                            <input type="checkbox" class="checkbox-v1" id="info1">
+                            <label for="info1">아이디 저장</label>
+                        </div>
+                        <button class="join-box__btn btn-v1 type-primary">로그인</button>
                     </div>
-                </div>
+                    <div class="login-info">
+                        <ul class="login-info__list">
+                            <li class="login-info__item">
+                                <a href="" class="login-info__link">아이디 찾기</a>
+                            </li>
+                            <li class="login-info__item">
+                                <a href="" class="login-info__link">비밀번호 찾기</a>
+                            </li>
+                            <li class="login-info__item">
+                                <a href="" class="login-info__link">회원가입</a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="join__box2">
+                    <article class="join-sns">
+                        <ul class="join-sns__list">
+                            <li class="join-sns__item type-naver">
+                                <a href="" class="join-sns__link">
+                                    네이버 계정으로 로그인
+                                </a>
+                            </li>
+                            <li class="join-sns__item type-kakao">
+                                <a href="" class="join-sns__link">
+                                    카카오 계정으로 로그인
+                                </a>
+                            </li>
+                            <li class="join-sns__item type-payco">
+                                <a href="" class="join-sns__link">
+                                    페이코 계정으로 로그인
+                                </a>
+                            </li>
+                        </ul>
+                    </article>
+                </section>
+                <section class="join__box2">
+                    <div class="btn-group">
+                        <ul class="btn-group__list type-three">
+                            <li class="btn-group__item">
+                                <button class="btn-group__btn btn-v1 type-white">비회원 주문하기</button>
+                            </li>
+                            <li class="btn-group__item">
+                                <button class="btn-group__btn btn-v1 type-white">비회원 주문조회</button>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
             </div>
         </section>
     </div>
@@ -465,6 +512,7 @@
 
 
 <script src="../../js/common.js"></script>
+
 
 
 

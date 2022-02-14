@@ -238,39 +238,44 @@ jQuery(function () {
     }
   }
 
-  function selectView(selected, option) {
-    var selName = selected,
-        optName = option;
+  function selectView(option) {
+    var optName = option;
     $(optName).removeClass('is-current');
     $(this).addClass('is-current');
 
-    function selectedTextChange() {
-      var value = this.innerText,
-          select = $(selName).next(); //hidden input 에 value 값 넣기
+    function selectedTextChange(e) {
+      var link = e.target,
+          value = link.innerText,
+          select = link.parentNode.parentNode;
 
-      $('[class $= __meta--select ] .hidden-input').val(value);
-      $(selName).find('.selected_text').text(value); // selected Text변경 하고 옵션ul 닫기
+      if (link.parentNode.className === option.replace('.', '')) {
+        //hidden input 에 value 값 넣기
+        $(select).siblings('.hidden-input').val(value);
+        $(select).siblings().find('.selected_text').text(value); // selected Text변경 하고 옵션ul 닫기
 
-      $(selName).removeClass('is-active');
-      select.stop().slideUp();
+        $(select).siblings().removeClass('is-active');
+        $(select).stop().slideUp();
+      }
+
       return false;
     }
 
     $(document).on('click', optName, selectedTextChange);
+    return false;
   } //리스트 소팅버튼
 
 
   function customSelect() {
-    selectViewDropDown('.filter-custom__selected');
-    selectView('.filter-custom__selected', '.filter-custom__option');
+    selectViewDropDown(this);
+    selectView('.filter-custom__option');
     return false;
   }
 
   $(document).on('click', '.filter-custom__selected', customSelect); // 장바구니FREESIZE
 
   function cartCustomSelect() {
-    selectViewDropDown('.selBox-custom__selected');
-    selectView('.selBox-custom__selected', '.selBox-custom__option');
+    selectViewDropDown(this);
+    selectView('.selBox-custom__option');
     return false;
   }
 
