@@ -444,6 +444,125 @@ jQuery(function () {
         type: "fraction"
       }
     });
+  } // 컬렉션 상품슬라이드
+
+
+  if ($('.collection-slide').length > 0) {
+    var collectionSlide = new Swiper('.collection-slide__container', {
+      observer: true,
+      observeParents: true,
+      watchOverflow: true,
+      slidesPerView: 2,
+      loop: true,
+      navigation: {
+        nextEl: ".collecton-next-btn",
+        prevEl: ".collecton-prev-btn"
+      }
+    });
+  } // 컬렉션 더보기 슬라이드
+
+
+  if ($('.collection-more-slide').length > 0) {
+    var eventSliderTouch = false;
+    var collectionMoreSlide = new Swiper('.collection-more__container', {
+      observer: true,
+      observeParents: true,
+      watchOverflow: true,
+      slidesPerView: 3,
+      centeredSlides: true,
+      rewind: true,
+      loop: false,
+      autoplay: {
+        delay: 0
+        /*disableOnInteraction: false,*/
+
+      },
+      navigation: {
+        nextEl: ".more-next-btn",
+        prevEl: ".more-prev-btn"
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        type: "fraction"
+      },
+      on: {
+        /*init:function(){
+            $('.collection-more__wrapper').css({transitionTimingFunction:'linear'})
+        },*/
+        touchMove: function touchMove() {
+          eventSliderTouch = true;
+        },
+        touchEnd: function touchEnd() {
+          if (eventSliderTouch) {
+            eventSliderTouch = false;
+            this.params.speed = 500;
+            this.params.autoplay.delay = 1000;
+          }
+        },
+        transitionEnd: function transitionEnd() {
+          this.params.speed = 8000;
+          this.params.autoplay.delay = 0;
+        },
+        sliderFirstMove: function sliderFirstMove() {
+          console.log('dd : ', this.activeIndex);
+        }
+      }
+    });
+    /*슬라이드 온클릭 시 자동슬라이드 정지*/
+
+    $(document).on('click', collectionMoreSlide, function () {
+      // collectionMoreSlide.autoplay.stop();
+      collectionMoreSlide.autoplay.delay = 1000;
+      console.log(collectionMoreSlide.autoplay);
+    });
+  } // 컬렉션 모델슬라이드(상단)
+
+
+  if ($('.collection-model-slide').length > 0) {
+    var collectionModelSlide = new Swiper('.collection-model__container', {
+      effect: 'fade',
+      observer: true,
+      observeParents: true,
+      watchOverflow: true,
+      slidesPerView: 1,
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false
+      },
+      pagination: {
+        el: '.collection-slide-pagination',
+        clickable: true
+      },
+      navigation: {
+        nextEl: ".model-next-btn",
+        prevEl: ".model-prev-btn"
+      }
+    });
+  } // 컬렉션 모델슬라이드(하단)
+
+
+  if ($('.collection-model-slideSecond').length > 0) {
+    var collectionModelSlideSecond = new Swiper('.collection-model__containerSecond', {
+      effect: 'fade',
+      observer: true,
+      observeParents: true,
+      watchOverflow: true,
+      slidesPerView: 1,
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false
+      },
+      pagination: {
+        el: '.collection-slide-paginationSecond',
+        clickable: true
+      },
+      navigation: {
+        nextEl: ".model-next-btn",
+        prevEl: ".model-prev-btn"
+      }
+    });
   } //--END[swiper slider]-----------------------------
 
 }); //jQuery
