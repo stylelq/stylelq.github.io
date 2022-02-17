@@ -1,5 +1,6 @@
 
 
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,8 +23,6 @@
 
     
     
-        <link rel="stylesheet" href="../../css/pages/join.css">
-    
     
     
     
@@ -32,6 +31,8 @@
 
     
 
+    
+        <link rel="stylesheet" href="../../css/pages/project_collaboration.css">
     
     
     
@@ -361,21 +362,44 @@
 
 <!-- contents start -->
 <div class="container">
-    <div class="site-main">
-        <section class="join">
-            <div class="join__title">회원가입</div>
-            <section class="join">
-                <div class="join__wrap">
-                    <p class="join__info type-email">
-                        이메일로 가입합니다.<br>
-                        <span class="join__point">abcdefg@gmail.com</span>
-                    </p>
-                    <a onclick="infoSnsJoinStep2.checkPlusAccreditation();" class="join-box__btn btn-v1 type-primary">휴대폰 본인인증</a>
+    <div class="site-project">
+        <div class="collabo-list">
+            <!--콜라보 리스트-->
+            <div class="collabo-list__wrap">
+                <div class="collabo-list__item">
+                    <img class="collabo-list__img" src="https://mcdn.louisclub.com/static/mo/img/collabo/list/1.jpg" alt=""/>
+                    <a class="collabo-list__link js-popup-open" href="#collaborationPop">
+                        <div class="collabo-list__box">LOUIS QUATORZE X TZURI GUETTA</div>
+                    </a>
                 </div>
-            </section>
-        </section>
+            </div>
+            <!--//콜라보 리스트-->
+
+            <!--콜라보 리스트-->
+            <div class="collabo-list__wrap">
+                <div class="collabo-list__item">
+                    <img class="collabo-list__img" src="https://mcdn.louisclub.com/static/mo/img/collabo/list/2.jpg" alt=""/>
+                    <a class="collabo-list__link js-popup-open" href="#collaborationPop">
+                        <div class="collabo-list__box">LOUIS QUATORZE X TZURI GUETTA</div>
+                    </a>
+                </div>
+            </div>
+            <!--//콜라보 리스트-->
+
+            <!--콜라보 리스트-->
+            <div class="collabo-list__wrap">
+                <div class="collabo-list__item">
+                    <img class="collabo-list__img" src="https://mcdn.louisclub.com/static/mo/img/collabo/list/3.jpg" alt=""/>
+                    <a class="collabo-list__link js-popup-open" href="#collaborationPop">
+                        <div class="collabo-list__box">LOUIS QUATORZE X TZURI GUETTA</div>
+                    </a>
+                </div>
+            </div>
+            <!--//콜라보 리스트-->
+        </div>
     </div>
 </div>
+
 <!-- //section끝 -->
 <!--footer시작-->
 <footer class="footer">
@@ -449,14 +473,51 @@
         </div>
     </div>
 </footer>
+<!-- cart-fix -->
+<div class="cart-fix">
+    <a href="#;" class="cart-fix__add"><span class="cart-fix__add--count">2</span></a>
+    <div class="cart-fix__top js-scrollTop"><span class="sr-only">맨위로</span></div>
+</div>
+<!-- .cart-fix -->
+<!-- terms popup -->
+<section id="collaborationPop" class="popup">
+    <header class="popup__header">
+        <button class="popup__close js-popup-close">close</button>
+    </header>
+    <section class="popup__body">
+        <div class="collabo-wrap">
+            <!--콜라보 컨텐츠(영상)-->
+            <div class="collabo-wrap__list">
+                <div class="collabo-wrap__title">
+                    <div class="collabo-wrap__name">LOUIS QUATORZE X TZURI GUETTA</div>
+                </div>
+                <div class="collabo-wrap__item">
+                    <video class="collabo-wrap__video" src="https://mcdn.louisclub.com/static/mo/img/collabo/view/tzuriguetta/video.mp4" poster="https://mcdn.louisclub.com/static/mo/img/collabo/view/tzuriguetta/video_thumbnail.jpg" loop="" autoplay="" muted="true" playsinline="" data-object-fit="cover"></video>
+                    <a class="collabo-wrap__sound js-sound-btn" href=""></a>
+                </div>
+            </div>
+            <!--//콜라보 컨텐츠(영상)-->
+        </div>
+    </section>
+</section>
 
 <script src="../../js/libs/jquery-3.6.0.min.js"></script>
 
+
+    <script src="../../js/libs/swiper-4.5.0.min.js"></script>
+    <script src="../../js/libs/ScrollMagic.min.js"></script>
+    <script src="../../js/libs/TweenMax.min.js"></script>
+    <script src="../../js/libs/animation.gsap.js"></script>
+    <script src="https://www.youtube.com/player_api"></script>
+    <script src="../../js/findYoutube.js"></script>
+    <script src="../../js/menuFixed.js"></script>
 
 
 
 <script src="../../js/common.js"></script>
 
+
+    <script src="../../js/popup.js"></script>
 
 
 

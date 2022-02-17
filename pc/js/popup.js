@@ -179,4 +179,25 @@ jQuery(function () {
   }
 
   $(document).on('click', '.js-imgView-open', reviewImgView); //----
+  //------[임시::퍼블 확인용] 데이터 삽입시 지울것---------------------
+  // 주소검색 > 검색리스트 > 상세입력
+
+  function addressDepth() {
+    $('.form__search--btn').on('click', function () {
+      this.type = 'button';
+      console.log('??');
+      $('.address-search__section').removeClass('is-current');
+      $('.address-search__section').eq(1).addClass('is-current');
+    });
+    $('.zipcode-address .btn-v3').on('click', function () {
+      $('.address-search__section').removeClass('is-current');
+      $('.address-search__section').eq(2).addClass('is-current');
+    });
+    $('.js-popup-close').on('click', function () {
+      $('.address-search__section').removeClass('is-current');
+      $('.address-search__section').eq(0).addClass('is-current');
+    });
+  }
+
+  $(document).on('click', '.new-address .js-popup-open', addressDepth); //--------------------------------------------------------------------
 });
