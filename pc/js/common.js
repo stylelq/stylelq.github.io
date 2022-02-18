@@ -428,7 +428,7 @@ jQuery(function () {
     return this.checked ? chked(true) : chked(false);
   }
 
-  $(document).on('click', '.js-table-checkAll', checkBoxChkAll);
+  $(document).on('input', '.js-table-checkAll', checkBoxChkAll);
   /*------------------------
   * [dropdown::아코디언]
   ------------------------*/
