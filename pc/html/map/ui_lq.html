@@ -15,6 +15,7 @@
     <article class="select-custom__right">
         <h2>1. select custom</h2>
         <div class="wrap">
+            <h4>1-1. custom select - default </h4>
             <div class="filter__meta">
                 <!-- Select -->
                 <div class="filter__meta--select">
@@ -30,94 +31,204 @@
                 <!-- .Select -->
             </div>
     
-            <div class="lq-code">
+            <div class="lq-code row">
                 <textarea >
+<!-- HTML -->
 <!-- Select -->
-<div class="filter__meta">
-    <div class="filter__meta--select">
+<div class="selBox__meta">
+    <div class="selBox__meta--select">
         <input type="text" value="" class="hidden-input is-hide">
-        <p class="filter-custom__selected"><span class="selected_text">Sorting</span></p>
-        <ul class="filter-custom__select">
-            <li class="filter-custom__option"><a href="" class="filter-custom__link">New in</a></li>
-            <li class="filter-custom__option"><a href="" class="filter-custom__link">Best</a></li>
-            <li class="filter-custom__option"><a href="" class="filter-custom__link">Price low to high</a></li>
-            <li class="filter-custom__option"><a href="" class="filter-custom__link">Price high to low</a></li>
+        <p class="selBox-custom__selected"><span class="selected_text">Sorting</span></p>
+        <ul class="selBox-custom__select">
+            <li class="selBox-custom__option"><a href="" class="selBox-custom__link">New in</a></li>
+            <li class="selBox-custom__option"><a href="" class="selBox-custom__link">Best</a></li>
+            <li class="selBox-custom__option"><a href="" class="selBox-custom__link">Price low to high</a></li>
+            <li class="selBox-custom__option"><a href="" class="selBox-custom__link">Price high to low</a></li>
         </ul>
     </div>
 </div>
 <!-- .Select -->
-
+                </textarea>
+                <textarea>
+/* CSS */
+//custom 셀렉트
 //filter Select - custom
-.filter__meta {
-    position: relative;
-} 
-.filter-custom{
-    $this:&;
-    &__selected {
-        font-size: 12px;
-        font-weight: 400;
-        letter-spacing: 0.06em;
-        text-align: right;
-        margin-bottom: 10px;
-        cursor: pointer;
-        &:after{
-            content: '';
-            display: inline-block;
-            width: 7px;height: 4px;
-            background: url('../../images/common/select_arrow.png') no-repeat center center / contain;
-            background-size: 100%;
-        }
-        &.is-active:after{
-            transform: rotateZ(180deg);
-        }
-        .selected_text{margin-right: 10px;}
+.selBox{
+	&__meta--select{
+		position: relative;
+		width: calcRem(160rem);
+    &:not(:last-child){
+      margin-bottom: calcRem(10rem);
     }
-    
-    &__select{
-        font-size: 12px;
-        padding: 20px;
-        position: absolute;
-        top: 53px;
-        right: 0;
-        z-index: 100;
-        border: 1px solid $gray2;
-        width: 140px;
-        box-sizing: border-box;
-        background:$whiteColor;
-        display: none;
-    }
-    &__option{
-        &:not(:last-child){
-            margin-bottom: 15px;
-        }
-        #{$this}__link{
-            color: #000;
-            line-height: 19px;
-            position: relative;        
-            &:after{
-                content: '';
-                position:absolute;
-                bottom:-4px;left: 0;
-                width: 0;
-                height: 1px;
-                background:#000;
-                transition: all 0.5s;
-            }
-        }
 
-        &:hover,
-        &.is-current{
-            font-weight: $medium;
-            
-            #{$this}__link:after{
-                width: 100%; 
-            }
-        }
+    &.sel-disabled{
+      background-color: $gray2;
+      pointer-events: none;
+      padding: calcRem(5rem);
+      border: 1px solid $gray2;
+      .selBox-custom__selected{
+        border: 0;
+        padding: 0;
+      }
     }
-        
+    &.sel-border{
+      border: 1px solid $gray2;
+      padding: calcRem(5rem);
+      .selBox-custom__selected{
+        border: 0;
+        padding: 0;
+      }
+      .selBox-custom__select{
+        padding: calcRem(6rem);
+        top: 30px;
+        left: -1px;
+        width: 101%;
+      }
+    }
+	} 
+
+	&-custom{
+		$this:&;
+		&__selected {
+			@include body7;
+			text-align: left;
+			margin: 0;
+			padding-bottom: 5px;
+			border-bottom: 1px solid $gray2;
+			box-sizing: border-box;
+			cursor: pointer;
+			position: relative;
+			&:after{
+				content: '';
+				position: absolute;
+				top: 50%;right: 0;
+				transform: translateY(-50%);
+				width: 7px;height: 4px;
+				@include background('/images/common/ico_faq_arrow.svg','no-repeat center center / contain' );
+			}
+			&.is-active:after{
+				transform: rotateZ(180deg);
+			}
+			.selected_text{margin-right: 10px;}
+		}
+		
+		&__select{
+			font-size: 12px;
+			padding: 20px;
+			position: absolute;
+			top: 25px;
+			right: 0;
+			z-index: 100;
+			border: 1px solid $gray2;
+			width: 100%;
+			box-sizing: border-box;
+			background:$whiteColor;
+			display: none;
+		}
+		&__option{
+			text-align: left;
+			&:not(:last-child){
+				margin-bottom: 15px;
+			}
+			#{$this}__link{
+				color: #000;
+				line-height: 19px;
+				position: relative;        
+				&:after{
+					content: '';
+					position:absolute;
+					bottom:-4px;left: 0;
+					width: 0;
+					height: 1px;
+					background:#000;
+					transition: all 0.5s;
+				}
+
+        .sel-border &{
+          &::after{display: none;}
+        }
+			}
+	
+			&:hover,
+			&.is-current{
+				font-weight: $medium;
+				
+				#{$this}__link:after{
+					width: 100%; 
+				}
+			}
+		}
+			
+	}
 }
                 </textarea>
+                <textarea>
+/* JS */
+/*---------------------
+* [select] :: custom 
+---------------------*/
+// select dropdown
+function selectViewDropDown(selected){
+    var ele = selected;
+    if( $(ele).hasClass('is-active') ){
+        $(ele).removeClass('is-active');
+        $(ele).next().stop().slideUp();
+    }else{
+        $(ele).addClass('is-active');
+        $(ele).next().stop().slideDown();
+    }
+}
+// option view 
+function selectView(option){
+    var optName = option;
+       
+    $(optName).removeClass('is-current');
+    $(this).addClass('is-current');
+
+    function selectedTextChange(e){
+        var link = e.target,
+            value = link.innerText,
+            select = link.parentNode.parentNode; //ul
+
+        if( link.parentNode.className === optName.replace('.','') ){
+            //hidden input 에 value 값 넣기
+            $(select).siblings('.hidden-input').val(value);
+            $(select).siblings().find('.selected_text').text(value);
+
+            // selected Text변경 하고 옵션ul 닫기
+            $(select).siblings().removeClass('is-active');
+            $(select).stop().slideUp();
+        }
+        return false;
+    }
+    $(document).on('click',optName, selectedTextChange);
+    return false;
+}
+    
+// 리스트 소팅버튼
+function customSelect(){
+    selectViewDropDown(this);
+    selectView('.filter-custom__option');
+    return false;
+}
+$(document).on('click','.filter-custom__selected',customSelect);
+                </textarea>
             </div>
+        </div>
+
+        <div class="wrap">
+            <h4>1-2. custom select - border</h4>
+            <!-- Select -->
+            <div class="selBox__meta--select">
+                <input type="text" value="" class="hidden-input is-hide">
+                <p class="selBox-custom__selected"><span class="selected_text">FREESIZE</span></p>
+                <ul class="selBox-custom__select" style="display: none;">
+                    <li class="selBox-custom__option"><a href="" class="selBox-custom__link">FREESIZE</a></li>
+                    <li class="selBox-custom__option"><a href="" class="selBox-custom__link">M</a></li>
+                    <li class="selBox-custom__option"><a href="" class="selBox-custom__link">S</a></li>
+                </ul> 
+            </div>
+            <!-- .Select -->
         </div>
     </article>
 
@@ -126,38 +237,54 @@
 
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 <script type="text/javascript">
-    function customSelect(){
-        // sorting btn
-        if( $(this).hasClass('is-active') ){
-            $(this).removeClass('is-active');
-            $(this).next().stop().slideUp();
+    /*---------------------
+    * [select] :: custom 
+    ---------------------*/
+    // select dropdown
+    function selectViewDropDown(selected){
+        var ele = selected;
+        if( $(ele).hasClass('is-active') ){
+            $(ele).removeClass('is-active');
+            $(ele).next().stop().slideUp();
         }else{
-            $(this).addClass('is-active');
-            $(this).next().stop().slideDown();
+            $(ele).addClass('is-active');
+            $(ele).next().stop().slideDown();
         }
-      
-        // select option view
-        function selectView(){
-            var link = '[class $= __link]',
-                value = $(this).find(link).text(),
-                selectedLabel = $(this).parent().siblings('.filter-custom__selected'),
-                select = $(this).parent();
-            $('.filter-custom__option').removeClass('is-current')
-            $(this).addClass('is-current');
-            $(this).parent().siblings('.hidden-input').val(value);
-            selectedLabel.find('.selected_text').text(value);
-            selectedLabel.removeClass('is-active');
-            select.stop().slideUp();
-            
+    }
+    // option view 
+    function selectView(option){
+        var optName = option;
+           
+        $(optName).removeClass('is-current');
+        $(this).addClass('is-current');
+
+        function selectedTextChange(e){
+            var link = e.target,
+                value = link.innerText,
+                select = link.parentNode.parentNode; //ul
+
+            if( link.parentNode.className === optName.replace('.','') ){
+                //hidden input 에 value 값 넣기
+                $(select).siblings('.hidden-input').val(value);
+                $(select).siblings().find('.selected_text').text(value);
+
+                // selected Text변경 하고 옵션ul 닫기
+                $(select).siblings().removeClass('is-active');
+                $(select).stop().slideUp();
+            }
             return false;
         }
-        $(document).on('click','.filter-custom__option',selectView);
-
+        $(document).on('click',optName, selectedTextChange);
+        return false;
+    }
+    
+    // 리스트 소팅버튼
+    function customSelect(){
+        selectViewDropDown(this);
+        selectView('.filter-custom__option');
         return false;
     }
     $(document).on('click','.filter-custom__selected',customSelect);
-
-    
 </script>    
 </body>
 </html>
