@@ -30,23 +30,23 @@ article h2{
 .select-custom__right{
     margin: 20px;
 }
-/* .select-custom__right .wrap{
-    display: flex;
-} */
 .select-custom__right .wrap > div:first-child{
     width: 200px;
-    /* margin-right: 50px; */
 }
 .lq-code textarea{
     height: 150px;
     width: 100%;
     margin-top: 50px;
 }
+.lq-code.row{
+    display: flex;
+}
 
 /* select - custom */
 .filter__meta{
-    /* float:right; */
     position: relative;
+    margin-top: 30px;
+    width: 150px;
 }
 .filter-custom__selected{
     font-size: 12px;
