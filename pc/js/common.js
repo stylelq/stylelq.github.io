@@ -704,7 +704,6 @@ jQuery(function () {
         prevEl: ".special-slide__prev"
       }
     });
-<<<<<<< HEAD
   } // project - about 매장슬라이드
 
 
@@ -772,9 +771,6 @@ jQuery(function () {
     document.execCommand("copy");
     obShareUrl.blur();
   }
-=======
-  } //--END[swiper slider]-----------------------------
->>>>>>> 06d8ab69dabba8d65fbe9c573bab1359e6e91d4e
 
   var copyBtn = document.querySelector('.js-url-copy');
   copyBtn.addEventListener('click', CopyUrlToClipboard); //--END[swiper slider]-----------------------------
