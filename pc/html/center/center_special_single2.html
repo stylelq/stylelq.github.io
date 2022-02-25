@@ -64,7 +64,20 @@
                         <a href="#;" class="header-wrap__link js-search-open"></a>
                     </li>
                     <li class="header-wrap__item type-login">
-                        <a href="#;" class="header-wrap__link"></a>
+                        <a href="#;" class="header-wrap__link js-mypage"></a>
+                        <div class="header-mypage">
+                            <ul class="header-mypage__list">
+                                <li class="header-mypage__item">
+                                    <a href="https://www.stylelq.com/fr/mylouis/mylouisSubMain.do?site=1" class="header-mypage__link">my page</a>
+                                </li>
+                                <li class="header-mypage__item">
+                                    <a href="https://www.stylelq.com/fr/mylouis/contents/wishList.do?searchType=wish" class="header-mypage__link">wish list</a>
+                                </li>
+                                <li class="header-mypage__item">
+                                    <a href="https://www.stylelq.com/fr/manager/logout.do?site=1" class="header-mypage__link">logout</a>
+                                </li>
+                            </ul>
+                        </div>
                     </li>
                     <li class="header-wrap__item type-cart">
                         <a href="#;" class="header-wrap__link"></a>
@@ -413,28 +426,29 @@
 </div>
 <!-- .lnb -->
         <section class="service-center">
-            <div class="center-right__head">
-                <p class="center-right__title">STORES</p>
-            </div>
-            <!-- 탭 -->
-            <div class="stores-tab js-fixed-check">
-                <ul class="stores-tab__fix">
-                    <li class="stores-tab__item">
-                        <a href="#;" class="stores-tab__link js-stores-tab">LOCATION</a>
-                    </li>
-                    <li class="stores-tab__item">
-                        <a href="#;" class="stores-tab__link js-stores-tab">GLOBAL</a>
-                    </li>
-                    <li class="stores-tab__item is-current">
-                        <a href="#;" class="stores-tab__link js-stores-tab">SPECIAL</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- 탭 -->
-            <!-- 컨텐츠 -->
-            <div class="stores-tab__cont">
-                <div class="stores-tab__info">
-                    <!-- Location -->
+            <div class="center-stores__wrap">
+                <div class="center-right__head">
+                    <p class="center-right__title">STORES</p>
+                </div>
+                <!-- 탭 -->
+                <div class="stores-tab js-fixed-check">
+                    <ul class="stores-tab__fix">
+                        <li class="stores-tab__item">
+                            <a href="#;" class="stores-tab__link js-stores-tab">LOCATION</a>
+                        </li>
+                        <li class="stores-tab__item">
+                            <a href="#;" class="stores-tab__link js-stores-tab">GLOBAL</a>
+                        </li>
+                        <li class="stores-tab__item is-current">
+                            <a href="#;" class="stores-tab__link js-stores-tab">SPECIAL</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 탭 -->
+                <!-- 컨텐츠 -->
+                <div class="stores-tab__cont">
+                    <div class="stores-tab__info">
+                        <!-- Location -->
 <div class="stores-filter bg-gray">
     <div class="stores-filter__list">
         <div class="stores-filter__item">
@@ -568,9 +582,9 @@
 </div>
 <!-- .list -->
 <!-- .Location -->
-                </div>
-                <div class="stores-tab__info">
-                    <!-- global -->
+                    </div>
+                    <div class="stores-tab__info">
+                        <!-- global -->
 <div class="stores-global">
     <div class="stores-global__section">
         <div class="stores-global__title">ON-LINE</div>
@@ -730,69 +744,70 @@
     </div>
 </div>
 <!-- .global -->
-                </div>
-                <div class="stores-tab__info is-current">
-                    <div class="special-single">
-                        <!-- special Slide -->
-                        <div class="special-slide">
-                            <div class="swiper-container special-slide__container">
-                                <div class="swiper-wrapper special-slide__wrapper">
-                                    <div class='swiper-slide special-slide__item'>
-                                        <div class="special-slide__inner">
-                                            <img class="special-slide__img" src="../../images/stores/special2-dummy1.jpg" alt="" />
+                    </div>
+                    <div class="stores-tab__info is-current">
+                        <div class="special-single">
+                            <!-- special Slide -->
+                            <div class="special-slide">
+                                <div class="swiper-container special-slide__container">
+                                    <div class="swiper-wrapper special-slide__wrapper">
+                                        <div class='swiper-slide special-slide__item'>
+                                            <div class="special-slide__inner">
+                                                <img class="special-slide__img" src="../../images/stores/special2-dummy1.jpg" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class='swiper-slide detail-thumb__item'>
+                                            <div class="special-slide__inner">
+                                                <img class="special-slide__img" src="../../images/stores/special2-dummy2.jpg" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class='swiper-slide detail-thumb__item'>
+                                            <div class="special-slide__inner">
+                                                <img class="special-slide__img" src="../../images/stores/special2-dummy3.jpg" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class='swiper-slide detail-thumb__item'>
+                                            <div class="special-slide__inner">
+                                                <img class="special-slide__img" src="../../images/stores/special2-dummy4.jpg" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class='swiper-slide detail-thumb__item'>
+                                            <div class="special-slide__inner">
+                                                <img class="special-slide__img" src="../../images/stores/special2-dummy5.jpg" alt="" />
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class='swiper-slide detail-thumb__item'>
-                                        <div class="special-slide__inner">
-                                            <img class="special-slide__img" src="../../images/stores/special2-dummy2.jpg" alt="" />
-                                        </div>
-                                    </div>
-                                    <div class='swiper-slide detail-thumb__item'>
-                                        <div class="special-slide__inner">
-                                            <img class="special-slide__img" src="../../images/stores/special2-dummy3.jpg" alt="" />
-                                        </div>
-                                    </div>
-                                    <div class='swiper-slide detail-thumb__item'>
-                                        <div class="special-slide__inner">
-                                            <img class="special-slide__img" src="../../images/stores/special2-dummy4.jpg" alt="" />
-                                        </div>
-                                    </div>
-                                    <div class='swiper-slide detail-thumb__item'>
-                                        <div class="special-slide__inner">
-                                            <img class="special-slide__img" src="../../images/stores/special2-dummy5.jpg" alt="" />
-                                        </div>
-                                    </div>
+                                    <div class="swiper-button-next special-slide__next"></div>
+                                    <div class="swiper-button-prev special-slide__prev"></div>
                                 </div>
-                                <div class="swiper-button-next special-slide__next"></div>
-                                <div class="swiper-button-prev special-slide__prev"></div>
+                                <div class="swiper-pagination  special-slide__pagination"></div>
                             </div>
-                            <div class="swiper-pagination  special-slide__pagination"></div>
-                        </div>
-                        <!-- .special Slide -->
-                        <!-- content -->
-                        <div class="special-single__body">
-                            <div class="wrap">
-                                <div class="special-single__header">
-                                    <h2 class="special-single__title">LOUIS QUATORZE PLATFORM-L FLAGSHIP STORE</h2>
-                                    <a href="https://platform-l.org" class="special-single__sub" target="_blank">https://platform-l.org</a>
-                                </div>
-                                <div class="special-single__cont">
-                                    <h3 class="title">루이까또즈가 예술이 되는 공간</h3>
-                                    <p>루이까또즈에서 설립하고 후원하는 복합문화공간 ‘플랫폼-엘 컨템포러리 아트센터’(플랫폼-엘)에는 아름다운 중정 옆에 자리한 루이까또즈 플래그십스토어가 있습니다.</p>
-                                    <p>루이까또즈 플랫폼-엘점은 '루이까또즈가 예술이 되는 공간'을 컨셉으로, 브랜드가 추구하는 패션과 예술 그리고 문화를 일상 속에서 편하고 부담없이 만나볼 수 있는 공간으로 꾸며졌습니다. 매장에는 가죽 핸드백과 지갑, 스카프를 비롯한 최신 컬렉션부터 루이까또즈와 파트너십을 맺은 라이프스타일 브랜드의 리빙 소품, 전시 관련 아트 컬래버레이션 제품까지 다채롭게 준비되어 있습니다. 기존 매장에서 찾아볼 수 없었던 도서 공간에서는 예술, 패션, 라이프스타일 서적까지 트렌드를 한 눈에 읽고 마음에 드는 도서를 현장 구매할 수 있습니다.</p>
-                                    <p>마치 전시장에서 예술 작품을 전시해놓듯 하나의 공간 안에 다양한 아트웍으로 구성된 루이까또즈의 새로운 플래그십스토어를 만나보세요.</p>
-                                    <div class="email">협업 문의 : <a href="mailto:artshop@platform-L.org">artshop@platform-L.org</a></div>
-                                </div>
-                                <div class="special-single__btn">
-                                    <a href="#;" class="btn-v1 type-white btn-v1--small">LIST</a>
+                            <!-- .special Slide -->
+                            <!-- content -->
+                            <div class="special-single__body">
+                                <div class="wrap">
+                                    <div class="special-single__header">
+                                        <h2 class="special-single__title">LOUIS QUATORZE PLATFORM-L FLAGSHIP STORE</h2>
+                                        <a href="https://platform-l.org" class="special-single__sub" target="_blank">https://platform-l.org</a>
+                                    </div>
+                                    <div class="special-single__cont">
+                                        <h3 class="title">루이까또즈가 예술이 되는 공간</h3>
+                                        <p>루이까또즈에서 설립하고 후원하는 복합문화공간 ‘플랫폼-엘 컨템포러리 아트센터’(플랫폼-엘)에는 아름다운 중정 옆에 자리한 루이까또즈 플래그십스토어가 있습니다.</p>
+                                        <p>루이까또즈 플랫폼-엘점은 '루이까또즈가 예술이 되는 공간'을 컨셉으로, 브랜드가 추구하는 패션과 예술 그리고 문화를 일상 속에서 편하고 부담없이 만나볼 수 있는 공간으로 꾸며졌습니다. 매장에는 가죽 핸드백과 지갑, 스카프를 비롯한 최신 컬렉션부터 루이까또즈와 파트너십을 맺은 라이프스타일 브랜드의 리빙 소품, 전시 관련 아트 컬래버레이션 제품까지 다채롭게 준비되어 있습니다. 기존 매장에서 찾아볼 수 없었던 도서 공간에서는 예술, 패션, 라이프스타일 서적까지 트렌드를 한 눈에 읽고 마음에 드는 도서를 현장 구매할 수 있습니다.</p>
+                                        <p>마치 전시장에서 예술 작품을 전시해놓듯 하나의 공간 안에 다양한 아트웍으로 구성된 루이까또즈의 새로운 플래그십스토어를 만나보세요.</p>
+                                        <div class="email">협업 문의 : <a href="mailto:artshop@platform-L.org">artshop@platform-L.org</a></div>
+                                    </div>
+                                    <div class="special-single__btn">
+                                        <a href="#;" class="btn-v1 type-white btn-v1--small">LIST</a>
+                                    </div>
                                 </div>
                             </div>
+                            <!-- .content -->
                         </div>
-                        <!-- .content -->
                     </div>
                 </div>
+                <!-- .컨텐츠 -->
             </div>
-            <!-- .컨텐츠 -->
         </section>
     </div>
 </div>

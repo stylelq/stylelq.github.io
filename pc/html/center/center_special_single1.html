@@ -64,7 +64,20 @@
                         <a href="#;" class="header-wrap__link js-search-open"></a>
                     </li>
                     <li class="header-wrap__item type-login">
-                        <a href="#;" class="header-wrap__link"></a>
+                        <a href="#;" class="header-wrap__link js-mypage"></a>
+                        <div class="header-mypage">
+                            <ul class="header-mypage__list">
+                                <li class="header-mypage__item">
+                                    <a href="https://www.stylelq.com/fr/mylouis/mylouisSubMain.do?site=1" class="header-mypage__link">my page</a>
+                                </li>
+                                <li class="header-mypage__item">
+                                    <a href="https://www.stylelq.com/fr/mylouis/contents/wishList.do?searchType=wish" class="header-mypage__link">wish list</a>
+                                </li>
+                                <li class="header-mypage__item">
+                                    <a href="https://www.stylelq.com/fr/manager/logout.do?site=1" class="header-mypage__link">logout</a>
+                                </li>
+                            </ul>
+                        </div>
                     </li>
                     <li class="header-wrap__item type-cart">
                         <a href="#;" class="header-wrap__link"></a>
@@ -413,28 +426,29 @@
 </div>
 <!-- .lnb -->
         <section class="service-center">
-            <div class="center-right__head">
-                <p class="center-right__title">STORES</p>
-            </div>
-            <!-- 탭 -->
-            <div class="stores-tab js-fixed-check">
-                <ul class="stores-tab__fix">
-                    <li class="stores-tab__item">
-                        <a href="#;" class="stores-tab__link js-stores-tab">LOCATION</a>
-                    </li>
-                    <li class="stores-tab__item">
-                        <a href="#;" class="stores-tab__link js-stores-tab">GLOBAL</a>
-                    </li>
-                    <li class="stores-tab__item is-current">
-                        <a href="#;" class="stores-tab__link js-stores-tab">SPECIAL</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- 탭 -->
-            <!-- 컨텐츠 -->
-            <div class="stores-tab__cont">
-                <div class="stores-tab__info">
-                    <!-- Location -->
+            <div class="center-stores__wrap">
+                <div class="center-right__head">
+                    <p class="center-right__title">STORES</p>
+                </div>
+                <!-- 탭 -->
+                <div class="stores-tab js-fixed-check">
+                    <ul class="stores-tab__fix">
+                        <li class="stores-tab__item">
+                            <a href="#;" class="stores-tab__link js-stores-tab">LOCATION</a>
+                        </li>
+                        <li class="stores-tab__item">
+                            <a href="#;" class="stores-tab__link js-stores-tab">GLOBAL</a>
+                        </li>
+                        <li class="stores-tab__item is-current">
+                            <a href="#;" class="stores-tab__link js-stores-tab">SPECIAL</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 탭 -->
+                <!-- 컨텐츠 -->
+                <div class="stores-tab__cont">
+                    <div class="stores-tab__info">
+                        <!-- Location -->
 <div class="stores-filter bg-gray">
     <div class="stores-filter__list">
         <div class="stores-filter__item">
@@ -568,9 +582,9 @@
 </div>
 <!-- .list -->
 <!-- .Location -->
-                </div>
-                <div class="stores-tab__info">
-                    <!-- global -->
+                    </div>
+                    <div class="stores-tab__info">
+                        <!-- global -->
 <div class="stores-global">
     <div class="stores-global__section">
         <div class="stores-global__title">ON-LINE</div>
@@ -730,74 +744,75 @@
     </div>
 </div>
 <!-- .global -->
-                </div>
-                <div class="stores-tab__info is-current">
-                    <div class="special-single">
-                        <!-- special Slide -->
-                        <div class="special-slide">
-                            <div class="swiper-container special-slide__container">
-                                <div class="swiper-wrapper special-slide__wrapper">
-                                    <div class='swiper-slide special-slide__item'>
-                                        <div class="special-slide__inner">
-                                            <img class="special-slide__img" src="../../images/stores/special-dummy1.jpg" alt="" />
+                    </div>
+                    <div class="stores-tab__info is-current">
+                        <div class="special-single">
+                            <!-- special Slide -->
+                            <div class="special-slide">
+                                <div class="swiper-container special-slide__container">
+                                    <div class="swiper-wrapper special-slide__wrapper">
+                                        <div class='swiper-slide special-slide__item'>
+                                            <div class="special-slide__inner">
+                                                <img class="special-slide__img" src="../../images/stores/special-dummy1.jpg" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class='swiper-slide detail-thumb__item'>
+                                            <div class="special-slide__inner">
+                                                <img class="special-slide__img" src="../../images/stores/special-dummy2.jpg" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class='swiper-slide detail-thumb__item'>
+                                            <div class="special-slide__inner">
+                                                <img class="special-slide__img" src="../../images/stores/special-dummy3.jpg" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class='swiper-slide detail-thumb__item'>
+                                            <div class="special-slide__inner">
+                                                <img class="special-slide__img" src="../../images/stores/special-dummy4.jpg" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class='swiper-slide detail-thumb__item'>
+                                            <div class="special-slide__inner">
+                                                <img class="special-slide__img" src="../../images/stores/special-dummy5.jpg" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class='swiper-slide detail-thumb__item'>
+                                            <div class="special-slide__inner">
+                                                <img class="special-slide__img" src="../../images/stores/special-dummy6.jpg" alt="" />
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class='swiper-slide detail-thumb__item'>
-                                        <div class="special-slide__inner">
-                                            <img class="special-slide__img" src="../../images/stores/special-dummy2.jpg" alt="" />
-                                        </div>
-                                    </div>
-                                    <div class='swiper-slide detail-thumb__item'>
-                                        <div class="special-slide__inner">
-                                            <img class="special-slide__img" src="../../images/stores/special-dummy3.jpg" alt="" />
-                                        </div>
-                                    </div>
-                                    <div class='swiper-slide detail-thumb__item'>
-                                        <div class="special-slide__inner">
-                                            <img class="special-slide__img" src="../../images/stores/special-dummy4.jpg" alt="" />
-                                        </div>
-                                    </div>
-                                    <div class='swiper-slide detail-thumb__item'>
-                                        <div class="special-slide__inner">
-                                            <img class="special-slide__img" src="../../images/stores/special-dummy5.jpg" alt="" />
-                                        </div>
-                                    </div>
-                                    <div class='swiper-slide detail-thumb__item'>
-                                        <div class="special-slide__inner">
-                                            <img class="special-slide__img" src="../../images/stores/special-dummy6.jpg" alt="" />
-                                        </div>
-                                    </div>
+                                    <div class="swiper-button-next special-slide__next"></div>
+                                    <div class="swiper-button-prev special-slide__prev"></div>
                                 </div>
-                                <div class="swiper-button-next special-slide__next"></div>
-                                <div class="swiper-button-prev special-slide__prev"></div>
+                                <div class="swiper-pagination special-slide__pagination"></div>
                             </div>
-                            <div class="swiper-pagination special-slide__pagination"></div>
-                        </div>
-                        <!-- .special Slide -->
-                        <!-- content -->
-                        <div class="special-single__body">
-                            <div class="wrap">
-                                <div class="special-single__header">
-                                    <h2 class="special-single__title">PARIS FLAGSHIP STORE</h2>
-                                    <div class="special-single__sub">06 rue Vieille du Temple 75003 Paris</div>
-                                </div>
-                                <div class="special-single__cont">
-                                    <p>2009년 10월 파리 마레 지역 새롭게 오픈한 루이까또즈 파리 매장은 현대작가들의 작품전시회와 피카소박물관 등의 깊은 역사와 볼거리가 가득한 마레지역에 위치하고 있으며, 브랜드 오리진이 느껴지는 인테리어로 한국의 청담 플레그십 스토어와 루이까또즈 백화점 매장의 리뉴얼의 모티브가 되기도 하였습니다.</p>
-                                    <p>루이까또즈의 파리 매장은 베르사이유 궁전 중에서도 가장 매력적으로 꼽히는 거울의 방을 모티브로 합니다. 큰 창을 통해 매장으로 들어오는 빛과 유니크한 인테리어 소품들이 서로 거울에 반사되며 신비로운 느낌을 자아냅니다. 화이트 컬러로 덮인 매장 내부의 유리와 거울장식이 반사하는 빛의 섬세한 화려함은 마치 베르사이유 궁전의 거울의 방에 온듯한 착각을 불러 일으키는데요. 루이 14세 시대의 화려한 문화, 예술적 감성의 인테리어와 모던하고 미래 지향적인 루이까또즈의 제품의 조화는 루이까또즈 매장만의 신비로운 매력입니다.</p>
-                                    <p>2층으로 된 파리매장 안은 쇼핑을 즐기는 스타일리쉬한 파리지앵들의 마음을 사로잡는 창의적인 오브제들로 가득합니다.차이니즈 블루컬러의 나무로 된 계단과 독특한 인테리어는 17세기, 루이 14세 시절부터 내려오던 장인들의 노하우에 현대적 모던함이 가미되어 탄생하게 되었는데요.파리샵의 모습 중 가장 흥미로운 점은, 다양하고 개성 있는 가구들 입니다.</p>
-                                    <p>호기심 캐비닛”이라는 진열장 안에 빈티지한 액세서리와 현대 장식품들, 루이까또즈만의 유일한 또 다른 컬렉션을 감상 할 수 있습니다. 소품 하나에서도 루이까또즈의 섬세함을 느낄 수 있는데요, 한국 매장에서도 프랑스의 매장을 경험하실 수 있습니다.</p>
-                                    <p>프랑스 파리의 깊은 역사와 볼거리가 가득한 마레지구에 위치한 루이까또즈 매장은 단지, 패션이 아닌 루이까또즈만의 오랜 전통, 역사와 현대의 모던함, 그리고 창의적인 디자인과 문화들의 결합으로 새로움을 더하고 있습니다.</p>
-                                </div>
-                                <div class="special-single__btn">
-                                    <a href="#;" class="btn-v1 type-white btn-v1--small">LIST</a>
+                            <!-- .special Slide -->
+                            <!-- content -->
+                            <div class="special-single__body">
+                                <div class="wrap">
+                                    <div class="special-single__header">
+                                        <h2 class="special-single__title">PARIS FLAGSHIP STORE</h2>
+                                        <div class="special-single__sub">06 rue Vieille du Temple 75003 Paris</div>
+                                    </div>
+                                    <div class="special-single__cont">
+                                        <p>2009년 10월 파리 마레 지역 새롭게 오픈한 루이까또즈 파리 매장은 현대작가들의 작품전시회와 피카소박물관 등의 깊은 역사와 볼거리가 가득한 마레지역에 위치하고 있으며, 브랜드 오리진이 느껴지는 인테리어로 한국의 청담 플레그십 스토어와 루이까또즈 백화점 매장의 리뉴얼의 모티브가 되기도 하였습니다.</p>
+                                        <p>루이까또즈의 파리 매장은 베르사이유 궁전 중에서도 가장 매력적으로 꼽히는 거울의 방을 모티브로 합니다. 큰 창을 통해 매장으로 들어오는 빛과 유니크한 인테리어 소품들이 서로 거울에 반사되며 신비로운 느낌을 자아냅니다. 화이트 컬러로 덮인 매장 내부의 유리와 거울장식이 반사하는 빛의 섬세한 화려함은 마치 베르사이유 궁전의 거울의 방에 온듯한 착각을 불러 일으키는데요. 루이 14세 시대의 화려한 문화, 예술적 감성의 인테리어와 모던하고 미래 지향적인 루이까또즈의 제품의 조화는 루이까또즈 매장만의 신비로운 매력입니다.</p>
+                                        <p>2층으로 된 파리매장 안은 쇼핑을 즐기는 스타일리쉬한 파리지앵들의 마음을 사로잡는 창의적인 오브제들로 가득합니다.차이니즈 블루컬러의 나무로 된 계단과 독특한 인테리어는 17세기, 루이 14세 시절부터 내려오던 장인들의 노하우에 현대적 모던함이 가미되어 탄생하게 되었는데요.파리샵의 모습 중 가장 흥미로운 점은, 다양하고 개성 있는 가구들 입니다.</p>
+                                        <p>호기심 캐비닛”이라는 진열장 안에 빈티지한 액세서리와 현대 장식품들, 루이까또즈만의 유일한 또 다른 컬렉션을 감상 할 수 있습니다. 소품 하나에서도 루이까또즈의 섬세함을 느낄 수 있는데요, 한국 매장에서도 프랑스의 매장을 경험하실 수 있습니다.</p>
+                                        <p>프랑스 파리의 깊은 역사와 볼거리가 가득한 마레지구에 위치한 루이까또즈 매장은 단지, 패션이 아닌 루이까또즈만의 오랜 전통, 역사와 현대의 모던함, 그리고 창의적인 디자인과 문화들의 결합으로 새로움을 더하고 있습니다.</p>
+                                    </div>
+                                    <div class="special-single__btn">
+                                        <a href="#;" class="btn-v1 type-white btn-v1--small">LIST</a>
+                                    </div>
                                 </div>
                             </div>
+                            <!-- .content -->
                         </div>
-                        <!-- .content -->
                     </div>
                 </div>
+                <!-- .컨텐츠 -->
             </div>
-            <!-- .컨텐츠 -->
         </section>
     </div>
 </div>
