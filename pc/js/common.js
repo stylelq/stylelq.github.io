@@ -512,16 +512,20 @@ jQuery(function () {
   //상품상세
 
   if ($('.detail-thumb').length > 0) {
-    var slideButtonClassName = function slideButtonClassName() {
+    var slideButtonClassName = function slideButtonClassName(ele) {
       $('.detail-thumb--prev, .detail-thumb--next').removeClass('swiper-button-disabled');
 
-      if (this.activeIndex === 0) {
+      if (ele.activeIndex === 0) {
         $('.detail-thumb--prev').addClass('swiper-button-disabled');
       }
 
-      if (this.activeIndex === this.imagesLoaded - 1) {
+      if (ele.activeIndex === ele.imagesLoaded - 1) {
         $('.detail-thumb--next').addClass('swiper-button-disabled');
       }
+
+      console.group('-----------');
+      console.log('ee : ', ele);
+      console.groupEnd();
     };
 
     var detailThumbSlide = new Swiper('.detail-thumb__container', {
@@ -539,30 +543,10 @@ jQuery(function () {
       },
       on: {
         slideChange: function slideChange() {
-          $('.detail-thumb--prev, .detail-thumb--next').removeClass('swiper-button-disabled');
-
-          if (this.activeIndex === 0) {
-            $('.detail-thumb--prev').addClass('swiper-button-disabled');
-          }
-
-          if (this.activeIndex === this.imagesLoaded - 1) {
-            $('.detail-thumb--next').addClass('swiper-button-disabled');
-          }
+          slideButtonClassName(this);
         },
         click: function click() {
-          $('.detail-thumb--prev, .detail-thumb--next').removeClass('swiper-button-disabled');
-
-          if (this.activeIndex === 0) {
-            $('.detail-thumb--prev').addClass('swiper-button-disabled');
-          }
-
-          if (this.activeIndex === this.imagesLoaded - 1) {
-            $('.detail-thumb--next').addClass('swiper-button-disabled');
-          }
-
-          console.group('-----------');
-          console.log('click : ', this);
-          console.groupEnd();
+          slideButtonClassName(this);
         }
       }
     });
