@@ -51,7 +51,7 @@ $('.js-play-btn').on('click', function () {
   } else {
     var areaElem = $(this);
     var areaNum = areaElem.attr('class').replace(/[^0-9]/g, '') - 1;
-    areaElem.find('.project-video__intro').addClass('is-hide');
+    areaElem.find('.content-video__intro').addClass('is-hide');
     videoNum = areaNum;
     objAry[videoNum].playVideo();
   }
