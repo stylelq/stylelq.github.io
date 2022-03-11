@@ -411,7 +411,7 @@
                     <span class="lnb__line">상품 리뷰</span>
                 </a>
             </li>
-            <li class="lnb__item is-active">
+            <li class="lnb__item false">
                 <a href="" class="lnb__link">
                     <span class="lnb__line">Wish List</span>
                 </a>
@@ -450,7 +450,7 @@
                     <span class="lnb__line">비밀번호 변경</span>
                 </a>
             </li>
-            <li class="lnb__item false">
+            <li class="lnb__item is-active">
                 <a href="" class="lnb__link">
                     <span class="lnb__line">배송지 관리</span>
                 </a>
@@ -465,123 +465,146 @@
     <!-- .lnbMenu -->
 </div>
 <!-- .lnb -->
-        <section class="service-center">
-            <div class="myReserves-contents">
+        <section class="service-center myAddressModify">
+            <div class="myAddressModify-center">
                 <div class="center-right__head">
-                    <p class="center-right__title">Wish List</p>
+                    <p class="center-right__title">배송지 관리</p>
                 </div>
-
-                <!-- 리스트 -->
-                <section class="wishList-section">
-                    <div class="wish-list">
-                        <!-- item -->
-                        <div class="order-list__item">
-                            <div class="checkbox-point">
-                                <input class="checkbox-point__input sr-only" type="checkbox" name="cart" id="cart1" >
-                                <label for="cart1" class="checkbox-point__label"><span class="sr-only">체크</span></label>
-                            </div>
-                            <div class="detail-Meta">
-                                <a href="#;" class="detail-Meta__thumb"><img class="detail-Meta__img" src="../../images/dummy/detail-img1.jpg" alt="" /></a>
-                                <h2 class="detail-Meta__title">oalc SINGLE BREASTED HARRIS TWEED JACKET 싱글브레스트 해리스 트위드 재킷 (Beige)</h2>
-                                <div class="detail-Meta__price">
-                                    <span class="detail-Meta__price--sale">328,000원</span>
-                                    <span class="detail-Meta__price--current">289,290원</span>
-                                    <a href="#benefitsPop" class="detail-Meta__benefit js-popup-open">benefit</a>
-                                </div>
-                            </div>
-                            <div class="order-list__btn">
-                                <div class="detail-Meta__btn">
-                                    <a href="" class="btn-v3 btn-v3--small type-primary">Add to Cart</a>
-                                </div>
-                                <div class="detail-Meta__btn">
-                                    <a href="" class="btn-v3 btn-v3--small type-white">삭제하기</a>
+                <!-- 배송지 입력 form -->
+                <div class="address-info__form">
+                    <!-- item -->
+                    <div class="address-info__group">
+                        <div class="address-info__label">배송지명</div>
+                        <div class="address-info__list">
+                            <div class="address-info__inner">
+                                <input type="text" class="form__input--text" placeholder="배송지명">
+                                <div class="form__checkbox">
+                                    <input class="form__checkbox--input form__checkbox--big-red sr-only" type="checkbox" name="addressList" id="addressList">
+                                    <label class="form__checkbox--text" for="addressList">기본배송지로 설정</label>
                                 </div>
                             </div>
                         </div>
-                        <!-- //item -->
-                        
-                        <!-- item -->
-                        <div class="order-list__item">
-                            <div class="checkbox-point">
-                                <input class="checkbox-point__input sr-only" type="checkbox" name="cart" id="cart2" >
-                                <label for="cart2" class="checkbox-point__label"><span class="sr-only">체크</span></label>
-                            </div>
-                            <div class="detail-Meta">
-                                <a href="#;" class="detail-Meta__thumb"><img class="detail-Meta__img" src="../../images/dummy/product_img3.png" alt="" /></a>
-                                <h2 class="detail-Meta__title">oalc SINGLE BREASTED HARRIS TWEED JACKET 싱글브레스트 해리스 트위드 재킷 (Beige)</h2>
-                                <div class="detail-Meta__price">
-                                    <span class="detail-Meta__price--sale">328,000원</span>
-                                    <span class="detail-Meta__price--current">289,290원</span>
-                                    <a href="#benefitsPop" class="detail-Meta__benefit js-popup-open">benefit</a>
-                                </div>
-                            </div>
-                            <div class="order-list__btn">
-                                <div class="detail-Meta__btn">
-                                    <a href="" class="btn-v3 btn-v3--small type-primary">Add to Cart</a>
-                                </div>
-                                <div class="detail-Meta__btn">
-                                    <a href="" class="btn-v3 btn-v3--small type-white">삭제하기</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- //item -->
-                        
-                        <!-- item -->
-                        <div class="order-list__item">
-                            <div class="checkbox-point">
-                                <input class="checkbox-point__input sr-only" type="checkbox" name="cart" id="cart3" >
-                                <label for="cart3" class="checkbox-point__label"><span class="sr-only">체크</span></label>
-                            </div>
-                            <div class="detail-Meta">
-                                <a href="#;" class="detail-Meta__thumb"><img class="detail-Meta__img" src="../../images/dummy/product_img4.png" alt="" /></a>
-                                <h2 class="detail-Meta__title">oalc SINGLE BREASTED HARRIS TWEED JACKET 싱글브레스트 해리스 트위드 재킷 (Beige)</h2>
-                                <div class="detail-Meta__price">
-                                    <span class="detail-Meta__price--sale">328,000원</span>
-                                    <span class="detail-Meta__price--current">289,290원</span>
-                                    <a href="#benefitsPop" class="detail-Meta__benefit js-popup-open">benefit</a>
-                                </div>
-                            </div>
-                            <div class="order-list__btn">
-                                <div class="detail-Meta__btn">
-                                    <a href="" class="btn-v3 btn-v3--small type-primary">Add to Cart</a>
-                                </div>
-                                <div class="detail-Meta__btn">
-                                    <a href="" class="btn-v3 btn-v3--small type-white">삭제하기</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- //item -->
-
                     </div>
+                    <!-- //item -->
 
-                    <div class="wishList-bottom__list">
-                        <div class="list-btn">
-                            <a href="" class="btn-v3 btn-v3--small type-white">선택상품 삭제</a>
-                            <a href="" class="btn-v3 btn-v3--small type-primary">Add to Cart</a>
+                    <!-- item -->
+                    <div class="address-info__group">
+                        <div class="address-info__label">받으시는분</div>
+                        <div class="address-info__list">
+                            <div class="address-info__inner">
+                                <input type="text" class="form__input--text" placeholder="성명">
+                            </div>
                         </div>
-                        <!-- 유의사항 -->
-                        <ul class="center-bullet">
-                            <li class="center-bullet__item">판매중단, 일시 품절된 상품은 리스트에서 삭제될 수 있습니다.</li>
-                        </ul>
-                        <!-- .유의사항 -->
                     </div>
-
-                    <!-- paging -->
-<div class="paging">
-    <ul class="paging__list">
-        <li class="paging__item paging__item--prev"><a class="paging__link" href="#;"><span class="sr-only">prev</span></a></li>
-        <li class="paging__item is-current"><span class="paging__link">1</span></li>
-        <li class="paging__item"><a class="paging__link" href="#;">2</a></li>
-        <li class="paging__item"><a class="paging__link" href="#;">3</a></li>
-        <li class="paging__item"><a class="paging__link" href="#;">4</a></li>
-        <li class="paging__item"><a class="paging__link" href="#;">5</a></li>
-        <li class="paging__item paging__item--next"><a class="paging__link" href="#;"><span class="sr-only">next</span></a></li>
-    </ul>
-</div>
-<!-- .paging -->
-                </section>
-                <!-- .리스트 -->
+                    <!-- //item -->
+                
+                    <!-- item -->
+                    <div class="address-info__group">
+                        <div class="address-info__label">연락처</div>
+                        <div class="address-info__list">
+                            <div class="address-info__inner">
+                                <ul class="address-info__inner--list">
+                                    <li class="address-info__inner--item">
+                                        <select name="wirteOption" id="addressSelect1" class="form__select js-placeholder" title="선택">
+                                            <option value="" disabled="">선택</option>
+                                            <option value="010" selected="">010</option>
+                                            <option value="011">011</option>
+                                            <option value="016">016</option>
+                                            <option value="017">017</option>
+                                            <option value="018">018</option>
+                                            <option value="019">019</option>
+                                        </select>
+                                    </li>
+                                    <li class="address-info__inner--item">
+                                        <input type="number" class="form__input--text" title="연락처1 중간 번호" placeholder="연락처1" maxlength="4">
+                                    </li>
+                                    <li class="address-info__inner--item">
+                                        <input type="number" class="form__input--text" title="연락처1 마지막 번호" maxlength="4">
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //item -->
+                
+                    <!-- item -->
+                    <div class="address-info__group">
+                        <div class="address-info__label">추가연락처</div>
+                        <div class="address-info__list">
+                            <div class="address-info__inner">
+                                <ul class="address-info__inner--list">
+                                    <li class="address-info__inner--item">
+                                        <select name="wirteOption" id="addressSelect2" class="form__select js-placeholder" title="선택">
+                                            <option value="" disabled="">선택</option>
+                                            <option value="02">02</option>
+                                            <option value="031">031</option>
+                                            <option value="032">032</option>
+                                            <option value="033">033</option>
+                                            <option value="041">041</option>
+                                            <option value="042">042</option>
+                                            <option value="043">043</option>
+                                            <option value="044">044</option>
+                                            <option value="051">051</option>
+                                            <option value="052">052</option>
+                                            <option value="053">053</option>
+                                            <option value="054">054</option>
+                                            <option value="055">055</option>
+                                            <option value="061">061</option>
+                                            <option value="062">062</option>
+                                            <option value="063">063</option>
+                                            <option value="064">064</option>
+                                            <option value="070">070</option>
+                                        </select>
+                                    </li>
+                                    <li class="address-info__inner--item">
+                                        <input type="number" class="form__input--text" title="연락처1 중간 번호" placeholder="연락처1" maxlength="4">
+                                    </li>
+                                    <li class="address-info__inner--item">
+                                        <input type="number" class="form__input--text" title="연락처1 마지막 번호" maxlength="4">
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //item -->
+                
+                    <!-- item -->
+                    <div class="address-info__group">
+                        <div class="address-info__label">주소</div>
+                        <div class="address-info__list">
+                            <!-- inner -->
+                            <div class="address-info__inner address-info__inner--btn">
+                                <input type="text" class="form__input--text" title="우편번호"  placeholder="우편번호" readonly>
+                                <a href="#addressPop" class="form__input--btn js-popup-open">주소검색</a>
+                            </div>
+                            <!-- .inner -->
+                            <!-- inner -->
+                            <div class="address-info__item">
+                                <input type="text" class="form__input--text" title="중간 주소" readonly>
+                            </div>
+                            <!-- .inner -->
+                            <!-- inner -->
+                            <div class="address-info__item">
+                                <input type="text" class="form__input--text" title="상세 주소">
+                            </div>
+                            <!-- .inner -->
+                        </div>
+                    </div>
+                    <!-- .item -->
+                </div>
+                <!-- //배송지 입력 form -->   
             </div>
+
+            <div class="btn-group btn-inquiry__group">
+                <ul class="btn-group__list type-two">
+                    <li class="btn-group__item">
+                        <button class="btn-group__btn btn-v1 btn-v1--small type-white">취소</button>
+                    </li>
+                    <li class="btn-group__item">
+                        <button class="btn-group__btn btn-v1 btn-v1--small type-primary">저장</button>
+                    </li>
+                </ul>
+            </div>  
         </section>
     </div>
 </div>
@@ -658,12 +681,325 @@
         </div>
     </div>
 </footer>
-<!-- cart-fix -->
-<div class="cart-fix">
-    <a href="#;" class="cart-fix__add"><span class="cart-fix__add--count">2</span></a>
-    <div class="cart-fix__top js-scrollTop"><span class="sr-only">맨위로</span></div>
+<!-- terms popup -->
+<section id="addressPop" class="small-popup">
+    <div class="small-popup__dim"></div>
+    <section class="small-popup__body">
+        <div class="small-popup__header">
+            <h3 class="small-popup__header--title">주소 검색</h3>
+            <a class="small-popup__close js-popup-close" href="#;"><span class="sr-only">닫기</span></a>
+        </div>
+
+        <div class="wrap">
+            <div class="address-search">
+                <!-- 주소검색(1) -->
+                <div class="address-search__section is-current"><!-- 현재 보고있는 컨텐츠에 is-current -->
+                    <div class="address-search__form">
+                        <div class="form__search">
+                            <input type="text" class="form__search--input" name="keyword" id="keyword" autocomplete="off" placeholder="Search" required="">
+                            <button type="submit" class="form__search--btn"><span class="sr-only">검색</span></button>
+                        </div>
+                    </div>
+                    <p class="address-search__text">도로명과 건물명을 같이 입력하면 더 정확하게 검색됩니다.</p>
+                    <ul class="address-search__list">
+                        <li class="address-search__item">도로명+건물번호<br />예) 하정로 26</li>
+                        <li class="address-search__item">건물명<br />예) 태진사옥</li>
+                        <li class="address-search__item">지번<br />예) 신설동 93-15</li>
+                    </ul>
+                </div>
+                <!-- .주소검색(1) -->
+                <!-- 주소검색(2) -->
+                <div class="address-search__section">
+                    <div class="address-search__form">
+                        <div class="form__search">
+                            <input type="text" class="form__search--input" name="keyword" id="keyword" autocomplete="off" placeholder="Search" required="">
+                            <button type="submit" class="form__search--btn"><span class="sr-only">검색</span></button>
+                        </div>
+                    </div>
+                    <!-- list -->
+                    <div class="address-list">
+                        <ul class="address-list__inner">
+                            <li class="address-list__item">
+                                <div class="zipcode-address">
+                                    <div class="zipcode-address__zip">02586</div>
+                                    <div class="zipcode-address__cont">
+                                        <span class="zipcode-address__cont--zip">[도로명] 서울특별시 동대문구 하정로 4</span>
+                                        <span class="zipcode-address__cont--address">(신설동) [지번] 서울특별시 동대문구 신설동 94-35</span>
+                                    </div>
+                                    <button class="btn-v3 btn-v3--small type-primary">선택</button>
+                                </div>
+                            </li>
+                            <li class="address-list__item">
+                                <div class="zipcode-address">
+                                    <div class="zipcode-address__zip">02586</div>
+                                    <div class="zipcode-address__cont">
+                                        <span class="zipcode-address__cont--zip">[도로명] 서울특별시 동대문구 하정로 4</span>
+                                        <span class="zipcode-address__cont--address">(신설동) [지번] 서울특별시 동대문구 신설동 94-35</span>
+                                    </div>
+                                    <button class="btn-v3 btn-v3--small type-primary">선택</button>
+                                </div>
+                            </li>
+                            <li class="address-list__item">
+                                <div class="zipcode-address">
+                                    <div class="zipcode-address__zip">02586</div>
+                                    <div class="zipcode-address__cont">
+                                        <span class="zipcode-address__cont--zip">[도로명] 서울특별시 동대문구 하정로 4</span>
+                                        <span class="zipcode-address__cont--address">(신설동) [지번] 서울특별시 동대문구 신설동 94-35</span>
+                                    </div>
+                                    <button class="btn-v3 btn-v3--small type-primary">선택</button>
+                                </div>
+                            </li>
+                            <li class="address-list__item">
+                                <div class="zipcode-address">
+                                    <div class="zipcode-address__zip">02586</div>
+                                    <div class="zipcode-address__cont">
+                                        <span class="zipcode-address__cont--zip">[도로명] 서울특별시 동대문구 하정로 4</span>
+                                        <span class="zipcode-address__cont--address">(신설동) [지번] 서울특별시 동대문구 신설동 94-35</span>
+                                    </div>
+                                    <button class="btn-v3 btn-v3--small type-primary">선택</button>
+                                </div>
+                            </li>
+                            <li class="address-list__item">
+                                <div class="zipcode-address">
+                                    <div class="zipcode-address__zip">02586</div>
+                                    <div class="zipcode-address__cont">
+                                        <span class="zipcode-address__cont--zip">[도로명] 서울특별시 동대문구 하정로 4</span>
+                                        <span class="zipcode-address__cont--address">(신설동) [지번] 서울특별시 동대문구 신설동 94-35</span>
+                                    </div>
+                                    <button class="btn-v3 btn-v3--small type-primary">선택</button>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- .list -->
+                    <!-- paging -->
+<div class="paging">
+    <ul class="paging__list">
+        <li class="paging__item paging__item--prev"><a class="paging__link" href="#;"><span class="sr-only">prev</span></a></li>
+        <li class="paging__item is-current"><span class="paging__link">1</span></li>
+        <li class="paging__item"><a class="paging__link" href="#;">2</a></li>
+        <li class="paging__item"><a class="paging__link" href="#;">3</a></li>
+        <li class="paging__item"><a class="paging__link" href="#;">4</a></li>
+        <li class="paging__item"><a class="paging__link" href="#;">5</a></li>
+        <li class="paging__item paging__item--next"><a class="paging__link" href="#;"><span class="sr-only">next</span></a></li>
+    </ul>
 </div>
-<!-- .cart-fix -->
+<!-- .paging -->
+                </div>
+                <!-- .주소검색(2) -->
+                <!-- 주소검색(3) -->
+                <div class="address-search__section">
+                    <div class="zipcode-address__cont">
+                        <span class="zipcode-address__cont--zip">(02586) 서울특별시 동대문구 하정로 4 (신설동)</span>
+                        <span class="zipcode-address__cont--address">(신설동) [지번] 서울특별시 동대문구 신설동 94-35</span>
+                    </div>
+                    <div class="zipcode-address__form">
+                        <input type="text" class="form__input--text" title="나머지 주소(동/호수, 층수)" placeholder="나머지 주소(동/호수, 층수)">
+                    </div>
+                    <div class="address-search__btn">
+                        <ul class="address-search__btn--list">
+                            <li class="address-search__btn--item">
+                                <a href="javascript:void(0)" class="btn-v1 type-primary">주소입력</a>
+                            </li>
+                            <li class="address-search__btn--item">
+                                <a href="javascript:void(0)" class="btn-v1 type-white">다른 주소 검색</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- .주소검색(3) -->
+            </div>
+        </div>
+    </section>
+</section>
+<!-- shipping popup -->
+<section id="addressModifyPop" class="small-popup pop-addModify">
+    <div class="small-popup__dim"></div>
+
+    <section class="small-popup__body">
+        <a class="small-popup__close js-popup-close" href="#;"><span class="sr-only">닫기</span></a>
+        <div class="small-popup__header">
+            <h3 class="small-popup__header--title align-center">배송지 변경</h3>
+        </div>
+        
+        <div class="wrap">
+            <!-- confirm Footer -->
+            <div class="small-popup-confirm__btn">
+                <ul class="small-popup-confirm__list">
+                    <li class="small-popup-confirm__item"><a class="popup-confirm__link js-popup-open" href="#addressAddPop">새로운 주소로 입력</a></li>
+                </ul>
+            </div>
+            <!-- .confirm Footer -->
+            <!-- 내주소록 -->
+            <div class="my-address">
+                <ul class="my-address__list">
+                    <li class="my-address__item">
+                        <div class="my-address__user">홍길동 / 회사<span class="form__radio--select"></span> 
+                            <button class="my-address__btn btn-v3 btn-v3--small type-primary">선택</button>
+                        </div>
+                        <div class="my-address__text">(02586) 서울시 동대문구 하정로 26 (신설동) 3F</div>
+                        <div class="my-address__tel">010-1234-5678</div>                       
+                    </li>
+                    <li class="my-address__item">
+                        <div class="my-address__user">홍길동 / 회사<span class="form__radio--select">[기본배송지]</span>
+                            <button class="my-address__btn btn-v3 btn-v3--small type-primary">선택</button>
+                        </div>
+                        <div class="my-address__text">(02586) 서울시 동대문구 하정로 26 (신설동) 3F</div>
+                        <div class="my-address__tel">010-1234-5678</div>                       
+                    </li>
+                </ul>
+            </div>
+            <!-- .내주소록 -->
+        </div>
+        
+    </section>
+</section>
+<!-- .shipping popup -->
+
+
+
+
+
+<!-- terms popup -->
+<section id="addressAddPop" class="popup type-write popup-addressAdd">
+    <div class="popup__dim"></div>
+    <section class="popup__body">
+        <a class="popup__close js-popup-close" href="#;"><span class="sr-only">닫기</span></a>
+        <div class="popup__header">
+            <h3 class="popup__header--title">새로운 주소</h3>
+        </div>
+        <div class="wrap">
+            <div class="address-add">
+                <div class="address-info__form">
+                    <!-- item -->
+                    <div class="address-info__group">
+                        <div class="address-info__label">받는분</div>
+                        <div class="address-info__list">
+                            <div class="address-info__inner">
+                                <input type="text" class="form__input--text" placeholder="받는 분">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //item -->
+
+                    <!-- item -->
+                    <div class="address-info__group">
+                        <div class="address-info__label">연락처</div>
+                        <div class="address-info__list">
+                            <div class="address-info__inner">
+                                <ul class="address-info__inner--list">
+                                    <li class="address-info__inner--item">
+                                        <select name="wirteOption" id="addressSelect1" class="form__select js-placeholder" title="선택">
+                                            <option value="" disabled="">선택</option>
+                                            <option value="010" selected="">010</option>
+                                            <option value="011">011</option>
+                                            <option value="016">016</option>
+                                            <option value="017">017</option>
+                                            <option value="018">018</option>
+                                            <option value="019">019</option>
+                                        </select>
+                                    </li>
+                                    <li class="address-info__inner--item">
+                                        <input type="number" class="form__input--text" title="연락처1 중간 번호" placeholder="연락처1" maxlength="4">
+                                    </li>
+                                    <li class="address-info__inner--item">
+                                        <input type="number" class="form__input--text" title="연락처1 마지막 번호" maxlength="4">
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //item -->
+
+                    <!-- item -->
+                    <div class="address-info__group">
+                        <div class="address-info__label">추가연락처</div>
+                        <div class="address-info__list">
+                            <div class="address-info__inner">
+                                <ul class="address-info__inner--list">
+                                    <li class="address-info__inner--item">
+                                        <select name="wirteOption" id="addressSelect2" class="form__select js-placeholder" title="선택">
+                                            <option value="" disabled="">선택</option>
+                                            <option value="02">02</option>
+                                            <option value="031">031</option>
+                                            <option value="032">032</option>
+                                            <option value="033">033</option>
+                                            <option value="041">041</option>
+                                            <option value="042">042</option>
+                                            <option value="043">043</option>
+                                            <option value="044">044</option>
+                                            <option value="051">051</option>
+                                            <option value="052">052</option>
+                                            <option value="053">053</option>
+                                            <option value="054">054</option>
+                                            <option value="055">055</option>
+                                            <option value="061">061</option>
+                                            <option value="062">062</option>
+                                            <option value="063">063</option>
+                                            <option value="064">064</option>
+                                            <option value="070">070</option>
+                                        </select>
+                                    </li>
+                                    <li class="address-info__inner--item">
+                                        <input type="number" class="form__input--text" title="연락처1 중간 번호" placeholder="연락처1" maxlength="4">
+                                    </li>
+                                    <li class="address-info__inner--item">
+                                        <input type="number" class="form__input--text" title="연락처1 마지막 번호" maxlength="4">
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //item -->
+
+                    <!-- item -->
+                    <div class="address-info__group">
+                        <div class="address-info__label">주소</div>
+                        <div class="address-info__list">
+                            <!-- inner -->
+                            <div class="address-info__inner address-info__inner--btn">
+                                <input type="text" class="form__input--text" title="우편번호"  placeholder="우편번호" readonly>
+                                <a href="#addressPop" class="form__input--btn js-popup-open">주소검색</a>
+                            </div>
+                            <!-- .inner -->
+                            <!-- inner -->
+                            <div class="address-info__item">
+                                <input type="text" class="form__input--text" title="중간 주소" readonly>
+                            </div>
+                            <!-- .inner -->
+                            <!-- inner -->
+                            <div class="address-info__item">
+                                <input type="text" class="form__input--text" title="상세 주소">
+                            </div>
+                            <!-- .inner -->
+                            <!-- inner -->
+                            <div class="address-info__inner">
+                                <div class="form__checkbox">
+                                    <input class="form__checkbox--input form__checkbox--big-red sr-only" type="checkbox" name="addressList" id="addressList">
+                                    <label class="form__checkbox--text" for="addressList">배송지목록에 추가</label>
+                                </div>
+                            </div>
+                            <!-- .inner -->
+                        </div>
+                    </div>
+                    <!-- .item -->
+                </div>
+            </div>
+            <div class="btn-group btn-popup__group">
+                <ul class="btn-group__list type-two">
+                    <li class="btn-group__item">
+                        <button class="btn-group__btn btn-v1 btn-v1--small type-white">취소</button>
+                    </li>
+                    <li class="btn-group__item">
+                        <button class="btn-group__btn btn-v1 btn-v1--small type-primary">저장</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</section>
+
+
 
 <script src="../../js/libs/jquery-3.6.0.min.js"></script>
 
@@ -672,6 +1008,8 @@
 
 <script src="../../js/common.js"></script>
 
+
+    <script src="../../js/popup.js"></script>
 
 
 
