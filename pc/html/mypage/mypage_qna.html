@@ -30,11 +30,10 @@
 
     
     
-        <link rel="stylesheet" href="../../css/pages/product.css">
-        <link rel="stylesheet" href="../../css/pages/platform.css">
     
     
     
+        <link rel="stylesheet" href="../../css/pages/mypage.css">
     
     
     
@@ -381,180 +380,236 @@
 <!-- contents start -->
 <div class="container">
     <div class="site-main">
-        <section class="platform">
-            <!-- 플랫폼 탭 -->
-<div class="product-tab">
-    <ul class="product-tab__fix">
-        <li class="product-tab__item">
-            <a href="#" class="product-tab__link js-basic-tab-link">Exhibition</a>
-        </li>
-        <li class="product-tab__item is-current">
-            <a href="#" class="product-tab__link js-basic-tab-link">ALL Works </a>
-        </li>
-        <li class="product-tab__item">
-            <a href="#" class="product-tab__link js-basic-tab-link">L Edition</a>
-        </li>
-        <li class="product-tab__item">
-            <a href="#" class="product-tab__link js-basic-tab-link">Art Object</a>
-        </li>
-        <li class="product-tab__item">
-            <a href="#" class="product-tab__link js-basic-tab-link">Textile & Fashion</a>
-        </li>
-        <li class="product-tab__item">
-            <a href="#" class="product-tab__link js-basic-tab-link">Printed Matter</a>
-        </li>
-    </ul>
-</div>
-<!-- //탭 -->
-
-            <!-- platform video -->
-            <div class="platform-banner platform-banner--img"><!-- 안에 이미지가 들어갈시 platform-banner--img 클래스, 비디오 추가시 platform-banner--video 클래스 추가 -->
-                <img class="platform-banner__img" src="../../images/platform/mo_TextileFashion.jpg" alt="" />
-            </div>
-            <!-- .platform video -->
-
-            <!-- _platformFilter noSort= true 값이면 오른쪽 소팅 버튼 숨기기. [noSort = true/false]  -->
-            <!-- Product List Filter -->
-
-<div class="list-filter ">
-    <div class="wrap">
-        <div class="filter__state">
-            <span class="filter__state--tit">플랫폼엘</span> [<strong class="filter__state--data">50</strong>]
-        </div>
-        <div class="filter__meta">
-            <!-- Select -->
-            <div class="filter__meta--select">
-                <input type="text" value="" class="hidden-input is-hide">
-                <p class="filter-custom__selected"><span class="selected_text">Sorting</span></p>
-                <ul class="filter-custom__select">
-                    <li class="filter-custom__option"><a href="" class="filter-custom__link">New in</a></li>
-                    <li class="filter-custom__option"><a href="" class="filter-custom__link">Best</a></li>
-                    <li class="filter-custom__option"><a href="" class="filter-custom__link">Price low to high</a></li>
-                    <li class="filter-custom__option"><a href="" class="filter-custom__link">Price high to low</a></li>
-                </ul>
-            </div>
-            <!-- .Select -->
-        </div>
+        <!-- lnb -->
+<div class="lnb">
+    <div class="lnb__tit">MY LOUIS</div>
+    <!-- lnbMenu -->
+    <div class="lnb__wrap">
+        <ul class="lnb__list">
+            <li class="lnb__item false">
+                <a href="" class="lnb__link">
+                    <span class="lnb__line">주문배송조회</span>
+                </a>
+            </li>
+            <li class="lnb__item false">
+                <a href="" class="lnb__link">
+                    <span class="lnb__line">취소/반품</span>
+                </a>
+            </li>
+            <li class="lnb__item false">
+                <a href="" class="lnb__link">
+                    <span class="lnb__line">쿠폰</span>
+                </a>
+            </li>
+            <li class="lnb__item false">
+                <a href="" class="lnb__link">
+                    <span class="lnb__line">적립금</span>
+                </a>
+            </li>
+            <li class="lnb__item false">
+                <a href="" class="lnb__link">
+                    <span class="lnb__line">상품 리뷰</span>
+                </a>
+            </li>
+            <li class="lnb__item false">
+                <a href="" class="lnb__link">
+                    <span class="lnb__line">Wish List</span>
+                </a>
+            </li>
+        </ul>
+        <ul class="lnb__list">
+            <li class="lnb__item false">
+                <a href="" class="lnb__link">
+                    <span class="lnb__line">1:1 문의</span>
+                </a>
+            </li>
+            <li class="lnb__item is-active">
+                <a href="" class="lnb__link">
+                    <span class="lnb__line">상품 Q&A</span>
+                </a>
+            </li>
+            <li class="lnb__item false">
+                <a href="" class="lnb__link">
+                    <span class="lnb__line">재입고 알림 내역</span>
+                </a>
+            </li>
+            <li class="lnb__item false">
+                <a href="" class="lnb__link">
+                    <span class="lnb__line">이벤트 참여현황</span>
+                </a>
+            </li>
+        </ul>
+        <ul class="lnb__list">
+            <li class="lnb__item false">
+                <a href="" class="lnb__link">
+                    <span class="lnb__line">회원정보수정</span>
+                </a>
+            </li>
+            <li class="lnb__item false">
+                <a href="" class="lnb__link">
+                    <span class="lnb__line">비밀번호 변경</span>
+                </a>
+            </li>
+            <li class="lnb__item false">
+                <a href="" class="lnb__link">
+                    <span class="lnb__line">배송지 관리</span>
+                </a>
+            </li>
+            <li class="lnb__item false">
+                <a href="" class="lnb__link">
+                    <span class="lnb__line">회원 탈퇴</span>
+                </a>
+            </li>
+        </ul>
     </div>
+    <!-- .lnbMenu -->
 </div>
-<!-- .Product List Filter -->
-            <!-- product post -->
-            <div class="product-post product-post--post">
-                <ul class="product-post__list">
-                    <li class="product-post__item">
+<!-- .lnb -->
+        <section class="service-center myQna">
+            <div class="myQna-center">
+                <div class="center-right__head">
+                    <p class="center-right__title">상품 Q&A</p>
+                </div>
+
+                <!-- list -->
+                <div class="myQna-wrap">
+                    <ul class="myQna-wrap__list">
                         <!-- item -->
-                        <div class="product-item">
-                            <a href="" class="product-item__link">
-                                <div class="product-item__state">SOLD OUT</div>
-                                <div class="product-item__thumb">
-                                    <img class="product-item__img" src="../../images/dummy/platform-dummy5-1.jpg" alt="" />
-                                </div>
-                                <div class="product-item__cont">
-                                    <div class="product-item__title">Martens and Martens KM Wrinkle Bag HP4CD35BW</div>
-                                    <div class="product-item__price">
-                                        <span class="product-item__price--sale">328,000원</span>
-                                        <span class="product-item__price--current">289,290원</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
+                        <li class="myQna-wrap__item">
+                            <div class="myQna-item">
+                                <dl class="myQna-item__inner">
+                                    <dt class="myQna-item__title">
+                                        <a href="#;" class="myQna-item__link js-myQna-more">
+                                            <div class="myQna-item__thumb">
+                                                <img class="myQna-item__img" src="../../images/dummy/inquiry_thumbs.png" alt="">
+                                            </div>
+                                            <div class="myQna-item__info">
+                                                <div class="myQna-item__pre">루이까또즈 1980 MONOGRAM 남성
+                                                    메신저백 MO4MG04NA</div>
+                                                <div class="myQna-item__state">
+                                                    <span class="myQna-item__tag inquiry-item__end">완료</span>
+                                                    <!-- 대기:inquiry-item__waiting 완료:inquiry-item__end -->
+                                                    <span class="myQna-item__state--title">루이까또즈 LQ리그 모노그램 토트백 MO2PM02GA 상품에 대하여</span>
+                                                </div>
+                                            </div>
+                                            <div class="myQna-item__cont--head">
+                                                <div class="myQna-item__date">2021.06.25</div>
+                                            </div>
+                                        </a>
+                                    </dt>
+                                    <dd class="myQna-item__cont">
+                                        <!-- 더미 -->
+                                        <div class="myQna-item__cont--body">
+                                            <div class="myQna-item__cont--pre">
+                                                안녕하세요. 해당 상품을 매장에서 직접보고 구매하고 싶은데 서울 지역 어느 매장을 방문하면 될까요?
+                                            </div>
+                                        </div>
+                                        <div class="myQna-item__cont--anc bg-gray">
+                                            <div class="myQna-item__bullet--string">A.</div>
+                                            <div class="myQna-item__cont--pre">
+                                            안녕하세요.고객님<br>
+                                            루이까또즈 직영몰 담당자 입니다.<br>
+                                            항상 저희 루이까또즈를 찾아 주셔서 감사합니다.<br>
+                                            금일 오후 1시 이전까지 결제를 해주실 경우에는 당일출고가 되오며 금일 오후 1시 이후 주문건은 익일 출고가 됩니다.
+                                            </div>
+                                        </div>
+                                        <!-- .더미 -->
+                                    </dd>
+                                </dl>
+                            </div>
+                        </li>
                         <!-- .item -->
-                    </li>
-                    <li class="product-post__item">
+
                         <!-- item -->
-                        <div class="product-item">
-                            <a href="" class="product-item__link">
-                                <div class="product-item__state">NEW</div>
-                                <div class="product-item__thumb">
-                                    <img class="product-item__img" src="../../images/dummy/platform-dummy5-2.jpg" alt="" />
-                                </div>
-                                <div class="product-item__cont">
-                                    <div class="product-item__title">Martens and Martens KM Wrinkle Bag HP4CD35BW</div>
-                                    <div class="product-item__price">
-                                        <span class="product-item__price--sale">328,000원</span>
-                                        <span class="product-item__price--current">289,290원</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
+                        <li class="myQna-wrap__item">
+                            <div class="myQna-item">
+                                <dl class="myQna-item__inner">
+                                    <dt class="myQna-item__title">
+                                        <a href="#;" class="myQna-item__link js-myQna-more">
+                                            <div class="myQna-item__thumb">
+                                                <img class="myQna-item__img" src="../../images/dummy/product_img2.png" alt="">
+                                            </div>
+                                            <div class="myQna-item__info">
+                                                <div class="myQna-item__pre">루이까또즈 1980 MONOGRAM 남성
+                                                    메신저백 MO4MG04NA</div>
+                                                <div class="myQna-item__state">
+                                                    <span class="myQna-item__tag inquiry-item__end">완료</span>
+                                                    <!-- 대기:inquiry-item__waiting 완료:inquiry-item__end -->
+                                                    <span class="myQna-item__state--title">루이까또즈 LQ리그 모노그램 토트백 MO2PM02GA 상품에 대하여</span>
+                                                </div>
+                                            </div>
+                                            <div class="myQna-item__cont--head">
+                                                <div class="myQna-item__date">2021.06.25</div>
+                                            </div>
+                                        </a>
+                                    </dt>
+                                    <dd class="myQna-item__cont">
+                                        <!-- 더미 -->
+                                        <div class="myQna-item__cont--body">
+                                            <div class="myQna-item__cont--pre">
+                                                안녕하세요. 해당 상품을 매장에서 직접보고 구매하고 싶은데 서울 지역 어느 매장을 방문하면 될까요?
+                                            </div>
+                                        </div>
+                                        <div class="myQna-item__cont--anc bg-gray">
+                                            <div class="myQna-item__bullet--string">A.</div>
+                                            <div class="myQna-item__cont--pre">
+                                            안녕하세요.고객님<br>
+                                            루이까또즈 직영몰 담당자 입니다.<br>
+                                            항상 저희 루이까또즈를 찾아 주셔서 감사합니다.<br>
+                                            금일 오후 1시 이전까지 결제를 해주실 경우에는 당일출고가 되오며 금일 오후 1시 이후 주문건은 익일 출고가 됩니다.
+                                            </div>
+                                        </div>
+                                        <!-- .더미 -->
+                                    </dd>
+                                </dl>
+                            </div>
+                        </li>
                         <!-- .item -->
-                    </li>
-                    <li class="product-post__item">
+
                         <!-- item -->
-                        <div class="product-item">
-                            <a href="" class="product-item__link">
-                                <div class="product-item__thumb">
-                                    <img class="product-item__img" src="../../images/dummy/platform-dummy5-1.jpg" alt="" />
-                                </div>
-                                <div class="product-item__cont">
-                                    <div class="product-item__title">Martens and Martens KM Wrinkle Bag HP4CD35BW</div>
-                                    <div class="product-item__price">
-                                        <span class="product-item__price--sale">328,000원</span>
-                                        <span class="product-item__price--current">289,290원</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
+                        <li class="myQna-wrap__item">
+                            <div class="myQna-item">
+                                <dl class="myQna-item__inner">
+                                    <dt class="myQna-item__title">
+                                        <a href="#;" class="myQna-item__link js-myQna-more">
+                                            <div class="myQna-item__thumb">
+                                                <img class="myQna-item__img" src="../../images/dummy/detail-img1.jpg" alt="">
+                                            </div>
+                                            <div class="myQna-item__info">
+                                                <div class="myQna-item__pre">루이까또즈 1980 MONOGRAM 남성
+                                                    메신저백 MO4MG04NA</div>
+                                                <div class="myQna-item__state">
+                                                    <span class="myQna-item__tag inquiry-item__waiting">대기</span>
+                                                    <!-- 대기:inquiry-item__waiting 완료:inquiry-item__end -->
+                                                    <span class="myQna-item__state--title">매장 재고 여부</span>
+                                                </div> 
+                                            </div>
+                                            <div class="myQna-item__cont--head">
+                                                <div class="myQna-item__date">2021.06.25</div>
+                                            </div>
+                                        </a>
+                                    </dt>
+                                    <dd class="myQna-item__cont">
+                                       <!-- 더미 -->
+                                        <div class="myQna-item__cont--body">
+                                            <div class="myQna-item__cont--pre">
+                                            안녕하세요. 해당 상품을 매장에서 직접보고 구매하고싶은데 서울 지역 어느 매장을 방문하면 될까요?
+                                            </div>
+                                        </div>
+                                        <div class="myQna-item__btn">
+                                            <a href="#qnaWrite" class="myQna-btn js-popup-open">수정</a>
+                                            <a href="#" class="myQna-btn">삭제</a>
+                                        </div>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </li>
                         <!-- .item -->
-                    </li>
-                    <li class="product-post__item">
-                        <!-- item -->
-                        <div class="product-item">
-                            <a href="" class="product-item__link">
-                                <div class="product-item__thumb">
-                                    <img class="product-item__img" src="../../images/dummy/platform-dummy5-2.jpg" alt="" />
-                                </div>
-                                <div class="product-item__cont">
-                                    <div class="product-item__title">Martens and Martens KM Wrinkle Bag HP4CD35BW</div>
-                                    <div class="product-item__price">
-                                        <span class="product-item__price--sale">328,000원</span>
-                                        <span class="product-item__price--current">289,290원</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- .item -->
-                    </li>
-                    <li class="product-post__item">
-                        <!-- item -->
-                        <div class="product-item">
-                            <a href="" class="product-item__link">
-                                <div class="product-item__thumb">
-                                    <img class="product-item__img" src="../../images/dummy/platform-dummy5-1.jpg" alt="" />
-                                </div>
-                                <div class="product-item__cont">
-                                    <div class="product-item__title">Martens and Martens KM Wrinkle Bag HP4CD35BW</div>
-                                    <div class="product-item__price">
-                                        <span class="product-item__price--sale">328,000원</span>
-                                        <span class="product-item__price--current">289,290원</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- .item -->
-                    </li>
-                    <li class="product-post__item">
-                        <!-- item -->
-                        <div class="product-item">
-                            <a href="" class="product-item__link">
-                                <div class="product-item__thumb">
-                                    <img class="product-item__img" src="../../images/dummy/platform-dummy5-2.jpg" alt="" />
-                                </div>
-                                <div class="product-item__cont">
-                                    <div class="product-item__title">Martens and Martens KM Wrinkle Bag HP4CD35BW</div>
-                                    <div class="product-item__price">
-                                        <span class="product-item__price--sale">328,000원</span>
-                                        <span class="product-item__price--current">289,290원</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- .item -->
-                    </li>
-                </ul>
-            </div>
-            <!-- .product post -->
-            <!-- paging -->
+
+                    </ul>
+                </div>
+                <!-- list -->
+                <!-- paging -->
 <div class="paging">
     <ul class="paging__list">
         <li class="paging__item paging__item--prev"><a class="paging__link" href="#;"><span class="sr-only">prev</span></a></li>
@@ -567,6 +622,15 @@
     </ul>
 </div>
 <!-- .paging -->
+            </div>
+            <!-- 유의사항 -->
+            <div class="myQna-info">
+                <ul class="center-bullet">
+                    <li class="center-bullet__item">상품과 관계가 없는 내용이나 비방성 글은 등록자에게 사전 동의 없이 임의로 삭제될 수 있습니다.</li>
+                    <li class="center-bullet__item">답변완료된 문의는 수정, 삭제 하실 수 없습니다.</li>
+                </ul>
+            </div>
+            <!-- .유의사항 -->
         </section>
     </div>
 </div>
@@ -643,12 +707,76 @@
         </div>
     </div>
 </footer>
-<!-- cart-fix -->
-<div class="cart-fix">
-    <a href="#;" class="cart-fix__add"><span class="cart-fix__add--count">2</span></a>
-    <div class="cart-fix__top js-scrollTop"><span class="sr-only">맨위로</span></div>
-</div>
-<!-- .cart-fix -->
+<!-- qna write popup -->
+<section id="qnaWrite" class="popup type-write">
+    <div class="popup__dim"></div>
+    <section class="popup__body">
+        <a class="popup__close js-popup-close" href="#;"><span class="sr-only">닫기</span></a>
+        <div class="popup__header">
+            <h3 class="popup__header--title">상품 Q&A 작성</h3>
+        </div>
+        <div class="wrap">
+            <div class="popup-write__header">
+                <div class="popup-write__thumb"><img class="popup-write__img" src="../../images/dummy/detail-img1.jpg" alt="" /></div>
+                <div class="popup-write__cont">
+                    <div class="popup-write__cont--title">루이까또즈 MINI CAVIAR (미니캐비어) 사첼백 HO1PM21IV</div>
+                </div>
+            </div>
+            <!-- qna write form -->
+            <div class="popup-write__form">
+                <dl class="popup-write__group">
+                    <dt><div class="popup-write__label">문의유형</div></dt>
+                    <dd>
+                        <div class="popup-write__form--item">
+                            <select name="wirteOption" id="wirteOption" class="form__select js-placeholder" title="문의 유형 선택">
+                                <option value="" disabled selected>문의 유형 선택</option>
+                                <option value="all">전체</option>
+                                <option value="size">사이즈</option>
+                                <option value="color">디자인/색상</option>
+                                <option value="etc">기타</option>
+                            </select>
+                        </div>
+                    </dd>
+                </dl>
+                
+                <dl class="popup-write__group">
+                    <dt><div class="popup-write__label">제목</div></dt>
+                    <dd>
+                        <div class="popup-write__form--item">
+                            <input type="text" class="form__input--text" title="제목" placeholder="제목을 입력해 주세요">
+                        </div>
+                    </dd>
+                </dl>
+
+                <dl class="popup-write__group">
+                    <dt><div class="popup-write__label">내용</div></dt>
+                    <dd>
+                        <div class="popup-write__form--item">
+                            <textarea class="form__input--textarea" title="내용" placeholder="문의하실 내용을 입력해 주세요"></textarea>
+                        </div>
+                        <div class="popup-write__form--item">
+                            <div class="form__checkbox">
+                                <input class="form__checkbox--input sr-only" type="checkbox" name="private" id="private">
+                                <label class="form__checkbox--text" for="private">비공개</label>
+                            </div>
+                        </div>
+                        <p class="popup-write__form--info">본 게시판과 관련이 없거나 광고성, 단순 반복성, 저작권 침해 등 불건전한 내용을 올리실 경우 통보 없이 임의로 삭제 처리될 수 있습니다.</p>
+                    </dd>
+                </dl>
+            </div>
+            <!-- .qna write form -->
+        </div>
+        <!-- wirte Footer -->
+        <div class="popup-write__footer">
+            <ul class="popup-write__list">
+                <li class="popup-write__item"><a class="popup-write__link" href="javascript:void(0);">취소</a></li>
+                <li class="popup-write__item"><a class="popup-write__link" href="javascript:void(0);">저장</a></li>
+            </ul>
+        </div>
+        <!-- .wirte Footer -->
+    </section>
+</section>
+<!-- .qna write popup -->
 
 <script src="../../js/libs/jquery-3.6.0.min.js"></script>
 
@@ -658,9 +786,13 @@
 <script src="../../js/common.js"></script>
 
 
+    <script src="../../js/popup.js"></script>
 
 
 
+
+
+    <script src="../../js/libs/swiper-4.5.0.min.js"></script>
 
 
 </body>

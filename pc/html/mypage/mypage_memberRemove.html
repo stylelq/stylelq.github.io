@@ -30,11 +30,10 @@
 
     
     
-        <link rel="stylesheet" href="../../css/pages/product.css">
-        <link rel="stylesheet" href="../../css/pages/platform.css">
     
     
     
+        <link rel="stylesheet" href="../../css/pages/mypage.css">
     
     
     
@@ -381,192 +380,168 @@
 <!-- contents start -->
 <div class="container">
     <div class="site-main">
-        <section class="platform">
-            <!-- 플랫폼 탭 -->
-<div class="product-tab">
-    <ul class="product-tab__fix">
-        <li class="product-tab__item">
-            <a href="#" class="product-tab__link js-basic-tab-link">Exhibition</a>
-        </li>
-        <li class="product-tab__item is-current">
-            <a href="#" class="product-tab__link js-basic-tab-link">ALL Works </a>
-        </li>
-        <li class="product-tab__item">
-            <a href="#" class="product-tab__link js-basic-tab-link">L Edition</a>
-        </li>
-        <li class="product-tab__item">
-            <a href="#" class="product-tab__link js-basic-tab-link">Art Object</a>
-        </li>
-        <li class="product-tab__item">
-            <a href="#" class="product-tab__link js-basic-tab-link">Textile & Fashion</a>
-        </li>
-        <li class="product-tab__item">
-            <a href="#" class="product-tab__link js-basic-tab-link">Printed Matter</a>
-        </li>
-    </ul>
-</div>
-<!-- //탭 -->
-
-            <!-- platform video -->
-            <div class="platform-banner platform-banner--img"><!-- 안에 이미지가 들어갈시 platform-banner--img 클래스, 비디오 추가시 platform-banner--video 클래스 추가 -->
-                <img class="platform-banner__img" src="../../images/platform/mo_TextileFashion.jpg" alt="" />
-            </div>
-            <!-- .platform video -->
-
-            <!-- _platformFilter noSort= true 값이면 오른쪽 소팅 버튼 숨기기. [noSort = true/false]  -->
-            <!-- Product List Filter -->
-
-<div class="list-filter ">
-    <div class="wrap">
-        <div class="filter__state">
-            <span class="filter__state--tit">플랫폼엘</span> [<strong class="filter__state--data">50</strong>]
-        </div>
-        <div class="filter__meta">
-            <!-- Select -->
-            <div class="filter__meta--select">
-                <input type="text" value="" class="hidden-input is-hide">
-                <p class="filter-custom__selected"><span class="selected_text">Sorting</span></p>
-                <ul class="filter-custom__select">
-                    <li class="filter-custom__option"><a href="" class="filter-custom__link">New in</a></li>
-                    <li class="filter-custom__option"><a href="" class="filter-custom__link">Best</a></li>
-                    <li class="filter-custom__option"><a href="" class="filter-custom__link">Price low to high</a></li>
-                    <li class="filter-custom__option"><a href="" class="filter-custom__link">Price high to low</a></li>
-                </ul>
-            </div>
-            <!-- .Select -->
-        </div>
+        <!-- lnb -->
+<div class="lnb">
+    <div class="lnb__tit">MY LOUIS</div>
+    <!-- lnbMenu -->
+    <div class="lnb__wrap">
+        <ul class="lnb__list">
+            <li class="lnb__item false">
+                <a href="" class="lnb__link">
+                    <span class="lnb__line">주문배송조회</span>
+                </a>
+            </li>
+            <li class="lnb__item false">
+                <a href="" class="lnb__link">
+                    <span class="lnb__line">취소/반품</span>
+                </a>
+            </li>
+            <li class="lnb__item false">
+                <a href="" class="lnb__link">
+                    <span class="lnb__line">쿠폰</span>
+                </a>
+            </li>
+            <li class="lnb__item false">
+                <a href="" class="lnb__link">
+                    <span class="lnb__line">적립금</span>
+                </a>
+            </li>
+            <li class="lnb__item false">
+                <a href="" class="lnb__link">
+                    <span class="lnb__line">상품 리뷰</span>
+                </a>
+            </li>
+            <li class="lnb__item false">
+                <a href="" class="lnb__link">
+                    <span class="lnb__line">Wish List</span>
+                </a>
+            </li>
+        </ul>
+        <ul class="lnb__list">
+            <li class="lnb__item false">
+                <a href="" class="lnb__link">
+                    <span class="lnb__line">1:1 문의</span>
+                </a>
+            </li>
+            <li class="lnb__item false">
+                <a href="" class="lnb__link">
+                    <span class="lnb__line">상품 Q&A</span>
+                </a>
+            </li>
+            <li class="lnb__item false">
+                <a href="" class="lnb__link">
+                    <span class="lnb__line">재입고 알림 내역</span>
+                </a>
+            </li>
+            <li class="lnb__item false">
+                <a href="" class="lnb__link">
+                    <span class="lnb__line">이벤트 참여현황</span>
+                </a>
+            </li>
+        </ul>
+        <ul class="lnb__list">
+            <li class="lnb__item false">
+                <a href="" class="lnb__link">
+                    <span class="lnb__line">회원정보수정</span>
+                </a>
+            </li>
+            <li class="lnb__item false">
+                <a href="" class="lnb__link">
+                    <span class="lnb__line">비밀번호 변경</span>
+                </a>
+            </li>
+            <li class="lnb__item false">
+                <a href="" class="lnb__link">
+                    <span class="lnb__line">배송지 관리</span>
+                </a>
+            </li>
+            <li class="lnb__item is-active">
+                <a href="" class="lnb__link">
+                    <span class="lnb__line">회원 탈퇴</span>
+                </a>
+            </li>
+        </ul>
     </div>
+    <!-- .lnbMenu -->
 </div>
-<!-- .Product List Filter -->
-            <!-- product post -->
-            <div class="product-post product-post--post">
-                <ul class="product-post__list">
-                    <li class="product-post__item">
-                        <!-- item -->
-                        <div class="product-item">
-                            <a href="" class="product-item__link">
-                                <div class="product-item__state">SOLD OUT</div>
-                                <div class="product-item__thumb">
-                                    <img class="product-item__img" src="../../images/dummy/platform-dummy5-1.jpg" alt="" />
+<!-- .lnb -->
+        <section class="service-center memberRemove">
+            <div class="memberRemove-center">
+                <div class="center-right__head">
+                    <p class="center-right__title">회원 탈퇴</p>
+                </div>
+
+                <!-- 컨텐츠 -->
+                <div class="memberRemove-cont">
+                    <div class="memberRemove-cont__title">그 동안 루이까또즈를 이용해 주셔서<br>
+                        감사합니다.</div>
+                    
+                    <div class="memberRemove-cont__textBox">
+                        <div class="memberRemove-cont__text is-point">탈퇴를 하시면 회원만의 특별한 혜택을 누리실 수 없습니다.</div>
+                        <div class="memberRemove-cont__text is-point">탈퇴 후 30일 이내 재가입이 불가 합니다, 신중히 생각하신 후 탈퇴를 해주세요.</div>
+                        <ul class="center-bullet">
+                            <li class="center-bullet__item">진행중인 거래(주문, 교환, 반품) 내역이 있을 경우 즉시 회원 탈퇴가 불가능합니다. 거래내역 종료 후 탈퇴 신청을 완료해주세요.</li>
+                            <li class="center-bullet__item">회원탈퇴 시 보유하고 있는 적립금, 쿠폰은 모두 삭제됩니다.</li>
+                            <li class="center-bullet__item">탈퇴하신 아이디는 다시 사용할 수 없습니다.</li>
+                            <li class="center-bullet__item">회원탈퇴 후 재가입 시 신규 가입으로 처리되며, 탈퇴전 회원정보와 거래정보 및 적립금, 쿠폰 정보 등은 복구되지 않습니다</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="memberRemove-cont__textBox">
+                        <div class="memberRemove-cont__title">회원탈퇴 사유 (필수, 중복 체크 가능)</div>
+                        <ul class="memberRemove-cont__list">
+                            <li class="memberRemove-cont__item">
+                                <div class="form__checkbox form__checkbox--big">
+                                    <input class="form__checkbox--input sr-only" type="checkbox" name="chk" id="chk1">
+                                    <label class="form__checkbox--text" for="chk1">상품의 다양성/가격 불만</label>
                                 </div>
-                                <div class="product-item__cont">
-                                    <div class="product-item__title">Martens and Martens KM Wrinkle Bag HP4CD35BW</div>
-                                    <div class="product-item__price">
-                                        <span class="product-item__price--sale">328,000원</span>
-                                        <span class="product-item__price--current">289,290원</span>
-                                    </div>
+                            </li>
+                            <li class="memberRemove-cont__item">
+                                <div class="form__checkbox form__checkbox--big">
+                                    <input class="form__checkbox--input sr-only" type="checkbox" name="chk" id="chk2">
+                                    <label class="form__checkbox--text" for="chk2">회원혜택의 불만</label>
                                 </div>
-                            </a>
-                        </div>
-                        <!-- .item -->
-                    </li>
-                    <li class="product-post__item">
-                        <!-- item -->
-                        <div class="product-item">
-                            <a href="" class="product-item__link">
-                                <div class="product-item__state">NEW</div>
-                                <div class="product-item__thumb">
-                                    <img class="product-item__img" src="../../images/dummy/platform-dummy5-2.jpg" alt="" />
+                            </li>
+                            <li class="memberRemove-cont__item">
+                                <div class="form__checkbox form__checkbox--big">
+                                    <input class="form__checkbox--input sr-only" type="checkbox" name="chk" id="chk3">
+                                    <label class="form__checkbox--text" for="chk3">사이트 시스템 및 속도 불안</label>
                                 </div>
-                                <div class="product-item__cont">
-                                    <div class="product-item__title">Martens and Martens KM Wrinkle Bag HP4CD35BW</div>
-                                    <div class="product-item__price">
-                                        <span class="product-item__price--sale">328,000원</span>
-                                        <span class="product-item__price--current">289,290원</span>
-                                    </div>
+                            </li>
+                            <li class="memberRemove-cont__item">
+                                <div class="form__checkbox form__checkbox--big">
+                                    <input class="form__checkbox--input sr-only" type="checkbox" name="chk" id="chk4">
+                                    <label class="form__checkbox--text" for="chk4">자주 이용하지 않음</label>
                                 </div>
-                            </a>
-                        </div>
-                        <!-- .item -->
-                    </li>
-                    <li class="product-post__item">
-                        <!-- item -->
-                        <div class="product-item">
-                            <a href="" class="product-item__link">
-                                <div class="product-item__thumb">
-                                    <img class="product-item__img" src="../../images/dummy/platform-dummy5-1.jpg" alt="" />
+                            </li>
+                            <li class="memberRemove-cont__item">
+                                <div class="form__checkbox form__checkbox--big">
+                                    <input class="form__checkbox--input sr-only" type="checkbox" name="chk" id="chk5">
+                                    <label class="form__checkbox--text" for="chk5">상담원의 고객응대 불만</label>
                                 </div>
-                                <div class="product-item__cont">
-                                    <div class="product-item__title">Martens and Martens KM Wrinkle Bag HP4CD35BW</div>
-                                    <div class="product-item__price">
-                                        <span class="product-item__price--sale">328,000원</span>
-                                        <span class="product-item__price--current">289,290원</span>
-                                    </div>
+                            </li>
+                            <li class="memberRemove-cont__item">
+                                <div class="form__checkbox form__checkbox--big">
+                                    <input class="form__checkbox--input sr-only" type="checkbox" name="chk" id="chk6">
+                                    <label class="form__checkbox--text" for="chk6">기타</label>
                                 </div>
-                            </a>
-                        </div>
-                        <!-- .item -->
-                    </li>
-                    <li class="product-post__item">
-                        <!-- item -->
-                        <div class="product-item">
-                            <a href="" class="product-item__link">
-                                <div class="product-item__thumb">
-                                    <img class="product-item__img" src="../../images/dummy/platform-dummy5-2.jpg" alt="" />
-                                </div>
-                                <div class="product-item__cont">
-                                    <div class="product-item__title">Martens and Martens KM Wrinkle Bag HP4CD35BW</div>
-                                    <div class="product-item__price">
-                                        <span class="product-item__price--sale">328,000원</span>
-                                        <span class="product-item__price--current">289,290원</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- .item -->
-                    </li>
-                    <li class="product-post__item">
-                        <!-- item -->
-                        <div class="product-item">
-                            <a href="" class="product-item__link">
-                                <div class="product-item__thumb">
-                                    <img class="product-item__img" src="../../images/dummy/platform-dummy5-1.jpg" alt="" />
-                                </div>
-                                <div class="product-item__cont">
-                                    <div class="product-item__title">Martens and Martens KM Wrinkle Bag HP4CD35BW</div>
-                                    <div class="product-item__price">
-                                        <span class="product-item__price--sale">328,000원</span>
-                                        <span class="product-item__price--current">289,290원</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- .item -->
-                    </li>
-                    <li class="product-post__item">
-                        <!-- item -->
-                        <div class="product-item">
-                            <a href="" class="product-item__link">
-                                <div class="product-item__thumb">
-                                    <img class="product-item__img" src="../../images/dummy/platform-dummy5-2.jpg" alt="" />
-                                </div>
-                                <div class="product-item__cont">
-                                    <div class="product-item__title">Martens and Martens KM Wrinkle Bag HP4CD35BW</div>
-                                    <div class="product-item__price">
-                                        <span class="product-item__price--sale">328,000원</span>
-                                        <span class="product-item__price--current">289,290원</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- .item -->
-                    </li>
-                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                                        
+                </div>
+                <!-- .컨텐츠 -->
+                
+                <div class="btn-group btn-inquiry__group">
+                    <ul class="btn-group__list">
+                        <li class="btn-group__item">
+                            <button class="btn-group__btn btn-v1 btn-v1--small type-white"
+                                onclick=" location.href = location.href.slice(0, location.href.lastIndexOf('/') ) + '/mypage_memberRemove2.html'; ">
+                                다음</button>
+                        </li>
+                    </ul>
+                </div> 
             </div>
-            <!-- .product post -->
-            <!-- paging -->
-<div class="paging">
-    <ul class="paging__list">
-        <li class="paging__item paging__item--prev"><a class="paging__link" href="#;"><span class="sr-only">prev</span></a></li>
-        <li class="paging__item is-current"><span class="paging__link">1</span></li>
-        <li class="paging__item"><a class="paging__link" href="#;">2</a></li>
-        <li class="paging__item"><a class="paging__link" href="#;">3</a></li>
-        <li class="paging__item"><a class="paging__link" href="#;">4</a></li>
-        <li class="paging__item"><a class="paging__link" href="#;">5</a></li>
-        <li class="paging__item paging__item--next"><a class="paging__link" href="#;"><span class="sr-only">next</span></a></li>
-    </ul>
-</div>
-<!-- .paging -->
         </section>
     </div>
 </div>
@@ -643,12 +618,6 @@
         </div>
     </div>
 </footer>
-<!-- cart-fix -->
-<div class="cart-fix">
-    <a href="#;" class="cart-fix__add"><span class="cart-fix__add--count">2</span></a>
-    <div class="cart-fix__top js-scrollTop"><span class="sr-only">맨위로</span></div>
-</div>
-<!-- .cart-fix -->
 
 <script src="../../js/libs/jquery-3.6.0.min.js"></script>
 
@@ -661,6 +630,8 @@
 
 
 
+
+    <script src="../../js/libs/swiper-4.5.0.min.js"></script>
 
 
 </body>
