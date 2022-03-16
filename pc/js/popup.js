@@ -204,5 +204,13 @@ jQuery(function () {
     return false;
   }
 
-  $(document).on('click', '.popup-orderlist__body .detail-Meta__btn>a, .product-post__item', orderMetaSelect); //--------------------------------------------------------------------
+  $(document).on('click', '.popup-orderlist__body .detail-Meta__btn>a, .product-post__item', orderMetaSelect); //팝업닫기(메인)
+
+  function closemainPopup() {
+    if ($('.notice-popup').length <= 1) {
+      $('#mainPopup').css('display', 'none');
+    }
+  }
+
+  $(document).on('click', '.js-popup-close', closemainPopup); //--------------------------------------------------------------------
 });
