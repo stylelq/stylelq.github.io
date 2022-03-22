@@ -520,7 +520,7 @@ jQuery(function () {
   $(document).on('click', '.js-myQna-more', myQnaMore); //--END[dropdown::아코디언] ----------------------
 
   /*---------------------
-    * [swiper slider] 
+    * [swiper slider]
     ---------------------*/
   //상품상세
 
