@@ -799,12 +799,12 @@ jQuery(function () {
         clickable: true
       }
     });
-  }
+  } // 프로젝트페이지 - 주소복사 기능
+
 
   function CopyUrlToClipboard(e) {
     e.preventDefault();
     var obShareUrl = document.getElementById("ShareUrl");
-    obShareUrl.value = window.document.location.href;
     obShareUrl.select();
     document.execCommand("copy");
     obShareUrl.blur();
