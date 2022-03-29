@@ -9,9 +9,13 @@ jQuery(function () {
       el = this.dataset.popup;
     }
 
-    if (this.tagName === "A") {
+    if ($(this).attr('href')) {
       el = $(this).attr('href').replace('#', '');
     }
+    /*if( this.tagName === "A" ){
+        el = $(this).attr('href').replace('#','');
+    }*/
+
 
     if ($('.popup.is-active').length <= 1) {} else {
       $('.popup').removeClass('is-active');
