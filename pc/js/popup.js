@@ -17,9 +17,18 @@ jQuery(function () {
     }*/
 
 
-    if ($('.popup.is-active').length <= 1) {} else {
+    if ($('.popup.is-active').length <= 1) {
+      document.getElementsByTagName('body')[0].style.overflow = 'auto';
+      document.getElementsByTagName('body')[0].style.height = '100%';
+    } else {
       $('.popup').removeClass('is-active');
     }
+    /*
+    document.getElementsByClassName('js-popup-open')[0].addEventListener('click', function() {
+        document.getElementsByClassName('popup').style.display = 'block';
+    });
+     */
+
 
     $('#' + el).addClass('is-active');
     $('.popup__body').scrollTop(0); // // 전체 팝업 body scroll 없앰
@@ -93,6 +102,8 @@ jQuery(function () {
       $(this).closest('.popup, .small-popup, .slide-popup, .button-popup').removeClass('is-active'); // $('.popup, .small-popup, .slide-popup, .button-popup').removeClass('is-active');
 
       $('html').removeClass('is-hidden');
+      document.getElementsByTagName('body')[0].style.overflow = 'scroll';
+      document.getElementsByTagName('body')[0].style.height = 'auto';
     } else {
       $(this).closest('.popup').removeClass('is-active');
     }
