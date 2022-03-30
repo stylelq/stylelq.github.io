@@ -753,15 +753,57 @@
     <div class="order-info__title">
         <dl class="order-info__group">
             <dt><div class="order-info__label">주문자</div></dt>
-            <dd><div class="order-info__name">홍길동</div></dd>
+            <dd>
+                <div class="order-info__name">
+                    <input type="text" class="form__input--text" name="ORD_DLV_NM" id="non_ord_nm" placeholder="주문자">
+                </div>
+            </dd>
         </dl>
         <dl class="order-info__group">
             <dt><div class="order-info__label">연락처</div></dt>
-            <dd><div class="order-info__tel">010-1234-5678</div></dd>
+            <dd><div class="order-info__list">
+                    <div class="order-info__inner">
+                        <ul class="order-info__inner--list">
+                            <li class="order-info__inner--item">
+                                <select name="wirteOption" id="addressSelect1" class="form__select js-placeholder" title="선택">
+                                    <option value="" disabled="">선택</option>
+                                    <option value="010" selected="">010</option>
+                                    <option value="011">011</option>
+                                    <option value="016">016</option>
+                                    <option value="017">017</option>
+                                    <option value="018">018</option>
+                                    <option value="019">019</option>
+                                </select>
+                            </li>
+                            <li class="order-info__inner--item">
+                                <input type="number" class="form__input--text" title="연락처1 중간 번호" placeholder="" maxlength="4">
+                            </li>
+                            <li class="order-info__inner--item">
+                                <input type="number" class="form__input--text" title="연락처1 마지막 번호" placeholder="" maxlength="4">
+                            </li>
+                        </ul>
+                    </div>
+                </div></dd>
         </dl>
         <dl class="order-info__group">
             <dt><div class="order-info__label">이메일</div></dt>
-            <dd><div class="order-info__email">abcdef@naver.com</div></dd>
+            <dd>
+                <div class="order-info__field">
+                    <input type="email" name="EMAIL" id="EMAIL" class="input-v1" placeholder="이메일">
+                    <div class="order-info__select">
+                        <select id="emailDomainSelectbox" class="form__select js-placeholder is-check">
+                            <option value="">직접입력</option>
+                            <option value="naver.com">naver.com</option>
+                            <option value="nate.com">nate.com</option>
+                            <option value="daum.net">daum.net</option>
+                            <option value="hanmail.net">hanmail.net</option>
+                            <option value="hotmail.com">hotmail.com</option>
+                            <option value="gmail.com">gmail.com</option>
+                            <option value="kakao.com">kakao.com</option>
+                        </select>
+                    </div>
+                </div>
+            </dd>
         </dl>
     </div>
 </div>
