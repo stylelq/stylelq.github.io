@@ -502,7 +502,7 @@
                             <p>주문번호 <span>P20210812142407</span></p>
                             <span>( 2021.10.19 오후 04:10 )</span>
                         </div>
-                        <button class="myOrderList-detail__search-btn btn-v1 type-white">반품신청</button>
+                        <a href="#returnPop" class="myOrderList-detail__search-btn js-popup-open btn-v1 type-white">반품신청</a>
                     </div>
                 </div>
                 <!-- .기간조회::detail  -->
@@ -1299,6 +1299,253 @@
         </div>
     </section>
 </section>
+<!-- 반품신청 popup -->
+<section id="returnPop" class="popup type-write">
+    <div class="popup__dim"></div>
+    <section class="popup__body">
+        <div class="small-popup__close js-popup-close">
+            <a class="small-popup__inner" href="#;"><span class="sr-only">닫기</span></a>
+        </div>
+
+        <div class="wrap popup-scroll">
+            <!-- list -->
+            <div class="return-list">
+                <table class="list-table" summary="반품신청">
+                    <caption>반품신청</caption>
+                    <colgroup>
+                        <col width="3%"><col width="50%"><col><col><col><col><col>
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th class="type-chk">
+                                <div class="checkbox-point">
+                                    <input class="checkbox-point__input sr-only js-table-checkAll" type="checkbox" name="cart" id="cartAll" >
+                                    <label for="cartAll" class="checkbox-point__label"><span class="sr-only">체크</span></label>
+                                </div>
+                            </th>
+                            <th>상품/옵션 정보</th>
+                            <th>수량</th>
+                            <th>총 결제금액</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                    <tr>
+                        <td class="type-chk">
+                            <div class="checkbox-point">
+                                <input class="checkbox-point__input sr-only" type="checkbox" name="cart" id="cart1" >
+                                <label for="cart1" class="checkbox-point__label"><span class="sr-only">체크</span></label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="detail-Meta">
+                                <a href="#;" class="detail-Meta__thumb"><img class="cart-product__img" src="../../images/dummy/detail-img1.jpg" alt="" /></a>
+                                <h2 class="detail-Meta__title">oalc SINGLE BREASTED HARRIS TWEED JACKET 싱글브레스트 해리스 트위드 재킷 (Beige)</h2>
+                                <div class="detail-Meta__option">
+                                    <div class="selBox__meta--select">FREESIZE</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <!-- quantity -->
+                            <div class="quantity">1</div>
+                            <!-- quantity -->
+                        </td>
+                        <td><span class="detail-Meta__price--current">289,290원</span></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <!-- item -->
+                <div class="return-list__group">
+                    <div class="return-list__label">반품사유</div>
+                    <div class="return-list__list">
+                        <div class="return-list__inner return-list__item--message">
+                            <select name="wirteOption" id="addressSelect2" class="form__select js-placeholder js-custom-message" title="배송 메세지 선택">
+                                <option value="1">메시지를 선택해주세요</option>
+                                <option value="2">가격불만족</option>
+                                <option value="3">단순변심</option>
+                                <option value="4">서비스불만족</option>
+                                <option value="5">다른 상품으로 재주문</option>
+                                <option value="6">기타</option>
+                            </select>
+                        </div>
+                        <div class="return-list__item js-select-custom">
+                            <textarea class="return-list__text form__input--text js-max-keyup" placeholder="50자 이내 입력해주세요."></textarea>
+                        </div>
+                        <p class="return-list--text">
+                            <span class="js-byte">0</span>/50byte
+                        </p>
+                    </div>
+                </div>
+                <!-- //item -->
+
+                <!--반품신청 버튼영역-->
+                <div class="btn-group return-group">
+                    <ul class="btn-group__list type-two">
+                        <li class="btn-group__item">
+                            <button class="btn-group__btn btn-v1 btn-v1--small type-white js-popup-close">닫기</button>
+                        </li>
+                        <li class="btn-group__item">
+                            <button class="btn-group__btn btn-v1 btn-v1--small type-primary">반품 신청</button>
+                        </li>
+                    </ul>
+                </div>
+                <!--.반품신청 버튼영역-->
+
+                <div class="return-cont">
+                    <h2 class="return-cont__title">반품 이용안내</h2>
+                    <p class="return-cont__sub">반품비용 구매자 부담</p>
+                    <ul class="return-cont__list">
+                        <li class="return-cont__item">상품에 이상은 없으나 구매의사 없음</li>
+                        <li class="return-cont__item">옵션을 잘못 선택함</li>
+                    </ul>
+
+                    <p class="return-cont__sub">반품비용 쇼핑몰 부담</p>
+                    <ul class="return-cont__list">
+                        <li class="return-cont__item">상품에 결함이 있음</li>
+                        <li class="return-cont__item">도착한 상품이 상품상세 정보와 다름</li><br />
+                        <li class="return-cont__item">반품 사유가 구매자 책임인 경우 최초 발송 비용을 포함한 왕복 배송비가 부과될 수 있습니다.</li>
+                    </ul>
+
+                </div>
+            </div>
+            <!-- .list -->
+        </div>
+    </section>
+</section>
+<!-- .반품신청 popup -->
+<!-- 주문취소 popup -->
+<section id="orderCancelPop" class="popup type-write">
+    <div class="popup__dim"></div>
+    <section class="popup__body">
+        <div class="small-popup__close js-popup-close">
+            <a class="small-popup__inner" href="#;"><span class="sr-only">닫기</span></a>
+        </div>
+
+        <div class="wrap popup-scroll">
+            <!-- list -->
+            <div class="return-list">
+                <p class="return-list__top">주문을 취소하시겠습니까?</p>
+                <table class="list-table" summary="반품신청">
+                    <caption>반품신청</caption>
+                    <colgroup>
+                        <col width="3%"><col width="50%"><col><col><col><col><col>
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th class="type-chk">
+                            <div class="checkbox-point">
+                                <input class="checkbox-point__input sr-only js-table-checkAll" type="checkbox" name="cart" id="cartAll" >
+                                <label for="cartAll" class="checkbox-point__label"><span class="sr-only">체크</span></label>
+                            </div>
+                        </th>
+                        <th>상품/옵션 정보</th>
+                        <th>수량</th>
+                        <th>총 결제금액</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                    <tr>
+                        <td class="type-chk">
+                            <div class="checkbox-point">
+                                <input class="checkbox-point__input sr-only" type="checkbox" name="cart" id="cart1" >
+                                <label for="cart1" class="checkbox-point__label"><span class="sr-only">체크</span></label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="detail-Meta">
+                                <a href="#;" class="detail-Meta__thumb"><img class="cart-product__img" src="../../images/dummy/detail-img1.jpg" alt="" /></a>
+                                <h2 class="detail-Meta__title">oalc SINGLE BREASTED HARRIS TWEED JACKET 싱글브레스트 해리스 트위드 재킷 (Beige)</h2>
+                                <div class="detail-Meta__option">
+                                    <div class="selBox__meta--select">FREESIZE</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <!-- quantity -->
+                            <div class="quantity">1</div>
+                            <!-- quantity -->
+                        </td>
+                        <td><span class="detail-Meta__price--current">289,290원</span></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <!-- item -->
+                <div class="return-list__group">
+                    <div class="return-list__label">취소사유</div>
+                    <div class="return-list__list">
+                        <div class="return-list__inner return-list__item--message">
+                            <select name="wirteOption" id="addressSelect2" class="form__select js-placeholder js-custom-message" title="배송 메세지 선택">
+                                <option value="1">메시지를 선택해주세요</option>
+                                <option value="2">가격불만족</option>
+                                <option value="3">단순변심</option>
+                                <option value="4">서비스불만족</option>
+                                <option value="5">다른 상품으로 재주문</option>
+                                <option value="6">기타</option>
+                            </select>
+                        </div>
+                        <div class="return-list__item js-select-custom">
+                            <textarea class="return-list__text form__input--text js-max-keyup" placeholder="50자 이내 입력해주세요."></textarea>
+                        </div>
+                        <p class="return-list--text">
+                            <span class="js-byte">0</span>/50byte
+                        </p>
+                    </div>
+                </div>
+                <!-- //item -->
+
+                <!--주문취소 버튼영역-->
+                <div class="btn-group return-group">
+                    <ul class="btn-group__list type-two">
+                        <li class="btn-group__item">
+                            <button class="btn-group__btn btn-v1 btn-v1--small type-white js-popup-close">닫기</button>
+                        </li>
+                        <li class="btn-group__item">
+                            <button class="btn-group__btn btn-v1 btn-v1--small type-primary">주문 취소</button>
+                        </li>
+                    </ul>
+                </div>
+                <!--.주문취소 버튼영역-->
+
+                <div class="return-cont">
+                    <h2 class="return-cont__title">결제수단별 환불안내</h2>
+                    <p class="return-cont__sub">신용카드</p>
+                    <ul class="return-cont__list">
+                        <li class="return-cont__item">간편 신용카드/체크카드 : 취소 완료 후 3~5영업일 이후 환불(승인/매입 구분 불가)</li>
+                        <li class="return-cont__item">간편 계좌이체 : 취소 완료 즉시 환불 (단, 은행 정기점검시간 등에는 환불 불가)</li>
+                        <li class="return-cont__item">포인트 : 취소 완료 즉시 환불</li>
+                        <li class="return-cont__item">은행 점검 관련</li>
+                        <li class="return-cont__item num">1. 정기 점검 시간 : 23시 30분 ~ 00시 30분</li>
+                        <li class="return-cont__item num">2. 추가 점검 시간: 정기 점검 시간 외에 은행별 추가 점검시간에는 해당 은행을 이용하기 어렵습니다.</li>
+                        <li class="return-cont__item">우리은행 : 매월 두 번째 토요일 23시 30분 ~ 일요일 06시까지</li>
+                        <li class="return-cont__item">농협은행 : 매월 세 번째 일요일 23시 30분 ~ 월요일 04시까지</li>
+                    </ul>
+
+                    <p class="return-cont__sub">네이버페이</p>
+                    <ul class="return-cont__list">
+                        <li class="return-cont__item">신용카드 : 취소완료일로부터 영업일 기준 3일~5일 이내 카드 승인 취소</li>
+                        <li class="return-cont__item">실시간계좌이체 : 취소완료일로부터 영업일 기준 2일~3일 이내 최초 결제 시 이용한 계좌로 입금</li>
+                    </ul>
+
+                    <p class="return-cont__sub">카카오페이</p>
+                    <ul class="return-cont__list">
+                        <li class="return-cont__item">신용카드 : 취소완료일로부터 영업일 기준 3일~5일 이내 카드 승인 취소</li>
+                        <li class="return-cont__item">실시간계좌이체 : 취소완료일로부터 영업일 기준 2일~3일 이내 최초 결제 시 이용한 계좌로 입금</li>
+                    </ul>
+
+                    <p class="return-cont__sub">페이코</p>
+                    <ul class="return-cont__list">
+                        <li class="return-cont__item">영업일 1~3일 이내에 등록된 환불계좌로 환불됩니다.</li>
+                    </ul>
+
+                </div>
+            </div>
+            <!-- .list -->
+        </div>
+    </section>
+</section>
+<!-- .주문취소 popup -->
 <!-- gift popup -->
 <section id="giftPop" class="small-popup modal-pop">
     <div class="small-popup__dim"></div>
