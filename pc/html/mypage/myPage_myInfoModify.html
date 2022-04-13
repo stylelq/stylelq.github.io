@@ -516,7 +516,7 @@
 
                         <div class="fieldset__group">
                             <div class="fieldset__label">휴대폰번호</div>
-                            <div class="fieldset__text">010-1234-5678 <a href="#" class="basic-table--btn">수정</a></div>
+                            <div class="fieldset__text">010-1234-5678 <a href="#phoneCertification" class="basic-table--btn js-popup-open">수정</a></div>
                         </div>
 
                         <div class="fieldset__group">
@@ -736,6 +736,37 @@
     </div>
 </section>
 <!-- .email-modify-result popup -->
+
+
+<!-- email modify popup -->
+<section id="phoneCertification" class="small-popup">
+    <div class="small-popup__dim"></div>
+    <div class="small-popup__wrap">
+        <section class="small-popup__body">
+            <a class="small-popup__close js-popup-close" href="#;"><span class="sr-only">닫기</span></a>
+            <div class="small-popup__header">
+                <h3 class="small-popup__header--title">이메일 주소 수정</h3>
+            </div>
+            <div class="small-popup__cont">
+                <div class="wrap emailModify-wrap">
+                    <div class="emailModify-list">
+                        <div class="email-box__field">
+                            <input type="text" class="input-v1" placeholder="내용을 입력하세요">
+                            <div class="email-box__select">
+                                <select name="" id="" class="form__select js-placeholder is-check">
+                                    <option value="0">직접입력</option>
+                                    <option value="1">@naver.com</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="popup-confirm__link js-popup-open" href="#emailModifyResult">인증메일 발송</a>
+                </div>
+            </div>
+        </section>
+    </div>
+</section>
+<!-- .email modify popup -->
 
 
 
