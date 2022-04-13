@@ -971,46 +971,45 @@
 <!-- shipping popup -->
 <section id="addressModifyPop" class="small-popup pop-addModify">
     <div class="small-popup__dim"></div>
-
-    <section class="small-popup__body">
-        <div class="small-popup__close js-popup-close">
-            <a class="small-popup__inner" href="#;"><span class="sr-only">닫기</span></a>
-        </div>
-        <div class="small-popup__header">
-            <h3 class="small-popup__header--title align-center">배송지 변경</h3>
-        </div>
-        
-        <div class="wrap">
-            <!-- confirm Footer -->
-            <div class="small-popup-confirm__btn">
-                <ul class="small-popup-confirm__list">
-                    <li class="small-popup-confirm__item"><a class="popup-confirm__link js-popup-open" href="#addressAddPop">새로운 주소로 입력</a></li>
-                </ul>
+    <div class="small-popup__wrap">
+        <section class="small-popup__body">
+            <div class="small-popup__header">
+                <h3 class="small-popup__header--title align-center">배송지 변경</h3>
+                <div class="small-popup__close js-popup-close">
+                    <a class="small-popup__inner" href="#;"><span class="sr-only">닫기</span></a>
+                </div>
             </div>
-            <!-- .confirm Footer -->
-            <!-- 내주소록 -->
-            <div class="my-address">
-                <ul class="my-address__list">
-                    <li class="my-address__item">
-                        <div class="my-address__user">홍길동 / 회사<span class="form__radio--select"></span> 
-                            <button class="my-address__btn btn-v3 btn-v3--small type-primary">선택</button>
-                        </div>
-                        <div class="my-address__text">(02586) 서울시 동대문구 하정로 26 (신설동) 3F</div>
-                        <div class="my-address__tel">010-1234-5678</div>                       
-                    </li>
-                    <li class="my-address__item">
-                        <div class="my-address__user">홍길동 / 회사<span class="form__radio--select">[기본배송지]</span>
-                            <button class="my-address__btn btn-v3 btn-v3--small type-primary">선택</button>
-                        </div>
-                        <div class="my-address__text">(02586) 서울시 동대문구 하정로 26 (신설동) 3F</div>
-                        <div class="my-address__tel">010-1234-5678</div>                       
-                    </li>
-                </ul>
+            <div class="wrap">
+                <!-- confirm Footer -->
+                <div class="small-popup-confirm__btn">
+                    <ul class="small-popup-confirm__list">
+                        <li class="small-popup-confirm__item"><a class="popup-confirm__link js-popup-open" href="#addressAddPop">새로운 주소로 입력</a></li>
+                    </ul>
+                </div>
+                <!-- .confirm Footer -->
+                <!-- 내주소록 -->
+                <div class="my-address">
+                    <ul class="my-address__list">
+                        <li class="my-address__item">
+                            <div class="my-address__user">홍길동 / 회사<span class="form__radio--select"></span>
+                                <button class="my-address__btn btn-v3 btn-v3--small type-primary">선택</button>
+                            </div>
+                            <div class="my-address__text">(02586) 서울시 동대문구 하정로 26 (신설동) 3F</div>
+                            <div class="my-address__tel">010-1234-5678</div>
+                        </li>
+                        <li class="my-address__item">
+                            <div class="my-address__user">홍길동 / 회사<span class="form__radio--select">[기본배송지]</span>
+                                <button class="my-address__btn btn-v3 btn-v3--small type-primary">선택</button>
+                            </div>
+                            <div class="my-address__text">(02586) 서울시 동대문구 하정로 26 (신설동) 3F</div>
+                            <div class="my-address__tel">010-1234-5678</div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- .내주소록 -->
             </div>
-            <!-- .내주소록 -->
-        </div>
-        
-    </section>
+        </section>
+    </div>
 </section>
 <!-- .shipping popup -->
 
@@ -1171,7 +1170,6 @@
                     <a class="small-popup__inner" href="#;"><span class="sr-only">닫기</span></a>
                 </div>
             </div>
-
             <div class="wrap">
                 <div class="address-search">
                     <!-- 주소검색(1) -->
@@ -1553,29 +1551,29 @@
     <div class="small-popup__dim"></div>
     <div class="small-popup__wrap">
         <section class="small-popup__body">
-        <div class="small-popup__close js-popup-close">
-            <a class="small-popup__inner" href="#;"><span class="sr-only">닫기</span></a>
-        </div>
-        <div class="small-popup__header">
-            <h3 class="small-popup__header--title">선물포장 안내</h3>
-        </div>
-        <div class="small-popup__cont">
-            <!-- gift cont -->
-            <div class="pop-gift">
-                <ul class="pop-gift__list">
-                    <li class="pop-gift__item">
-                        <div class="pop-gift__title">[루이까또즈]</div>
-                        <p class="pop-bullet__text">선물포장은 지갑/벨트/키링만 가능하며, 핸드백/서류가<br>방 등은 선물포장 불가합니다. (더스트백과 쇼핑백 제공)</p>
-                    </li>
-                    <li class="pop-gift__item">
-                        <div class="pop-gift__title">[OÀLC]</div>
-                        <p class="pop-bullet__text">OÀLC 브랜드 제품은 별도 선물포장이 불가능하며,<br> 구매 시 쇼핑백이 함께 제공됩니다.</p>
-                    </li>
-                </ul>
+            <div class="small-popup__header">
+                <h3 class="small-popup__header--title">선물포장 안내</h3>
+                <div class="small-popup__close js-popup-close">
+                    <a class="small-popup__inner" href="#;"><span class="sr-only">닫기</span></a>
+                </div>
             </div>
-            <!-- .gift cont -->
-        </div>
-    </section>
+            <div class="small-popup__cont">
+                <!-- gift cont -->
+                <div class="pop-gift">
+                    <ul class="pop-gift__list">
+                        <li class="pop-gift__item">
+                            <div class="pop-gift__title">[루이까또즈]</div>
+                            <p class="pop-bullet__text">선물포장은 지갑/벨트/키링만 가능하며, 핸드백/서류가<br>방 등은 선물포장 불가합니다. (더스트백과 쇼핑백 제공)</p>
+                        </li>
+                        <li class="pop-gift__item">
+                            <div class="pop-gift__title">[OÀLC]</div>
+                            <p class="pop-bullet__text">OÀLC 브랜드 제품은 별도 선물포장이 불가능하며,<br> 구매 시 쇼핑백이 함께 제공됩니다.</p>
+                        </li>
+                    </ul>
+                </div>
+                <!-- .gift cont -->
+            </div>
+        </section>
     </div>
 </section>
 <!-- gift popup -->
@@ -1585,27 +1583,27 @@
     <div class="small-popup__dim"></div>
     <div class="small-popup__wrap">
         <section class="small-popup__body">
-        <div class="small-popup__close js-popup-close">
-            <a class="small-popup__inner" href="#;"><span class="sr-only">닫기</span></a>
-        </div>
-        <div class="small-popup__header">
-            <h3 class="small-popup__header--title">메시지 카드 안내</h3>
-        </div>
-        <div class="small-popup__cont">
-            <!-- gift cont -->
-            <div class="pop-message">
-                <ul class="pop-message__list">
-                    <li class="pop-gift__item">
-                        <p class="pop-bullet__text">메시지카드는 지갑/벨트/핸드백/가방/팔찌/스카프/머플<br>러 등 일부 제품에 한해서만 제공 가능합니다</p>
-                    </li>
-                    <li class="pop-message__item">
-                        <p class="pop-bullet__text">라이선스 제품(장갑,선글라스 등)은 메시지 카드 제공이<br> 어렵습니다.</p>
-                    </li>
-                </ul>
+            <div class="small-popup__header">
+                <h3 class="small-popup__header--title">메시지 카드 안내</h3>
+                <div class="small-popup__close js-popup-close">
+                    <a class="small-popup__inner" href="#;"><span class="sr-only">닫기</span></a>
+                </div>
             </div>
-            <!-- .gift cont -->
-        </div>
-    </section>
+            <div class="small-popup__cont">
+                <!-- gift cont -->
+                <div class="pop-message">
+                    <ul class="pop-message__list">
+                        <li class="pop-gift__item">
+                            <p class="pop-bullet__text">메시지카드는 지갑/벨트/핸드백/가방/팔찌/스카프/머플<br>러 등 일부 제품에 한해서만 제공 가능합니다</p>
+                        </li>
+                        <li class="pop-message__item">
+                            <p class="pop-bullet__text">라이선스 제품(장갑,선글라스 등)은 메시지 카드 제공이<br> 어렵습니다.</p>
+                        </li>
+                    </ul>
+                </div>
+                <!-- .gift cont -->
+            </div>
+        </section>
     </div>
 </section>
 <!-- message popup -->
