@@ -1099,10 +1099,10 @@ jQuery(function () {
       watchOverflow: true,
       slidesPerView: 3,
       centeredSlides: true,
-      speed: 10000,
+      //speed: 10000,
       loop: true,
       autoplay: {
-        delay: 0,
+        delay: 1000,
         disableOnInteraction: true
       },
       pagination: {
@@ -1114,18 +1114,6 @@ jQuery(function () {
         prevEl: ".main-collection__prev"
       },
       on: {
-        init: function init() {
-          var slide = $(this.$wrapperEl[0]).find(".swiper-slide-active");
-          var bg = slide.data("bg");
-
-          if ($('.main-banner__item[data-bg="white"]').hasClass('swiper-slide-active')) {
-            $('body').removeClass('is-black');
-            $('body').addClass('is-white');
-          } else {
-            $('body').removeClass('is-white');
-            $('body').addClass('is-black');
-          }
-        },
         beforeTransitionStart: function beforeTransitionStart() {
           var slide = $(this.$wrapperEl[0]).find(".swiper-slide-active");
           var bg = slide.data("bg");
@@ -1137,6 +1125,8 @@ jQuery(function () {
             $('body').removeClass('is-white');
             $('body').addClass('is-black');
           }
+
+          this.params.speed = 1000;
         },
         touchMove: function touchMove() {
           eventSliderTouch = true;
@@ -1146,9 +1136,6 @@ jQuery(function () {
             eventSliderTouch = false;
             this.params.speed = 500;
           }
-        },
-        transitionEnd: function transitionEnd() {
-          this.params.speed = 10000;
         }
       }
     });
