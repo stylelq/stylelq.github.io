@@ -1764,98 +1764,100 @@
 <!-- coupon popup -->
 <section id="couponPop" class="popup type-write">
     <div class="popup__dim"></div>
-    <section class="popup__body">
-        <div class="small-popup__close js-popup-close">
-            <a class="small-popup__inner" href="#;"><span class="sr-only">닫기</span></a>
-        </div>
-        <div class="popup__header">
-            <h3 class="popup__header--title">쿠폰 조회/적용</h3>
-            <p class="popup__header--text">사용 가능한 쿠폰 : <span>2</span>장</p>
-        </div>
-        <div class="wrap">
-            <!-- 쿠폰 컨텐츠 -->
-            <div class="popup-coupon">
-                <!-- 상품 -->
-                <div class="popup-coupon__product">
-                    <table class="list-table" summary="쿠폰 리스트">
-                        <caption>쿠폰 리스트</caption>
-                        <colgroup>
-                            <col width="50%"><col><col><col><col>
-                        </colgroup>
-                        <thead>
-                            <tr>
-                                <th>상품/옵션 정보</th>
-                                <th>판매가</th>
-                                <th>수량</th>
-                                <th>쿠폰선택</th>
-                                <th>할인금액</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <span class="detail-Meta__title">oalc SINGLE BREASTED HARRIS TWEED JACKET 싱글브레스트 해리스 트위드 재킷 (Beige)</span>
-                                    <span class="detail-Meta__title--option">FREESIZE</span>
-                                </td>
-                                <td><span class="detail-Meta__price--current">289,290원</span></td>
-                                <td><span>1</span></td>
-                                <td>
-                                     <!-- Select -->
-                                     <select name="coupon1" id="" class="form__select js-placeholder js-custom-message" title="직영몰 쿠폰선택">
-                                        <option value="1">직영몰 상품 10%할인</option>
-                                        <option value="2">직영몰 상품 20%할인</option>
-                                    </select>
-                                    <!-- .Select -->
-                                    <!-- Select -->
-                                    <select name="coupon2" id="" class="form__select js-placeholder js-custom-message" title="더블 쿠폰선택">
-                                        <option value="1">더블 10%할인</option>
-                                        <option value="2">더블 20%할인</option>
-                                    </select>
-                                    <!-- .Select -->
-                                    <!-- Select -->
-                                    <select name="coupon3" id="" disabled class="form__select js-placeholder js-custom-message" title="쿠폰 없음">
-                                        <option value="1">쿠폰 없음</option>
-                                    </select>
-                                    <!-- .Select -->
-                                </td>
-                                <td><span class="detail-Meta__price--current">-38,710</span></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <span class="detail-Meta__title">oalc SINGLE BREASTED HARRIS TWEED JACKET 싱글브레스트 해리스 트위드 재킷 (Beige)</span>
-                                    <span class="detail-Meta__title--option">FREESIZE</span>
-                                </td>
-                                <td><span class="detail-Meta__price--current">289,290원</span></td>
-                                <td><span>1</span></td>
-                                <td>
-                                    <span class="popup-coupon__no-coupon">적용가능한 쿠폰이 없습니다.</span>
-                                </td>
-                                <td><span>-38,710</span></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <!-- .상품 -->
-                
+    <div class="popup__wrap">
+        <section class="popup__body">
+            <div class="small-popup__close js-popup-close">
+                <a class="small-popup__inner" href="#;"><span class="sr-only">닫기</span></a>
             </div>
-            <!-- .쿠폰 컨텐츠 -->
-            <!-- wirte Footer -->
-            <div class="popup__footer">
-                <div class="popup-coupon__total">
-                    <ul class="popup-coupon__list">
-                        <!-- <li class="popup-coupon__item"> 5만원 미만 상품은 쿠폰이 적용되지 않습니다.</li> -->
-                        <li class="popup-coupon__item">상품쿠폰 총 할인금액 : <span>17,800</span>원</li>
+            <div class="popup__header">
+                <h3 class="popup__header--title">쿠폰 조회/적용</h3>
+                <p class="popup__header--text">사용 가능한 쿠폰 : <span>2</span>장</p>
+            </div>
+            <div class="wrap">
+                <!-- 쿠폰 컨텐츠 -->
+                <div class="popup-coupon">
+                    <!-- 상품 -->
+                    <div class="popup-coupon__product">
+                        <table class="list-table" summary="쿠폰 리스트">
+                            <caption>쿠폰 리스트</caption>
+                            <colgroup>
+                                <col width="50%"><col><col><col><col>
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>상품/옵션 정보</th>
+                                    <th>판매가</th>
+                                    <th>수량</th>
+                                    <th>쿠폰선택</th>
+                                    <th>할인금액</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <span class="detail-Meta__title">oalc SINGLE BREASTED HARRIS TWEED JACKET 싱글브레스트 해리스 트위드 재킷 (Beige)</span>
+                                        <span class="detail-Meta__title--option">FREESIZE</span>
+                                    </td>
+                                    <td><span class="detail-Meta__price--current">289,290원</span></td>
+                                    <td><span>1</span></td>
+                                    <td>
+                                         <!-- Select -->
+                                         <select name="coupon1" id="" class="form__select js-placeholder js-custom-message" title="직영몰 쿠폰선택">
+                                            <option value="1">직영몰 상품 10%할인</option>
+                                            <option value="2">직영몰 상품 20%할인</option>
+                                        </select>
+                                        <!-- .Select -->
+                                        <!-- Select -->
+                                        <select name="coupon2" id="" class="form__select js-placeholder js-custom-message" title="더블 쿠폰선택">
+                                            <option value="1">더블 10%할인</option>
+                                            <option value="2">더블 20%할인</option>
+                                        </select>
+                                        <!-- .Select -->
+                                        <!-- Select -->
+                                        <select name="coupon3" id="" disabled class="form__select js-placeholder js-custom-message" title="쿠폰 없음">
+                                            <option value="1">쿠폰 없음</option>
+                                        </select>
+                                        <!-- .Select -->
+                                    </td>
+                                    <td><span class="detail-Meta__price--current">-38,710</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="detail-Meta__title">oalc SINGLE BREASTED HARRIS TWEED JACKET 싱글브레스트 해리스 트위드 재킷 (Beige)</span>
+                                        <span class="detail-Meta__title--option">FREESIZE</span>
+                                    </td>
+                                    <td><span class="detail-Meta__price--current">289,290원</span></td>
+                                    <td><span>1</span></td>
+                                    <td>
+                                        <span class="popup-coupon__no-coupon">적용가능한 쿠폰이 없습니다.</span>
+                                    </td>
+                                    <td><span>-38,710</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- .상품 -->
+
+                </div>
+                <!-- .쿠폰 컨텐츠 -->
+                <!-- wirte Footer -->
+                <div class="popup__footer">
+                    <div class="popup-coupon__total">
+                        <ul class="popup-coupon__list">
+                            <!-- <li class="popup-coupon__item"> 5만원 미만 상품은 쿠폰이 적용되지 않습니다.</li> -->
+                            <li class="popup-coupon__item">상품쿠폰 총 할인금액 : <span>17,800</span>원</li>
+                        </ul>
+                    </div>
+
+                    <ul class="popup-coupon__btn">
+                        <li class="popup-write__item"><a class="popup-write__link" href="javascript:void(0);">선택 쿠폰 적용</a></li>
+                        <li class="popup-write__item"><a class="popup-write__link" href="javascript:void(0);">초기화</a></li>
                     </ul>
                 </div>
-
-                <ul class="popup-coupon__btn">
-                    <li class="popup-write__item"><a class="popup-write__link" href="javascript:void(0);">선택 쿠폰 적용</a></li>
-                    <li class="popup-write__item"><a class="popup-write__link" href="javascript:void(0);">초기화</a></li>
-                </ul>
+                <!-- .wirte Footer -->
             </div>
-            <!-- .wirte Footer -->
-        </div>
-    </section>
+        </section>
+    </div>
 </section>
 <!-- terms popup -->
 <section id="addressPop" class="small-popup">

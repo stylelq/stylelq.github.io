@@ -355,18 +355,18 @@ jQuery(function () {
     selectViewDropDown(this);
     selectView('.filter-custom__option');
     return false;
-  } //$(document).on('click','.filter-custom__selected',customSelect);
-  // 장바구니FREESIZE
+  }
 
+  $(document).on('click', '.filter-custom__selected', customSelect); // 장바구니FREESIZE
 
   function cartCustomSelect() {
     selectViewDropDown(this);
     selectView('.selBox-custom__option');
     return false;
-  } //$(document).on('click','.selBox-custom__selected',cartCustomSelect);
-  //--END[select]--------------------------
-  // 좋아요/장바구니 넣기
+  }
 
+  $(document).on('click', '.selBox-custom__selected', cartCustomSelect); //--END[select]--------------------------
+  // 좋아요/장바구니 넣기
 
   function productItem() {
     if ($(this).closest('.type-like').length > 0) {
@@ -383,9 +383,9 @@ jQuery(function () {
     }
 
     return false;
-  }
+  } //$(document).on('click','.product-icon__link',productItem);
+  // 좋아요버튼 active style
 
-  $(document).on('click', '.product-icon__link', productItem); // 좋아요버튼 active style
 
   var likeClick;
 

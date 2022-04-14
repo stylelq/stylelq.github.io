@@ -206,17 +206,23 @@ jQuery(function () {
 
   function orderMetaSelect() {
     closePopup();
-    var popup = this.closest('.popup'),
-        popupId = ['inquiryOrderPop', 'inquiryProductPop'];
-    $('.inquiry-search__cont').removeClass('is-current');
+    var popup = this.closest('.popup');
 
-    for (var i = 0, len = popupId.length; i < len; i++) {
-      if (popup.id === popupId[i]) {
-        $('.inquiry-search__cont').eq(i).addClass('is-current');
+    if (popup) {
+      var popupId = popup.attr("id");
+      var popupIds = ['inquiryOrderPop', 'inquiryProductPop'];
+      $('.inquiry-search__cont').removeClass('is-current');
+
+      for (var i = 0, len = popupIds.length; i < len; i++) {
+        if (popup.attr("id") === popupIds[i]) {
+          $('.inquiry-search__cont').eq(i).addClass('is-current');
+        }
       }
-    }
 
-    return false;
+      return false;
+    } else {
+      return true;
+    }
   }
 
   $(document).on('click', '.popup-orderlist__body .detail-Meta__btn>a, .product-post__item', orderMetaSelect); //팝업닫기(메인)
