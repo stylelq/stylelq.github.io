@@ -18,8 +18,10 @@ jQuery(function () {
 
 
     if ($('.popup.is-active').length <= 1) {
-      document.getElementsByTagName('body')[0].style.overflow = 'auto';
+      document.getElementsByTagName('html')[0].style.height = '100%';
+      document.getElementsByTagName('html')[0].style.overflow = 'hidden';
       document.getElementsByTagName('body')[0].style.height = '100%';
+      document.getElementsByTagName('body')[0].style.overflow = 'hidden';
     } else {
       $('.popup').removeClass('is-active');
     }
@@ -104,6 +106,8 @@ jQuery(function () {
       $('html').removeClass('is-hidden');
       document.getElementsByTagName('body')[0].style.overflow = 'scroll';
       document.getElementsByTagName('body')[0].style.height = 'auto';
+      document.getElementsByTagName('html')[0].style.overflow = 'scroll';
+      document.getElementsByTagName('html')[0].style.height = 'auto';
     } else {
       $(this).closest('.popup').removeClass('is-active');
     }

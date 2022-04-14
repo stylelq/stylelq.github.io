@@ -506,7 +506,7 @@
                         <div class="myLouis-level__more">
                             <a href="#" class="myLouis-level__more--userInfo">홍길동님</a>
                             <p class="myLouis-level__more--text"><span class="myLouis-level__name">WEB</span> 등급입니다.</p>
-                            <a href="#" class="myLouis-level__more--membership js-popup-open">멤버쉽 회원으로 전환</a>
+                            <a href="#membershipJoin" class="myLouis-level__more--membership js-popup-open">멤버쉽 회원으로 전환</a>
                         </div>
                     </div>
                     <!-- .userLevel --->
@@ -705,6 +705,47 @@
     <div class="cart-fix__top js-scrollTop"><span class="sr-only">맨위로</span></div>
 </div>
 <!-- .cart-fix -->
+<!-- 멤버쉽 전환 -->
+<section id="membershipJoin" class="popup type-write">
+    <div class="popup__dim"></div>
+    <div class="popup__wrap">
+        <section class="popup__body">
+            <div class="small-popup__close js-popup-close">
+                <a class="small-popup__inner" href="#;"><span class="sr-only">닫기</span></a>
+            </div>
+            <div class="popup__header">
+                <h3 class="popup__tit">멤버십회원으로 전환</h3>
+            </div>
+            <div class="membership-join">
+                <div class="membership-join__contBox">
+                    <div class="membership-join__contBox-img">
+                        <img src="../../images/popup/membership_join_1.png" alt="">
+                    </div>
+                    <div class="membership-join__contBox-btn">
+                        <button class="membership-join__btn btn-v1 type-primary">휴대폰으로 인증하기</button>
+                    </div>
+                    <ul class="membership-join__contBox-bullet type-small">
+                        <li class="membership-join__contBox-bullet__item">구매금액의 2%가 적립되어집니다.</li>
+                        <li class="membership-join__contBox-bullet__item">구매금액은 최종 결제한 금액으로 모든 할인금액은 제외된 금액입니다.</li>
+                    </ul>
+                </div>
+                <div class="membership-join__contBox">
+                    <div class="membership-join__contBox-img">
+                        <img src="../../images/popup/membership_join_2.png" alt="">
+                    </div>
+                    <div class="membership-join__contBox-btn">
+                        <button class="membership-join__btn btn-v1 type-primary">아이핀(I-PIN)으로 인증하기</button>
+                    </div>
+                    <ul class="membership-join__contBox-bullet type-small">
+                        <li class="membership-join__contBox-bullet__item">아이핀(I-PIN) 아이디로 가입하신 고객 분들만 사용 가능 합니다.</li>
+                        <li class="membership-join__contBox-bullet__item">아이핀(I-PIN) 아이디가 없는 경우 아이핀 발급기관에서 발급 받으셔야 이용 가능 합니다.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+</section>
+<!-- .멤버쉽 전환 -->
 
 <script src="../../js/libs/jquery-3.6.0.min.js"></script>
 
@@ -714,6 +755,8 @@
 
 <script src="../../js/common.js"></script>
 
+
+    <script src="../../js/popup.js"></script>
 
 
 
