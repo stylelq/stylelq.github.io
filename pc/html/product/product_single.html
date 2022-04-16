@@ -412,6 +412,11 @@
                 <div class="product-option__wrap">
                     <!-- Detail info -->
                     <div class="detail-info">
+                        <!-- Detail share -->
+                        <div class="detail-fix__btn">
+                            <a href="#zoomPop" class="detail-fix__zoom js-popup-open"><span class="sr-only">확대해보기</span></a>
+                        </div>
+                        <!--. Detail share -->
                         <!-- Detail Thumb Slide -->
                         <div class="detail-thumb">
                             <div class="swiper-container detail-thumb__container">
@@ -1557,6 +1562,36 @@
     </div>
 </section>
 <!-- .360view popup -->
+<!-- product zoom popup -->
+<section id="zoomPop" class="slide-popup">
+    <a class="slide-popup__close js-popup-close" href="#;"><span class="sr-only">닫기</span></a>
+    <div class="popup-slider">
+        <div class="swiper-container popup-slider__container">
+            <div class="swiper-wrapper popup-slider__wrapper">
+                <div class='swiper-slide popup-slider__item'>
+                    <div class="product-zoom js-product-zoom">
+                        <img src="../../images/dummy/zoom-img.jpg" alt="" />
+                    </div>
+                </div>
+                <div class='swiper-slide popup-slider__item'>
+                    <div class="product-zoom js-product-zoom">
+                        <img src="../../images/dummy/zoom_img2.jpg" alt="" />
+                    </div>
+                </div>
+                <div class='swiper-slide popup-slider__item'>
+                    <div class="product-zoom js-product-zoom">
+                        <img src="../../images/dummy/zoom-img.jpg" alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popup-slider__wrap">
+        <div class="swiper-button-next popup-slider__button--next only-zoom"></div>
+        <div class="swiper-button-prev popup-slider__button--prev only-zoom"></div>
+    </div>
+</section>
+<!-- .product zoom popup -->
 
 <script src="../../js/libs/jquery-3.6.0.min.js"></script>
 
