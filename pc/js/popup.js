@@ -32,7 +32,7 @@ jQuery(function () {
 
     $('#' + el).addClass('is-active');
     $('.popup__body').scrollTop(0); // // 전체 팝업 body scroll 없앰
-    // $('html').addClass('is-hidden'); 
+    // $('html').addClass('is-hidden');
     // 예외 modal-pop
 
     var typeModal = ['small-popup', 'button-popup', 'modal-pop'];
@@ -102,7 +102,7 @@ jQuery(function () {
       $(this).closest('.popup, .small-popup, .slide-popup, .button-popup').removeClass('is-active'); // $('.popup, .small-popup, .slide-popup, .button-popup').removeClass('is-active');
 
       $('html').removeClass('is-hidden');
-      document.getElementsByTagName('body')[0].style.overflow = 'scroll';
+      document.getElementsByTagName('body')[0].style.overflow = 'auto';
       document.getElementsByTagName('body')[0].style.height = 'auto'; //document.getElementsByTagName('html')[0].style.overflow = 'scroll';
       //document.getElementsByTagName('html')[0].style.height = 'auto';
     } else {
