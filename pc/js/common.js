@@ -1143,25 +1143,19 @@ jQuery(function () {
 
 
   if ($('.main-banner4').length > 0 && $('.main-banner4__item').length > 1) {
-    var eventSliderTouch = false;
     var mainNewSlide = new Swiper('.main-banner4__container', {
       observer: true,
       observeParents: true,
       watchOverflow: true,
       slidesPerView: 1,
-      centeredSlides: true,
-      autoplay: {
-        delay: 10000,
-        disableOnInteraction: true
-      },
       loop: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false
+      },
       pagination: {
         el: ".main-banner4__pagination",
         type: "fraction"
-      },
-      navigation: {
-        nextEl: ".main-banner4__next",
-        prevEl: ".main-banner4__prev"
       },
       on: {
         init: function init() {
