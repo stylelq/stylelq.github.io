@@ -458,7 +458,7 @@
                     <span class="lnb__line">재입고 알림 내역</span>
                 </a>
             </li>
-            <li class="lnb__item is-active">
+            <li class="lnb__item false">
                 <a href="" class="lnb__link">
                     <span class="lnb__line">이벤트 참여현황</span>
                 </a>
@@ -490,62 +490,48 @@
     <!-- .lnbMenu -->
 </div>
 <!-- .lnb -->
-        <section class="service-center myEvent">
-            <div class="myEvent-center">
-                <div class="center-right__head">
-                    <p class="center-right__title">이벤트 참여현황</p>
+        <section class="membershipJoin">
+            <div class="membershipJoin-result">
+                <div class="membershipJoin-result__head">
+                    <p class="membershipJoin-result__title">멤버십 전환안내</p>
                 </div>
-
-                <!-- list -->
-                <div class="order-mypage">
-                    <table class="list-table" summary="이벤트">
-                        <caption>이벤트</caption>
+                <div class="membershipJoin-result__text">회원님께서는 기존에 가입하신 <br /><span class="text--point">멤버십 회원 정보가 존재</span>합니다.</div>
+                <div class="membershipJoin-result__table">
+                    <table class="basic-table">
+                        <caption class="sr-only">구매 채별별 적립율</caption>
                         <colgroup>
-                            <col><col width="38%"><col><col><col width="5%">
+                            <col style="width:38%;">
+                            <col style="">
                         </colgroup>
-                        <thead>
-                            <tr>
-                                <th>이벤트 상태</th>
-                                <th>이벤트명</th>
-                                <th>이벤트 기간</th>
-                                <th>당첨자 발표</th> 
-                                <th>응모일</th>
-                            </tr>
-                        </thead>
                         <tbody>
                             <tr>
-                                <td><span class="state-item__ing">진행중</span></td>
-                                <td><span class="order-mypage__header--title">Who Am I ? 저의 이름을 맞춰주세요!</span></td>
-                                <td>2021.06.10 ~ 2021.06.16</td>
-                                <td>2021.06.30</td>
-                                <td>2021.06.10</td>
+                                <th scope="row" class="basic-table--bold">아이디</th>
+                                <td class="basic-table--left">youngv**</td>
                             </tr>
                             <tr>
-                                <td><span class="state-item__end">완료</span></td>
-                                <td><span class="order-mypage__header--title">이벤트 내용  제목 입니다.</span></td>
-                                <td>2021.06.10 ~ 2021.06.16</td>
-                                <td>2021.06.30</td>
-                                <td>2021.06.10</td>
+                                <th scope="row" class="basic-table--bold">가입유형</th>
+                                <td class="basic-table--left">네이버 계정</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="basic-table--bold">이메일</th>
+                                <td class="basic-table--left">abcdefg**@***</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="basic-table--bold">휴대폰 번호</th>
+                                <td class="basic-table--left">010-****-1622</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="basic-table--bold">가입일</th>
+                                <td class="basic-table--left">2020.05.20</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
-                <!-- .list -->
-                <!-- paging -->
-                <!-- paging -->
-<div class="paging">
-    <ul class="paging__list">
-        <li class="paging__item paging__item--prev"><a class="paging__link" href="#;"><span class="sr-only">prev</span></a></li>
-        <li class="paging__item is-current"><span class="paging__link">1</span></li>
-        <li class="paging__item"><a class="paging__link" href="#;">2</a></li>
-        <li class="paging__item"><a class="paging__link" href="#;">3</a></li>
-        <li class="paging__item"><a class="paging__link" href="#;">4</a></li>
-        <li class="paging__item"><a class="paging__link" href="#;">5</a></li>
-        <li class="paging__item paging__item--next"><a class="paging__link" href="#;"><span class="sr-only">next</span></a></li>
-    </ul>
-</div>
-<!-- .paging -->
-                <!-- .paging -->
+                <ul class="center-bullet">
+                    <li class="center-bullet__item">MEMBERSHIP 아이디로 로그인 후 사용하시기 바랍니다</li>
+                    <li class="center-bullet__item">ID통합 등 회원 관련 문의사항은 <a class="join-existing__tel" href="tel:080-599-1414">080-599-1414</a>로 문의 주시기 바랍니다.</li>
+                    <li class="center-bullet__item">멤버십회원은 하나의 ID로 온라인 및 오프라인 매장에서 적립금 사용 및 적립이 가능 합니다.</li>
+                </ul>
             </div>
         </section>
     </div>
@@ -633,8 +619,6 @@
 <script src="../../js/common.js"></script>
 
 
-    <script src="../../js/popup.js"></script>
-
 
 
 
@@ -645,4 +629,3 @@
 </body>
 </html>
 <!--footer끝-->
-
