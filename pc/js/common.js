@@ -162,9 +162,13 @@ jQuery(function () {
             positionFixed($('.header').height() + 20);
           }
         }
+
+        $('.detail-height').addClass('is-summary');
       } else {
         $('.detail-tab').removeClass('fixed');
         positionFixed(''); //default css
+
+        $('.detail-height').removeClass('is-summary');
       } // 스크롤 0일때 초기화
 
 
@@ -172,9 +176,9 @@ jQuery(function () {
         $('.detail-tab__item').removeClass('is-current');
         $('.detail-tab__item').eq(0).addClass('is-current');
         $('.detail-tab__info').eq(0).addClass('is-current');
-      } //$('.product-option-fix').css($styleOpt);
+      }
 
-
+      $('.product-option-fix').css($styleOpt);
       return;
     });
   } // 주문서 배송지 option fix scroll
@@ -244,10 +248,10 @@ jQuery(function () {
       minHeight: 600
     }); //오른쪽 옵션값 고정시키기
 
-    /*$('.product-option-fix').css({
-        position: 'fixed',
-        top: $('.header').height()+20
-    });*/
+    $('.product-option-fix').css({
+      position: 'fixed',
+      top: $('.header').height() + 20
+    });
   }
 
   $(document).on('click', '.js-tab-link', detailTab); //주문서 배송지 탭
@@ -927,10 +931,10 @@ jQuery(function () {
       watchOverflow: true,
       slidesPerView: 3,
       centeredSlides: true,
-      //speed: 10000,
+      speed: 10000,
       loop: true,
       autoplay: {
-        delay: 1000,
+        delay: 0,
         disableOnInteraction: true
       },
       pagination: {
@@ -942,32 +946,6 @@ jQuery(function () {
         prevEl: ".main-new__prev"
       },
       on: {
-        /*init: function(){
-            var slide = $(this.$wrapperEl[0]).find(".swiper-slide-active");
-            var bg = slide.data("bg");
-            if($('.main-banner__item[data-bg="white"]').hasClass('swiper-slide-active')){
-                $('body').removeClass('is-black');
-                $('body').addClass('is-white');
-            }else {
-                $('body').removeClass('is-white');
-                $('body').addClass('is-black');
-            }
-            this.params.speed = 5000;
-        },*/
-        beforeTransitionStart: function beforeTransitionStart() {
-          var slide = $(this.$wrapperEl[0]).find(".swiper-slide-active");
-          var bg = slide.data("bg");
-
-          if ($('.main-banner__item[data-bg="white"]').hasClass('swiper-slide-active')) {
-            $('body').removeClass('is-black');
-            $('body').addClass('is-white');
-          } else {
-            $('body').removeClass('is-white');
-            $('body').addClass('is-black');
-          }
-
-          this.params.speed = 1000;
-        },
         touchMove: function touchMove() {
           eventSliderTouch = true;
         },
@@ -976,6 +954,9 @@ jQuery(function () {
             eventSliderTouch = false;
             this.params.speed = 500;
           }
+        },
+        transitionEnd: function transitionEnd() {
+          this.params.speed = 10000;
         }
       }
     });
