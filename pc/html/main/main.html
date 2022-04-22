@@ -419,7 +419,7 @@
 </section>
 <!--//메인공지팝업-->
 <!-- terms popup -->
-<section id="termsPop" class="small-popup modal-pop">
+<section id="termsPop" class="small-popup modal-pop terms-pop">
     <div class="small-popup__dim"></div>
     <div class="small-popup__wrap">
         <section class="small-popup__body terms-only">
@@ -704,10 +704,14 @@
 </section>
 <div class="dim-join"></div>
 <!-- terms popup -->
-<section id="termsPop2" class="popup type-write">
+<section id="termsPop2" class="popup type-write terms-pop">
     <div class="popup__dim"></div>
+    <div class="popup__wrap">
     <section class="popup__body terms-only">
-        <a class="popup__close js-popup-close" href="#;"><span class="sr-only">닫기</span></a>
+        <div class="popup__close js-popup-close">
+            <a class="popup__inner" href="#;"><span class="sr-only">닫기</span></a>
+        </div>
+        <!--<a class="popup__close js-popup-close" href="#;"><span class="sr-only">닫기</span></a>-->
         <div class="popup__header terms">
             <h3 class="popup__header--title">개인정보처리방침</h3>
         </div>
@@ -1030,9 +1034,8 @@
             <p>개인정보 취급방침 공고일자 : 2019-08-13<br>
                개인정보 취급방침 시행일자 : 2019-08-20</p>
         </div>
-
     </section>
-
+    </div>
 </section>
 
 <div class="section-body">
