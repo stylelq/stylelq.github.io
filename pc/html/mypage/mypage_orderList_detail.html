@@ -823,7 +823,7 @@
                         <div class="payment-info__cont">
                             <dl class="fieldset-dl__group">
                                 <dt><div class="fieldset-dl__label">결제방법</div></dt>
-                                <dd><div class="fieldset-dl__name">신용카드</div></dd>
+                                <dd><div class="fieldset-dl__name">네이버페이</div></dd>
                             </dl>
                             <dl class="fieldset-dl__group">
                                 <dt><div class="fieldset-dl__label">결제정보</div></dt>
@@ -831,7 +831,10 @@
                                     <p>승인번호 : 12345678</p>
                                     <p>신용카드 정보 : 외환 9411****3949****</p>
                                     <p>할부 : 일시불</p>
-                                    <div class="fieldset-dl__btn"><button class="btn-v3 btn-v3--small type-white">신용카드 영수중</button></div>
+                                    <div class="fieldset-dl__btn">
+                                        <a href="#receiptAddPop" class="myOrderList-detail__search-btn js-popup-open btn-v1 type-white">현금영수증 신청</a>
+                                        <!--<button class="btn-v3 btn-v3--small type-white">현금영수증 신청</button>-->
+                                    </div>
                                 </div></dd>
                             </dl>
                         </div>
@@ -1638,6 +1641,89 @@
     </div>
 </section>
 <!-- message popup -->
+<!-- terms popup -->
+<!--현금영수증 신청팝업-->
+<section id="receiptAddPop" class="popup type-write">
+    <div class="popup__dim"></div>
+    <div class="popup__wrap">
+        <section class="popup__body receipt-only">
+            <div class="popup__close js-popup-close">
+                <a class="popup__inner" href="#;"><span class="sr-only">닫기</span></a>
+            </div>
+            <div class="popup__header">
+                <h3 class="popup__header--title">현금영수증 신청</h3>
+            </div>
+            <div class="wrap">
+                <div class="receipt">
+                    <ul class="receipt-tab__fix">
+                        <li class="receipt-tab__item is-current">
+                            <a href="#" class="receipt__link js-add-tab-link">
+                                <div class="form__radio form__radio--big form__radio--red">
+                                    <input class="form__radio--input sr-only" type="radio" name="receiptTab" id="receipt1" checked>
+                                    <label class="form__radio--text" for="receipt1">개인소득공제</label>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="receipt-tab__item">
+                            <a href="#" class="receipt__link js-add-tab-link">
+                                <div class="form__radio form__radio--big form__radio--red">
+                                    <input class="form__radio--input sr-only" type="radio" name="receiptTab" id="receipt2">
+                                    <label class="form__radio--text" for="receipt2">사업자지출증빙</label>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="receipt-info">
+                        <div class="receipt-info__title">
+                            <dl class="receipt-info__group">
+                                <dt><div class="receipt-info__label">이메일</div></dt>
+                                <dd>
+                                    <div class="receipt-info__field">
+                                        <input type="email" name="EMAIL" id="EMAIL" class="input-v1" placeholder="이메일">
+                                        <div class="receipt-info__select">
+                                            <select id="emailDomainSelectbox" class="form__select js-placeholder is-check">
+                                                <option value="">직접입력</option>
+                                                <option value="naver.com">naver.com</option>
+                                                <option value="nate.com">nate.com</option>
+                                                <option value="daum.net">daum.net</option>
+                                                <option value="hanmail.net">hanmail.net</option>
+                                                <option value="hotmail.com">hotmail.com</option>
+                                                <option value="gmail.com">gmail.com</option>
+                                                <option value="kakao.com">kakao.com</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </dd>
+                            </dl>
+                            <dl class="receipt-info__group">
+                                <dt><div class="receipt-info__label">주민등록번호<br />(또는 휴대폰번호)</div></dt>
+                                <dd>
+                                    <div class="receipt-info__name">
+                                        <input type="text" class="form__input--text" name="ORD_DLV_NM" id="non_ord_nm" placeholder="휴대폰 번호 입력">
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-group btn-popup__group">
+                    <ul class="btn-group__list type-two">
+                        <li class="btn-group__item">
+                            <button class="btn-group__btn btn-v1 btn-v1--small type-white">취소</button>
+                        </li>
+                        <li class="btn-group__item">
+                            <button class="btn-group__btn btn-v1 btn-v1--small type-primary">신청</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+</section>
+<!--//현금영수증 신청팝업-->
+
+
 
 <script src="../../js/libs/jquery-3.6.0.min.js"></script>
 
