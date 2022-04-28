@@ -62,9 +62,8 @@ jQuery(function () {
     // boundsDisabledForZoom: true,
     maxZoom: 2,
     minZoom: 0.5,
-    $reset: $(".popup-slider__button, .slide-popup__close, .js-popup-close") //제품 팝업 확대축소(플러그인 panzoom)
-
-  };
+    $reset: $(".popup-slider__button, .slide-popup__close, .js-popup-close")
+  }; //제품 팝업 확대축소(플러그인 panzoom)
 
   function productZoom() {
     var area = document.querySelectorAll('.js-product-zoom');
