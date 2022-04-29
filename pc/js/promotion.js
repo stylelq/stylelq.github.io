@@ -97,3 +97,14 @@ if ($('.promotion-thumb').length > 0 && $('.promotion-thumb__item').length > 1) 
     promotionSlide.slideTo(num);
   });
 }
+
+if ($('.promotion-view__video--src').length > 0) {
+  var video = document.querySelector('.promotion-view__video--src');
+  var videoMuted = video.muted;
+
+  if (videoMuted) {
+    video.muted = false;
+  } else {
+    video.muted = true;
+  }
+}
