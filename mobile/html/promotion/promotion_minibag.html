@@ -1,5 +1,6 @@
 
 
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,8 +22,7 @@
 <!-- 공통 css -->
 <link rel="stylesheet" href="../../css/common.css">
 
-	<link rel="stylesheet" href="../../css/pages/platform.css">
-	<link rel="stylesheet" href="../../css/pages/product.css">
+	<link rel="stylesheet" href="../../css/pages/promotion.css">
 
 </head>
 
@@ -498,7 +498,7 @@
 <div class="lnb">
     <div class="lnb__tit">
         <a href="" class="lnb__back js-lnb-back">back</a>
-        <a href="#;" class="lnb__btn js-lnb-btn"><span class="lnb__arrow">ALL WORKS</span></a>
+        <a href="#;" class="lnb__btn js-lnb-btn"><span class="lnb__arrow">PROMOTION</span></a>
     </div>
     <!-- lnbMenu -->
     <div class="lnb__dim js-lnb-close">dim</div>
@@ -506,99 +506,183 @@
         <ul class="lnb__list">
             <li class="lnb__item is-active">
                 <a href="" class="lnb__link">
-                    <span class="lnb__line">ALL Works</span>
+                    <span class="lnb__line">BAG ALL</span>
                 </a>
             </li>
             <li class="lnb__item ">
                 <a href="" class="lnb__link">
-                    <span class="lnb__line">L Edition</span>
+                    <span class="lnb__line">숄더백</span>
                 </a>
             </li>
             <li class="lnb__item ">
                 <a href="" class="lnb__link">
-                    <span class="lnb__line">Art Furniture</span>
+                    <span class="lnb__line">토트백</span>
                 </a>
             </li>
             <li class="lnb__item ">
                 <a href="" class="lnb__link">
-                    <span class="lnb__line">Art Object</span>
+                    <span class="lnb__line">크로스백</span>
                 </a>
             </li>
             <li class="lnb__item ">
                 <a href="" class="lnb__link">
-                    <span class="lnb__line">Textile & Fashion</span>
+                    <span class="lnb__line">미니백/클러치백</span>
                 </a>
             </li>
             <li class="lnb__item ">
                 <a href="" class="lnb__link">
-                    <span class="lnb__line">Printed Matter</span>
+                    <span class="lnb__line">백팩</span>
                 </a>
             </li>
         </ul>
+        <a class="lnb__collection" href=""><span class="lnb__collection--text">COLLECTION</span></a>
     </div>
     <!-- .lnbMenu -->
 </div>
 <!-- .lnb -->
-    <div class="site-main">
-        <section class="platform">
-            <!-- platform video -->
-            <div class="platform-banner platform-banner--video"><!-- 안에 이미지가 들어갈시 platform-banner--img 클래스, 비디오 추가시 platform-banner--video 클래스 추가 -->
-                <video src="https://mcdn.louisclub.com/static/mo/img/platform/video_210907.mp4" class="platform-banner__file" loop="" autoplay="" muted="muted" playsinline="" data-object-fit="cover"></video>
+    <div class="site-promotion">
+        <!--프로모션 뷰 비주얼-->
+        <div class="promotion-view">
+            <div class="promotion-view__title">
+                <div class="promotion-view__name">Gift for You</div>
+                <div class="promotion-view__date">2021.11.04 ~ 2021.11.14</div>
             </div>
-            <!-- .platform video -->
-            <!-- Product List Filter -->
-<div class="list-filter">
-    <div class="wrap">
-        <div class="filter__layout">
-            <a href="#;" class="filter__link filter__link--list js-layout-chage">217개 상품</a>
-        </div>
-        <div class="filter__meta">
-            <!-- Select -->
-            <div class="filter__meta--select">
-                <select name="sort" id="sort" class="filter__select" title="상품 정렬 순서">
-                    <option value="new" selected="">신상품순</option>
-                    <option value="best">베스트순</option>
-                    <option value="high">높은가격순</option>
-                    <option value="low">낮은가격순</option>
-                </select>
-            </div>
-            <!-- .Select -->
-        </div>
-    </div>
-</div>
-<!-- .Product List Filter -->
-            <!-- product post -->
-            <div class="product-post product-post--post">
-                <ul class="product-post__list">
-                    <li class="product-post__item">
-                        <!-- item -->
-                        <div class="product-item">
-                            <a href="" class="product-item__link">
-                                <div class="product-item__state">SOLD OUT</div>
-                                <div class="product-item__thumb">
-                                    <img class="product-item__img" src="../../images/dummy/platform-dummy1-1.jpg" alt="" />
-                                </div>
-                                <div class="product-item__cont">
-                                    <div class="product-item__title">Martens and Martens KM Wrinkle Bag HP4CD43BU</div>
-                                    <div class="product-item__price">
-                                        <span class="product-item__price--sale">328,000원</span>
-                                        <span class="product-item__price--current">289,290원</span>
-                                    </div>
-                                </div>
-                            </a>
+            <div class="promotion-view__visual">
+                <!--비디오-->
+                <div class="promotion-view__video">
+                    <video class="promotion-view__video--src" src="https://cdn.louisclub.com/static/mo/img/specialty/20220512/mo_detail.mp4"
+                           poster=""
+                           id="find-video" loop=""
+                           autoplay="" playsinline=""  data-object-fit="cover"></video>
+                </div>
+                <!--//비디오-->
+
+                <!--콘텐츠 영역-->
+                <div class="promotion-view__contents minibag">
+                    <div class="promotion-view__header">
+                        <p class="promotion-view__header--ko">미니백 & 미니지갑 전용 쿠폰</p>
+                    </div>
+
+                    <div class="promotion-view__coupon">
+                        <img src="../../images/promotion/minibag/img_coupon.png" class="promotion-view__coupon--img" alt="추가 5% coupon"/>
+                        <a href="" class="promotion-view__btn">
+                            <img src="../../images/promotion/minibag/img_download.png" class="promotion-view__btn--img" alt="다운로드" />
+                        </a>
+                    </div>
+
+                    <!--minibag-->
+                    <div class="promotion-view__minibag">
+                        <div class="promotion-view__tit">
+                            <img src="../../images/promotion/minibag/img_tit_minibag.png" class="promotion-view__tit--minibag" alt="Mini Bag" />
                         </div>
-                        <!-- .item -->
-                    </li>
-                    <li class="product-post__item">
+                        <div class="promotion-view__list">
+                            <div class="promotion-view__item minibag">
+                                <div class="promotion-view__left">
+                                    <img src="../../images/promotion/minibag/img_minibag01.png" alt="" />
+                                </div>
+                                <div class="promotion-view__right">
+                                    <p class="promotion-view__right--txt">포인트 가방 하나로 센스있는<br />코디 완성. 가장 작은 미니백.</p>
+                                    <a href="https://m.stylelq.com/mo/product/productView.do?PRD_MST_CD=LLHQ1SD73FA9PU0170&searchCtg=119" class="promotion-view__right--btn">
+                                        <img src="../../images/promotion/minibag/img_button.png" class="" alt="shop->" />
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="promotion-view__item minibag">
+                                <div class="promotion-view__left">
+                                    <img src="../../images/promotion/minibag/img_minibag02.png" alt="" />
+                                </div>
+                                <div class="promotion-view__right">
+                                    <p class="promotion-view__right--txt">L퀼팅을 활용해 고급스러우며<br />앙증맞은 미니 크로스백.
+                                    </p>
+                                    <a href="https://m.stylelq.com/mo/product/productView.do?PRD_MST_CD=LLHP3QT06FA9PI0171&searchCtg=119" class="promotion-view__right--btn">
+                                        <img src="../../images/promotion/minibag/img_button.png" class="" alt="shop->" />
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="promotion-view__item minibag">
+                                <div class="promotion-view__left">
+                                    <img src="../../images/promotion/minibag/img_minibag03.png" alt="" />
+                                </div>
+                                <div class="promotion-view__right">
+                                    <p class="promotion-view__right--txt">우아한  컬러와 볼드한 심볼,<br />스퀘어 쉐입에 클래식한 미니 사첼백.</p>
+                                    <a href="https://m.stylelq.com/mo/product/productView.do?PRD_MST_CD=LLHP1SO01FB3IV0171&searchCtg=118" class="promotion-view__right--btn">
+                                        <img src="../../images/promotion/minibag/img_button.png" class="" alt="shop->" />
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!--//minibag-->
+
+                    <!--miniwallet-->
+                    <div class="promotion-view__minibag">
+                        <div class="promotion-view__tit">
+                            <img src="../../images/promotion/minibag/img_tit_miniwallet.png" class="promotion-view__tit--minibag" alt="Mini Bag" />
+                        </div>
+                        <div class="promotion-view__list">
+                            <div class="promotion-view__item minibag">
+                                <div class="promotion-view__left">
+                                    <img src="../../images/promotion/minibag/img_miniwallet01.png" alt="" />
+                                </div>
+                                <div class="promotion-view__right">
+                                    <p class="promotion-view__right--txt">미니 사이즈 지갑에 파스텔 컬러를<br />더해 한층 더 귀여워진 미니지갑.
+                                    </p>
+                                    <a href="https://m.stylelq.com/mo/product/productView.do?PRD_MST_CD=LLSP3SD71FI0PB0171&searchCtg=126" class="promotion-view__right--btn">
+                                        <img src="../../images/promotion/minibag/img_button.png" class="" alt="shop->" />
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="promotion-view__item minibag">
+                                <div class="promotion-view__left">
+                                    <img src="../../images/promotion/minibag/img_miniwallet02.png" alt="" />
+                                </div>
+                                <div class="promotion-view__right">
+                                    <p class="promotion-view__right--txt">미니몬트의 시그니처 장식과<br />조화로운 컬러까지 컴팩트한 반지갑.
+                                    </p>
+                                    <a href="https://m.stylelq.com/mo/product/productView.do?PRD_MST_CD=LLSQ1SO01FF4PI0171&searchCtg=124" class="promotion-view__right--btn">
+                                        <img src="../../images/promotion/minibag/img_button.png" class="" alt="shop->" />
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="promotion-view__item minibag">
+                                <div class="promotion-view__left">
+                                    <img src="../../images/promotion/minibag/img_miniwallet03.png" alt="" />
+                                </div>
+                                <div class="promotion-view__right">
+                                    <p class="promotion-view__right--txt">실용적인 카드 수납 공간에 뮤트한<br />컬러를 더한 아코디언 카드지갑.</p>
+                                    <a href="https://m.stylelq.com/mo/product/productView.do?PRD_MST_CD=LLSO4FM14FI1MT0171&searchCtg=126" class="promotion-view__right--btn">
+                                        <img src="../../images/promotion/minibag/img_button.png" class="" alt="shop->" />
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!--//miniwallet-->
+                </div>
+                <!--//콘텐츠 영역-->
+            </div>
+        </div>
+        <!--//프로모션 뷰 비주얼-->
+
+        <div class="promotion-group">
+            <!--프로모션 상품 리스트-->
+            <div class="promotion-product">
+                <div class="promotion-product__header">
+                    <div class="promotion-product__name">Wallet 1+1</div>
+                </div>
+                <div class="promotion-product__wrap">
+                    <div class="promotion-product__item">
                         <!-- item -->
                         <div class="product-item">
                             <a href="" class="product-item__link">
                                 <div class="product-item__state">NEW</div>
                                 <div class="product-item__thumb">
-                                    <img class="product-item__img" src="../../images/dummy/platform-dummy1-2.jpg" alt="" />
+                                    <img class="product-item__img" src="../../images/dummy/product_img1.png" alt="" />
                                 </div>
                                 <div class="product-item__cont">
-                                    <div class="product-item__title">Martens and Martens KM Wrinkle Bag HP4CD43BU</div>
+                                    <div class="product-item__title">루이까또즈 L-Quilting Mini(엘퀼팅 미니) 여성크로스백 HP3QT06OR</div>
                                     <div class="product-item__price">
                                         <span class="product-item__price--sale">328,000원</span>
                                         <span class="product-item__price--current">289,290원</span>
@@ -607,16 +691,17 @@
                             </a>
                         </div>
                         <!-- .item -->
-                    </li>
-                    <li class="product-post__item">
+                    </div>
+                    <div class="promotion-product__item">
                         <!-- item -->
                         <div class="product-item">
                             <a href="" class="product-item__link">
+                                <div class="product-item__state">NEW</div>
                                 <div class="product-item__thumb">
-                                    <img class="product-item__img" src="../../images/dummy/platform-dummy1-1.jpg" alt="" />
+                                    <img class="product-item__img" src="../../images/dummy/product_img1.png" alt="" />
                                 </div>
                                 <div class="product-item__cont">
-                                    <div class="product-item__title">Martens and Martens KM Wrinkle Bag HP4CD43BU</div>
+                                    <div class="product-item__title">루이까또즈 L-Quilting Mini(엘퀼팅 미니) 여성크로스백 HP3QT06OR</div>
                                     <div class="product-item__price">
                                         <span class="product-item__price--sale">328,000원</span>
                                         <span class="product-item__price--current">289,290원</span>
@@ -625,16 +710,17 @@
                             </a>
                         </div>
                         <!-- .item -->
-                    </li>
-                    <li class="product-post__item">
+                    </div>
+                    <div class="promotion-product__item">
                         <!-- item -->
                         <div class="product-item">
                             <a href="" class="product-item__link">
+                                <div class="product-item__state">NEW</div>
                                 <div class="product-item__thumb">
-                                    <img class="product-item__img" src="../../images/dummy/platform-dummy1-2.jpg" alt="" />
+                                    <img class="product-item__img" src="../../images/dummy/product_img1.png" alt="" />
                                 </div>
                                 <div class="product-item__cont">
-                                    <div class="product-item__title">Martens and Martens KM Wrinkle Bag HP4CD43BU</div>
+                                    <div class="product-item__title">루이까또즈 L-Quilting Mini(엘퀼팅 미니) 여성크로스백 HP3QT06OR</div>
                                     <div class="product-item__price">
                                         <span class="product-item__price--sale">328,000원</span>
                                         <span class="product-item__price--current">289,290원</span>
@@ -643,16 +729,17 @@
                             </a>
                         </div>
                         <!-- .item -->
-                    </li>
-                    <li class="product-post__item">
+                    </div>
+                    <div class="promotion-product__item">
                         <!-- item -->
                         <div class="product-item">
                             <a href="" class="product-item__link">
+                                <div class="product-item__state">NEW</div>
                                 <div class="product-item__thumb">
-                                    <img class="product-item__img" src="../../images/dummy/platform-dummy1-1.jpg" alt="" />
+                                    <img class="product-item__img" src="../../images/dummy/product_img1.png" alt="" />
                                 </div>
                                 <div class="product-item__cont">
-                                    <div class="product-item__title">Martens and Martens KM Wrinkle Bag HP4CD43BU</div>
+                                    <div class="product-item__title">루이까또즈 L-Quilting Mini(엘퀼팅 미니) 여성크로스백 HP3QT06OR</div>
                                     <div class="product-item__price">
                                         <span class="product-item__price--sale">328,000원</span>
                                         <span class="product-item__price--current">289,290원</span>
@@ -661,44 +748,221 @@
                             </a>
                         </div>
                         <!-- .item -->
-                    </li>
-                    <li class="product-post__item">
-                        <!-- item -->
-                        <div class="product-item">
-                            <a href="" class="product-item__link">
-                                <div class="product-item__thumb">
-                                    <img class="product-item__img" src="../../images/dummy/platform-dummy1-2.jpg" alt="" />
-                                </div>
-                                <div class="product-item__cont">
-                                    <div class="product-item__title">Martens and Martens KM Wrinkle Bag HP4CD43BU</div>
-                                    <div class="product-item__price">
-                                        <span class="product-item__price--sale">328,000원</span>
-                                        <span class="product-item__price--current">289,290원</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- .item -->
-                    </li>
-                </ul>
+                    </div>
+                </div>
             </div>
-            <!-- .product post -->
-            <!-- paging -->
-<div class="paging">
-    <ul class="paging__list">
-        <li class="paging__item paging__item--prev"><a class="paging__link" href="#;"><span class="sr-only">prev</span></a></li>
-        <li class="paging__item is-current"><span class="paging__link">1</span></li>
-        <li class="paging__item"><a class="paging__link" href="#;">2</a></li>
-        <li class="paging__item"><a class="paging__link" href="#;">3</a></li>
-        <li class="paging__item"><a class="paging__link" href="#;">4</a></li>
-        <li class="paging__item"><a class="paging__link" href="#;">5</a></li>
-        <li class="paging__item paging__item--next"><a class="paging__link" href="#;"><span class="sr-only">next</span></a></li>
-    </ul>
-</div>
-<!-- .paging -->
-        </section>
+            <!--//프로모션 상품 리스트-->
+
+            <!--프로모션 상품 리스트-->
+            <div class="promotion-product">
+                <div class="promotion-product__header">
+                    <div class="promotion-product__name">WOMEN'S WALLET</div>
+                </div>
+                <div class="promotion-product__wrap">
+                    <div class="promotion-product__item">
+                        <!-- item -->
+                        <div class="product-item">
+                            <a href="" class="product-item__link">
+                                <div class="product-item__state">NEW</div>
+                                <div class="product-item__thumb">
+                                    <img class="product-item__img" src="../../images/dummy/product_img1.png" alt="" />
+                                </div>
+                                <div class="product-item__cont">
+                                    <div class="product-item__title">루이까또즈 L-Quilting Mini(엘퀼팅 미니) 여성크로스백 HP3QT06OR</div>
+                                    <div class="product-item__price">
+                                        <span class="product-item__price--sale">328,000원</span>
+                                        <span class="product-item__price--current">289,290원</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- .item -->
+                    </div>
+                    <div class="promotion-product__item">
+                        <!-- item -->
+                        <div class="product-item">
+                            <a href="" class="product-item__link">
+                                <div class="product-item__state">NEW</div>
+                                <div class="product-item__thumb">
+                                    <img class="product-item__img" src="../../images/dummy/product_img1.png" alt="" />
+                                </div>
+                                <div class="product-item__cont">
+                                    <div class="product-item__title">루이까또즈 L-Quilting Mini(엘퀼팅 미니) 여성크로스백 HP3QT06OR</div>
+                                    <div class="product-item__price">
+                                        <span class="product-item__price--sale">328,000원</span>
+                                        <span class="product-item__price--current">289,290원</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- .item -->
+                    </div>
+                    <div class="promotion-product__item">
+                        <!-- item -->
+                        <div class="product-item">
+                            <a href="" class="product-item__link">
+                                <div class="product-item__state">NEW</div>
+                                <div class="product-item__thumb">
+                                    <img class="product-item__img" src="../../images/dummy/product_img1.png" alt="" />
+                                </div>
+                                <div class="product-item__cont">
+                                    <div class="product-item__title">루이까또즈 L-Quilting Mini(엘퀼팅 미니) 여성크로스백 HP3QT06OR</div>
+                                    <div class="product-item__price">
+                                        <span class="product-item__price--sale">328,000원</span>
+                                        <span class="product-item__price--current">289,290원</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- .item -->
+                    </div>
+                    <div class="promotion-product__item">
+                        <!-- item -->
+                        <div class="product-item">
+                            <a href="" class="product-item__link">
+                                <div class="product-item__state">NEW</div>
+                                <div class="product-item__thumb">
+                                    <img class="product-item__img" src="../../images/dummy/product_img1.png" alt="" />
+                                </div>
+                                <div class="product-item__cont">
+                                    <div class="product-item__title">루이까또즈 L-Quilting Mini(엘퀼팅 미니) 여성크로스백 HP3QT06OR</div>
+                                    <div class="product-item__price">
+                                        <span class="product-item__price--sale">328,000원</span>
+                                        <span class="product-item__price--current">289,290원</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- .item -->
+                    </div>
+                </div>
+            </div>
+            <!--//프로모션 상품 리스트-->
+
+            <!--프로모션 상품 리스트-->
+            <div class="promotion-product">
+                <div class="promotion-product__header">
+                    <div class="promotion-product__name">MEN'S WALLET</div>
+                </div>
+                <div class="promotion-product__wrap">
+                    <div class="promotion-product__item">
+                        <!-- item -->
+                        <div class="product-item">
+                            <a href="" class="product-item__link">
+                                <div class="product-item__state">NEW</div>
+                                <div class="product-item__thumb">
+                                    <img class="product-item__img" src="../../images/dummy/product_img1.png" alt="" />
+                                </div>
+                                <div class="product-item__cont">
+                                    <div class="product-item__title">루이까또즈 L-Quilting Mini(엘퀼팅 미니) 여성크로스백 HP3QT06OR</div>
+                                    <div class="product-item__price">
+                                        <span class="product-item__price--sale">328,000원</span>
+                                        <span class="product-item__price--current">289,290원</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- .item -->
+                    </div>
+                    <div class="promotion-product__item">
+                        <!-- item -->
+                        <div class="product-item">
+                            <a href="" class="product-item__link">
+                                <div class="product-item__state">NEW</div>
+                                <div class="product-item__thumb">
+                                    <img class="product-item__img" src="../../images/dummy/product_img1.png" alt="" />
+                                </div>
+                                <div class="product-item__cont">
+                                    <div class="product-item__title">루이까또즈 L-Quilting Mini(엘퀼팅 미니) 여성크로스백 HP3QT06OR</div>
+                                    <div class="product-item__price">
+                                        <span class="product-item__price--sale">328,000원</span>
+                                        <span class="product-item__price--current">289,290원</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- .item -->
+                    </div>
+                    <div class="promotion-product__item">
+                        <!-- item -->
+                        <div class="product-item">
+                            <a href="" class="product-item__link">
+                                <div class="product-item__state">NEW</div>
+                                <div class="product-item__thumb">
+                                    <img class="product-item__img" src="../../images/dummy/product_img1.png" alt="" />
+                                </div>
+                                <div class="product-item__cont">
+                                    <div class="product-item__title">루이까또즈 L-Quilting Mini(엘퀼팅 미니) 여성크로스백 HP3QT06OR</div>
+                                    <div class="product-item__price">
+                                        <span class="product-item__price--sale">328,000원</span>
+                                        <span class="product-item__price--current">289,290원</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- .item -->
+                    </div>
+                    <div class="promotion-product__item">
+                        <!-- item -->
+                        <div class="product-item">
+                            <a href="" class="product-item__link">
+                                <div class="product-item__state">NEW</div>
+                                <div class="product-item__thumb">
+                                    <img class="product-item__img" src="../../images/dummy/product_img1.png" alt="" />
+                                </div>
+                                <div class="product-item__cont">
+                                    <div class="product-item__title">루이까또즈 L-Quilting Mini(엘퀼팅 미니) 여성크로스백 HP3QT06OR</div>
+                                    <div class="product-item__price">
+                                        <span class="product-item__price--sale">328,000원</span>
+                                        <span class="product-item__price--current">289,290원</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- .item -->
+                    </div>
+                </div>
+            </div>
+            <!--//프로모션 상품 리스트-->
+        </div>
+
+        <div class="promotion-wrap">
+            <!--프로모션 배너 리스트-->
+            <div class="promotion-list">
+                <a class="promotion-list__link" href="promotion_view.html">
+                    <div class="promotion-list__box">
+                        <img class="promotion-list__img" src="https://mcdn.louisclub.com/static/upload/marketing/2021/11/18/74480173-3dde-4aa5-a288-e70221b13deb.jpg" alt=""/>
+                    </div>
+                    <div class="promotion-list__name">KAREL MARTENS BAG</div>
+                </a>
+            </div>
+            <!--//프로모션 배너 리스트-->
+
+            <!--프로모션 배너 리스트-->
+            <div class="promotion-list">
+                <a class="promotion-list__link" href="promotion_view.html">
+                    <div class="promotion-list__box">
+                        <img class="promotion-list__img" src="https://mcdn.louisclub.com/static/upload/marketing/2021/11/19/35143dfb-abad-4ac5-b3f5-183ffe2a0b71.jpg" alt=""/>
+                    </div>
+                    <div class="promotion-list__name">L-Quilting mini</div>
+                </a>
+            </div>
+            <!--//프로모션 배너 리스트-->
+
+            <!--프로모션 배너 리스트-->
+            <div class="promotion-list">
+                <a class="promotion-list__link" href="promotion_view.html">
+                    <div class="promotion-list__box">
+                        <img class="promotion-list__img" src="https://mcdn.louisclub.com/static/upload/marketing/2021/11/17/becb0eb7-fa17-4ac9-9997-c266de64dde9.jpg" alt=""/>
+                    </div>
+                    <div class="promotion-list__name">LALA WALLET</div>
+                </a>
+            </div>
+            <!--//프로모션 배너 리스트-->
+        </div>
     </div>
 </div>
+
 <!-- //section끝 -->
 <!--footer시작-->
 <footer class="footer">
@@ -774,9 +1038,10 @@
 	
 	
 	
-	<script src="../../js/common.js"></script>
+		<script src="../../js/libs/swiper-4.5.0.min.js"></script>
+		<script src="../../js/promotion.js"></script>
 	
-		<script src="../../js/popup.js"></script>
+	<script src="../../js/common.js"></script>
 	
 	
 	
@@ -784,4 +1049,3 @@
 </body>
 </html>
 <!--footer끝-->
-
