@@ -507,6 +507,30 @@ jQuery(function () {
           disableOnInteraction: false
         }
       });
+    } // 프로모션 모델슬라이드(하단)
+
+
+    if ($('.promotion-model-slideSecond').length > 0) {
+      var promotionModelSlideSecond = new Swiper('.promotion-model__containerSecond', {
+        effect: 'fade',
+        observer: true,
+        observeParents: true,
+        watchOverflow: true,
+        slidesPerView: 1,
+        loop: true,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false
+        },
+        pagination: {
+          el: '.promotion-slide-paginationSecond',
+          clickable: true
+        },
+        navigation: {
+          nextEl: ".model-next-btn",
+          prevEl: ".model-prev-btn"
+        }
+      });
     } // 컬렉션,프로모션 비디오 재생버튼 액션추가
 
 
