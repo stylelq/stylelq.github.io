@@ -228,6 +228,31 @@ jQuery(function () {
 
   $(document).on('click', '.popup-orderlist__body .detail-Meta__btn>a, .product-post__item', orderMetaSelect); //팝업닫기(메인)
 
+  $('.collabo-wrap__sound--stop').addClass('is-show');
+  $('.collabo-wrap__sound--play').addClass('is-hide'); // 콜라보레이션 영상 음소거 관련 스크립트
+
+  function stopSoundPop() {
+    // 영상 소리 음소거
+    var videoCollabo = document.querySelector('.collabo-wrap__video');
+    var videoMuted = videoCollabo.muted;
+    videoCollabo.muted = true;
+    $('.collabo-wrap__sound--stop').removeClass('is-show').addClass('is-hide');
+    $('.collabo-wrap__sound--play').removeClass('is-hide').addClass('is-show');
+  }
+
+  $(document).on('click', '.js-sound-stop', stopSoundPop);
+
+  function playSoundPop() {
+    //영상 소리 음소거 해제
+    var videoCollaboNew = document.querySelector('.collabo-wrap__video');
+    var videoMutedNew = videoCollaboNew.muted;
+    videoCollaboNew.muted = false;
+    $('.collabo-wrap__sound--stop').removeClass('is-hide').addClass('is-show');
+    $('.collabo-wrap__sound--play').removeClass('is-show').addClass('is-hide');
+  }
+
+  $(document).on('click', '.js-sound-play', playSoundPop);
+
   function closemainPopup() {
     if ($('.notice-popup').length <= 1) {
       $('#mainPopup').css('display', 'none');

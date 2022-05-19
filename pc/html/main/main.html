@@ -53,8 +53,9 @@
             <div class="header-wrap__top">
             <!--로고-->
             <a href="../main/main.html" class="header-wrap__logo">
-                <h2 class="header-wrap__background">louisquatorze</h2>
-                <!--<img src="../../images/common/logo.png" alt="louis quatorze" class="img-w100 header__black">-->
+                <!--<h2 class="header-wrap__background">louisquatorze</h2>-->
+                <img src="../../images/common/logo.png" alt="louis quatorze" class="header__black">
+                <img src="../../images/common/logo_white.png" alt="louis quatorze" class="header__white">
             </a>
             <!--//로고-->
 
@@ -63,10 +64,18 @@
             <div class="header-wrap__right">
                 <ul class="header-wrap__List">
                     <li class="header-wrap__item type-search">
-                        <a href="#;" class="header-wrap__link js-search-open"></a>
+                        <a href="#;" class="header-wrap__link js-search-open">
+                            <img src="../../images/common/icon_search_blk.svg" alt="louis quatorze" class="header__black search-btn">
+                            <img src="../../images/common/icon_search_white.svg" alt="louis quatorze" class="header__white search-btn">
+
+                            <img src="../../images/common/icon_close2.png" alt="louis quatorze" class="header__black close-btn">
+                        </a>
                     </li>
                     <li class="header-wrap__item type-login">
-                        <a href="#;" class="header-wrap__link js-mypage"></a>
+                        <a href="#;" class="header-wrap__link js-mypage">
+                            <img src="../../images/common/icon_mypage.svg" alt="louis quatorze" class="header__black">
+                            <img src="../../images/common/icon_mypage_white.svg" alt="louis quatorze" class="header__white">
+                        </a>
 
                         <div class="header-mypage">
                             <ul class="header-mypage__list">
@@ -83,7 +92,11 @@
                         </div>
                     </li>
                     <li class="header-wrap__item type-cart">
-                        <a href="#;" class="header-wrap__link">0</a>
+                        <a href="#;" class="header-wrap__link">
+                            <img src="../../images/common/icon_basket.svg" alt="louis quatorze" class="header__black" />
+                            <img src="../../images/common/icon_basket_white.png" alt="louis quatorze" class="header__white" />
+                            <span class="header-wrap__count">0</span>
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -1070,23 +1083,23 @@
     <div class="main-banner">
         <div class="swiper-container main-banner__container">
             <div class="swiper-wrapper main-banner__wrapper">
-                <div class='swiper-slide main-banner__item js-first-slide' data-bg="black">
+                <div class='swiper-slide main-banner__item js-first-slide' data-bg="white">
                     <a href="#;" class="main-banner__inner">
                         <div class="main-banner__box" style="background:url('https://cdn.louisclub.com/static/upload/display/2022/04/01/fe33ea49-0ed5-4238-befa-21654a78bfd1.jpg');">
                             <div class="main-banner__wrap">
-                                <div class="main-banner__content">
-                                    <div class="main-banner__name">L-QUILTING MINI</div>
+                                <div class="main-banner__content" data-title="is-black">
+                                    <div class="main-banner__name is-black">L-QUILTING MINI</div>
                                 </div>
                             </div>
                         </div>
                     </a>
                 </div>
-                <div class='swiper-slide main-banner__item js-first-slide' data-bg="black">
+                <div class='swiper-slide main-banner__item js-first-slide' data-bg="white">
                     <a href="#;" class="main-banner__inner">
                         <div class="main-banner__box" style="background:url('https://cdn.louisclub.com/static/upload/display/2022/04/01/fe33ea49-0ed5-4238-befa-21654a78bfd1.jpg');">
                             <div class="main-banner__wrap">
-                                <div class="main-banner__content">
-                                    <div class="main-banner__name">L-QUILTING MINI</div>
+                                <div class="main-banner__content" data-title="is-white">
+                                    <div class="main-banner__name is-white">L-QUILTING MINI</div>
                                 </div>
                             </div>
                         </div>
@@ -1094,18 +1107,21 @@
                 </div>
 
                 <!--비디오일 때-->
-                <div class='swiper-slide main-banner__item js-first-slide' data-bg="white">
+                <div class='swiper-slide main-banner__item js-first-slide' data-bg="black">
                     <a href="#;" class="main-banner__inner">
                         <div class="main-banner__box">
                             <video class="main-banner__video" src="https://mcdn.louisclub.com/static/mo/img/specialty/20200710/find.mp4" loop="" autoplay="" muted="true" playsinline="" data-object-fit="cover" poster="https://mcdn.louisclub.com/static/mo/img/specialty/20200710/video_bg.jpg"></video>
-                            <div class="main-banner__content">
-                                <div class="main-banner__name">L-QUILTING MINI</div>
+                            <div class="main-banner__content" data-title="is-black">
+                                <div class="main-banner__name is-black">L-QUILTING MINI</div>
                             </div>
                         </div>
                     </a>
                 </div>
                 <!--.비디오일 때-->
             </div>
+            <div class="swiper-button-prev main-banner--prev"></div>
+            <div class="swiper-button-next main-banner--next"></div>
+
             <div class="swiper-pagination main-banner__pagination"></div>
             <div class="swiper-progress-bar main-banner__progressbar">
                 <span class="slide_progress-bar"></span>
@@ -1210,14 +1226,14 @@
                         </div>
                         <!--//이미지일 때-->
                         <div class="main-banner2__wrap">
-                            <div class="main-banner2__content">
+                            <div class="main-banner2__content" data-title="is-white">
                                 <div class="main-banner2__name is-white">L-QUILTING MINI</div>
                             </div>
                         </div>
                     </a>
 
                 </div>
-                <div class='swiper-slide main-banner2__item' data-bg="white">
+                <div class='swiper-slide main-banner2__item' data-bg="black">
                     <a href="#;" class="main-banner2__inner">
                         <!--이미지일 때-->
                         <div class="main-banner2__source main-banner2__source--img">
@@ -1225,8 +1241,8 @@
                         </div>
                         <!--//이미지일 때-->
                         <div class="main-banner2__wrap">
-                            <div class="main-banner2__content">
-                                <div class="main-banner2__name is-white">L-QUILTING MINI</div>
+                            <div class="main-banner2__content" data-title="is-black">
+                                <div class="main-banner2__name is-black">L-QUILTING MINI</div>
                             </div>
                         </div>
                     </a>
@@ -1451,7 +1467,7 @@
                         </div>
                         <!--//비디오일 때-->
                         <div class="main-banner3__wrap">
-                            <div class="main-banner3__content">
+                            <div class="main-banner3__content" data-title="is-white">
                                 <div class="main-banner3__name is-white">L-QUILTING MINI</div>
                             </div>
                         </div>
@@ -1466,7 +1482,7 @@
                         </div>
                         <!--//이미지일 때-->
                         <div class="main-banner3__wrap">
-                            <div class="main-banner3__content">
+                            <div class="main-banner3__content" data-title="is-white">
                                 <div class="main-banner3__name is-white">L-QUILTING MINI</div>
                             </div>
                         </div>
