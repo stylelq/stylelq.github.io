@@ -203,7 +203,10 @@ jQuery(function () {
           if ($sc - $divH > 0) {
             //윈도우 끝쪽에 다닳았을때
             positionAbsolute($divH + 240);
-            $('.detail-tab').removeClass('fixed');
+
+            if ($divH > 960) {
+              $('.detail-tab').removeClass('fixed');
+            }
           } else {
             positionFixed($('.header').height() + 10);
           }
@@ -217,12 +220,13 @@ jQuery(function () {
         $('.detail-height').removeClass('is-summary');
       } // 스크롤 0일때 초기화
 
-
+      /*
       if ($sc == 0) {
-        $('.detail-tab__item').removeClass('is-current');
-        $('.detail-tab__item').eq(0).addClass('is-current');
-        $('.detail-tab__info').eq(0).addClass('is-current');
-      }
+          $('.detail-tab__item').removeClass('is-current');
+          $('.detail-tab__item').eq(0).addClass('is-current');
+          $('.detail-tab__info').eq(0).addClass('is-current');
+      }*/
+
 
       $('.product-option-fix').css($styleOpt);
       return;
@@ -909,11 +913,11 @@ jQuery(function () {
   });
 
   function pagingOptionChange() {
-    if ($('.main-banner__item[data-bg="white"]').hasClass('swiper-slide-active')) {
+    if ($('.header').hasClass('is-bg-white')) {
       $('body').removeClass('is-black');
       $('body').addClass('is-white');
     } else {
-      if ($('.header').hasClass('is-bg-white')) {
+      if ($('.main-banner__item[data-bg="white"]').hasClass('swiper-slide-active')) {
         $('body').removeClass('is-black');
         $('body').addClass('is-white');
       } else {
