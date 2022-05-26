@@ -203,10 +203,9 @@ jQuery(function () {
           if ($sc - $divH > 0) {
             //윈도우 끝쪽에 다닳았을때
             positionAbsolute($divH + 240);
-
-            if ($divH > 960) {
-              $('.detail-tab').removeClass('fixed');
-            }
+            /*if ($divH > 960) {
+                $('.detail-tab').removeClass('fixed');
+            }*/
           } else {
             positionFixed($('.header').height() + 10);
           }
