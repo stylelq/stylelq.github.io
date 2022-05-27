@@ -1219,12 +1219,13 @@ jQuery(function () {
 
 
   if ($('.main-banner4').length > 0 && $('.main-banner4__item').length > 1) {
-    var mainSlide = new Swiper('.main-banner4__container', {
+    var _mainSlide = new Swiper('.main-banner4__container', {
       observer: true,
       observeParents: true,
       watchOverflow: true,
-      slidesPerView: 1,
+      slidesPerView: 'auto',
       loop: true,
+      centeredSlides: true,
       autoplay: {
         delay: 5000,
         disableOnInteraction: false
@@ -1279,8 +1280,9 @@ jQuery(function () {
     });
     /*슬라이드 온클릭 시 자동슬라이드 정지*/
 
-    $(document).on('click', mainSlide, function () {
-      mainSlide.autoplay.stop();
+
+    $(document).on('click', _mainSlide, function () {
+      _mainSlide.autoplay.stop();
     });
   } //--END[swiper slider]-----------------------------
 
