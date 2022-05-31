@@ -561,6 +561,30 @@ jQuery(function () {
     } // 컬렉션,프로모션 비디오 재생버튼 액션추가
 
 
+    if ($('.promotion-model-pochebag').length > 0) {
+      var promotionModelSlideSecond = new Swiper('.promotion-model__pochebag', {
+        //effect: 'fade',
+        observer: true,
+        observeParents: true,
+        watchOverflow: true,
+        slidesPerView: 1,
+        loop: true,
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false
+        },
+        pagination: {
+          el: '.pochebag-slide-pagination',
+          clickable: true
+        },
+        navigation: {
+          nextEl: ".pochebag-next-btn",
+          prevEl: ".pochebag-prev-btn"
+        }
+      });
+    } // 프로모션 - 핸드폰가방 기획전
+
+
     if ($('.promotion-view__visual--play').length > 0) {
       var videoPlay = function videoPlay(e) {
         e.preventDefault();
