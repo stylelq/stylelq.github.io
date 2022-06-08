@@ -24,20 +24,37 @@
   - BEM 방법론 사용   
     ```html
       <!-- 예시 -->
-      <div class="loading"> <!-- 블록(Block) -->
-        <div class="loading-box"> <!-- 블록(Block) -->
-          <div class="loading-box__img"> <!-- 요소(Element) -->
-            <img src="../../images/common/loading.gif" alt="">
-          </div>
-          <div class="loading-box__text">데이터 로딩중입니다<br>잠시만 기다려주세요</div> <!-- 요소(Element) -->
+      <div class="myLouis-level level-1"> <!-- Block(블록) -->
+        <div class="myLouis-level__icon"></div>
+        <div class="myLouis-level__more"> <!-- Element(요소) -->
+          <a href="#" class="myLouis-level__more--userInfo">홍길동님</a> <!-- Modifier(수정자) -->
+          <p class="myLouis-level__more--text">
+            <span class="myLouis-level__name">PLATINUM</span> 등급입니다.
+          </p>
+          <a href="#membershipJoin" class="myLouis-level__more--membership js-popup-open">맴버쉽 혜택</a>
         </div>
-      </div>
+      </div>  
       ```
 - 웹접근성
-- 레이어팝업 구현 시 유의사항
+  - 이미지 alt값 설정
+  - 캐릭터셋 지정   
+    ```html
+     <meta charset=“utf-8” >
+      ```
 - 기본 문서형/문자셋
+  - 문서형: HTML5
+  - 문자셋/인코딩: UTF-8 
+ 
+#### 1.2. PC   
+- 문자셋
+- 파일 인코딩
+- XHTML 문법
+  - 속성의 값은 큰따옴표("")로 묶는다
+  - 종료태그는 반드시 선언한다
+  - 모든 요소와 속성은 소문자로 작성한다
+- 공통 css구성
+- 아이디/클래스 네이밍규칙
 
-#### 1.2. PC 
 #### 1.3. 모바일
 
 ***
