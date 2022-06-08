@@ -20,7 +20,17 @@
 |images|이미지|
 |js|자바스크립트|
 
-- 공통 유의사항
+- 클래스명 작성규칙
+  - BEM 방법론 사용   
+    ```html
+      <section class="membershipJoin">
+        <div class="membershipJoin-result">
+          <div class="membershipJoin-result__text">멤버십 회원으로 전환이 <span class="text--point">완료</span>되었습니다.</div>
+          <div class="membershipJoin-result__table">
+          </div>
+        </div>
+      </section>
+      ```
 
 #### 1.2. PC 
 #### 1.3. 모바일
