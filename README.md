@@ -24,8 +24,8 @@
   - BEM 방법론 사용   
     ```html
       <!--예제-->
-      <div class="loading"> <!-- 블록 1(Block) -->
-        <div class="loading-box"> <!-- 블록 2(Block) -->
+      <div class="loading"> <!-- 블록(Block) -->
+        <div class="loading-box"> <!-- 블록(Block) -->
           <div class="loading-box__img"> <!-- 요소(Element) -->
             <img src="../../images/common/loading.gif" alt="">
           </div>
