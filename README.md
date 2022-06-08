@@ -56,13 +56,26 @@
   - common.css(common.scss에 공통 스타일을 import함)
   - common.scss를 구성하는 scss 폴더구조 및 폴더명
 
-  |디렉토리|파일명|내용|
-  |:-----:|:-----:|:-----:|
-  |base|_font|@font-face 웹폰트지원|
-  |base|_mixins|mixins 통합 관리|
-  |base|_reset|테마 리셋정보|
-  |base|_rule|자주사용하는 클래스 등록|
-  |base|_variables|변수 정보| 
+    |디렉토리|파일명|내용|
+    |:-----:|:-----:|:-----:|
+    |base|_font|웹폰트지원|
+    |base|_mixins|mixins 통합 관리|
+    |base|_reset|테마 리셋정보|
+    |base|_rule|자주사용하는 클래스 등록|
+    |base|_variables|변수 정보| 
+    |layout|_footer|푸터 스타일 정의|
+    |layout|_gnb|헤더 메뉴 스타일 정의|
+    |layout|_header|헤더 레이아웃 스타일 정의|
+    |layout|_layout|사이트 레이아웃 스타일 정의|
+    |layout|_search|헤더 서치 스타일 정의| 
+    |components|_cartFix|상품리스트, 상품상세 우측 하단에 노출되는 최신본제품 및 Top버튼 스타일 정의|
+    |components|_cartFixButton|상품 상세페이지 하단 결제 버튼 스타일 정의|
+    |components|_depthHead|각 페이지의 상단 2뎁스 lnb 요소 스타일 정의|
+    |components|_form|폼(인풋, 테이블, 셀렉박스 등) 관련된 스타일 정의|
+    |components|_paging|리스트, 포스트 페이징 스타일 정의|
+    |components|_popup|모든 팝업관련 스타일 정의|
+    |components|_productFixButton|상품 상세 하단 결제, 좋아요관련 픽시드버튼 스타일 정의|
+    |components|_productListFilter|상품 리스트 상단 필터 레이아웃 스타일 정의|
   
 - 아이디/클래스 네이밍규칙
 
