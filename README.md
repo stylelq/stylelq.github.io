@@ -23,13 +23,12 @@
 - 클래스명 작성규칙
   - BEM 방법론 사용   
     ```html
-      <section class="membershipJoin">
-        <div class="membershipJoin-result">
-          <div class="membershipJoin-result__text">멤버십 회원으로 전환이 <span class="text--point">완료</span>되었습니다.</div>
-          <div class="membershipJoin-result__table">
-          </div>
+      <div class="loading">
+        <div class="loading-box">
+          <div class="loading-box__img"><img src="../../images/common/loading.gif" alt=""></div>
+          <div class="loading-box__text">데이터 로딩중입니다<br>잠시만 기다려주세요</div>
         </div>
-      </section>
+      </div>
       ```
 
 #### 1.2. PC 
