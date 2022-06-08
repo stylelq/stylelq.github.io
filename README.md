@@ -23,10 +23,13 @@
 - 클래스명 작성규칙
   - BEM 방법론 사용   
     ```html
-      <div class="loading">
-        <div class="loading-box">
-          <div class="loading-box__img"><img src="../../images/common/loading.gif" alt=""></div>
-          <div class="loading-box__text">데이터 로딩중입니다<br>잠시만 기다려주세요</div>
+      <!--예제-->
+      <div class="loading"> <!-- 블록 1(Block) -->
+        <div class="loading-box"> <!-- 블록 2(Block) -->
+          <div class="loading-box__img"> <!-- 요소(Element) -->
+            <img src="../../images/common/loading.gif" alt="">
+          </div>
+          <div class="loading-box__text">데이터 로딩중입니다<br>잠시만 기다려주세요</div> <!-- 요소(Element) -->
         </div>
       </div>
       ```
