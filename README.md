@@ -23,7 +23,7 @@
 - 클래스명 작성규칙
   - BEM 방법론 사용   
     ```html
-      <!--예제-->
+      <!-- 예시 -->
       <div class="loading"> <!-- 블록(Block) -->
         <div class="loading-box"> <!-- 블록(Block) -->
           <div class="loading-box__img"> <!-- 요소(Element) -->
@@ -33,6 +33,9 @@
         </div>
       </div>
       ```
+- 웹접근성
+- 레이어팝업 구현 시 유의사항
+- 기본 문서형/문자셋
 
 #### 1.2. PC 
 #### 1.3. 모바일
