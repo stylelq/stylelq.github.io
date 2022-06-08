@@ -55,7 +55,6 @@
 - 공통 css구성
   - common.css(common.scss에 공통 스타일을 import함)
   - common.scss를 구성하는 scss 폴더구조 및 폴더명
-
     |디렉토리|파일명|내용|
     |:-----:|:-----:|:-----:|
     |base|_font|웹폰트지원|
@@ -76,8 +75,11 @@
     |components|_popup|모든 팝업관련 스타일 정의|
     |components|_productFixButton|상품 상세 하단 결제, 좋아요관련 픽시드버튼 스타일 정의|
     |components|_productListFilter|상품 리스트 상단 필터 레이아웃 스타일 정의|
-  
-- 아이디/클래스 네이밍규칙
+- 파일명 네이밍 규칙
+  - 알파벳 소문자, 숫자, 언더바(_)를 조합하여 생성함
+- 레이아웃
+  - 1920px이 디폴트로, 1200px까지 처리
+    (브라우저 크롬 기준)
 
 #### 1.3. 모바일
 
