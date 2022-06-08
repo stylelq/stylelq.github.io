@@ -55,6 +55,7 @@
 - 공통 css구성
   - common.css(common.scss에 공통 스타일을 import함)
   - common.scss를 구성하는 scss 폴더구조 및 폴더명
+
   |디렉토리|파일명|내용|
   |:-----:|:-----:|:-----:|
   |base|_font|@font-face 웹폰트지원|
