@@ -89,7 +89,7 @@
 
 ### 2. HTML 작업규칙   
 #### 2.1. 문서형 선언
-- ```html
+```html
     <!DOCTYPE html>
   ```
 
