@@ -128,8 +128,38 @@
     * 속성의 값은 큰따옴표("")로 묶는다.
     * 특수기호는 엔티티 코드(Entity Code)로 변환한다.
     * 종료 태그를 반드시 선언한다.
+    
+    유의해야 할 특수기호 Entity name
+    |문자|엔티티 문자|
+    |:-----:|:-----:|
+    | |&nbsp;|
+    |<|&lt;|
+    |>|&gt;|
+    |&|&amp;|
+    |"|&quot;|
 
 #### 2.5. 주석
+- 코드의 가독성을 높이고 페이지별 HTML 구조를 쉽게 파악하기 위해 주석사용
+```html
+      <!-- 주문 상품정보-->
+      <section class="payment-section">
+        <h2 class="payment-section__title">주문 상품정보</h2>
+        <div class="payment-section__cont">
+          <% include ../_include/_orderProduct %>
+        </div>
+      </section>
+      <!-- .주문 상품정보 -->
+
+      <!-- 쿠폰/할인 정보-->
+      <section class="payment-section">
+        <h2 class="payment-section__title">쿠폰/할인 정보</h2>
+        <div class="payment-section__cont">
+          <% include ../_include/_couponInfo %>
+        </div>
+      </section>
+      <!-- .쿠폰/할인 정보 -->
+  ```
+
 #### 2.6. 마크업 유의사항
 
 ***
