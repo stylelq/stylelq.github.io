@@ -92,13 +92,45 @@
 ```html
     <!DOCTYPE html>
   ```
-
 #### 2.2. 언어 지정
-#### 2.3. <head> 구조
-#### 2.4. button 요소의 사용 범위
-#### 2.5. 요소의 기본 속성 지정 순서
-#### 2.6. 주석
-#### 2.7. 마크업 유의사항
+- 스크린 리더가 lang 속성을 통해 자동으로 음성을 변환함
+```html
+    <html lang="ko">
+  ```
+#### 2.3. <head>구조
+- meta, title, link 순서로 요소를 선언
+```html
+    <!DOCTYPE html>
+    <html lang="ko">
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="description" content="">
+      <meta name="format-detection" content="telephone=no, address=no, email=no">
+      <meta property="og:type" content="website">
+      <meta property="og:title" content="루이까또즈">
+      <meta property="og:description" content="">
+      <meta property="og:url" content="">
+      <title>루이까또즈 StyleLQ</title>
+      <!-- icon/favicon -->
+      <link rel="shortcut icon" href="../../images/logo/favicon.ico" />
+      <link rel="icon" type="image/png"  href="../../images/logo/favicon_32.png" sizes="32x32" />
+      <link rel="icon" type="image/png" href="../../images/logo/favicon_192.png" sizes="192x192" />
+
+      <!-- 공통 css -->
+      <link rel="stylesheet" href="../../css/common.css">
+    </head>
+  ```
+#### 2.4. HTML 코드 작성 규칙
+- 표준 문법의 사용
+  - DTD(문서 타입 정의)의 명세에 맞게 작성해야 함   
+    * DTD를 제외한 모든 요소와 속성은 소문자로 작성한다.
+    * 속성의 값은 큰따옴표("")로 묶는다.
+    * 특수기호는 엔티티 코드(Entity Code)로 변환한다.
+    * 종료 태그를 반드시 선언한다.
+
+#### 2.5. 주석
+#### 2.6. 마크업 유의사항
 
 ***
 ### 3. CSS 작업규칙
