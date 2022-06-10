@@ -174,31 +174,31 @@
 
 |디렉토리|파일명|내용|
 |:-----:|:-----:|:-----:|
-|center|_faq|faq 탭, 리스트 검색결과 스타일|
-|center|_inquiry|1:1문의 레이아웃 및 폼입력 스타일|
-|center|_main|고객센터 메인 및 공통레이아웃 스타일|
-|center|_membership||
-|center|_single||
-|center|_store_inquiry||
-|center|_stores||
-|mypage|_address||
-|mypage|_addressWrite||
-|mypage|_allim|| 
-|mypage|_base||
-|mypage|_coupon||
-|mypage|_event||
-|mypage|_memberRemove||
-|mypage|_myInfo||
-|mypage|_myInfoModify||
-|mypage|_myInquiry||
-|mypage|_myLouis||
-|mypage|_orderList||
-|mypage|_password||
-|mypage|_qna|| 
-|mypage|_reserves||
-|mypage|_returnOrder||
-|mypage|_review||
-|mypage|_wishList||
+|center|_faq|faq 탭, 리스트 검색결과|
+|center|_inquiry|1:1문의 레이아웃 및 입력폼|
+|center|_main|고객센터 메인 및 공통 레이아웃|
+|center|_membership|MEMBERSHIP(멤버쉽)페이지|
+|center|_single|공지사항 상세페이지|
+|center|_store_inquiry|대량구매/입점문의 페이지|
+|center|_stores|STORE(스토어) 페이지|
+|mypage|_address|배송지관리 리스트|
+|mypage|_addressWrite|배송지입력 폼|
+|mypage|_allim|재입고 알림 내역 페이지|
+|mypage|_base|마이페이지 공통 레이아웃|
+|mypage|_coupon|쿠폰페이지|
+|mypage|_event|이벤트 참여현황페이지|
+|mypage|_memberRemove|회원탈퇴페이지|
+|mypage|_myInfo|회원정보 수정페이지 - 인증|
+|mypage|_myInfoModify|회원정보 수정페이지 - 수정|
+|mypage|_myInquiry|1:1문의 리스트페이지|
+|mypage|_myLouis|마이페이지 메인|
+|mypage|_orderList|주문배송조회 리스트|
+|mypage|_password|비밀번호 변경페이지|
+|mypage|_qna|상품 Q&A 페이지|
+|mypage|_reserves|적립금페이지|
+|mypage|_returnOrder|취소/반품|
+|mypage|_review|상품 리뷰|
+|mypage|_wishList|wishList(위시리스트)|
 |pages|cart||
 |pages|center||
 |pages|collection||
