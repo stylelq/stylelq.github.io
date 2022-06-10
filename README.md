@@ -171,47 +171,48 @@
 #### 3.1. 공통 CSS
 
 #### 3.2. 로컬 CSS
-    |디렉토리|파일명|내용|
-    |:-----:|:-----:|:-----:|
-    |center|_faq|faq 탭, 리스트 검색결과 스타일|
-    |center|_inquiry|1:1문의 레이아웃 및 폼입력 스타일|
-    |center|_main|고객센터 메인 및 공통레이아웃 스타일|
-    |center|_membership||
-    |center|_single||
-    |center|_store_inquiry||
-    |center|_stores||
-    |mypage|_address||
-    |mypage|_addressWrite||
-    |mypage|_allim|| 
-    |mypage|_base||
-    |mypage|_coupon||
-    |mypage|_event||
-    |mypage|_memberRemove||
-    |mypage|_myInfo||
-    |mypage|_myInfoModify||
-    |mypage|_myInquiry||
-    |mypage|_myLouis||
-    |mypage|_orderList||
-    |mypage|_password||
-    |mypage|_qna|| 
-    |mypage|_reserves||
-    |mypage|_returnOrder||
-    |mypage|_review||
-    |mypage|_wishList||
-    |pages|cart||
-    |pages|center||
-    |pages|collection||
-    |pages|detail||
-    |pages|gift||    
-    |pages|join||
-    |pages|main||
-    |pages|mypage||
-    |pages|payment||
-    |pages|platform||
-    |pages|product||
-    |pages|project||
-    |pages|project_collaboration||
-    |pages|promotion||   
+
+|디렉토리|파일명|내용|
+|:-----:|:-----:|:-----:|
+|center|_faq|faq 탭, 리스트 검색결과 스타일|
+|center|_inquiry|1:1문의 레이아웃 및 폼입력 스타일|
+|center|_main|고객센터 메인 및 공통레이아웃 스타일|
+|center|_membership||
+|center|_single||
+|center|_store_inquiry||
+|center|_stores||
+|mypage|_address||
+|mypage|_addressWrite||
+|mypage|_allim|| 
+|mypage|_base||
+|mypage|_coupon||
+|mypage|_event||
+|mypage|_memberRemove||
+|mypage|_myInfo||
+|mypage|_myInfoModify||
+|mypage|_myInquiry||
+|mypage|_myLouis||
+|mypage|_orderList||
+|mypage|_password||
+|mypage|_qna|| 
+|mypage|_reserves||
+|mypage|_returnOrder||
+|mypage|_review||
+|mypage|_wishList||
+|pages|cart||
+|pages|center||
+|pages|collection||
+|pages|detail||
+|pages|gift||    
+|pages|join||
+|pages|main||
+|pages|mypage||
+|pages|payment||
+|pages|platform||
+|pages|product||
+|pages|project||
+|pages|project_collaboration||
+|pages|promotion||   
 
 #### 3.3. 폰트 스타일
 
