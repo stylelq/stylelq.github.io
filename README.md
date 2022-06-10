@@ -199,20 +199,20 @@
 |mypage|_returnOrder|취소/반품|
 |mypage|_review|상품 리뷰|
 |mypage|_wishList|wishList(위시리스트)|
-|pages|cart||
+|pages|cart|장바구니|
 |pages|center||
-|pages|collection||
-|pages|detail||
-|pages|gift||    
-|pages|join||
-|pages|main||
-|pages|mypage||
-|pages|payment||
-|pages|platform||
-|pages|product||
-|pages|project||
-|pages|project_collaboration||
-|pages|promotion||   
+|pages|collection|콜렉션|
+|pages|detail|상품상세페이지|
+|pages|gift|기프트페이지|
+|pages|join|회원가입 및 로그인페이지|
+|pages|main|메인페이지|
+|pages|mypage|마이페이지 디렉토리 안에 있는 파일들 import|
+|pages|payment|주문결제페이지|
+|pages|platform|플랫폼L 페이지|
+|pages|product|상품 리스트영역|
+|pages|project|프로젝트 페이지|
+|pages|project_collaboration|콜라보레이션|
+|pages|promotion|프로모션|
 
 #### 3.3. 폰트 스타일
 
