@@ -246,4 +246,54 @@
 ***
 ### 5. 공통 레이아웃 구조
 #### 5.1. 페이지
+- 상품 리스트 구조
+```html
+      <!-- product post -->
+      <div class="product-post product-post--post">
+        <ul class="product-post__list">
+          <li class="product-post__item">
+            <!-- item -->
+            <div class="product-item">
+              <a href="" class="product-item__link">
+              <div class="product-item__state">SOLD OUT</div>
+              <div class="product-item__thumb">
+                <img class="product-item__img" src="../../images/dummy/product_img3.png" alt="" />
+                <img class="product-item__img" src="../../images/dummy/product_img3_3.png" alt="" />
+              </div>
+              <div class="product-item__cont">
+                <div class="product-item__title">루이까또즈 L-Quilting Mini(엘퀼팅 미니) 여성크로스백 HP3QT06OR</div>
+                <div class="product-item__price">
+                  <span class="product-item__price--sale">328,000원</span>
+                  <span class="product-item__price--current">289,290원</span>
+                </div>
+              </div>
+              </a>
+            </div>
+            <!-- .item -->
+          </li>
+          <li class="product-post__item">
+            <!-- item -->
+            <div class="product-item">
+              <a href="" class="product-item__link">
+              <div class="product-item__state">SOLD OUT</div>
+              <div class="product-item__thumb">
+                <img class="product-item__img" src="../../images/dummy/product_img3.png" alt="" />
+                <img class="product-item__img" src="../../images/dummy/product_img3_3.png" alt="" />
+              </div>
+              <div class="product-item__cont">
+                <div class="product-item__title">루이까또즈 L-Quilting Mini(엘퀼팅 미니) 여성크로스백 HP3QT06OR</div>
+                <div class="product-item__price">
+                  <span class="product-item__price--sale">328,000원</span>
+                  <span class="product-item__price--current">289,290원</span>
+                </div>
+              </div>
+              </a>
+            </div>
+            <!-- .item -->
+          </li>
+        </ul>
+      </div>
+      <!-- .product post -->
+  ```
+
 #### 5.2. 레이어팝업
