@@ -301,13 +301,31 @@
     <!-- paging -->
     <div class="paging">
         <ul class="paging__list">
-            <li class="paging__item paging__item--prev"><a class="paging__link" href="#;"><span class="sr-only">prev</span></a></li>
-            <li class="paging__item is-current"><span class="paging__link">1</span></li>
-            <li class="paging__item"><a class="paging__link" href="#;">2</a></li>
-            <li class="paging__item"><a class="paging__link" href="#;">3</a></li>
-            <li class="paging__item"><a class="paging__link" href="#;">4</a></li>
-            <li class="paging__item"><a class="paging__link" href="#;">5</a></li>
-            <li class="paging__item paging__item--next"><a class="paging__link" href="#;"><span class="sr-only">next</span></a></li>
+            <li class="paging__item paging__item--prev">
+              <a class="paging__link" href="#;">
+                <span class="sr-only">prev</span>
+              </a>
+            </li>
+            <li class="paging__item is-current">
+              <span class="paging__link">1</span>
+            </li>e
+            <li class="paging__item">
+              <a class="paging__link" href="#;">2</a>
+            </li>
+            <li class="paging__item">
+              <a class="paging__link" href="#;">3</a>
+            </li>
+            <li class="paging__item">
+              <a class="paging__link" href="#;">4</a>
+            </li>
+            <li class="paging__item">
+              <a class="paging__link" href="#;">5</a>
+            </li>
+            <li class="paging__item paging__item--next">
+              <a class="paging__link" href="#;">
+                <span class="sr-only">next</span>
+              </a>
+          </li>
         </ul>
     </div>
     <!-- .paging -->
