@@ -1,5 +1,6 @@
 
 
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -21,7 +22,8 @@
 <!-- 공통 css -->
 <link rel="stylesheet" href="../../css/common.css">
 
-	<link rel="stylesheet" href="../../css/pages/myPage.css">
+	<link rel="stylesheet" href="../../css/pages/live.css">
+	<link rel="stylesheet" href="../../css/pages/product.css">
 
 </head>
 
@@ -497,169 +499,225 @@
 <div class="lnb">
     <div class="lnb__tit">
         <a href="" class="lnb__back js-lnb-back">back</a>
-        <a href="#;" class="lnb__btn js-lnb-btn"><span class="lnb__arrow">주문배송조회</span></a>
+        <span class="lnb__btn">LQ LIVE</span>
     </div>
-    <!-- lnbMenu -->
-    <div class="lnb__dim js-lnb-close">dim</div>
-    <div class="lnb__wrap">
-        <ul class="lnb__list">
-            <li class="lnb__item is-active">
-                <a href="" class="lnb__link">
-                    <span class="lnb__line">MY LOUIS</span>
-                </a>
-            </li>
-            <li class="lnb__item ">
-                <a href="" class="lnb__link">
-                    <span class="lnb__line">주문배송조회</span>
-                </a>
-            </li>
-            <li class="lnb__item ">
-                <a href="" class="lnb__link">
-                    <span class="lnb__line">취소/반품</span>
-                </a>
-            </li>
-            <li class="lnb__item ">
-                <a href="" class="lnb__link">
-                    <span class="lnb__line">쿠폰</span>
-                </a>
-            </li>
-            <li class="lnb__item ">
-                <a href="" class="lnb__link">
-                    <span class="lnb__line">적립금</span>
-                </a>
-            </li>
-            <li class="lnb__item ">
-                <a href="" class="lnb__link">
-                    <span class="lnb__line">상품 리뷰</span>
-                </a>
-            </li>
-            <li class="lnb__item ">
-                <a href="" class="lnb__link">
-                    <span class="lnb__line">WISH LIST</span>
-                </a>
-            </li>
-            <li class="lnb__item ">
-                <a href="" class="lnb__link">
-                    <span class="lnb__line">1:1 문의</span>
-                </a>
-            </li>
-            <li class="lnb__item ">
-                <a href="" class="lnb__link">
-                    <span class="lnb__line">상품 Q&A</span>
-                </a>
-            </li>
-            <li class="lnb__item ">
-                <a href="" class="lnb__link">
-                    <span class="lnb__line">재입고 알림 내역</span>
-                </a>
-            </li>
-            <li class="lnb__item ">
-                <a href="" class="lnb__link">
-                    <span class="lnb__line">이벤트 참여현황</span>
-                </a>
-            </li>
-            <li class="lnb__item ">
-                <a href="" class="lnb__link">
-                    <span class="lnb__line">회원정보수정</span>
-                </a>
-            </li>
-            <li class="lnb__item ">
-                <a href="" class="lnb__link">
-                    <span class="lnb__line">배송지 관리</span>
-                </a>
-            </li>
-            <li class="lnb__item ">
-                <a href="" class="lnb__link">
-                    <span class="lnb__line">회원 탈퇴</span>
-                </a>
-            </li>
-            <li class="lnb__item ">
-                <a href="" class="lnb__link">
-                    <span class="lnb__line">비밀번호 변경</span>
-                </a>
-            </li>
-        </ul>
-    </div>
-    <!-- .lnbMenu -->
 </div>
 <!-- .lnb -->
-    <div class="site-main">
-        <section class="myOrderList">
-            <div class="myOrderList-contents">
-                <!-- 기간조회 -->
-                <div class="myOrderList-filter">
-                    <ul class="myOrderList-filter__btnList">
-                        <li class="myOrderList-filter__item is-current"><button class="myOrderList-btn btn-v1 btn-v1--small">3개월</button></li>
-                        <li class="myOrderList-filter__item"><button class="myOrderList-btn btn-v1 btn-v1--small">6개월</button></li>
-                        <li class="myOrderList-filter__item"><button class="myOrderList-btn btn-v1 btn-v1--small">1년</button></li>
-                        <li class="myOrderList-filter__item"><button class="myOrderList-btn btn-v1 btn-v1--small js-btn-dropDown">기간조회</button></li>
-                    </ul>
-                    <div class="myOrderList-filter__detail">
-                        <div class="myOrderList-filter__date">
-                            <div class="form-date__field">
-                                <input type="date" pattern="\d{4}-\d{2}-\d{2}" class="form__input--text" placeholder="2021.07.10"><span></span>
-                            </div>
-                            <span class="form-date__field">~</span>
-                            <div class="form-date__field">
-                                <input type="date" pattern="\d{4}-\d{2}-\d{2}" class="form__input--text" placeholder="2021.07.10"><span></span>
-                            </div> 
-                        </div>
-                        <button class="myOrderList-filter__search-btn btn-v1">조회하기</button>
-                    </div>
+    <div class="site-promotion">
+        <!-- 라이브 상단 비주얼 영역-->
+        <div class="live-view">
+            <div class="live-view__header">
+                <div class="live-view__txt">
+                    <p class="live-view__txt--title">LIVE 주간 루이까또즈</p>
+                    <p class="live-view__txt--date">22.07.16 오후 8시</p>
                 </div>
-                <!-- .기간조회 -->
-
-                <!-- 배송현황 -->
-                <div class="myOrderList-workflow">
-                    <ul class="myOrderList-workflow__list">
-                        <li class="myOrderList-workflow__item">
-                            <p class="myOrderList-workflow__item-name">주문<br>전체</p>
-                            <p class="myOrderList-workflow__item-figure">2</p>
-                        </li>
-                        <li class="myOrderList-workflow__item">
-                            <p class="myOrderList-workflow__item-name">입금<br>대기</p>
-                            <p class="myOrderList-workflow__item-figure">0</p>
-                        </li>
-                        <li class="myOrderList-workflow__item">
-                            <p class="myOrderList-workflow__item-name">결제<br>완료</p>
-                            <p class="myOrderList-workflow__item-figure">1</p>
-                        </li>
-                        <li class="myOrderList-workflow__item">
-                            <p class="myOrderList-workflow__item-name">상품<br>준비중</p>
-                            <p class="myOrderList-workflow__item-figure">0</p>
-                        </li>
-                        <li class="myOrderList-workflow__item">
-                            <p class="myOrderList-workflow__item-name">상품<br>배송중</p>
-                            <p class="myOrderList-workflow__item-figure">0</p>
-                        </li>
-                        <li class="myOrderList-workflow__item">
-                            <p class="myOrderList-workflow__item-name">배송<br>완료</p>
-                            <p class="myOrderList-workflow__item-figure">1</p>
-                        </li>
-                    </ul>
-                </div>
-                <!-- .배송현황 -->
-                 
-                <!-- 주문 상품 -->
-                <section class="myOrderList-section">
-                    <!-- 데이터없음 -->
-                    <div class="notData-wrap">
-                        <div class="notData-wrap__title">
-                            <span class="notData-wrap__title--text">주문배송조회 목록이 없습니다.</span>
-                        </div>
-                        <div class="notData-wrap__textBox">
-                            <ul class="center-bullet">
-                                <li class="center-bullet__item">현금영수증은 PC용 사이트에서만 신청하실 수 있습니다.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- .데이터없음 -->
-                </section>
-                <!-- .주문 상품 -->
             </div>
-        </section>
+
+            <div class="live-view__button">
+                <ul class="live-view__list">
+                    <li class="live-view__item">
+                        <button class="live-view__btn btn-v1 btn-blk">07.16 오후 8시</button>
+                    </li>
+                    <li class="live-view__item">
+                        <a href="#livePop" class="js-popup-open">
+                            <button class="live-view__btn btn-v1 btn-white ">알람 받는 중</button>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="live-view__coupon">
+                <div class="live-view__download">
+                    <p class="live-view__download--title">LIVE 전용 쿠폰</p>
+                    <div class="live-view__source">
+                        <div class="live-view__percent">
+                            COUPON<br />
+                            <span class="live-view__percent--num">5</span>%
+                        </div>
+                        <button class="live-view__btn btn-v1 btn-coupon"></button>
+                    </div></div>
+            </div>
+        </div>
+        <!--.라이브 상단 비주얼 영역-->
+
+        <!-- 라이브 상품리스트 시작 -->
+        <div class="live-group">
+            <!--라이브 상품 리스트-->
+            <div class="live-product">
+                <div class="live-product__header">
+                    <div class="live-product__name">Wallet</div>
+                </div>
+                <div class="live-product__wrap">
+                    <div class="live-product__item">
+                        <!-- item -->
+                        <div class="product-item">
+                            <a href="" class="product-item__link">
+                                <div class="product-item__state">NEW</div>
+                                <div class="product-item__thumb">
+                                    <img class="product-item__img" src="../../images/dummy/product_img1.png" alt="" />
+                                </div>
+                                <div class="product-item__cont">
+                                    <div class="product-item__title">루이까또즈 L-Quilting Mini(엘퀼팅 미니) 여성크로스백 HP3QT06OR</div>
+                                    <div class="product-item__price">
+                                        <span class="product-item__price--sale">328,000원</span>
+                                        <span class="product-item__price--current">289,290원</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- .item -->
+                    </div>
+                    <div class="live-product__item">
+                        <!-- item -->
+                        <div class="product-item">
+                            <a href="" class="product-item__link">
+                                <div class="product-item__state">NEW</div>
+                                <div class="product-item__thumb">
+                                    <img class="product-item__img" src="../../images/dummy/product_img1.png" alt="" />
+                                </div>
+                                <div class="product-item__cont">
+                                    <div class="product-item__title">루이까또즈 L-Quilting Mini(엘퀼팅 미니) 여성크로스백 HP3QT06OR</div>
+                                    <div class="product-item__price">
+                                        <span class="product-item__price--sale">328,000원</span>
+                                        <span class="product-item__price--current">289,290원</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- .item -->
+                    </div>
+                    <div class="live-product__item">
+                        <!-- item -->
+                        <div class="product-item">
+                            <a href="" class="product-item__link">
+                                <div class="product-item__state">NEW</div>
+                                <div class="product-item__thumb">
+                                    <img class="product-item__img" src="../../images/dummy/product_img1.png" alt="" />
+                                </div>
+                                <div class="product-item__cont">
+                                    <div class="product-item__title">루이까또즈 L-Quilting Mini(엘퀼팅 미니) 여성크로스백 HP3QT06OR</div>
+                                    <div class="product-item__price">
+                                        <span class="product-item__price--sale">328,000원</span>
+                                        <span class="product-item__price--current">289,290원</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- .item -->
+                    </div>
+                    <div class="live-product__item">
+                        <!-- item -->
+                        <div class="product-item">
+                            <a href="" class="product-item__link">
+                                <div class="product-item__state">NEW</div>
+                                <div class="product-item__thumb">
+                                    <img class="product-item__img" src="../../images/dummy/product_img1.png" alt="" />
+                                </div>
+                                <div class="product-item__cont">
+                                    <div class="product-item__title">루이까또즈 L-Quilting Mini(엘퀼팅 미니) 여성크로스백 HP3QT06OR</div>
+                                    <div class="product-item__price">
+                                        <span class="product-item__price--sale">328,000원</span>
+                                        <span class="product-item__price--current">289,290원</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- .item -->
+                    </div>
+                </div>
+            </div>
+            <!--//라이브 상품 리스트-->
+
+            <!--라이브 상품 리스트-->
+            <div class="live-product">
+                <div class="live-product__header">
+                    <div class="live-product__name">Wallet</div>
+                </div>
+                <div class="live-product__wrap">
+                    <div class="live-product__item">
+                        <!-- item -->
+                        <div class="product-item">
+                            <a href="" class="product-item__link">
+                                <div class="product-item__state">NEW</div>
+                                <div class="product-item__thumb">
+                                    <img class="product-item__img" src="../../images/dummy/product_img1.png" alt="" />
+                                </div>
+                                <div class="product-item__cont">
+                                    <div class="product-item__title">루이까또즈 L-Quilting Mini(엘퀼팅 미니) 여성크로스백 HP3QT06OR</div>
+                                    <div class="product-item__price">
+                                        <span class="product-item__price--sale">328,000원</span>
+                                        <span class="product-item__price--current">289,290원</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- .item -->
+                    </div>
+                    <div class="live-product__item">
+                        <!-- item -->
+                        <div class="product-item">
+                            <a href="" class="product-item__link">
+                                <div class="product-item__state">NEW</div>
+                                <div class="product-item__thumb">
+                                    <img class="product-item__img" src="../../images/dummy/product_img1.png" alt="" />
+                                </div>
+                                <div class="product-item__cont">
+                                    <div class="product-item__title">루이까또즈 L-Quilting Mini(엘퀼팅 미니) 여성크로스백 HP3QT06OR</div>
+                                    <div class="product-item__price">
+                                        <span class="product-item__price--sale">328,000원</span>
+                                        <span class="product-item__price--current">289,290원</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- .item -->
+                    </div>
+                    <div class="live-product__item">
+                        <!-- item -->
+                        <div class="product-item">
+                            <a href="" class="product-item__link">
+                                <div class="product-item__state">NEW</div>
+                                <div class="product-item__thumb">
+                                    <img class="product-item__img" src="../../images/dummy/product_img1.png" alt="" />
+                                </div>
+                                <div class="product-item__cont">
+                                    <div class="product-item__title">루이까또즈 L-Quilting Mini(엘퀼팅 미니) 여성크로스백 HP3QT06OR</div>
+                                    <div class="product-item__price">
+                                        <span class="product-item__price--sale">328,000원</span>
+                                        <span class="product-item__price--current">289,290원</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- .item -->
+                    </div>
+                    <div class="live-product__item">
+                        <!-- item -->
+                        <div class="product-item">
+                            <a href="" class="product-item__link">
+                                <div class="product-item__state">NEW</div>
+                                <div class="product-item__thumb">
+                                    <img class="product-item__img" src="../../images/dummy/product_img1.png" alt="" />
+                                </div>
+                                <div class="product-item__cont">
+                                    <div class="product-item__title">루이까또즈 L-Quilting Mini(엘퀼팅 미니) 여성크로스백 HP3QT06OR</div>
+                                    <div class="product-item__price">
+                                        <span class="product-item__price--sale">328,000원</span>
+                                        <span class="product-item__price--current">289,290원</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- .item -->
+                    </div>
+                </div>
+            </div>
+            <!--//라이브 상품 리스트-->
+        </div>
+        <!--.라이브 상품리스트 시작 -->
     </div>
 </div>
+
 <!-- //section끝 -->
 <!--footer시작-->
 <footer class="footer">
@@ -723,6 +781,48 @@
         COPYRIGHT LOUIS QUATORZE. ALL RIGHTS RESERVED.
     </div>
 </footer>
+<!-- cart-fix -->
+<div class="cart-fix">
+    <a href="#;" class="cart-fix__add"><span class="cart-fix__add--count">2</span></a>
+    <div class="cart-fix__top js-scrollTop"><span class="sr-only">맨위로</span></div>
+</div>
+<!-- .cart-fix -->
+<!-- Benefits popup -->
+<section id="livePop" class="small-popup modal-pop">
+    <div class="small-popup__dim"></div>
+    <section class="small-popup__body live-pop">
+        <a class="small-popup__close js-popup-close" href="#;"><span class="sr-only">닫기</span></a>
+        <div class="small-popup__header">
+            <h3 class="small-popup__header--title">라이브 방송 알림</h3>
+        </div>
+        <div class="small-popup__cont">
+            <!-- live cont -->
+            <div class="pop-live">
+                <p class="pop-live__txt">루이까또즈 라이브 방송 알람을<br />받으시겠어요?</p>
+            </div>
+            <!-- .live cont -->
+
+            <!-- live button -->
+            <div class="btn-group live__group">
+                <ul class="btn-group__list type-two">
+                    <li class="btn-group__item">
+                        <a class="btn-group__link js-popup-close" href="#;">
+                            <button class="btn-group__btn btn-v1 btn-v1--small type-white">닫기</button>
+                        </a>
+                    </li>
+                    <li class="btn-group__item">
+                        <a class="btn-group__link" href="#;">
+                            <button class="btn-group__btn btn-v1 btn-v1--small type-primary">알림받기</button>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- .live button -->
+        </div>
+    </section>
+</section>
+<!-- Benefits popup -->
+
 
 	<script src="../../js/libs/jquery-3.6.0.min.js"></script>
 	
@@ -736,10 +836,9 @@
 	
 	
 	
-		<script src="../../js/libs/swiper-4.5.0.min.js"></script>
 	
+		<script src="../../js/libs/swiper-4.5.0.min.js"></script>
 	
 </body>
 </html>
 <!--footer끝-->
-
