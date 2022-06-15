@@ -519,9 +519,14 @@
                         <button class="live-view__btn btn-v1 btn-blk">07.16 오후 8시</button>
                     </li>
                     <li class="live-view__item">
-                        <a href="#livePop" class="js-popup-open">
+                        <a href="#livePop" class="live-view___on js-popup-open">
                             <button class="live-view__btn btn-v1 btn-white ">알람 받는 중</button>
                         </a>
+                        <!-- 알림 해제버튼 -->
+                        <!--<a href="#livePopSecond" class="live-view___off js-popup-open">
+                            <button class="live-view__btn btn-v1 btn-white ">알람 해제</button>
+                        </a>-->
+                        <!-- .알림 해제버튼 -->
                     </li>
                 </ul>
             </div>
@@ -787,7 +792,7 @@
     <div class="cart-fix__top js-scrollTop"><span class="sr-only">맨위로</span></div>
 </div>
 <!-- .cart-fix -->
-<!-- Benefits popup -->
+<!-- live popup(알림받기) -->
 <section id="livePop" class="small-popup modal-pop">
     <div class="small-popup__dim"></div>
     <section class="small-popup__body live-pop">
@@ -821,7 +826,43 @@
         </div>
     </section>
 </section>
-<!-- Benefits popup -->
+<!-- live popup(알림받기) -->
+
+<!-- live popup(알림해제) -->
+<section id="livePopSecond" class="small-popup modal-pop">
+    <div class="small-popup__dim"></div>
+    <section class="small-popup__body live-pop">
+        <a class="small-popup__close js-popup-close" href="#;"><span class="sr-only">닫기</span></a>
+        <div class="small-popup__header">
+            <h3 class="small-popup__header--title">라이브 방송 알림 해제</h3>
+        </div>
+        <div class="small-popup__cont">
+            <!-- live cont -->
+            <div class="pop-live">
+                <p class="pop-live__txt">루이까또즈 라이브 방송 알람을<br />해제 하시겠어요?</p>
+            </div>
+            <!-- .live cont -->
+
+            <!-- live button -->
+            <div class="btn-group live__group">
+                <ul class="btn-group__list type-two">
+                    <li class="btn-group__item">
+                        <a class="btn-group__link js-popup-close" href="#;">
+                            <button class="btn-group__btn btn-v1 btn-v1--small type-white">닫기</button>
+                        </a>
+                    </li>
+                    <li class="btn-group__item">
+                        <a class="btn-group__link" href="#;">
+                            <button class="btn-group__btn btn-v1 btn-v1--small type-primary">해제하기</button>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- .live button -->
+        </div>
+    </section>
+</section>
+<!-- live popup(알림해제) -->
 
 
 	<script src="../../js/libs/jquery-3.6.0.min.js"></script>
