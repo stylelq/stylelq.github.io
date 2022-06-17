@@ -519,7 +519,7 @@
                         <button class="live-view__btn btn-v1 btn-blk">07.16 오후 8시</button>
                     </li>
                     <li class="live-view__item">
-                        <a href="#livePop" class="live-view___on js-popup-open">
+                        <a href="#liveCouponPop" class="live-view___on js-popup-open">
                             <button class="live-view__btn btn-v1 btn-white ">알람 받는 중</button>
                         </a>
                         <!-- 알림 해제버튼 -->
@@ -863,6 +863,42 @@
     </section>
 </section>
 <!-- live popup(알림해제) -->
+<!-- live 전용쿠폰 받기 -->
+<section id="liveCouponPop" class="small-popup modal-pop">
+    <div class="small-popup__dim"></div>
+    <section class="small-popup__body live-pop">
+        <a class="small-popup__close js-popup-close" href="#;"><span class="sr-only">닫기</span></a>
+        <div class="small-popup__header">
+            <h3 class="small-popup__header--title">LIVE 전용 쿠폰</h3>
+        </div>
+        <div class="small-popup__cont">
+            <!-- live cont -->
+            <div class="pop-live">
+                <div class="live-view__source">
+                    <div class="live-view__percent">
+                        COUPON<br />
+                        <span class="live-view__percent--num">5</span>%
+                    </div>
+                </div>
+            </div>
+            <!-- .live cont -->
+
+            <!-- live button -->
+            <div class="btn-group live__group">
+                <ul class="btn-group__list type-two">
+                    <li class="btn-group__item btn-coupon">
+                        <a class="btn-group__link" href="#;">
+                            <button class="btn-group__btn btn-v1 btn-v1--small type-primary">쿠폰받기</button>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- .live button -->
+        </div>
+    </section>
+</section>
+<!-- live 전용쿠폰 받기 -->
+
 
 	<script src="../../js/libs/jquery-3.6.0.min.js"></script>
 	
