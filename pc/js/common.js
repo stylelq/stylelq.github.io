@@ -169,7 +169,22 @@ jQuery(function () {
       }
     });
   } //스크롤탑 버튼
+  // 프로모션 - 스크롤 시 패럴랙스 효과
 
+
+  if ($('.parallax-wrap').length > 0) {
+    $(window).scroll(function () {
+      var scroll = $(this).scrollTop(); //var pinkScroll = -scroll/3
+
+      var yellowScroll = -scroll / 1;
+      $('.parallax-01').css({
+        'transform': 'translate3d(0,' + yellowScroll + 'px,0)'
+      });
+      $('.parallax-02').css({
+        'transform': 'matrix(0,' + yellowScroll + 'px,0)'
+      });
+    });
+  }
 
   function scrollTopBtn() {
     $('html, body').animate({
