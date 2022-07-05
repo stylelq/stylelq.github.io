@@ -326,7 +326,71 @@ jQuery(function () {
       $('.cart-fix').addClass('is-up');
       $('.footer').addClass('bottom-fix');
     } //연관제품 슬라이드
+    // 프로모션 - 스크롤 시 패럴랙스 효과
 
+
+    if ($('.parallax-wrap').length > 0) {
+      $(window).scroll(function () {
+        var scroll = $(this).scrollTop(); //var pinkScroll = -scroll/3
+
+        var yellowScroll = -scroll / 1; //$('.parallax-01').css({'transform' : 'matrix(0,'+ scroll +'px,0)'});
+
+        $('.parallax-01').css({
+          'transform': 'matrix(2,1,-1,1.5,30,-45)'
+        }); //$('.parallax-02').css({'transform' : 'matrix(2,1,-1,1.5,30,-45)'});
+
+        $('.parallax-02').css({
+          'transform': 'translate3d(0,' + yellowScroll + 'px,0)'
+        });
+        $('.parallax-03').css({
+          'transform': 'translate3d(0,' + yellowScroll + 'px,0)'
+        });
+        $('.parallax-04').css({
+          'transform': 'translate3d(0,' + yellowScroll + 'px,0)'
+        });
+        $('.parallax-05').css({
+          'transform': 'translate3d(0,' + yellowScroll + 'px,0)'
+        });
+        $('.parallax-06').css({
+          'transform': 'translate3d(0,' + yellowScroll + 'px,0)'
+        });
+        $('.parallax-07').css({
+          'transform': 'translate3d(0,' + yellowScroll + 'px,0)'
+        });
+        $('.parallax-08').css({
+          'transform': 'translate3d(0,' + yellowScroll + 'px,0)'
+        });
+        $('.parallax-09').css({
+          'transform': 'translate3d(0,' + yellowScroll + 'px,0)'
+        });
+        $('.parallax-10').css({
+          'transform': 'translate3d(0,' + yellowScroll + 'px,0)'
+        }); //$('.parallax-02').css({'transform' : 'matrix3d(0,'+ yellowScroll +'px,0)'})
+      });
+    } // 말풍선 클릭 시 효과
+
+
+    var bubbleItem = document.querySelectorAll('.bubble-01');
+    Array.prototype.forEach.call(bubbleItem, function (bubbleElem) {
+      bubbleElem.addEventListener('click', function (e) {
+        e.preventDefault();
+        setTimeout(function () {
+          $('.bubble-01').fadeOut(1000);
+          $('.bubble-01').fadeIn(2000);
+        }, 300);
+      });
+    }); // bubble event
+
+    /*
+    function bubbleEvent() {
+        setTimeout(function(){
+            $('.js-bubble').fadeOut(1000);
+            $('.js-bubble').fadeIn(2000);
+        },300);
+    }
+     const bubbleItem = document.querySelector('.js-bubble');
+    bubbleItem.addEventListener('click', bubbleEvent);*/
+    //$(document).on('click', '.js-bubble', bubbleEvent);
 
     if ($('.recommended-slide').length > 0) {
       var recommendeSlide = new Swiper('.recommended-slide__container', {
