@@ -365,32 +365,20 @@ jQuery(function () {
         });
         $('.parallax-10').css({
           'transform': 'translate3d(0,' + yellowScroll + 'px,0)'
-        }); //$('.parallax-02').css({'transform' : 'matrix3d(0,'+ yellowScroll +'px,0)'})
+        });
       });
-    } // 말풍선 클릭 시 효과
+    } // 말풍선 클릭 시 이벤트
 
 
-    var bubbleItem = document.querySelectorAll('.bubble-01');
-    Array.prototype.forEach.call(bubbleItem, function (bubbleElem) {
-      bubbleElem.addEventListener('click', function (e) {
-        e.preventDefault();
-        setTimeout(function () {
-          $('.bubble-01').fadeOut(1000);
-          $('.bubble-01').fadeIn(1000);
-        }, 400);
-      });
-    }); // bubble event
-
-    /*
     function bubbleEvent() {
-        setTimeout(function(){
-            $('.js-bubble').fadeOut(1000);
-            $('.js-bubble').fadeIn(2000);
-        },300);
+      var bubbleItem = $(this);
+      setTimeout(function () {
+        bubbleItem.fadeOut(500);
+        bubbleItem.fadeIn(3000);
+      }, 300);
     }
-     const bubbleItem = document.querySelector('.js-bubble');
-    bubbleItem.addEventListener('click', bubbleEvent);*/
-    //$(document).on('click', '.js-bubble', bubbleEvent);
+
+    $(document).on('click', '.js-click-bubble', bubbleEvent); //말풍선 클릭이벤트
 
     if ($('.recommended-slide').length > 0) {
       var recommendeSlide = new Swiper('.recommended-slide__container', {
