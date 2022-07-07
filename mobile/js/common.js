@@ -1,17 +1,5 @@
 "use strict";
 
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
-
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
-
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
 function _defineProperty(obj, key, value) {
   if (key in obj) {
     Object.defineProperty(obj, key, {
@@ -346,163 +334,129 @@ jQuery(function () {
         $('.parallax-img').removeClass('animate__animated');
         $('.parallax-img').removeClass('animate__fadeInDown'); //스크롤 이벤트
 
-        var matrix;
-        var parallax01 = document.querySelector('.parallax-01');
-        var parallax02 = document.querySelector('.parallax-02');
-        var parallax03 = document.querySelector('.parallax-03');
-        var parallax04 = document.querySelector('.parallax-04');
-        var parallax05 = document.querySelector('.parallax-05');
-        var parallax06 = document.querySelector('.parallax-06');
-        var parallax07 = document.querySelector('.parallax-07');
-        var parallax08 = document.querySelector('.parallax-08');
-        var parallax09 = document.querySelector('.parallax-09');
-        var parallax10 = document.querySelector('.parallax-10');
-
-        var updateScroll = function updateScroll() {
-          var scrollPos = window.scrollY;
-          var progress = scrollPos / 700;
-
-          var m = _toConsumableArray(matrix);
-
-          m[0] = progress * (matrix[0] - 1) + 1;
-          m[1] = progress * matrix[1];
-          m[2] = progress * matrix[2];
-          m[3] = progress * matrix[3];
-          m[4] = progress * matrix[4];
-          m[5] = progress * (matrix[5] - 1) + 1;
-          m[6] = progress * matrix[6];
-          m[7] = progress * matrix[7];
-          m[8] = progress * matrix[8];
-          m[9] = progress * matrix[9];
-          m[10] = progress * (matrix[10] - 1) + 1;
-          m[11] = progress * matrix[11];
-          m[12] = progress * (matrix[12] / 100) * 100;
-          m[13] = progress * (matrix[13] / 100) * 100;
-          m[14] = progress * (matrix[14] / 100) * 100;
-          m[15] = progress * (matrix[15] - 1) + 1;
-          setTransform(parallax01, toString(m));
-          setTransform(parallax02, toString(m));
-          setTransform(parallax03, toString(m));
-          setTransform(parallax04, toString(m));
-          setTransform(parallax05, toString(m));
-          setTransform(parallax06, toString(m));
-          setTransform(parallax07, toString(m));
-          setTransform(parallax08, toString(m));
-          setTransform(parallax09, toString(m));
-          setTransform(parallax10, toString(m));
-        };
-
-        var init = function init() {
-          var r1 = rotateZ(0);
-          var t1 = translateY(-600);
-          matrix = multiply(t1, r1);
-          console.log(matrix);
-          window.addEventListener('scroll', updateScroll);
-        };
-
-        var setTransform = function setTransform(parallax01, transform) {
-          parallax01.style.transform = transform;
-          parallax01.style.WebkitTransform = transform;
-        };
-
-        var setTransform = function setTransform(parallax02, transform) {
-          parallax02.style.transform = transform;
-          parallax02.style.WebkitTransform = transform;
-        };
-
-        var setTransform = function setTransform(parallax03, transform) {
-          parallax03.style.transform = transform;
-          parallax03.style.WebkitTransform = transform;
-        };
-
-        var setTransform = function setTransform(parallax04, transform) {
-          parallax04.style.transform = transform;
-          parallax04.style.WebkitTransform = transform;
-        };
-
-        var setTransform = function setTransform(parallax05, transform) {
-          parallax05.style.transform = transform;
-          parallax05.style.WebkitTransform = transform;
-        };
-
-        var setTransform = function setTransform(parallax06, transform) {
-          parallax06.style.transform = transform;
-          parallax06.style.WebkitTransform = transform;
-        };
-
-        var setTransform = function setTransform(parallax07, transform) {
-          parallax07.style.transform = transform;
-          parallax07.style.WebkitTransform = transform;
-        };
-
-        var setTransform = function setTransform(parallax08, transform) {
-          parallax08.style.transform = transform;
-          parallax08.style.WebkitTransform = transform;
-        };
-
-        var setTransform = function setTransform(parallax9, transform) {
-          parallax09.style.transform = transform;
-          parallax09.style.WebkitTransform = transform;
-        };
-
-        var setTransform = function setTransform(parallax10, transform) {
-          parallax10.style.transform = transform;
-          parallax10.style.WebkitTransform = transform;
-        };
-
-        function translateY(distance) {
-          var matrix = identity();
-          matrix[13] = distance;
-          return matrix;
-        }
-
-        function toString(source) {
-          return "matrix3d(".concat(format(source).join(', '), ")");
-        }
-
-        function rotateZ(angle) {
-          var matrix = identity();
-          return matrix;
-        }
-
-        function format(source) {
-          if (source.length === 16) {
-            return source;
-          }
-        }
-
-        function identity() {
-          var matrix = [];
-
-          for (var i = 0; i < 16; i++) {
-            i % 5 == 0 ? matrix.push(1) : matrix.push(0);
-          }
-
-          return matrix;
-        }
-
-        function multiply(m, x) {
-          var fm = format(m);
-          var fx = format(x);
-          var product = [];
-
-          for (var i = 0; i < 4; i++) {
-            var row = [fm[i], fm[i + 4], fm[i + 8], fm[i + 12]];
-
-            for (var j = 0; j < 4; j++) {
-              var k = j * 4;
-              var col = [fx[k], fx[k + 1], fx[k + 2], fx[k + 3]];
-              var result = row[0] * col[0] + row[1] * col[1] + row[2] * col[2] + row[3] * col[3];
-              product[i + k] = result;
-            }
-          }
-
-          return product;
-        }
-
-        init();
+        parallaxMove();
       });
     } // 말풍선 클릭 시 이벤트
+    /////////////////////
+
+
+    function parallaxMove() {
+      var parallax01 = document.querySelector('.parallax-01');
+      var parallax02 = document.querySelector('.parallax-02');
+      var parallax03 = document.querySelector('.parallax-03');
+      var parallax04 = document.querySelector('.parallax-04');
+      var parallax05 = document.querySelector('.parallax-05');
+      var parallax06 = document.querySelector('.parallax-06');
+      var parallax07 = document.querySelector('.parallax-07');
+      var parallax08 = document.querySelector('.parallax-08');
+      var parallax09 = document.querySelector('.parallax-09');
+      var parallax10 = document.querySelector('.parallax-10');
+
+      var init = function init(targetObject, matrix1, matrix2) {
+        console.log("### window.scrollY : " + window.scrollY);
+        var matrix = multiply(matrix1, matrix2);
+        window.addEventListener('scroll', function () {
+          updateScroll(targetObject, matrix);
+        });
+      };
+
+      var scrollY = window.scrollY;
+      var calcScrollY = parseInt(scrollY / 1) - 25; //	var targetList = [ parallax01, parallax02, parallax03, parallax04, parallax05, parallax06, parallax07, parallax08, parallax09, parallax10 ];
+
+      var targetList = [parallax01, parallax04, parallax03, parallax02, parallax05, parallax07, parallax06, parallax08, parallax10, parallax09];
+
+      for (var i = 0; i < targetList.length; i++) {
+        var gap = i * 30;
+        var matrix1 = translateY(-600 - gap);
+        var matrix2 = identity();
+
+        if (calcScrollY >= gap) {
+          init(targetList[i], matrix1, matrix2);
+        }
+      }
+
+      if (scrollY <= 0) {
+        for (var i = 0; i < targetList.length; i++) {
+          var matrix1 = translateY(0);
+          var matrix2 = identity();
+          init(targetList[i], matrix1, matrix2);
+        }
+      }
+    }
+
+    function updateScroll(target, matrix) {
+      var scrollPos = window.scrollY;
+      var progress = scrollPos / 700;
+      var m = matrix;
+      m[0] = progress * (matrix[0] - 1) + 1;
+      m[1] = progress * matrix[1];
+      m[2] = progress * matrix[2];
+      m[3] = progress * matrix[3];
+      m[4] = progress * matrix[4];
+      m[5] = progress * (matrix[5] - 1) + 1;
+      m[6] = progress * matrix[6];
+      m[7] = progress * matrix[7];
+      m[8] = progress * matrix[8];
+      m[9] = progress * matrix[9];
+      m[10] = progress * (matrix[10] - 1) + 1;
+      m[11] = progress * matrix[11];
+      m[12] = progress * (matrix[12] / 100) * 100;
+      m[13] = progress * (matrix[13] / 100) * 100;
+      m[14] = progress * (matrix[14] / 100) * 100;
+      m[15] = progress * (matrix[15] - 1) + 1;
+      setTransform(target, toString(m));
+    }
+
+    function setTransform(target, transform) {
+      target.style.transform = transform;
+      target.style.WebkitTransform = transform;
+    }
+
+    function translateY(distance) {
+      var matrix = identity();
+      matrix[13] = distance;
+      return matrix;
+    }
+
+    function toString(source) {
+      return "matrix3d(".concat(format(source).join(', '), ")");
+    }
+
+    function format(source) {
+      if (source.length === 16) {
+        return source;
+      }
+    }
+
+    function identity() {
+      var matrix = [];
+
+      for (var i = 0; i < 16; i++) {
+        i % 5 == 0 ? matrix.push(1) : matrix.push(0);
+      }
+
+      return matrix;
+    }
+
+    function multiply(m, x) {
+      var fm = format(m);
+      var fx = format(x);
+      var product = [];
+
+      for (var i = 0; i < 4; i++) {
+        var row = [fm[i], fm[i + 4], fm[i + 8], fm[i + 12]];
+
+        for (var j = 0; j < 4; j++) {
+          var k = j * 4;
+          var col = [fx[k], fx[k + 1], fx[k + 2], fx[k + 3]];
+          var result = row[0] * col[0] + row[1] * col[1] + row[2] * col[2] + row[3] * col[3];
+          product[i + k] = result;
+        }
+      }
+
+      return product;
+    } /////////////////////
+    // 말풍선 클릭 시 이벤트
 
 
     function bubbleEvent() {
