@@ -732,7 +732,7 @@ jQuery(function () {
     var scrollY = window.scrollY;
     var calcScrollY = parseInt(scrollY / 2) - 25; //	var targetList = [ parallax01, parallax02, parallax03, parallax04, parallax05, parallax06, parallax07, parallax08, parallax09, parallax10 ];
 
-    var targetList = [parallax01, parallax05, parallax03, parallax02, parallax09, parallax04, parallax07, parallax06, parallax08, parallax10];
+    var targetList = [parallax01, parallax03, parallax05, parallax02, parallax09, parallax04, parallax07, parallax06, parallax08, parallax10];
 
     for (var i = 0; i < targetList.length; i++) {
       var gap = i * 40;
