@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>퍼블리싱 작업현황표</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" target-densitydpi="device-dpi" />
+    <link type="text/css" rel="stylesheet" href="coding.css" />
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script type="text/javascript">
+        //<![CDATA[
+        //테이블 tr over효과
+        $(document).ready(function() {
+            $("table tr:gt(0)").hover(
+                function() { $(this).addClass("hover"); },
+                function() { $(this).removeClass("hover"); }
+            );
+            $("table tr:not(.del)").each(function(index){
+                $("td:first-child", this).text(index);
+            });
+            $("table tr.del td:first-child").text("삭제");
+            $tr = $("tbody tr:not(.del)");
+            $("#rate").html("( 총:"+$tr.length+" / 잔여:"+$("td.date:empty",$tr).length+" / 진행:"+parseInt((($tr.length-$("td.date:empty",$tr).length)/$tr.length*100))+"% )");
+
+            //날짜 출력
+            var date = new Date();
+            var year = date.getFullYear();
+            var month = new String(date.getMonth()+1);
+            var day = new String(date.getDate());
+
+            $(".today").text(year + "년 " + month + "월 " + day + "일");
+        });
+        //'table tr:gt(0) 0보다 큰것만 마우스 오버 효과가 나타남
+        //]]>
+    </script>
+</head>
+<body>
+<div id="wrap">
+    <div class="tit">
+        <h1>루이가또즈 - PC</h1>
+        <p>
+            <span class="today red bold"></span>
+            <span id="rate"></span><br />
+        </p>
+    </div>
+
+    <div class="map">
+        <ul class="map-list">
+            <li class="map-item"></li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
