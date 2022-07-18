@@ -37,7 +37,6 @@ function _arrayLikeToArray(arr, len) {
 
 window.onload = function () {
   $('.loading').hide();
-  $('.loading-kakao').hide();
 };
 
 jQuery(function () {
