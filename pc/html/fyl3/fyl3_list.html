@@ -1,0 +1,859 @@
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="format-detection" content="telephone=no, address=no, email=no">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="루이까또즈">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="">
+    <title>루이까또즈 StyleLQ</title>
+    <!-- icon/favicon -->
+    <link rel="shortcut icon" href="../../images/logo/favicon.ico">
+    <link rel="icon" type="image/png"  href="../../images/logo/favicon_32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="../../images/logo/favicon_192.png" sizes="192x192">
+
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../css/common.css">
+    <script src="../../js/libs/gsap.min.js"></script>
+    <script src="../../js/ScrollToPlugin.min.js"></script>
+
+    
+    
+    
+    
+    
+    
+    
+    
+        <link rel="stylesheet" href="../../css/pages/fyl3.css">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+</head>
+
+
+<body class="">
+
+<!-- header -->
+<div class="dim"></div>
+    <div class="header">
+        <div class="header-wrap">
+            <div class="header-wrap__top">
+            <!--로고-->
+            <a href="../main/main.html" class="header-wrap__logo">
+                <!--<h2 class="header-wrap__background">louisquatorze</h2>-->
+                <img src="../../images/common/logo.png" alt="louis quatorze" class="header__black">
+                <img src="../../images/common/logo_white.png" alt="louis quatorze" class="header__white">
+            </a>
+            <!--//로고-->
+
+            <!--우측메뉴-->
+
+            <div class="header-wrap__right">
+                <ul class="header-wrap__List">
+                    <li class="header-wrap__item type-search">
+                        <a href="#;" class="header-wrap__link js-search-open">
+                            <img src="../../images/common/icon_search_blk.svg" alt="louis quatorze" class="header__black search-btn">
+                            <img src="../../images/common/icon_search_white.svg" alt="louis quatorze" class="header__white search-btn">
+
+                            <img src="../../images/common/icon_close2.png" alt="louis quatorze" class="header__black close-btn">
+                        </a>
+                    </li>
+                    <li class="header-wrap__item type-login">
+                        <a href="#;" class="header-wrap__link js-mypage">
+                            <img src="../../images/common/icon_mypage.svg" alt="louis quatorze" class="header__black">
+                            <img src="../../images/common/icon_mypage_white.svg" alt="louis quatorze" class="header__white">
+                        </a>
+
+                        <div class="header-mypage">
+                            <ul class="header-mypage__list">
+                                <li class="header-mypage__item">
+                                    <a href="https://www.stylelq.com/fr/mylouis/mylouisSubMain.do?site=1" class="header-mypage__link">my page</a>
+                                </li>
+                                <li class="header-mypage__item">
+                                    <a href="https://www.stylelq.com/fr/mylouis/contents/wishList.do?searchType=wish" class="header-mypage__link">wish list</a>
+                                </li>
+                                <li class="header-mypage__item">
+                                    <a href="https://www.stylelq.com/fr/manager/logout.do?site=1" class="header-mypage__link">logout</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="header-wrap__item type-cart">
+                        <a href="#;" class="header-wrap__link">
+                            <img src="../../images/common/icon_basket.svg" alt="louis quatorze" class="header__black" />
+                            <img src="../../images/common/icon_basket_white.png" alt="louis quatorze" class="header__white" />
+                            <span class="header-wrap__count">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!--//우측메뉴-->
+            </div>
+
+            <!--네비게이션-->
+            <div class="gnb">
+                <ul class="gnb-1depth__list">
+                    <li class="gnb-1depth__item" data-depth="1">
+                        <a href="" class="gnb-1depth__inner" style="color: #ff0000 !important;">LQ LIVE</a>
+                    </li>
+                    <li class="gnb-1depth__item" data-depth="1">
+                        <a href="" class="gnb-1depth__inner">NEW</a>
+                    </li>
+                    <li class="gnb-1depth__item" data-depth="2">
+                        <a href="" class="gnb-1depth__inner">WOMEN</a>
+                        <ul class="gnb-2depth__list">
+                            <li class="gnb-2depth__item">
+                                <a href="" class="gnb-2depth__inner">BAG</a>
+                                <ul class="gnb-3depth__list">
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">ALL</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">숄더백</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">토트백</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">크로스백</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">미니백/클러치백</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">백백</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="gnb-2depth__item">
+                                <a href="" class="gnb-2depth__inner">WALLET</a>
+                                <ul class="gnb-3depth__list">
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">ALL</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">장지갑</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">중지갑</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">반지갑</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">카드, 명함지갑</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">멀티지갑</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="gnb-2depth__item">
+                                <a href="" class="gnb-2depth__inner">ACC</a>
+                                <ul class="gnb-3depth__list">
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">ALL</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">헤어</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">벨트</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="gnb-1depth__item" data-depth="2">
+                        <a href="" class="gnb-1depth__inner">MEN</a>
+                        <ul class="gnb-2depth__list">
+                            <li class="gnb-2depth__item">
+                                <a href="" class="gnb-2depth__inner">BAG</a>
+                                <ul class="gnb-3depth__list">
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">ALL</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">서류가방</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">토트백/클러치백</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">크로스백</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">백팩</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="gnb-2depth__item">
+                                <a href="" class="gnb-2depth__inner">WALLET</a>
+                                <ul class="gnb-3depth__list">
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">ALL</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">장지갑</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">중지갑</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">반지갑</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">머니클립</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">카드, 명함지갑</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="gnb-2depth__item">
+                                <a href="" class="gnb-2depth__inner">ACC</a>
+                                <ul class="gnb-3depth__list">
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">ALL</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">헤어</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">벨트</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="gnb-1depth__item" data-depth="3">
+                        <a href="" class="gnb-1depth__inner">ACC</a>
+                        <ul class="gnb-2depth__list">
+                            <li class="gnb-2depth__item">
+                                <a href="" class="gnb-2depth__inner">SEASON ITEM</a>
+                                <ul class="gnb-3depth__list">
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">ALL</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">스카프</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">머플러</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">넥타이</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">우양산</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="gnb-2depth__item">
+                                <a href="" class="gnb-2depth__inner">BELT</a>
+                                <ul class="gnb-3depth__list">
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">ALL</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">벨트</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">서스펜더</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="gnb-2depth__item">
+                                <a href="" class="gnb-2depth__inner">ETC</a>
+                                <ul class="gnb-3depth__list">
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">ALL</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">키링</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">키지갑</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">휴대폰케이스</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">루이까또즈 리빙</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">기타지갑</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">기타상품</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="gnb-1depth__item" data-depth="1">
+                        <a href="" class="gnb-1depth__inner">EUDON CHOI</a>
+                    </li>
+                    <li class="gnb-1depth__item" data-depth="2">
+                        <a href="" class="gnb-1depth__inner">OÀLC</a>
+                        <ul class="gnb-2depth__list">
+                            <li class="gnb-2depth__item">
+                                <a href="" class="gnb-2depth__inner">BAG</a>
+                                <ul class="gnb-3depth__list">
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">ALL</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">서류가방</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">토트백/클러치백</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">크로스백</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">백팩</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="gnb-2depth__item">
+                                <a href="" class="gnb-2depth__inner">WALLET</a>
+                                <ul class="gnb-3depth__list">
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">ALL</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">장지갑</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">중지갑</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">반지갑</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">머니클립</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">카드, 명함지갑</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="gnb-1depth__item" data-depth="1">
+                        <a href="" class="gnb-1depth__inner">COLLECTION</a>
+                    </li>
+                    <li class="gnb-1depth__item" data-depth="2">
+                        <a href="" class="gnb-1depth__inner">PLATFORM L</a>
+                        <ul class="gnb-2depth__list">
+                            <li class="gnb-2depth__item">
+                                <a href="" class="gnb-2depth__inner">ALL Works</a>
+                                <ul class="gnb-3depth__list">
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">L Edition</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">Art Furniture</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">Art Object</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">Textile & Fashion</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">Printed Matter</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="gnb-2depth__item">
+                                <a href="" class="gnb-2depth__inner">Exhibition</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="gnb-1depth__item" data-depth="1">
+                        <a href="" class="gnb-1depth__inner">PROMOTION</a>
+                    </li>
+                    <li class="gnb-1depth__item" data-depth="1">
+                        <a href="" class="gnb-1depth__inner">PROJECT</a>
+                        <ul class="gnb-2depth__list">
+                            <li class="gnb-2depth__item only-project">
+                                <a href="" class="gnb-2depth__inner">
+                                    FYL1 - SPECTRUM<br /><br />
+                                    FYL2 - GROOVY ROOM<br/><br />
+                                    COLLABORATION
+                                </a>
+                                <!--<ul class="gnb-3depth__list">
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">L Edition</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">Art Furniture</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">Art Object</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">Textile & Fashion</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">Printed Matter</a>
+                                    </li>
+                                </ul>-->
+                            </li>
+                        </ul>
+                        <!--<ul class="gnb-2depth__list align-right">
+                            <li class="gnb-2depth__item">
+                                <a href="" class="gnb-2depth__inner">FIND YOUR LIGHT - SPECTRUM</a>
+                            </li>
+                            <li class="gnb-2depth__item">
+                                <a href="" class="gnb-2depth__inner">FIND YOUR LIGHT - GROOVY ROOM</a>
+                            </li>
+                            <li class="gnb-2depth__item">
+                                <a href="" class="gnb-2depth__inner">COLLABORATION</a>
+                            </li>
+                        </ul>-->
+                    </li>
+                </ul>
+            </div>
+            <!--//네비게이션-->
+
+            <div class="search">
+                <div class="search__wrap">
+                    <!-- <a href="" class="search__close js-search-close">close</a> -->
+                    <form id="" name="" class="form-inline" method="post" action="">
+                        <div class="search__group">
+                            <label class="sr-only" for="keyword">검색</label>
+                            <input type="text" class="search__input" name="keyword" id="keyword" autocomplete="off" placeholder="Search"
+                                   required="">
+                            <button type="submit" class="search__btn type-submit">검색</button>
+                        </div>
+                    </form>
+                    <div class="search__box">
+                        <p class="search__tit">TREND</p>
+                        <ul class="search__list">
+                            <li class="search__item"><a href="" class="search__link">여성반지갑</a></li>
+                            <li class="search__item"><a href="" class="search__link">남성반지갑</a></li>
+                            <li class="search__item"><a href="" class="search__link">카드지갑</a></li>
+                            <li class="search__item"><a href="" class="search__link">남성가방</a></li>
+                        </ul>
+                    </div>
+                    <div class="search__box">
+                        <p class="search__tit">RECOMMEND</p>
+                        <ul class="search__list">
+                            <li class="search__item"><a href="" class="search__link">쥬쥬백</a></li>
+                            <li class="search__item"><a href="" class="search__link">라라지갑</a></li>
+                            <li class="search__item"><a href="" class="search__link">몬트백</a></li>
+                            <li class="search__item"><a href="" class="search__link">치즈백</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>
+<!-- //header -->
+
+<div class="loading">
+    <div class="loading-box">
+        <div class="loading-box__img"><img src="../../images/common/loading.gif" alt=""></div>
+        <div class="loading-box__text">
+            데이터 로딩중입니다<br>잠시만 기다려주세요
+        </div>
+    </div>
+</div>
+
+<!-- contents start -->
+
+<div class="container">
+    <div class="site-project">
+        <div class="fyl3-wrap">
+            <!-- 섹션1(영상) -->
+            <section class="fyl-section fyl-section1">
+                <div class="fyl-section1__video">
+                    <div class="fyl-section1__play is-hide js-replay-btn" id="replayVideo"></div>
+                    <video class="fyl-section1__video--source js-pause-btn" id="stopVideo" src="https://mcdn.louisclub.com/static/mo/img/find/find_video_211029.mp4" poster="" loop="" autoplay="" muted="muted" playsinline="" data-object-fit="cover"></video>
+                </div>
+            </section>
+            <!-- //섹션1(영상) -->
+
+            <!-- 섹션2(타이핑) -->
+            <section class="fyl-section fyl-section2">
+                <div class="fyl-section2__wrap">
+                    <div class="fyl-section2__typography">
+                        <div class="fyl-section2__fix">
+                            <span class="fyl-section2__fix--word">find</span>
+                            <span class="fyl-section2__fix--word">your</span>
+                            <span class="fyl-section2__fix--word">light3</span>
+                        </div>
+                        <div class="fyl-section2__moving move-txt">
+                            <p class="fyl-section2__moving--word">SHAPE.SHIFTER</p>
+                            <p class="fyl-section2__moving--word">SHAPE.SHIFTER</p>
+                            <p class="fyl-section2__moving--word">SHAPE.SHIFTER</p>
+                            <p class="fyl-section2__moving--word">SHAPE.SHIFTER</p>
+                            <p class="fyl-section2__moving--word">SHAPE.SHIFTER</p>
+                            <p class="fyl-section2__moving--word">SHAPE.SHIFTER</p>
+                            <p class="fyl-section2__moving--word">SHAPE.SHIFTER</p>
+                            <p class="fyl-section2__moving--word">SHAPE.SHIFTER</p>
+                            <p class="fyl-section2__moving--word">SHAPE.SHIFTER</p>
+                            <p class="fyl-section2__moving--word">SHAPE.SHIFTER</p>
+                        </div>
+                    </div>
+
+                    <div class="fyl-section2__content">
+                        <div class="fyl-section2__box">
+                            <div class="fyl-section2__box--txt" id="contentText1"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- //섹션2(타이핑) -->
+
+            <!-- 섹션3(작가 리스트) -->
+            <section class="fyl-section fyl-section3">
+                <div class="fyl-section3__artist">
+                    <h3 class="fyl-section3__title">EXHIBITING ARTISTS :</h3>
+                    <ul class="fyl-section3__list">
+                        <li class="fyl-section3__item">
+                            <a href="" class="fyl-section3__link">SEONGBIN YANG
+                                <span class="fyl-section3__item--ko">양승빈</span>
+                            </a>
+                        </li>
+                        <li class="fyl-section3__item">
+                            <a href="" class="fyl-section3__link">SOOJIN CHOI
+                                <span class="fyl-section3__item--ko">최수진</span>
+                            </a>
+                        </li>
+                        <li class="fyl-section3__item before-opening">
+                            <a href="" class="fyl-section3__link">HYANGRO YOON
+                                <span class="fyl-section3__item--ko">윤향로</span>
+                            </a>
+                        </li>
+                        <li class="fyl-section3__item before-opening">
+                            <a href="" class="fyl-section3__link">JINYEONG YEON
+                                <span class="fyl-section3__item--ko">연진영</span>
+                            </a>
+                        </li><li class="fyl-section3__item before-opening">
+                            <a href="" class="fyl-section3__link">EUNHAK KIM
+                                <span class="fyl-section3__item--ko">김은학</span>
+                            </a>
+                        </li>
+                        <li class="fyl-section3__item before-opening">
+                            <a href="" class="fyl-section3__link">HITENCHO
+                                <span class="fyl-section3__item--ko">히텐조</span>
+                            </a>
+                        </li>
+                        <li class="fyl-section3__item before-opening">
+                            <a href="" class="fyl-section3__link">JUNSOO KIM
+                                <span class="fyl-section3__item--ko">김준수</span>
+                            </a>
+                        </li>
+                        <li class="fyl-section3__item before-opening">
+                            <a href="" class="fyl-section3__link">SERIN OH
+                                <span class="fyl-section3__item--ko">오세린</span>
+                            </a>
+                        </li>
+                        <li class="fyl-section3__item before-opening">
+                            <a href="" class="fyl-section3__link">JAEWON KANG
+                                <span class="fyl-section3__item--ko">강재원</span>
+                            </a>
+                        </li>
+                        <li class="fyl-section3__item before-opening">
+                            <a href="" class="fyl-section3__link">HYUNJEE JUNG
+                                <span class="fyl-section3__item--ko">정현지</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!-- //섹션3(작가 리스트) -->
+
+            <!-- 섹션4(작품 리스트) -->
+            <section class="fyl-section fyl-section4">
+                <div class="fyl-section4__work">
+                    <div class="fyl-section4__list">
+                        <div class="fyl-section4__item floating1">
+                            <a href="" class="fyl-section4__link">
+                                <div class="fyl-section4__name">
+                                    <p class="fyl-section4__name--eng">SEONGBIN YANG</p>
+                                    <p class="fyl-section4__name--ko">양승빈</p>
+                                </div>
+                                <div class="fyl-section4__border">
+                                    <img src="../../images/project/fyl3/img_work01.png" alt="양승빈 SEONGBIN YANG" class="fyl-section4__img" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="fyl-section4__item floating2">
+                            <a href="" class="fyl-section4__link">
+                                <div class="fyl-section4__name">
+                                    <p class="fyl-section4__name--eng">Soojin choi</p>
+                                    <p class="fyl-section4__name--ko">최수진</p>
+                                </div>
+                                <div class="fyl-section4__border">
+                                    <img src="../../images/project/fyl3/img_work02.png" alt="양승빈 SEONGBIN YANG" class="fyl-section4__img" />
+                                    <!--<video class="fyl-section4__video" src="https://mcdn.louisclub.com/static/mo/img/find/find_video_211029.mp4" poster="" loop="" autoplay="" muted="muted" playsinline="" data-object-fit="cover"></video>-->
+                                </div>
+                            </a>
+                        </div>
+                        <div class="fyl-section4__item floating3">
+                            <a href="" class="fyl-section4__link">
+                                <div class="fyl-section4__name">
+                                    <p class="fyl-section4__name--eng">hyangRo Yoon</p>
+                                    <p class="fyl-section4__name--ko">윤향로</p>
+                                </div>
+                                <div class="fyl-section4__border">
+                                    <img src="../../images/project/fyl3/img_work03.png" alt="양승빈 SEONGBIN YANG" class="fyl-section4__img" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="fyl-section4__item floating4">
+                            <a href="" class="fyl-section4__link">
+                                <div class="fyl-section4__name">
+                                    <p class="fyl-section4__name--eng">Jinyeong Yeon</p>
+                                    <p class="fyl-section4__name--ko">연진영</p>
+                                </div>
+                                <div class="fyl-section4__border">
+                                    <img src="../../images/project/fyl3/img_work04.png" alt="최수진 SOOJIN CHOI" class="fyl-section4__img" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="fyl-section4__item floating5">
+                            <div class="fyl-section4__dim"></div>
+                            <a href="" class="fyl-section4__link">
+                                <div class="fyl-section4__name">
+                                    <p class="fyl-section4__name--eng">Eunha Kim</p>
+                                    <p class="fyl-section4__name--ko">김은학</p>
+                                </div>
+                                <div class="fyl-section4__border">
+                                    <img src="../../images/project/fyl3/img_work05.png" alt="양승빈 SEONGBIN YANG" class="fyl-section4__img" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="fyl-section4__item floating6">
+                            <div class="fyl-section4__dim"></div>
+                            <a href="" class="fyl-section4__link">
+                                <div class="fyl-section4__name">
+                                    <p class="fyl-section4__name--eng">hitencho</p>
+                                    <p class="fyl-section4__name--ko">히텐조</p>
+                                </div>
+                                <div class="fyl-section4__border">
+                                    <img src="../../images/project/fyl3/img_work06.png" alt="최수진 SOOJIN CHOI" class="fyl-section4__img" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="fyl-section4__item floating7">
+                            <div class="fyl-section4__dim"></div>
+                            <a href="" class="fyl-section4__link">
+                                <div class="fyl-section4__name">
+                                    <p class="fyl-section4__name--eng">Junsoo Kim </p>
+                                    <p class="fyl-section4__name--ko">김준수</p>
+                                </div>
+                                <div class="fyl-section4__border">
+                                    <img src="../../images/project/fyl3/img_work07.png" alt="양승빈 SEONGBIN YANG" class="fyl-section4__img" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="fyl-section4__item floating8">
+                            <div class="fyl-section4__dim"></div>
+                            <a href="" class="fyl-section4__link">
+                                <div class="fyl-section4__name">
+                                    <p class="fyl-section4__name--eng">serin Oh</p>
+                                    <p class="fyl-section4__name--ko">오세린</p>
+                                </div>
+                                <div class="fyl-section4__border">
+                                    <img src="../../images/project/fyl3/img_work08.png" alt="최수진 SOOJIN CHOI" class="fyl-section4__img" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="fyl-section4__item floating9">
+                            <div class="fyl-section4__dim"></div>
+                            <a href="" class="fyl-section4__link">
+                                <div class="fyl-section4__name">
+                                    <p class="fyl-section4__name--eng">Jaewon Kang</p>
+                                    <p class="fyl-section4__name--ko">강재원</p>
+                                </div>
+                                <div class="fyl-section4__border">
+                                    <img src="../../images/project/fyl3/img_work09.png" alt="양승빈 SEONGBIN YANG" class="fyl-section4__img" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="fyl-section4__item floating10">
+                            <div class="fyl-section4__dim"></div>
+                            <a href="" class="fyl-section4__link">
+                                <div class="fyl-section4__name">
+                                    <p class="fyl-section4__name--eng">Hyunjee Jung</p>
+                                    <p class="fyl-section4__name--ko">정현지</p>
+                                </div>
+                                <div class="fyl-section4__border">
+                                    <img src="../../images/project/fyl3/img_work10.png" alt="최수진 SOOJIN CHOI" class="fyl-section4__img" />
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- 섹션4(작품 리스트) -->
+
+            <!-- 섹션5(하단 소개) -->
+            <section class="fyl-section fyl-section5">
+                <div class="fyl-section5__content">
+                    <div class="fyl-section5__paragraph">
+                        <h3 class="fyl-section5__paragraph--title">ABOUT</h3>
+                        <div class="fyl-section5__paragraph--txt">
+                            루이까또즈는 젊은 아티스트와 함께 다양한 문화와 에너지를 공유하<br>기 위한 Find Your Light 프로젝트를 2020년부터 이어가고 있습니다. 2022년 프로젝트 Shape.Shifter 쉐이프 쉬프터는 브랜드의<br>헤리티지인 가방이 가지고 있는 원형의 한계를 뛰어넘어 가방에 물리<br>적 변형을 가하며 자유롭게 창작하는 프로젝트입니다.
+                        </div>
+                    </div>
+
+                    <div class="fyl-section5__paragraph">
+                        <div class="fyl-section5__logo">
+                            <img src="../../images/project/fyl3/img_contributors.png" alt="컨트리뷰터스" class="fyl-section5__logo--img" />
+                        </div>
+                        <div class="fyl-section5__paragraph--txt">
+                            컨트리뷰터스는 공예인 김은학과 공예·디자인 연구자 이정은이 결성<br>한 제작문화 콜렉티브로 공예·디자인과 연결된 사회 현상, 역사, 인물, 지역 등에 대한 포괄적인 리서치를 기반으로 기획, 제작, 연구 활동을 시작했습니다. 공예·디자인에 대한 아티스틱 리서치와 창작을 목표로 둘 사이를 매개하는 기획 활동을 진행 중입니다.
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- 섹션5(하단 소개) -->
+        </div>
+    </div>
+</div>
+<!-- //section끝 -->
+<!--footer시작-->
+<footer class="footer">
+    <div class="footer__layout">
+        <div class="footer__wrap">
+            <!--왼쪽 영역-->
+            <div class="footer__left">
+                <img src="../../images/common/icon_footer_logo.png" class="footer__logo" alt="루이까또즈">
+                <p class="footer__info">
+                    (주)크리에이션엘  ㅣ  대표이사 전상우 신경민 ㅣ  서울시 동대문구 하정로 26<br>
+                    국내사업자등록번호 211-81063749  사업자 정보 확인  ㅣ 통신판매업신고 제 2011-서울동대문구-0019호<br>
+                    고객센터 080-599-1414   A/S문의 080-725-7272<br>
+                    월-금 9:30 -18:00 (공휴일 휴무)  점심 12:00-13:00<br>
+                    소비자피해 보상법 고객님은 안전거래를 위해 현금 결제시 저희사이트에서 가입한 구매안전 서비스를 이용하실 수 있습니다.
+                    <span class="footer__info--underline">
+                        <a href="#;" class="footer__info--link">서울보증보험 가입 확인</a>
+                    </span>
+                </p>
+            </div>
+            <!--//왼쪽 영역-->
+
+            <!--오른쪽 영역-->
+            <div class="footer__right">
+                <ul class="footer__list">
+                    <li class="footer__item">
+                        <a href="#termsPop" class="footer__link js-popup-open">이용약관</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#termsPop2" class="footer__link js-popup-open">개인정보처리방침</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="" class="footer__link">고객센터</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="" class="footer__link">STORES</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="" class="footer__link">MEMBERSHIP</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="" class="footer__link">ABOUT</a>
+                    </li>
+                </ul>
+            </div>
+            <!--오른쪽 영역-->
+        </div>
+        <!--sns채널-->
+        <div class="footer-sns">
+            <ul class="footer-sns__list">
+                <li class="footer-sns__item type-facebook">
+                    <a href="" class="footer-sns__link">facebook</a>
+                </li>
+                <li class="footer-sns__item type-post">
+                    <a href="" class="footer-sns__link">post</a>
+                </li>
+                <li class="footer-sns__item type-instagram">
+                    <a href="" class="footer-sns__link">instagram</a>
+                </li>
+                <li class="footer-sns__item type-youtube">
+                    <a href="" class="footer-sns__link">youtube</a>
+                </li>
+                <li class="footer-sns__item type-talk">
+                    <a href="" class="footer-sns__link">talk</a>
+                </li>
+            </ul>
+        </div>
+        <!--//sns채널-->
+
+        <div class="footer__copy">
+            COPYRIGHT LOUIS QUATORZE. ALL RIGHTS RESERVED.
+        </div>
+    </div>
+</footer>
+<!-- cart-fix -->
+<div class="cart-fix">
+    <a href="#;" class="cart-fix__add"><span class="cart-fix__add--count">2</span></a>
+    <div class="cart-fix__top js-scrollTop"><span class="sr-only">맨위로</span></div>
+</div>
+<!-- .cart-fix -->
+
+<script src="../../js/libs/jquery-3.6.0.min.js"></script>
+
+
+
+    <script src="../../js/libs/swiper-4.5.0.min.js"></script>
+    <script src="../../js/libs/ScrollMagic.min.js"></script>
+    <script src="../../js/libs/TweenMax.min.js"></script>
+    <script src="../../js/libs/animation.gsap.js"></script>
+   <!-- <script src="https://www.youtube.com/player_api"></script>-->
+    <script src="../../js/menuFixed.js"></script>
+    <script src="../../js/fyl.js"></script>
+    <script src="../../js/gsap.min.js"></script>
+    <script src="../../js/ScrollToPlugin.min.js"></script>
+    <script type="text/javascript" src="../../EVGvzMuD34R4pVZWRaher4/orbitvu12/orbitvu.js"></script>
+    <script type="text/javascript">
+        inject_orbitvu(
+            'ov-mgGdFXoxiS6PPRrWC8k5gX',
+            '../../EVGvzMuD34R4pVZWRaher4/orbitvu12/',
+            '',
+            {
+                ovus_folder: "../../EVGvzMuD34R4pVZWRaher4/1030/",
+                width: "520",
+                content2: 'yes',
+                height: "620",
+                partial_load: "yes"
+            });
+    </script>
+
+
+
+
+<script src="../../js/common.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
+<!--footer끝-->
