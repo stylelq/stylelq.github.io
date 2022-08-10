@@ -148,6 +148,8 @@ $('#replayVideo').on('click', fylReplayVideo); //영상재실행
 
 var isVisible = false;
 window.addEventListener('scroll', function () {
+  console.log('isVisible: ' + isVisible);
+
   if (checkVisible($('#contentText1')) && !isVisible) {
     var text1 = "<b>Shape.Shifter 쉐이프 쉬프터는</b> 신화나 소설 속에서 <b>형태가 변신하는 능력자를</b> 의미하며,<br>이야기 속에서 <b>물리적인 모양을 변신하는 능력은</b> 초인간적인 능력, 신의 개입, 악마의 조작, 마법과 주문 같은 초월의 능력으로 가능했습니다.<br>역사적으로 누적된 수많은 설화와 사례들은 고정된 모습을 전복하려는 인간의 모양 변신에 대한 욕망을 투사합니다.<br>Find Your Light 3는 루이까또즈의 헤리티지인 가방이 가지고 있는 원형의 한계를 뛰어 넘어 가방에 물리적 변형을 가하며 자유롭게 창작하는 프로젝트<br>입니다. 10인의 아티스트와 함께 패션과 미술의 혼성적 경계에서 새로운 차원의 감각을 추구하며 동시대 예술의 가능성을 탐험합니다.";
     textProcess('#contentText1', text1);
@@ -174,5 +176,4 @@ $(document).ready(function(){
         "포괄적인 리서치를 기반으로 기획, 제작, 연구 활동을 시작했습니다. 공예·디자인에 대한 아티스틱 리서치와 창작을 목표로 둘 사이를 매개하는 기획 활동을<br>" +
         "진행 중입니다.";
     textYellow( '#contentText2', text2);
-});
- */
+});*/
