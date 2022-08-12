@@ -1264,40 +1264,7 @@ jQuery(function () {
 
 
   if ($('.main-banner2').length > 0 && $('.main-banner2__item').length > 1) {
-    var mainBannerProgressbarOpt = {
-      init: function init() {
-        if ($('.swiper-slide-active.main-banner2__item').find('.main-banner2__content').data("title") === "is-white") {
-          $('.main-banner2__pagination').removeClass('is-black');
-          $('.main-banner2__pagination').addClass('is-white');
-        } else {
-          $('.main-banner2__pagination').removeClass('is-white');
-          $('.main-banner2__pagination').addClass('is-black');
-        }
-
-        $('.main-banner2__progressbar').removeClass("animate");
-        $('.main-banner2__progressbar').removeClass("active");
-        $('.main-banner2__progressbar').eq(0).addClass("animate");
-        $('.main-banner2__progressbar').eq(0).addClass("active");
-      },
-      slideChangeTransitionStart: function slideChangeTransitionStart() {
-        $('.main-banner2__progressbar').removeClass("animate");
-        $('.main-banner2__progressbar').removeClass("active");
-        $('.main-banner2__progressbar').eq(0).addClass("active");
-      },
-      slideChangeTransitionEnd: function slideChangeTransitionEnd() {
-        $('.main-banner2__progressbar').eq(0).addClass("animate");
-      },
-      beforeTransitionStart: function beforeTransitionStart() {
-        if ($('.swiper-slide-active.main-banner2__item').find('.main-banner2__content').data("title") === "is-white") {
-          $('.main-banner2__pagination').removeClass('is-black');
-          $('.main-banner2__pagination').addClass('is-white');
-        } else {
-          $('.main-banner2__pagination').removeClass('is-white');
-          $('.main-banner2__pagination').addClass('is-black');
-        }
-      }
-    };
-    var mainBannerOption = {
+    var mainSlide = new Swiper('.main-banner2__container', {
       observer: true,
       observeParents: true,
       watchOverflow: true,
@@ -1311,11 +1278,41 @@ jQuery(function () {
         el: ".main-banner2__pagination",
         type: "fraction"
       },
-      on: mainBannerProgressbarOpt
-    };
-    var mainSlide = new Swiper('.main-banner2__container', mainBannerOption);
-  } //best 배너슬라이드
+      on: {
+        init: function init() {
+          if ($('.swiper-slide-active.main-banner2__item').find('.main-banner2__content').data("title") === "is-white") {
+            $('.main-banner2__pagination').removeClass('is-black');
+            $('.main-banner2__pagination').addClass('is-white');
+          } else {
+            $('.main-banner2__pagination').removeClass('is-white');
+            $('.main-banner2__pagination').addClass('is-black');
+          }
 
+          $('.main-banner2__progressbar').removeClass("animate");
+          $('.main-banner2__progressbar').removeClass("active");
+          $('.main-banner2__progressbar').eq(0).addClass("animate");
+          $('.main-banner2__progressbar').eq(0).addClass("active");
+        },
+        slideChangeTransitionStart: function slideChangeTransitionStart() {
+          $('.main-banner2__progressbar').removeClass("animate");
+          $('.main-banner2__progressbar').removeClass("active");
+          $('.main-banner2__progressbar').eq(0).addClass("active");
+        },
+        slideChangeTransitionEnd: function slideChangeTransitionEnd() {
+          $('.main-banner2__progressbar').eq(0).addClass("animate");
+        },
+        beforeTransitionStart: function beforeTransitionStart() {
+          if ($('.swiper-slide-active.main-banner2__item').find('.main-banner2__content').data("title") === "is-white") {
+            $('.main-banner2__pagination').removeClass('is-black');
+            $('.main-banner2__pagination').addClass('is-white');
+          } else {
+            $('.main-banner2__pagination').removeClass('is-white');
+            $('.main-banner2__pagination').addClass('is-black');
+          }
+        }
+      }
+    });
+  }
 
   if ($('.best-thumb').length > 0 && $('.best-thumb__item').length > 1) {
     var bestSlide = new Swiper('.best-thumb__container', {
