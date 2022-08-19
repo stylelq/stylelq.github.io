@@ -106,5 +106,31 @@ if ($('.promotion-view__video--src').length > 0) {
     video.muted = false;
   } else {
     video.muted = true;
+    ㅓ;
   }
 }
+/* 2022 9월 프로모션*/
+
+
+function openCouponPopup(e) {
+  e.preventDefault();
+  $('.thanksgiving-dim').addClass('is-show');
+  $('.thanksgiving-popup').addClass('is-show');
+}
+
+$('.js-coupon-open').on('click', openCouponPopup);
+
+function openCloseButton(e) {
+  e.preventDefault();
+  $('.thanksgiving-pop__button').addClass('is-colorChange');
+  $('.thanksgiving-pop__close').addClass('is-show');
+}
+
+$('.js-coupon-download').on('click', openCloseButton);
+
+function closePopup(e) {
+  $('.thanksgiving-dim').removeClass('is-show');
+  $('.thanksgiving-popup').removeClass('is-show');
+}
+
+$('.js-popup-close').on('click', closePopup);
