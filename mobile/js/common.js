@@ -1002,6 +1002,21 @@ jQuery(function () {
   // }
 
 
+  if ($('.main-banner__item').length == 1) {
+    // 슬라이드 배너 1개일 때
+    if ($('.main-banner__item[data-bg="white"]').hasClass('swiper-slide-active')) {
+      $('body').removeClass('is-white');
+      $('body').addClass('is-black');
+      $('.main-banner__pagination').removeClass('is-black');
+      $('.main-banner__pagination').addClass('is-white');
+    } else {
+      $('body').removeClass('is-black');
+      $('body').addClass('is-white');
+      $('.main-banner__pagination').removeClass('is-white');
+      $('.main-banner__pagination').addClass('is-black');
+    }
+  }
+
   function pagingOptionChange() {
     /*
     if ($('.main-banner__wrapper').find('.swiper-slide-active').data('bg') === 'white') {
