@@ -1215,7 +1215,13 @@ jQuery(function () {
       }
     });
   } //--END[swiper slider]-----------------------------
+  // 메인 배너 1개일 때 슬라이드 버튼 미노출
 
+
+  if ($('.main-banner__item').length == 1) {
+    $('.main-banner--prev').css('display', 'none');
+    $('.main-banner--next').css('display', 'none');
+  }
 
   if ($('.main-new').length > 0 && $('.main-new__item').length > 1) {
     var eventSliderTouch = false;
@@ -1249,10 +1255,6 @@ jQuery(function () {
             this.params.speed = 500;
           }
         }
-        /*transitionEnd: function() {
-            this.params.speed = 10000;
-        },*/
-
       }
     });
     /*슬라이드 온클릭 시 자동슬라이드 정지*/
