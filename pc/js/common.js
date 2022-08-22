@@ -63,6 +63,11 @@ jQuery(function () {
 
           $('.header').removeClass('is-bg-white');
         }
+
+        if ($('.main-banner__item').length == 1) {
+          //메인배너 슬라이드 1개일 때
+          $('.header').removeClass('is-bg-white');
+        }
       }
 
       if ($('.main-banner').length > 0 && $('.main-banner__item').length > 1) {
