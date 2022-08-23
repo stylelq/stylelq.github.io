@@ -49,31 +49,23 @@ if ($('.promotion-thumb').length > 0 && $('.promotion-thumb__item').length > 1) 
     promotionSlide.slideTo(num);
   });
 } // 2022 9월 프로모션
-
-
-function openCouponPopup(e) {
-  // 쿠폰열기
-  e.preventDefault();
-  $('.thanksgiving-dim').addClass('is-show');
-  $('.thanksgiving-popup').addClass('is-show');
-}
-
-$('.js-coupon-open').on('click', openCouponPopup);
-
-function openCloseButton(e) {
-  // 닫기버튼 열기
-  e.preventDefault();
-  $('.thanksgiving-pop__button').addClass('is-colorChange');
-  $('.thanksgiving-pop__close').addClass('is-show');
-  $('.thanksgiving-pop__link').text('쿠폰 발급 완료!');
-}
-
-$('.js-coupon-download').on('click', openCloseButton);
-
-function closePopup(e) {
-  // 팝업닫기
-  $('.thanksgiving-dim').removeClass('is-show');
-  $('.thanksgiving-popup').removeClass('is-show');
-}
-
-$('.js-popup-close').on('click', closePopup);
+// function openCouponPopup(e){    // 쿠폰열기
+//     e.preventDefault();
+//     $('.thanksgiving-dim').addClass('is-show');
+//     $('.thanksgiving-popup').addClass('is-show');
+// }
+// $('.js-coupon-open').on('click', openCouponPopup);
+//
+// function openCloseButton(e){    // 닫기버튼 열기
+//     e.preventDefault();
+//     $('.thanksgiving-pop__button').addClass('is-colorChange');
+//     $('.thanksgiving-pop__close').addClass('is-show');
+//     $('.thanksgiving-pop__link').text('쿠폰 발급 완료!');
+// }
+// $('.js-coupon-download').on('click', openCloseButton);
+//
+// function closePopup(e){ // 팝업닫기
+//     $('.thanksgiving-dim').removeClass('is-show');
+//     $('.thanksgiving-popup').removeClass('is-show');
+// }
+// $('.js-popup-close').on('click', closePopup);
