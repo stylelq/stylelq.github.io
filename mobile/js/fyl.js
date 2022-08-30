@@ -118,25 +118,22 @@ floatingEvent('.floating6', 3, -10, 10);
 floatingEvent('.floating7', 3, 10, 10);
 floatingEvent('.floating8', 3, -10, 10);
 floatingEvent('.floating9', 3, 10, 10);
-floatingEvent('.floating10', 3, -10, 10);
-var playBtn = $('.fyl-section1__play');
-var pauseBtn = $('.fyl-section1__pause');
-var video = $('#stopVideo');
-
-function fylPauseVideo() {
-  playBtn.removeClass('is-hide');
-  video.get(0).pause();
-}
-
-function fylReplayVideo() {
-  video.get(0).play();
-  playBtn.addClass('is-hide');
-} //$('.js-fyl-btn').on('click', fylPlayVideo); // 영상재생
-
-
-$('#stopVideo').on('click', fylPauseVideo); // 영상정지
-
-$('#replayVideo').on('click', fylReplayVideo); //영상재실행
+floatingEvent('.floating10', 3, -10, 10); // var playBtn = $('.fyl-section1__play');
+// var pauseBtn = $('.fyl-section1__pause');
+// var video = $('#stopVideo');
+//
+// function fylPauseVideo(){
+//     playBtn.removeClass('is-hide');
+//     video.get(0).pause();
+// }
+//
+// function fylReplayVideo(){
+//     video.get(0).play();
+//     playBtn.addClass('is-hide');
+// }
+//
+// $('#stopVideo').on('click', fylPauseVideo); // 영상정지
+// $('#replayVideo').on('click',fylReplayVideo); //영상재실행
 // 텍스트 이벤트
 
 var text1 = "<b>Shape.Shifter 쉐이프 쉬프터는</b> 신화나 소설 속에서<br>형태가 변신하는 능력자를 의미하며,<br>이야기 속에서 물리적인 모양을 변신하는 능력은<br>초인간적인 능력, 신의 개입, 악마의 조작, 마법과 주문<br>같은 초월의 능력으로 가능했습니다.<br>역사적으로 누적된 수많은 설화와 사례들은 고정된<br>모습을 전복하려는 인간의 모양 변신에 대한<br>욕망을 투사합니다.<br>Find Your Light의 세번째 프로젝트 쉐이프 쉬프터는<br>루이까또즈의 헤리티지인 가방이 가지고 있는<br>원형의 한계를 뛰어 넘어 가방에 물리적 변형을 가하며<br>자유롭게 창작하는 것을 목표로 합니다.<br>10인의 아티스트와 함께 패션과 미술의 혼성적<br>경계에서 새로운 차원의 감각을 추구하며 동시대<br>예술의 가능성을 탐험합니다.";
