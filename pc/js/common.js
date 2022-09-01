@@ -52,25 +52,20 @@ jQuery(function () {
         $('body').addClass('is-white');
         $('.header').addClass('is-bg-white');
       } else {
-        if ($('.main-banner').length > 0 && $('.main-banner__item').length > 1) {
+        if ($('.main-banner').length > 0 && $('.main-banner__item').length > 0) {
           if ($('.main-banner__item[data-bg="white"]').hasClass('swiper-slide-active')) {
-            $('body').removeClass('is-black');
-            $('body').addClass('is-white');
-          } else {
             $('body').removeClass('is-white');
             $('body').addClass('is-black');
+          } else {
+            $('body').removeClass('is-black');
+            $('body').addClass('is-white');
           }
 
           $('.header').removeClass('is-bg-white');
         }
-
-        if ($('.main-banner__item').length == 1) {
-          //메인배너 슬라이드 1개일 때
-          $('.header').removeClass('is-bg-white');
-        }
       }
 
-      if ($('.main-banner').length > 0 && $('.main-banner__item').length > 1) {
+      if ($('.main-banner').length > 0 && $('.main-banner__item').length > 0) {
         pagingOptionChange();
       }
     });
@@ -166,7 +161,7 @@ jQuery(function () {
         } else {
           $('.header').removeClass('is-bg-white');
 
-          if ($('.main-banner').length > 0 && $('.main-banner__item').length > 1) {
+          if ($('.main-banner').length > 0 && $('.main-banner__item').length > 0) {
             if ($('.main-banner__item[data-bg="white"]').hasClass('swiper-slide-active')) {
               $('body').removeClass('is-black');
               $('body').addClass('is-white');
