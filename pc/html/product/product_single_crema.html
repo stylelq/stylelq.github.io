@@ -557,7 +557,15 @@
     <!-- 배너영역 추가-->
     <div class="product-detail__banner">
         <a href="" class="product-detail__link">
-            <img class="product-detail__img" src="../../images/dummy/detail-img1.jpg" alt="" />
+            <!-- 이미지일 때-->
+<!--            <div class="product_detail__img">-->
+<!--                <img class="product-detail__img&#45;&#45;source" src="../../images/dummy/detail-img1.jpg" alt="" />-->
+<!--            </div>-->
+
+            <!-- 영상일 때-->
+            <div class="product_detail__video">
+                <video src="https://cdn.louisclub.com/static/fr/img/specialty/20220923/pc_detail.mp4?v=202209220001" class="product-detail__video--source" loop="" autoplay="" muted="muted" playsinline="" data-object-fit="cover"></video>
+            </div>
         </a>
     </div>
     <!-- .배너영역 추가-->
