@@ -254,6 +254,7 @@ jQuery(function () {
   var $sc, $winH, $divH, $docH, $prHeight, $tot;
   var scHeight;
   var $styleOpt = {};
+  var $styleOpt2 = {};
 
   function positionAbsolute(num) {
     $styleOpt.position = 'absolute';
@@ -265,6 +266,16 @@ jQuery(function () {
     $styleOpt.top = num;
   } // 상품 상세 option fix scroll
 
+
+  function positionAbsolute2(num) {
+    $styleOpt2.position = 'absolute';
+    $styleOpt2.bottom = num;
+  }
+
+  function positionFixed2(num) {
+    $styleOpt2.position = 'fixed';
+    $styleOpt2.bottom = num;
+  }
 
   if ($('.detail').length > 0) {
     $(window).on('scroll', function () {
@@ -282,21 +293,25 @@ jQuery(function () {
           if ($sc - $divH > 470) {
             //윈도우창보다 작은 콘텐츠
             positionAbsolute($divH + 240);
+            positionAbsolute2($divH + 240);
             $('.detail-tab').removeClass('fixed');
           } else {
             //스크롤 햇을때
             positionFixed($('.header').height() + 20);
+            positionFixed2($('.header').height() - 20);
           }
         } else {
           //상세콘텐츠 높이 > 윈도우창 높이
           if ($sc - $divH > 0) {
             //윈도우 끝쪽에 다닳았을때
             positionAbsolute($divH + 240);
+            positionAbsolute2($divH + 0);
             /*if ($divH > 960) {
                 $('.detail-tab').removeClass('fixed');
             }*/
           } else {
             positionFixed($('.header').height() + 10);
+            positionFixed2($('.header').height() - 10);
           }
         }
 
@@ -304,6 +319,8 @@ jQuery(function () {
       } else {
         $('.detail-tab').removeClass('fixed');
         positionFixed(''); //default css
+
+        positionFixed2(''); //default css
 
         $('.detail-height').removeClass('is-summary');
       } // 스크롤 0일때 초기화
@@ -317,6 +334,7 @@ jQuery(function () {
 
 
       $('.product-option-fix').css($styleOpt);
+      $('.detail-halloween').css($styleOpt2);
       return;
     });
   } // 주문서 배송지 option fix scroll
@@ -334,12 +352,17 @@ jQuery(function () {
 
       if ($sc < 100) {
         positionFixed(''); //default css
+
+        positionFixed2(''); //default css
       } else {
         if ($sc >= $tot) {
           positionAbsolute($divH - 200);
+          positionAbsolute2($divH - 0);
         } else {
           positionFixed($divH);
           positionFixed($('.header').height() + 20);
+          positionFixed2($divH);
+          positionFixed2($('.header').height() + 20);
         }
       }
 
@@ -390,6 +413,10 @@ jQuery(function () {
       position: 'fixed',
       top: $('.header').height() + 20
     });
+    /*$('.detail-halloween.fixed').css({
+        position: 'fixed',
+        bottom: $('.header').height() + 20
+    });*/
   }
 
   $(document).on('click', '.js-tab-link', detailTab); //주문서 배송지 탭
