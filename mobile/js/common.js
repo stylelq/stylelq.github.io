@@ -319,8 +319,10 @@ jQuery(function () {
 
         if (height > headHeight) {
           $('.fix-button').addClass('is-on');
+          $('.detail-halloween').addClass('fixed');
         } else {
           $('.fix-button').removeClass('is-on');
+          $('.detail-halloween').removeClass('fixed');
         }
       });
       $('.cart-fix').addClass('is-up');
