@@ -211,14 +211,22 @@ jQuery(function () {
 
       if (height > headHeight) {
         $('.cart-fix').addClass('is-view');
+        $('.detail-halloween').addClass('fixed');
       } else {
         $('.cart-fix').removeClass('is-view');
+        $('.detail-halloween').removeClass('fixed');
       } // 푸터가 보일경우 버튼 위치값 조정
 
 
       if (height - (footY - winH) > 0) {
         $('.cart-fix').css({
           bottom: height - (footY - winH) + 50
+        });
+      }
+
+      if (height - (footY - winH) > 0) {
+        $('.detail-halloween').css({
+          bottom: height - (footY - winH) + 150
         });
       }
     });
@@ -333,8 +341,8 @@ jQuery(function () {
       }*/
 
 
-      $('.product-option-fix').css($styleOpt);
-      $('.detail-halloween').css($styleOpt2);
+      $('.product-option-fix').css($styleOpt); //$('.detail-halloween').css($styleOpt2);
+
       return;
     });
   } // 주문서 배송지 option fix scroll
