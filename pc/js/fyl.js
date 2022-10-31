@@ -106,20 +106,17 @@ function floatingEvent(selector, delay, sizeX, sizeY) {
     delay: random(0, delay) //지연시간
 
   });
-}
-
-function floatingHalloween(selector, delay, sizeX, sizeY) {
-  gsap.to(selector, random(1, 1), {
-    x: sizeX,
-    y: sizeY,
-    repeat: -1,
-    //무한반복
-    yoyo: true,
-    ease: Power1.easeInOut,
-    delay: random(0, delay) //지연시간
-
-  });
-} // 플로팅 이벤트 실행
+} // function floatingHalloween(selector,delay,sizeX, sizeY){
+//     gsap.to(selector, random(1, 1),{
+//         x: sizeX,
+//         y: sizeY,
+//         repeat: -1, //무한반복
+//         yoyo: true,
+//         ease: Power1.easeInOut,
+//         delay: random(0, delay)//지연시간
+//     })
+// }
+// 플로팅 이벤트 실행
 
 
 floatingEvent('.floating1', 6, 15, 15);
@@ -131,8 +128,8 @@ floatingEvent('.floating6', 6, -15, 15);
 floatingEvent('.floating7', 6, 15, 15);
 floatingEvent('.floating8', 6, -15, 15);
 floatingEvent('.floating9', 6, 15, 15);
-floatingEvent('.floating10', 6, -15, 15);
-floatingHalloween('.halloween', 0, 1, 15);
+floatingEvent('.floating10', 6, -15, 15); //floatingHalloween('.halloween',0,1, 15);
+
 /*function fylPlayVideo(){
     var areaElem = $(this);
     var areaNum = areaElem.attr('class').replace(/[^0-9]/g, '') - 1;

@@ -210,11 +210,9 @@ jQuery(function () {
       footY = $('.footer').offset().top;
 
       if (height > headHeight) {
-        $('.cart-fix').addClass('is-view');
-        $('.detail-halloween').addClass('fixed');
+        $('.cart-fix').addClass('is-view'); //$('.detail-halloween').addClass('fixed');
       } else {
-        $('.cart-fix').removeClass('is-view');
-        $('.detail-halloween').removeClass('fixed');
+        $('.cart-fix').removeClass('is-view'); //$('.detail-halloween').removeClass('fixed');
       } // 푸터가 보일경우 버튼 위치값 조정
 
 
@@ -222,13 +220,12 @@ jQuery(function () {
         $('.cart-fix').css({
           bottom: height - (footY - winH) + 50
         });
-      }
+      } // if (height - (footY - winH) > 0) {
+      //     $('.detail-halloween').css({
+      //         bottom: height - (footY - winH) + 150
+      //     });
+      // }
 
-      if (height - (footY - winH) > 0) {
-        $('.detail-halloween').css({
-          bottom: height - (footY - winH) + 150
-        });
-      }
     });
   } //스크롤탑 버튼
   // 프로모션 - 스크롤 시 패럴랙스 효과
