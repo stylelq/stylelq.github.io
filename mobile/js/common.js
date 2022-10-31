@@ -318,11 +318,9 @@ jQuery(function () {
         var headHeight = $('.header').scrollTop();
 
         if (height > headHeight) {
-          $('.fix-button').addClass('is-on');
-          $('.detail-halloween').addClass('fixed');
+          $('.fix-button').addClass('is-on'); //$('.detail-halloween').addClass('fixed');
         } else {
-          $('.fix-button').removeClass('is-on');
-          $('.detail-halloween').removeClass('fixed');
+          $('.fix-button').removeClass('is-on'); //$('.detail-halloween').removeClass('fixed');
         }
       });
       $('.cart-fix').addClass('is-up');

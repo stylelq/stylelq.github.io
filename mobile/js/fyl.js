@@ -106,20 +106,17 @@ function floatingEvent(selector, delay, sizeX, sizeY) {
     delay: random(0, delay) //지연시간
 
   });
-}
-
-function floatingHalloween(selector, delay, sizeX, sizeY) {
-  gsap.to(selector, random(1, 1), {
-    x: sizeX,
-    y: sizeY,
-    repeat: -1,
-    //무한반복
-    yoyo: true,
-    ease: Power1.easeInOut,
-    delay: random(0, delay) //지연시간
-
-  });
-} // 플로팅 이벤트 실행
+} // function floatingHalloween(selector,delay,sizeX, sizeY){
+//     gsap.to(selector, random(1, 1),{
+//         x: sizeX,
+//         y: sizeY,
+//         repeat: -1, //무한반복
+//         yoyo: true,
+//         ease: Power1.easeInOut,
+//         delay: random(0, delay)//지연시간
+//     })
+// }
+// 플로팅 이벤트 실행
 
 
 floatingEvent('.floating1', 3, 10, 10);
@@ -131,8 +128,8 @@ floatingEvent('.floating6', 3, -10, 10);
 floatingEvent('.floating7', 3, 10, 10);
 floatingEvent('.floating8', 3, -10, 10);
 floatingEvent('.floating9', 3, 10, 10);
-floatingEvent('.floating10', 3, -10, 10);
-floatingHalloween('.halloween', 0, 1, 15); // var playBtn = $('.fyl-section1__play');
+floatingEvent('.floating10', 3, -10, 10); //floatingHalloween('.halloween',0,1, 15);
+// var playBtn = $('.fyl-section1__play');
 // var pauseBtn = $('.fyl-section1__pause');
 // var video = $('#stopVideo');
 //
