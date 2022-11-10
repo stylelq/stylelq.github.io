@@ -128,3 +128,104 @@ if ($('.promotion-view__video--src').length > 0) {
 //     $('.thanksgiving-popup').removeClass('is-show');
 // }
 // $('.js-popup-close').on('click', closePopup);
+// 2022.11 minicaviar
+
+
+var mouse = {
+  x: 0,
+  y: 0
+};
+var showcasePos = 0;
+var showcaseCount = 20;
+var cardGap = 180;
+var cardWidth = 380;
+var padding = 0;
+var touch = false;
+
+function listeners() {
+  var loadCount = 0;
+  $(".showcase-cards__img").one('load', function () {
+    loadCount++;
+  }).each(function () {
+    if (this.complete) {
+      $(this).trigger('load');
+    }
+  });
+  $(".card-wrap").mousemove(function (e) {
+    mouse.x = e.clientX;
+    mouse.y = e.clientY;
+  });
+}
+
+function showcaseOffset() {
+  if (!touch) {
+    $(".showcase-cards .showcase-cards__box").each(function (i) {
+      var index = showcaseCount - 1 - i;
+      var offset = cardGap * index;
+      $(this).css({
+        'left': offset + 'px'
+      });
+    });
+  }
+}
+
+function cardAnimation() {
+  requestAnimationFrame(cardAnimation);
+
+  if (!touch) {
+    var position = mouse.x / window.innerWidth * 1.4 - 0.2;
+
+    if (position > 1) {
+      position = 1;
+    }
+
+    if (position < 0) {
+      position = 0;
+    }
+
+    var index = Math.round(position * (showcaseCount - 1));
+    $(".showcase-cards .showcase-cards__box").each(function (i) {
+      if (showcaseCount - 1 - i < index) {
+        $(this).addClass('push');
+      } else {
+        $(this).removeClass('push');
+      }
+    });
+    var edge = 0;
+    var g = (cardGap * (showcaseCount - 1) + cardWidth - window.innerWidth + padding * 2 + edge * 2) / (showcaseCount - 1);
+    var offset = edge - index * g;
+    showcasePos += (offset - showcasePos) / 10;
+    $(".showcase-cards").css({
+      'transform': 'translate(' + showcasePos + 'px, 0px)'
+    });
+  } else {
+    var position = $(".showcase").scrollLeft() / ($(".showcase-cards").outerWidth() - window.innerWidth) * 1 - 0;
+
+    if (position > 1) {
+      position = 1;
+    }
+
+    if (position < 0) {
+      position = 0;
+    }
+
+    var index = Math.round(position * (showcaseCount - 1));
+    $(".showcase-cards .showcase-cards__box").each(function (i) {
+      if (showcaseCount - 1 - i < index) {
+        $(this).addClass('push');
+      } else {
+        $(this).removeClass('push');
+      }
+    });
+  }
+}
+
+$(document).ready(function () {
+  if (showcaseCount > $(".showcase-cards__box").length) {
+    showcaseCount = $(".showcase-cards__box").length;
+  }
+
+  listeners();
+  showcaseOffset();
+  requestAnimationFrame(cardAnimation);
+});
