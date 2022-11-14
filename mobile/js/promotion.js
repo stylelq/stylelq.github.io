@@ -227,5 +227,4 @@ $(document).ready(function () {
   listeners();
   showcaseOffset();
   requestAnimationFrame(anim);
-  $(window).resize(resizeHandler);
 });
