@@ -1287,7 +1287,7 @@ jQuery(function () {
   }
 });
 jQuery(function () {
-  // 메인으로 이동
+  // 커버 지우고 메인으로 이동
   function mainMove() {
     $('.cover-wrap').hide();
     $('body').removeClass('scroll-stop');
