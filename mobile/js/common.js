@@ -1287,9 +1287,66 @@ jQuery(function () {
   }
 });
 jQuery(function () {
+  // 메인으로 이동
+  function mainMove() {
+    $('.cover-wrap').hide();
+    $('body').removeClass('scroll-stop');
+  }
+
+  $(document).on('click', '.js-home-link', mainMove); // 메인커버 노출
+
+  $('.cover-wrap__swipe').fadeOut(2000);
+
+  function coverShow() {
+    $('.cover-wrap__swipe').addClass('is-hide');
+  }
+
+  $(document).on('click', '.js-cover-dim', coverShow);
+
+  if ($('.cover-wrap').length > 0) {
+    $('body').addClass('scroll-stop');
+  } else {
+    $('body').removeClass('scroll-stop');
+  } // 메인커버 지우는 모션
+
+
+  $('#cover1').eraser({
+    size: 150,
+    completeRatio: .7,
+    completeFunction: function completeFunction() {
+      fadeMotion('#cover1');
+      $('body').removeClass('scroll-stop');
+    }
+  });
+  $('#cover2').eraser({
+    size: 150,
+    completeRatio: .7,
+    completeFunction: function completeFunction() {
+      fadeMotion('#cover2');
+    }
+  });
+  $('#cover3').eraser({
+    size: 150,
+    completeRatio: .7,
+    completeFunction: function completeFunction() {
+      fadeMotion('#cover3');
+    }
+  }); // $('body').addClass('scroll-stop');
+
+  function fadeMotion(target) {
+    if (target == '#cover1') {
+      $('.cover-wrap').addClass('is-hide');
+      $('body').removeClass('scroll-stop'); // location.href='https://www.stylelq.com/';
+    } else {
+      $(target).fadeOut(1000);
+      $(target).eraser('disable');
+    }
+  }
   /*
   //Header Scroll Bg
   */
+
+
   $(document).ready(function () {
     // 헤더 스크롤 백그라운드
     var didScroll;
