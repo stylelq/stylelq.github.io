@@ -1102,164 +1102,15 @@
     </div>
 </section>
 
-<style>
-    /*eraser 관련 css*/
-    .cover-area img {
-        width: 100%;
-    }
 
-    body.no-scroll {
-        overlfow: hidden;
-    }
-    @@ -2647,8 +2652,11 @@ img.cover-area__img {
-                               position: fixed;
-                               top: 0;
-                               left: 0;
-                               width: 100%;
-                               height: auto;
-                               z-index: -1;
-                               opacity: 0;
-                               max-width: none;
-                           }
-
-    canvas.cover-area__img {
-    @@ -2684,6 +2692,77 @@ canvas.cover-area__img {
-                               transform: translate(-50%, -50%);
-                           }
-
-    .cover-area__swipe {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 1100;
-        box-sizing: border-box;
-    }
-
-    .cover-area__btn {
-        position: fixed;
-        left: 0;
-        right: 0;
-        bottom: 3%;
-        overflow: hidden;
-        width: 48px;
-        margin: 0 auto;
-        z-index: 1200;
-    }
-
-    .loading {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        z-index: 9999;
-        background: white;
-        opacity: 1;
-        transition: 0.5s;
-    }
-    .loading.is-transparent {
-        opacity: 0;
-    }
-
-    @keyframes loading-spin {
-        100% {
-            transform: rotate(360deg);
-        }
-    }
-    @keyframes loading-circle-ani {
-        0% {
-            stroke-dashoffset: 157;
-        }
-        75% {
-            stroke-dashoffset: -147;
-        }
-        100% {
-            stroke-dashoffset: -157;
-        }
-    }
-    .loading-circle {
-        width: 54px;
-        height: 54px;
-        animation: loading-spin 3s infinite;
-    }
-
-    .loading-circle circle {
-        stroke: #000;
-        stroke-width: 4;
-        /* getTotalLength()로 stroke의 길이를 얻어올 수 있음 */
-        stroke-dasharray: 157, 157;
-        stroke-dashoffset: 0;
-        fill: transparent;
-        animation: loading-circle-ani 1s infinite;
-        /* transition: 1s; */
-    }
-
-
-
-    anvas.cover-area__img{position:fixed; top:50%; left:50%; transform: translate(-50%,-50%);}
-    .cover-area__swipe{position:fixed; top:50%; left:50%;  transform: translate(-50%,-50%); z-index:1100; box-sizing:border-box;}
-    .cover-area__btn{position:fixed; left:0; right:0; bottom:3%; overflow:hidden; width:48px; margin:0 auto; z-index:1200;}
-    .loading {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        z-index: 9999;
-        background: white;
-        opacity: 1;
-        transition: 0.5s;
-    &.is-transparent{opacity:0;}
-    }
-
-    @keyframes loading-spin {
-        100% { transform: rotate(360deg); }
-    }
-    @keyframes loading-circle-ani {
-        0% { stroke-dashoffset: 157; }
-        75% { stroke-dashoffset: -147; }
-        100% { stroke-dashoffset: -157; }
-    }
-    .loading-circle {
-        width: 54px;
-        height: 54px;
-        animation: loading-spin 3s infinite;
-    }
-    .loading-circle circle {
-        stroke: #000;
-        stroke-width: 4;
-        /* getTotalLength()로 stroke의 길이를 얻어올 수 있음 */
-        stroke-dasharray: 157, 157;
-        stroke-dashoffset: 0;
-        fill: transparent;
-        animation: loading-circle-ani 1s infinite;
-        /* transition: 1s; */
-    }
-</style>
-
-<div class="loading">
-    <svg class="loading-circle">
-        <circle cx="50%" cy="50%" r="25"></circle>
-    </svg>
+<!-- 메인 커버-->
+<div class="eraser-container">
+    <img id="robot" src="https://cdn.louisclub.com/static/upload/default/2022/11/01/b5711f6a-7bda-4bdd-9c90-92d9401994db.jpg" />
+    <img id="redux1" src="https://cdn.louisclub.com/static/upload/display/2022/11/14/6e138312-0c60-4409-9965-ff38e15a1938.jpg" />
+    <img id="redux2" src="https://cdn.louisclub.com/static/fr/img/specialty/20221027/pc_detail.jpg" />
+    <img id="redux3" src="https://cdn.louisclub.com/static/upload/default/2022/10/20/9c77263c-f439-4a16-b79b-15559a284c02.jpg" />
 </div>
-<div class="cover-area">
-    <ul class="cover-area__list">
-        <li class="cover-area__item">
-            <img class="cover-area__img nth-1 js-cover-item" src="https://cdn.louisclub.com/static/upload/display/2022/11/14/6e138312-0c60-4409-9965-ff38e15a1938.jpg" alt="">
-            <img class="cover-area__img nth-2 js-cover-item" src="https://cdn.louisclub.com/static/upload/default/2022/11/01/b5711f6a-7bda-4bdd-9c90-92d9401994db.jpg" alt="">
-            <img class="cover-area__img nth-3 js-cover-item" src="https://cdn.louisclub.com/static/upload/display/2022/11/14/6e138312-0c60-4409-9965-ff38e15a1938.jpg" alt="">
-            <img class="cover-area__img nth-4 js-cover-item" src="https://cdn.louisclub.com/static/upload/default/2022/11/01/b5711f6a-7bda-4bdd-9c90-92d9401994db.jpg" alt="">
-            <img class="cover-area__img nth-5 js-cover-item" src="https://cdn.louisclub.com/static/upload/display/2022/11/14/6e138312-0c60-4409-9965-ff38e15a1938.jpg" alt="">
-        </li>
-    </ul>
-</div>
+
 
 <div class="section-body">
     <!--top banner-->
@@ -1891,66 +1742,11 @@
     <!--//메인 배너슬라이드4-->
 </div>
 
-<script>
-    //cover
-    $('body').addClass('no-scroll is-cover');
-    $('.js-cover-item.nth-1').eraser( {
-        size:150,
-        completeRatio: .15,
-        completeFunction: fadeMotion,
-        progressFunction: function(p) {
-            var per = Math.round(p * 100)
-            if(per > 1){
-                $('.cover-area__swipe').fadeOut(500);
-            }
-        }
-    });
-    $('.js-cover-item.nth-2').eraser( {
-        size:150,
-        completeRatio: .15,
-        completeFunction: fadeMotion
-    });
-    $('.js-cover-item.nth-3').eraser( {
-        size:150,
-        completeRatio: .2,
-        completeFunction: fadeMotion
-    });
-    $('.js-cover-item.nth-4').eraser( {
-        size:150,
-        completeRatio: .15,
-        completeFunction: fadeMotion
-    });
-    $('.js-cover-item.nth-5').eraser( {
-        size:150,
-        completeRatio: .15,
-        completeFunction: fadeMotion
-    });
-    function fadeMotion(){
-        console.log(this.source);
-        var itemElem = this.source.classList[0]
-        var itemElemNumber = this.source.classList[1]
-        $('.'+itemElem+'.'+itemElemNumber).fadeOut(1000);
-        if(itemElemNumber === 'nth-5'){
-            $('body').removeClass('no-scroll is-cover');
-            $('.cover-area').fadeOut(500);
-        }
-    }
-    $('.cover-area__btn').on('click',function(e){
-        e.preventDefault();
-        $('.cover-area__swipe').fadeOut(300);
-        $('.js-cover-item').fadeOut(300);
-        $('body').removeClass('no-scroll is-cover');
-        $('.cover-area').fadeOut(300);
-    })
-    $(window).on('load',function(){
-        $('.loading').addClass('is-transparent').on('transitionend',function(e){
-            $(this).hide();
-        });
-    })
+<!--<script src='../js/jquery.eraser.js' type='text/javascript'></script>-->
+<script type = "text/javascript">
+
+
 </script>
-
-<script src='../../js/jquery.eraser.js' type='text/javascript'></script>
-
 
 <!-- //section끝 -->
 <!--footer시작-->

@@ -63,8 +63,6 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
 
         if (!data) {
           var handleImage = function handleImage() {
-            function drawCanvas() {}
-
             var $canvas = $('<canvas/>'),
                 canvas = $canvas.get(0),
                 ctx = canvas.getContext('2d'),
@@ -74,12 +72,12 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
                 backingStoreRatio = ctx.webkitBackingStorePixelRatio || ctx.mozBackingStorePixelRatio || ctx.msBackingStorePixelRatio || ctx.oBackingStorePixelRatio || ctx.backingStorePixelRatio || 1,
                 scaleRatio = devicePixelRatio / backingStoreRatio,
                 realWidth = $this.width(),
-                realHeight = $(window).outerHeight(),
+                realHeight = $this.height(),
                 width = realWidth * scaleRatio,
                 height = realHeight * scaleRatio,
                 pos = $this.offset(),
                 enabled = options && options.enabled === false ? false : true,
-                size = (options && options.size ? options.size : 40) * scaleRatio,
+                size = (options && options.size ? options.size : 150) * scaleRatio,
                 completeRatio = options && options.completeRatio ? options.completeRatio : .7,
                 completeFunction = options && options.completeFunction ? options.completeFunction : null,
                 progressFunction = options && options.progressFunction ? options.progressFunction : null,
@@ -97,8 +95,8 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
             canvas.height = height;
             canvas.style.width = realWidth.toString() + "px";
             canvas.style.height = realHeight.toString() + "px";
-            ctx.drawImage(that, 0, 0, width, height); // $this.remove();
-            // prepare context for drawing operations
+            ctx.drawImage(that, 0, 0, width, height);
+            $this.remove(); // prepare context for drawing operations
 
             ctx.globalCompositeOperation = 'destination-out';
             ctx.strokeStyle = 'rgba(255,0,0,255)';
@@ -144,96 +142,10 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
             };
             $canvas.data('eraser', data); // listen for resize event to update offset values
 
-            $(window).on('load resize', function () {
-              if ($('body').hasClass('is-cover')) {
-                var winW = $(window).outerWidth();
-                var winH = $(window).outerHeight();
-                var classArr = $this.attr('class').split(" ");
-                $('canvas.' + classArr[0] + '.' + classArr[1]).remove(); //가로
-
-                $('img.cover-area__img').addClass('is-land');
-                var $canvas = $('<canvas/>'),
-                    canvas = $canvas.get(0),
-                    ctx = canvas.getContext('2d'),
-                    // calculate scale ratio for high DPI devices
-                // http://www.html5rocks.com/en/tutorials/canvas/hidpi/
-                devicePixelRatio = window.devicePixelRatio || 1,
-                    backingStoreRatio = ctx.webkitBackingStorePixelRatio || ctx.mozBackingStorePixelRatio || ctx.msBackingStorePixelRatio || ctx.oBackingStorePixelRatio || ctx.backingStorePixelRatio || 1,
-                    scaleRatio = devicePixelRatio / backingStoreRatio,
-                    realWidth = winW,
-                    realHeight = $this.outerHeight(),
-                    width = realWidth * scaleRatio,
-                    height = realHeight * scaleRatio,
-                    pos = $this.offset(),
-                    enabled = options && options.enabled === false ? false : true,
-                    size = (options && options.size ? options.size : 40) * scaleRatio,
-                    completeRatio = options && options.completeRatio ? options.completeRatio : .7,
-                    completeFunction = options && options.completeFunction ? options.completeFunction : null,
-                    progressFunction = options && options.progressFunction ? options.progressFunction : null,
-                    zIndex = $this.css('z-index') == "auto" ? 1 : $this.css('z-index'),
-                    parts = [],
-                    colParts = Math.floor(width / size),
-                    numParts = colParts * Math.floor(height / size),
-                    n = numParts,
-                    that = $this[0]; // replace target with canvas
-
-                $this.after($canvas);
-                canvas.id = that.id;
-                canvas.className = that.className;
-                canvas.width = width;
-                canvas.height = height;
-                canvas.style.width = realWidth.toString() + "px";
-                canvas.style.height = realHeight.toString() + "px";
-                ctx.drawImage(that, 0, 0, width, height); // $this.remove();
-                // prepare context for drawing operations
-
-                ctx.globalCompositeOperation = 'destination-out';
-                ctx.strokeStyle = 'rgba(255,0,0,255)';
-                ctx.lineWidth = size;
-                ctx.lineCap = 'round'; // bind events
-
-                $canvas.bind('mousedown.eraser', methods.mouseDown);
-                $canvas.bind('touchstart.eraser', methods.touchStart);
-                $canvas.bind('touchmove.eraser', methods.touchMove);
-                $canvas.bind('touchend.eraser', methods.touchEnd); // reset parts
-
-                while (n--) {
-                  parts.push(1);
-                } // store values
-
-
-                data = {
-                  posX: pos.left,
-                  posY: pos.top,
-                  touchDown: false,
-                  touchID: -999,
-                  touchX: 0,
-                  touchY: 0,
-                  ptouchX: 0,
-                  ptouchY: 0,
-                  canvas: $canvas,
-                  ctx: ctx,
-                  w: width,
-                  h: height,
-                  scaleRatio: scaleRatio,
-                  source: that,
-                  size: size,
-                  parts: parts,
-                  colParts: colParts,
-                  numParts: numParts,
-                  ratio: 0,
-                  enabled: enabled,
-                  complete: false,
-                  completeRatio: completeRatio,
-                  completeFunction: completeFunction,
-                  progressFunction: progressFunction,
-                  zIndex: zIndex
-                };
-                $canvas.data('eraser', data);
-                var pos = $canvas.offset();
-                data.posX = pos.left;
-                data.posY = pos.top;
-              }
+            $(window).resize(function () {
+              var pos = $canvas.offset();
+              data.posX = pos.left;
+              data.posY = pos.top;
             });
           };
 

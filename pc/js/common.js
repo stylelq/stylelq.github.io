@@ -40,6 +40,48 @@ window.onload = function () {
 };
 
 jQuery(function () {
+  // 메인커버 지우는 모션
+  $('#redux1').eraser({
+    size: 150,
+    completeRatio: .5,
+    completeFunction: function completeFunction() {
+      fadeMotion('#redux1');
+    }
+  });
+  $('#redux2').eraser({
+    size: 150,
+    completeRatio: .5,
+    completeFunction: function completeFunction() {
+      fadeMotion('#redux2');
+    }
+  });
+  $('#redux3').eraser({
+    size: 150,
+    completeRatio: .5,
+    completeFunction: function completeFunction() {
+      fadeMotion('#redux3');
+    }
+  }); // $('#redux4').eraser({
+  //     size:150,
+  //     completeRatio: .5,
+  //     completeFunction: function(){
+  //         fadeMotion('#redux4');
+  //     }
+  // });
+
+  $('body').addClass('scroll-stop');
+
+  function fadeMotion(target) {
+    if (target == '#redux1') {
+      // location.href='https://www.stylelq.com/';
+      $('.eraser-container').addClass('is-hide');
+      $('body').removeClass('scroll-stop');
+    } else {
+      $(target).fadeOut(1000);
+      $(target).eraser('disable');
+    }
+  }
+
   var mouseEnterCheck = false; //GNB 마우스 오버 체크
 
   $(document).ready(function () {
