@@ -2,8 +2,8 @@
 
 //youtube
 var idAry = [],
-    urlAry = [],
-    objAry = [];
+  urlAry = [],
+  objAry = [];
 $(".project-video__youtube").each(function (i) {
   $(this).attr("id", "player" + i);
   idAry.push("player" + i);
@@ -12,7 +12,6 @@ $(".project-video__youtube").each(function (i) {
 var videoNum = 0;
 var videoPlay = "false";
 var videoLoad = false;
-
 function onYouTubeIframeAPIReady() {
   for (var i = 0; i < $(".project-video__youtube").length; i++) {
     var player;
@@ -34,17 +33,14 @@ function onYouTubeIframeAPIReady() {
     objAry.push(player);
   }
 }
-
 function onPlayerStateChange(event) {
   if (event.data === 0) {
     $('.project-video__intro').removeClass('is-hide');
   }
 }
-
 function onPlayerReady(event) {
   videoLoad = true;
 }
-
 $('.js-play-btn').on('click', function () {
   if (videoLoad == false) {
     alert("아직 동영상이 로드되지 않았습니다.");

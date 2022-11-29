@@ -1,7 +1,6 @@
 "use strict";
 
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 /*
 * jQuery.eraser v0.5.2
 * makes any image or canvas erasable by the user, using touch or mouse input
@@ -54,40 +53,41 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 * OTHER DEALINGS IN THE SOFTWARE.
 */
+
 (function ($) {
   var methods = {
     init: function init(options) {
       return this.each(function () {
         var $this = $(this),
-            data = $this.data('eraser');
-
+          data = $this.data('eraser');
         if (!data) {
           var handleImage = function handleImage() {
             var $canvas = $('<canvas/>'),
-                canvas = $canvas.get(0),
-                ctx = canvas.getContext('2d'),
-                // calculate scale ratio for high DPI devices
-            // http://www.html5rocks.com/en/tutorials/canvas/hidpi/
-            devicePixelRatio = window.devicePixelRatio || 1,
-                backingStoreRatio = ctx.webkitBackingStorePixelRatio || ctx.mozBackingStorePixelRatio || ctx.msBackingStorePixelRatio || ctx.oBackingStorePixelRatio || ctx.backingStorePixelRatio || 1,
-                scaleRatio = devicePixelRatio / backingStoreRatio,
-                realWidth = $this.width(),
-                realHeight = $this.height(),
-                width = realWidth * scaleRatio,
-                height = realHeight * scaleRatio,
-                pos = $this.offset(),
-                enabled = options && options.enabled === false ? false : true,
-                size = (options && options.size ? options.size : 150) * scaleRatio,
-                completeRatio = options && options.completeRatio ? options.completeRatio : .7,
-                completeFunction = options && options.completeFunction ? options.completeFunction : null,
-                progressFunction = options && options.progressFunction ? options.progressFunction : null,
-                zIndex = $this.css('z-index') == "auto" ? 1 : $this.css('z-index'),
-                parts = [],
-                colParts = Math.floor(width / size),
-                numParts = colParts * Math.floor(height / size),
-                n = numParts,
-                that = $this[0]; // replace target with canvas
+              canvas = $canvas.get(0),
+              ctx = canvas.getContext('2d'),
+              // calculate scale ratio for high DPI devices
+              // http://www.html5rocks.com/en/tutorials/canvas/hidpi/
+              devicePixelRatio = window.devicePixelRatio || 1,
+              backingStoreRatio = ctx.webkitBackingStorePixelRatio || ctx.mozBackingStorePixelRatio || ctx.msBackingStorePixelRatio || ctx.oBackingStorePixelRatio || ctx.backingStorePixelRatio || 1,
+              scaleRatio = devicePixelRatio / backingStoreRatio,
+              realWidth = $this.width(),
+              realHeight = $this.height(),
+              width = realWidth * scaleRatio,
+              height = realHeight * scaleRatio,
+              pos = $this.offset(),
+              enabled = options && options.enabled === false ? false : true,
+              size = (options && options.size ? options.size : 150) * scaleRatio,
+              completeRatio = options && options.completeRatio ? options.completeRatio : .7,
+              completeFunction = options && options.completeFunction ? options.completeFunction : null,
+              progressFunction = options && options.progressFunction ? options.progressFunction : null,
+              zIndex = $this.css('z-index') == "auto" ? 1 : $this.css('z-index'),
+              parts = [],
+              colParts = Math.floor(width / size),
+              numParts = colParts * Math.floor(height / size),
+              n = numParts,
+              that = $this[0];
 
+            // replace target with canvas
             $this.after($canvas);
             canvas.id = that.id;
             canvas.className = that.className;
@@ -96,23 +96,25 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
             canvas.style.width = realWidth.toString() + "px";
             canvas.style.height = realHeight.toString() + "px";
             ctx.drawImage(that, 0, 0, width, height);
-            $this.remove(); // prepare context for drawing operations
+            $this.remove();
 
+            // prepare context for drawing operations
             ctx.globalCompositeOperation = 'destination-out';
             ctx.strokeStyle = 'rgba(255,0,0,255)';
             ctx.lineWidth = size;
-            ctx.lineCap = 'round'; // bind events
-
+            ctx.lineCap = 'round';
+            // bind events
             $canvas.bind('mousedown.eraser', methods.mouseDown);
             $canvas.bind('touchstart.eraser', methods.touchStart);
             $canvas.bind('touchmove.eraser', methods.touchMove);
-            $canvas.bind('touchend.eraser', methods.touchEnd); // reset parts
+            $canvas.bind('touchend.eraser', methods.touchEnd);
 
+            // reset parts
             while (n--) {
               parts.push(1);
-            } // store values
+            }
 
-
+            // store values
             data = {
               posX: pos.left,
               posY: pos.top,
@@ -140,15 +142,15 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
               progressFunction: progressFunction,
               zIndex: zIndex
             };
-            $canvas.data('eraser', data); // listen for resize event to update offset values
+            $canvas.data('eraser', data);
 
+            // listen for resize event to update offset values
             $(window).resize(function () {
               var pos = $canvas.offset();
               data.posX = pos.left;
               data.posY = pos.top;
             });
           };
-
           if (this.complete && this.naturalWidth > 0) {
             handleImage();
           } else {
@@ -160,19 +162,16 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     },
     touchStart: function touchStart(event) {
       var $this = $(this),
-          data = $this.data('eraser');
-
+        data = $this.data('eraser');
       if (!data.touchDown) {
         var t = event.originalEvent.changedTouches[0],
-            tx = t.pageX - data.posX,
-            ty = t.pageY - data.posY;
+          tx = t.pageX - data.posX,
+          ty = t.pageY - data.posY;
         tx *= data.scaleRatio;
         ty *= data.scaleRatio;
-
         if (data.enabled) {
           methods.evaluatePoint(data, tx, ty);
         }
-
         data.touchDown = true;
         data.touchID = t.identifier;
         data.touchX = tx;
@@ -182,19 +181,16 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     },
     touchMove: function touchMove(event) {
       var $this = $(this),
-          data = $this.data('eraser');
-
+        data = $this.data('eraser');
       if (data.touchDown) {
         var ta = event.originalEvent.changedTouches,
-            n = ta.length;
-
+          n = ta.length;
         while (n--) {
           if (ta[n].identifier == data.touchID) {
             var tx = ta[n].pageX - data.posX,
-                ty = ta[n].pageY - data.posY;
+              ty = ta[n].pageY - data.posY;
             tx *= data.scaleRatio;
             ty *= data.scaleRatio;
-
             if (data.enabled) {
               methods.evaluatePoint(data, tx, ty);
               data.ctx.beginPath();
@@ -205,7 +201,6 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
                 "z-index": $this.css('z-index') == data.zIndex ? parseInt(data.zIndex) + 1 : data.zIndex
               });
             }
-
             data.touchX = tx;
             data.touchY = ty;
             event.preventDefault();
@@ -216,12 +211,10 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     },
     touchEnd: function touchEnd(event) {
       var $this = $(this),
-          data = $this.data('eraser');
-
+        data = $this.data('eraser');
       if (data.touchDown) {
         var ta = event.originalEvent.changedTouches,
-            n = ta.length;
-
+          n = ta.length;
         while (n--) {
           if (ta[n].identifier == data.touchID) {
             data.touchDown = false;
@@ -234,14 +227,11 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     evaluatePoint: function evaluatePoint(data, tx, ty) {
       if (!data.enabled) return;
       var p = Math.floor(tx / data.size) + Math.floor(ty / data.size) * data.colParts;
-
       if (p >= 0 && p < data.numParts) {
         data.ratio += data.parts[p];
         data.parts[p] = 0;
-
         if (!data.complete) {
           p = data.ratio / data.numParts;
-
           if (p >= data.completeRatio) {
             data.complete = true;
             if (data.completeFunction != null) data.completeFunction();
@@ -253,15 +243,14 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     },
     mouseDown: function mouseDown(event) {
       var $this = $(this),
-          data = $this.data('eraser'),
-          tx = event.pageX - data.posX,
-          ty = event.pageY - data.posY;
+        data = $this.data('eraser'),
+        tx = event.pageX - data.posX,
+        ty = event.pageY - data.posY;
       tx *= data.scaleRatio;
       ty *= data.scaleRatio;
       data.touchDown = true;
       data.touchX = tx;
       data.touchY = ty;
-
       if (data.enabled) {
         methods.evaluatePoint(data, tx, ty);
         data.ctx.beginPath();
@@ -269,19 +258,17 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         data.ctx.lineTo(data.touchX, data.touchY);
         data.ctx.stroke();
       }
-
       $this.bind('mousemove.eraser', methods.mouseMove);
       $(document).bind('mouseup.eraser', data, methods.mouseUp);
       event.preventDefault();
     },
     mouseMove: function mouseMove(event) {
       var $this = $(this),
-          data = $this.data('eraser'),
-          tx = event.pageX - data.posX,
-          ty = event.pageY - data.posY;
+        data = $this.data('eraser'),
+        tx = event.pageX - data.posX,
+        ty = event.pageY - data.posY;
       tx *= data.scaleRatio;
       ty *= data.scaleRatio;
-
       if (data.enabled) {
         methods.evaluatePoint(data, tx, ty);
         data.ctx.beginPath();
@@ -292,14 +279,13 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
           "z-index": $this.css('z-index') == data.zIndex ? parseInt(data.zIndex) + 1 : data.zIndex
         });
       }
-
       data.touchX = tx;
       data.touchY = ty;
       event.preventDefault();
     },
     mouseUp: function mouseUp(event) {
       var data = event.data,
-          $this = data.canvas;
+        $this = data.canvas;
       data.touchDown = false;
       $this.unbind('mousemove.eraser');
       $(document).unbind('mouseup.eraser');
@@ -307,16 +293,13 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     },
     clear: function clear() {
       var $this = $(this),
-          data = $this.data('eraser');
-
+        data = $this.data('eraser');
       if (data) {
         data.ctx.clearRect(0, 0, data.w, data.h);
         var n = data.numParts;
-
         while (n--) {
           data.parts[n] = 0;
         }
-
         data.ratio = data.numParts;
         data.complete = true;
         if (data.completeFunction != null) data.completeFunction();
@@ -324,34 +307,29 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     },
     enabled: function enabled() {
       var $this = $(this),
-          data = $this.data('eraser');
-
+        data = $this.data('eraser');
       if (data && data.enabled) {
         return true;
       }
-
       return false;
     },
     enable: function enable() {
       var $this = $(this),
-          data = $this.data('eraser');
-
+        data = $this.data('eraser');
       if (data) {
         data.enabled = true;
       }
     },
     disable: function disable() {
       var $this = $(this),
-          data = $this.data('eraser');
-
+        data = $this.data('eraser');
       if (data) {
         data.enabled = false;
       }
     },
     size: function size(value) {
       var $this = $(this),
-          data = $this.data('eraser');
-
+        data = $this.data('eraser');
       if (data && value) {
         data.size = value;
         data.ctx.lineWidth = value;
@@ -359,18 +337,15 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     },
     reset: function reset() {
       var $this = $(this),
-          data = $this.data('eraser');
-
+        data = $this.data('eraser');
       if (data) {
         data.ctx.globalCompositeOperation = 'source-over';
         data.ctx.drawImage(data.source, 0, 0, data.w, data.h);
         data.ctx.globalCompositeOperation = 'destination-out';
         var n = data.numParts;
-
         while (n--) {
           data.parts[n] = 1;
         }
-
         data.ratio = 0;
         data.complete = false;
         data.touchDown = false;
@@ -378,16 +353,13 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     },
     progress: function progress() {
       var $this = $(this),
-          data = $this.data('eraser');
-
+        data = $this.data('eraser');
       if (data) {
         return data.ratio / data.numParts;
       }
-
       return 0;
     }
   };
-
   $.fn.eraser = function (method) {
     if (methods[method]) {
       return methods[method].apply(this, Array.prototype.slice.call(arguments, 1));

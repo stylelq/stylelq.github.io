@@ -48,7 +48,22 @@ if ($('.promotion-thumb').length > 0 && $('.promotion-thumb__item').length > 1) 
     var num = slide;
     promotionSlide.slideTo(num);
   });
-} // 2022 9월 프로모션
+}
+
+//fade 모션슬라이드
+if ($('.promotion-fade').length > 0 && $('.promotion-fade__item').length > 1) {
+  var galleryTop = new Swiper('.promotion-fade__container', {
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false
+    },
+    effect: "fade",
+    speed: 1000,
+    loop: true
+  });
+}
+
+// 2022 9월 프로모션
 // function openCouponPopup(e){    // 쿠폰열기
 //     e.preventDefault();
 //     $('.thanksgiving-dim').addClass('is-show');
@@ -69,9 +84,8 @@ if ($('.promotion-thumb').length > 0 && $('.promotion-thumb__item').length > 1) 
 //     $('.thanksgiving-popup').removeClass('is-show');
 // }
 // $('.js-popup-close').on('click', closePopup);
+
 // 2022.11 minicavir
-
-
 var mouse = {
   x: 0,
   y: 0
@@ -86,13 +100,11 @@ var mobile = false;
 var pageReady = true;
 var current = '';
 var root = '';
-
 function listeners() {
   var loadCount = 0;
   $(".showcase-cards .card img").one('load', function () {
     loadCount++;
     console.log(loadCount);
-
     if (loadCount == $(".showcase-cards .card").length) {
       pageHandler('showcase');
     }
@@ -104,7 +116,6 @@ function listeners() {
   $(".card--new").click(function () {
     if (pageReady) {
       pageReady = false;
-
       if ($(".card--wrapper .card").length > 0) {
         $(".card--options").removeClass('active');
         $(".button--main").removeClass('active');
@@ -117,7 +128,6 @@ function listeners() {
     mouse.y = e.clientY;
   });
 }
-
 function showcaseOffset() {
   if (!touch) {
     $(".showcase-cards .card").each(function (i) {
@@ -129,12 +139,10 @@ function showcaseOffset() {
     });
   }
 }
-
 function pageHandler(dest) {
   if (dest != current) {
     pageReady = false;
     current = dest;
-
     if (dest == 'showcase') {
       $(".showcase").addClass('active');
       setTimeout(function () {
@@ -143,12 +151,10 @@ function pageHandler(dest) {
     }
   }
 }
-
 function textareaHeight(element) {
   element.style.height = "5px";
   element.style.height = element.scrollHeight + "px";
 }
-
 function clearCard() {
   $(".button--submit").removeClass('active');
   var card = $(".card--wrapper .card");
@@ -157,21 +163,16 @@ function clearCard() {
     card.remove();
   }, 1000);
 }
-
 function anim() {
   requestAnimationFrame(anim);
-
   if (!touch) {
     var pos = mouse.x / window.innerWidth * 1.4 - 0.2;
-
     if (pos > 1) {
       pos = 1;
     }
-
     if (pos < 0) {
       pos = 0;
     }
-
     var index = Math.round(pos * (showcaseCount - 1));
     $(".showcase-cards .card").each(function (i) {
       if (showcaseCount - 1 - i < index) {
@@ -181,11 +182,9 @@ function anim() {
       }
     });
     var edge = 100;
-
     if (mobile) {
       edge = 30;
     }
-
     var g = (cardGap * (showcaseCount - 1) + cardWidth - window.innerWidth + padding * 2 + edge * 2) / (showcaseCount - 1);
     var offset = edge - index * g;
     showcasePos += (offset - showcasePos) / 10;
@@ -194,15 +193,12 @@ function anim() {
     });
   } else {
     var pos = $(".showcase").scrollLeft() / ($(".showcase-cards").outerWidth() - window.innerWidth) * 1 - 0;
-
     if (pos > 1) {
       pos = 1;
     }
-
     if (pos < 0) {
       pos = 0;
     }
-
     var index = Math.round(pos * (showcaseCount - 1));
     $(".showcase-cards .card").each(function (i) {
       if (showcaseCount - 1 - i < index) {
@@ -213,17 +209,14 @@ function anim() {
     });
   }
 }
-
 $(document).ready(function () {
   if ("ontouchstart" in document.documentElement) {
     touch = true;
     $("body").addClass('touch');
   }
-
   if (showcaseCount > $(".showcase-cards .card").length) {
     showcaseCount = $(".showcase-cards .card").length;
   }
-
   listeners();
   showcaseOffset();
   requestAnimationFrame(anim);
