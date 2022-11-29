@@ -58,7 +58,7 @@ if ($('.promotion-fade').length > 0 && $('.promotion-fade__item').length > 1) {
       disableOnInteraction: false
     },
     effect: "fade",
-    speed: 1000,
+    speed: 1500,
     loop: true
   });
 }
