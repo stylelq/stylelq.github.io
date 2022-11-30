@@ -40,42 +40,56 @@ window.onload = function () {
 };
 
 jQuery(function () {
-  // 메인커버 지우는 모션
-  $('#redux1').eraser({
-    size: 150,
-    completeRatio: .5,
-    completeFunction: function completeFunction() {
-      fadeMotion('#redux1');
-    }
-  });
-  $('#redux2').eraser({
-    size: 150,
-    completeRatio: .5,
-    completeFunction: function completeFunction() {
-      fadeMotion('#redux2');
-    }
-  });
-  $('#redux3').eraser({
-    size: 150,
-    completeRatio: .5,
-    completeFunction: function completeFunction() {
-      fadeMotion('#redux3');
-    }
-  }); // $('#redux4').eraser({
-  //     size:150,
-  //     completeRatio: .5,
-  //     completeFunction: function(){
-  //         fadeMotion('#redux4');
-  //     }
-  // });
+  // 커버 지우고 메인으로 이동
+  function mainMove() {
+    $('.cover-wrap').hide();
+    $('body').removeClass('scroll-stop');
+  }
 
-  $('body').addClass('scroll-stop');
+  $(document).on('click', '.js-home-link', mainMove); // 메인커버 노출
+
+  $('.cover-wrap__swipe').fadeOut(2000);
+
+  function coverShow() {
+    $('.cover-wrap__swipe').addClass('is-hide');
+  }
+
+  $(document).on('click', '.js-cover-dim', coverShow);
+
+  if ($('.cover-wrap').length > 0) {
+    $('body').addClass('scroll-stop');
+  } else {
+    $('body').removeClass('scroll-stop');
+  } // 메인커버 지우는 모션
+
+
+  $('#cover1').eraser({
+    size: 150,
+    completeRatio: .7,
+    completeFunction: function completeFunction() {
+      fadeMotion('#cover1');
+      $('body').removeClass('scroll-stop');
+    }
+  });
+  $('#cover2').eraser({
+    size: 150,
+    completeRatio: .7,
+    completeFunction: function completeFunction() {
+      fadeMotion('#cover2');
+    }
+  });
+  $('#cover3').eraser({
+    size: 150,
+    completeRatio: .7,
+    completeFunction: function completeFunction() {
+      fadeMotion('#cover3');
+    }
+  }); // $('body').addClass('scroll-stop');
 
   function fadeMotion(target) {
-    if (target == '#redux1') {
-      // location.href='https://www.stylelq.com/';
-      $('.eraser-container').addClass('is-hide');
-      $('body').removeClass('scroll-stop');
+    if (target == '#cover1') {
+      $('.cover-wrap').addClass('is-hide');
+      $('body').removeClass('scroll-stop'); // location.href='https://www.stylelq.com/';
     } else {
       $(target).fadeOut(1000);
       $(target).eraser('disable');
