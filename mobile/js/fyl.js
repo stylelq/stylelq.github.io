@@ -148,12 +148,20 @@ var yeonjinyoung = "연진영의 작업은 산업용 기자재나 폐기물을 �
 
 // 강재원
 var kangjaewon = "강재원은 미래의 조각에 관심을 가지고 3D 모델링 소<br>프트웨어를 활용해 조각을 창작합니다. 디지털 환경<br>과 소프트웨어의 기능에서 발생하는 감각을 토대로<br>자신만의 조각을 만들어 왔습니다. 완성된 조각은 디<br>지털 이미지, 영상, 3D프린팅, 알루미늄, 스테인레스,<br>인플레이터블 등 다양한 매체로 변주됩니다.<br><br>" + "강재원은 3D 모델링 프로그램 에서 편의를 위한 기능<br>이 역으로 현실의 조각에 영향을 미치는 점에 주목했<br>습니다. 전통적인 조각 방식과 달리 작가는 화면 너머<br>로 다양한 각도로 물체를 돌려가며 <b>Move</b>당기고<br><b>Smooth</b>로 밀며 형태를 만들어나갑니다.<br>" + "<span>Deformation 20, 21, 22</span>는 가방이 변하는 순간의 가<br>방이 변하는 순간의 모습을 상상하며 운동감과 속도<br>감을 지닌 조각으로 창조했습니다. 3개의 실린더 입<br>" + "체 기둥을 3D 프로그램에서 제공하는 현실의 물리법<br>칙을 모사한 기능들(Deformation: Skew, Twist,<br>Bend, Gravity 등)을 적용해 변주하는 방식을 추가했<br>습니다. 조절바(control panel)의 수치로 형태를 조절<br>" + "하고 ctrl+z와 ctrt+shift+z를 적용해 과거와 현재를<br>오가며 작가가 원하는 조형성을 갖춘 형태를 선택합<br>니다. 순서와 강도의 조합에 따라 전혀 다른 결과가<br>도출되기에 신중하게 블렌딩하는 과정을 거쳐 완성<br>됩니다. 완성된 조각들은 3D 파일로 존재하며 조각들<br>주변에 환경과 조명을 설정한 렌더 이미지와 영상, 크<br>롬 도금한 3D 프린팅, 주조된 금속, 인플레이터블<br>" + "(Inflatable) 등 다양한 크기와 소재, 매체를 가로지르<br>며 미래의 조각으로 변화합니다.";
+
+// 김준수
+var kimjunsu = "김준수는 식물성 무두질된 가죽의 물질성과 상징성<br>에 주목한 조형 작업을 전개해 왔습니다. 국민대학교<br>에서 금속공예와 주얼리를 전공한 그는 이탈리아에<br>서 참여한 가죽 워크숍을 계기로 한국과 유럽을 중심<br>으로 다양한 전시 활동을 이어가고 있습니다.<br>" + "2019년 청주공예비엔날레의 우승작 공동 수상,<br>2022년 로에베 공예상 공모전에서 파이널리스트로<br>선정되었습니다.<br><br>" + "김준수는 식물성 무두질된 가죽을 자신만의 기법으<br>로 재해석한 조형 작업을 진행하고 있습니다. 전시대<br>위에 올려진 작품의 감상은 대부분 시각에 의존한 정<br>보 습득과 이해로 귀결됩니다.<br>" + "가방의 형태를 작가만의 기법과 조형 감각으로 풀어<br>낸 Tactile Object는 전시대 위에 놓인 오브제를 매개<br>로 손의 적극적인 개입을 유도합니다.<br>" + "시각뿐 아니라 우리의 다양한 감각을 사용하여 작품<br>을 느끼는 경험은 단순한 시각적 경험을 뛰어넘어 다<br>채로운 감각을 이끄는 증폭제가 됩니다.";
+
+// 김은하
+var kimeunha = "김은하는 유행의 변화와 패스트 패션으로 버려진 헌<br>옷을 업사이클링해 새로운 형상을 창조합니다. 옷이<br>가진 고유한 컬러와 프린팅, 텍스처를 활용해 다채로<br>운 색상을 가진 물체를 만드는 작업을 선보였습니다.<br>최근에는 자연의 일부분을 재해석하는 작업을 진행<br>중입니다.<br><br>" + "김은하는 버려지고 유행이 지나 더 이상 가치가 없는<br>옷을 해체하거나 덧붙여 새로운 형상을 창조합니다.<br>버려진 옷과 라벨, 루이까또즈의 금속 체인을 활용한<br><span>Fragments of Nature(Grapefruit, Kiwi,<br>Pomegranate)</span>는 끝없이 생산과 소비가 반복되는<br>" + "물질세계와 대비되는 자연에서 생성된 생명력과 색<br>상을 가진 과일을 형상화했습니다. 구 형태의 과일들<br>을 변형해 가방과 비슷한 조각 난 과일 형태로 변신을<br>시도했고, 해체되었던 각각의 옷과 라벨이 표면에 자<br>리를 잡아 과일 고유의 색상을 지닌 가방으로 도출되<br>었습니다.";
 var isVisible = false;
 var listTxt = $('#contentText1');
 var workTxt = $('#contentText2');
 var workTxt2 = $('#contentText3');
 var workTxt3 = $('#contentText4');
-var workTxt3 = $('#contentText5');
+var workTxt4 = $('#contentText5');
+var workTxt5 = $('#contentText6');
+var workTxt6 = $('#contentText7');
 window.addEventListener('scroll', function () {
   if (listTxt.scrollTop && workTxt.scrollTop && isVisible == false) {
     isVisible = true;
@@ -162,5 +170,7 @@ window.addEventListener('scroll', function () {
     textYellow('#contentText3', choisujin);
     textYellow('#contentText4', yeonjinyoung);
     textYellow('#contentText5', kangjaewon);
+    textYellow('#contentText6', kimjunsu);
+    textYellow('#contentText7', kimeunha);
   }
 });

@@ -59,11 +59,7 @@ if ($('.promotion-fade').length > 0 && $('.promotion-fade__item').length > 1) {
     },
     effect: "fade",
     speed: 1500,
-    loop: true,
-    navigation: {
-      nextEl: ".fade-next-btn",
-      prevEl: ".fade-prev-btn"
-    }
+    loop: true
   });
 }
 
