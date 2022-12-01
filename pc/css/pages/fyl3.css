@@ -453,6 +453,11 @@
   left: 0;
   width: 38rem;
 }
+.fyl-artist4__item.floating1.kimeunha {
+  top: -7.5rem;
+  left: -1.875rem;
+  width: 45rem;
+}
 .fyl-artist4__item.floating2 {
   left: 11.25rem;
 }
@@ -467,6 +472,11 @@
   top: 3.75rem;
   left: 0;
   width: 32.375rem;
+}
+.fyl-artist4__item.floating2.kimeunha {
+  top: 12.5rem;
+  left: 4.375rem;
+  width: 36.1875rem;
 }
 .fyl-artist4__item.floating3 {
   top: 7.5rem;
@@ -492,6 +502,10 @@
   left: -1.875rem;
   width: 36.1875rem;
 }
+.fyl-artist4__item.floating3.kimeunha {
+  top: 0;
+  width: 32.375rem;
+}
 .fyl-artist4__item.floating4 {
   top: 3.75rem;
   left: -1.25rem;
@@ -515,6 +529,11 @@
   top: 9.375rem;
   left: -8.125rem;
   width: 45rem;
+}
+.fyl-artist4__item.floating4.kimeunha {
+  top: 12.5rem;
+  left: 0;
+  width: 39.9375rem;
 }
 .fyl-artist4__item.floating5 {
   left: 39.375rem;
@@ -543,6 +562,11 @@
   bottom: -12.5rem;
   width: 38rem;
 }
+.fyl-artist4__item.floating5.kimeunha {
+  width: 38rem;
+  left: -6.25rem;
+  top: 9.375rem;
+}
 .fyl-artist4__item.floating6 {
   top: 12.5rem;
   right: 33.75rem;
@@ -569,6 +593,11 @@
   width: auto;
   height: 47.8125rem;
 }
+.fyl-artist4__item.floating6.kimeunha {
+  top: 25rem;
+  left: -2.5rem;
+  width: 48.25rem;
+}
 .fyl-artist4__item.floating7 {
   left: 46.875rem;
   bottom: 18.125rem;
@@ -582,6 +611,12 @@
   top: 9.375rem;
   padding-bottom: 18.75rem;
   width: 48.25rem;
+}
+.fyl-artist4__item.floating7.kimeunha {
+  left: 12.5rem;
+  top: 15.625rem;
+  width: 22.75rem;
+  padding-bottom: 21.875rem;
 }
 .fyl-artist4__border img {
   border: 2px solid #FFE100;
