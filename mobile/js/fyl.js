@@ -154,6 +154,15 @@ var kimjunsu = "김준수는 식물성 무두질된 가죽의 물질성과 상�
 
 // 김은하
 var kimeunha = "김은하는 유행의 변화와 패스트 패션으로 버려진 헌<br>옷을 업사이클링해 새로운 형상을 창조합니다. 옷이<br>가진 고유한 컬러와 프린팅, 텍스처를 활용해 다채로<br>운 색상을 가진 물체를 만드는 작업을 선보였습니다.<br>최근에는 자연의 일부분을 재해석하는 작업을 진행<br>중입니다.<br><br>" + "김은하는 버려지고 유행이 지나 더 이상 가치가 없는<br>옷을 해체하거나 덧붙여 새로운 형상을 창조합니다.<br>버려진 옷과 라벨, 루이까또즈의 금속 체인을 활용한<br><span>Fragments of Nature(Grapefruit, Kiwi,<br>Pomegranate)</span>는 끝없이 생산과 소비가 반복되는<br>" + "물질세계와 대비되는 자연에서 생성된 생명력과 색<br>상을 가진 과일을 형상화했습니다. 구 형태의 과일들<br>을 변형해 가방과 비슷한 조각 난 과일 형태로 변신을<br>시도했고, 해체되었던 각각의 옷과 라벨이 표면에 자<br>리를 잡아 과일 고유의 색상을 지닌 가방으로 도출되<br>었습니다.";
+
+// 조상현
+var hitencho = "조상현은 디자인 스튜디오 HITENCHO(하이텐코)를<br>운영하는 디자이너이자 작가입니다. 다양한 재료와<br>기계장치, 기술을 활용해 제작을 위한 과정을 설계하<br>고, 그 과정에서 탄생한 결과물을 가구와 오브제의 형<br>" + "태로 제작합니다. 서울시립대학교 산업디자인과를<br>졸업하고, 네덜란드 에인트호번 디자인 아카데미<br>(Design Academy Eindhoven)에서 컨셉추얼 디자인<br>으로 석사학위를 받았습니다. 홍익대학교와 한국예<br>" + "술종합학교, 서울시립대학교 등에 출강하며 강의를<br>진행하고 있습니다.<br><br>" + "Rajikon Series는 조상현(Hitencho) 작가가 루이까<br>또즈 문화에서 도출한 키워드에서 시작되었습니다.<br>작가는 프랑스˙전통˙클래식˙장인×한국˙문화˙서브<br>컬쳐˙로우테크(Low-tech) 같은 도출된 키워드의 영<br>역을 크게 젠더와 제너레이션으로 상정하고 아직 주<br>목받지 못한 소년(Boys) 문화를 재해석해 가방의 변<br>" + "화를 시도했습니다. 힙합, 스케이드 보드, 모페드갱,<br>자동차와 같이 소년 문화의 여러 요소 중 장난감 무선<br>조종 자동차(a.k.a RC Car)에 매력을 느낀 작가는<br>1980년대-1990년대까지 만들어진 자동차의 특징과<br>제작기법을 차용해 여성 핸드백의 전형성을 탈피하<br>는 새로운 핸드백을 창조했습니다. ";
+
+// 윤향로
+var yoonhyangro = "윤향로는 동시대 이미징 기술을 기반으로 추상 회화<br>의 가능성을 탐구합니다. 주요 작업을 ‘유사회화<br>(Pseudo Painting)’라 명명하고, 이미지를 편집하는<br>프로그램의 알고리즘을 이용해 대중문화와 회화의<br>역사를 만들어가는 다양한 작품의 이미지를 다루며<br>작업을 전개하고 있습니다.<br><br>" + "윤향로는 이미지를 편집하는 프로그램의 알고리즘을<br>이용해 추상 회화의 가능성을 탐구합니다.<br><span>Heritage</span>는 루이까또즈 디자인의 기본이 된 헤리티<br>지 라인에서 영감을 받았습니다. 헤리티지 라인이 가<br>지고 있는 형태를 단순화하고 표면에 작가의 회화 실<br>험을 더해 조각적 회화를 창조했습니다. 물감을 분사<br>" + "하는 작가의 방식으로 그려진 일련의 조각 회화 작업<br>은 그래피티 작가의 이름과 메시지를 남기는 행위를<br>뜻하는 그래피티 언어 ‘태깅’과 연결되며 물감 입자의<br>자취를 따라 스크롤됩니다.";
+
+// 정현지
+var junghyunjee = "정현지는 네덜란드의 에인트호번에 거주하며 평면과<br>입체를 오가며 다양한 섬유 작업을 합니다. 최근에는<br>한국 고유의 전통 공예 기법과 명주를 이용한 섬유 작<br>업을 전개하며 한국과 네널란드를 오가며 활동하고<br>있습니다. 서울 공예트렌드페어, 밀라노 페어, 더치디<br>자인위크 등 다수의 공예·디자인 페어에 참가하였고,<br>" + "서울 런던, 로테르담에 있는 갤러리를 통해 작업을 선<br>보이고 있습니다.<br><br>정현지는 평면과 입체를 오가며 다양한 섬유 작업을<br>전개해 왔습니다.<br>" + "<span>Leather Brick Series for a Bag</span>은 다소 평면적 소재로 인식된 가죽에 새로운 입체성을 부여했습니<br>다. 가죽의 앞, 뒤, 옆면이 가진 서로 다른 재질과 색상<br>에 주목하고 이를 교차시켜 재질의 속성을 강조했습<br>니다. 얇은 가죽을 동일한 폭으로 자른 뒤 차곡차곡<br>쌓아 올려 각각의 가죽 벽돌을 만들고 다시 그것들을<br>" + "하나의 구조로 쌓으며 가방의 형태를 완성했습니다.<br>벽돌을 쌓아서 건물을 구축하듯 하나의 기초가 되는<br>형태 요소를 반복-확장하며 평면에서 구조적 형태로<br>변화합니다.";
 var isVisible = false;
 var listTxt = $('#contentText1');
 var workTxt = $('#contentText2');
@@ -162,6 +171,9 @@ var workTxt3 = $('#contentText4');
 var workTxt4 = $('#contentText5');
 var workTxt5 = $('#contentText6');
 var workTxt6 = $('#contentText7');
+var workTxt7 = $('#contentText8');
+var workTxt8 = $('#contentText9');
+var workTxt9 = $('#contentText10');
 window.addEventListener('scroll', function () {
   if (listTxt.scrollTop && workTxt.scrollTop && isVisible == false) {
     isVisible = true;
@@ -172,5 +184,8 @@ window.addEventListener('scroll', function () {
     textYellow('#contentText5', kangjaewon);
     textYellow('#contentText6', kimjunsu);
     textYellow('#contentText7', kimeunha);
+    textYellow('#contentText8', hitencho);
+    textYellow('#contentText9', yoonhyangro);
+    textYellow('#contentText10', junghyunjee);
   }
 });
