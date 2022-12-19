@@ -65,7 +65,7 @@ jQuery(function () {
 
   $('#cover1').eraser({
     size: 150,
-    completeRatio: .7,
+    completeRatio: .4,
     completeFunction: function completeFunction() {
       fadeMotion('#cover1');
       $('body').removeClass('scroll-stop');
@@ -73,18 +73,27 @@ jQuery(function () {
   });
   $('#cover2').eraser({
     size: 150,
-    completeRatio: .7,
+    completeRatio: .4,
     completeFunction: function completeFunction() {
       fadeMotion('#cover2');
     }
   });
   $('#cover3').eraser({
     size: 150,
-    completeRatio: .7,
+    completeRatio: .4,
     completeFunction: function completeFunction() {
       fadeMotion('#cover3');
     }
-  }); // $('body').addClass('scroll-stop');
+  }); // 221219 프로모션 스크래치 모션
+
+  $('.promotion-scratch__cover--img').eraser({
+    size: 30,
+    completeRatio: .6,
+    completeFunction: function completeFunction() {
+      fadeMotion('.promotion-scratch__cover--img');
+      $('.promotion-scratch__link--txt').fadeIn(500).text('쿠폰받기').css('text-decoration', 'underline');
+    }
+  });
 
   function fadeMotion(target) {
     if (target == '#cover1') {
@@ -108,7 +117,17 @@ jQuery(function () {
         $('body').addClass('is-white');
         $('.header').addClass('is-bg-white');
       } else {
-        if ($('.main-banner').length > 0 && $('.main-banner__item').length > 0) {
+        if ($('.main-banner').length == 1 && $('.main-banner__item').length == 1) {
+          if ($('.main-banner__item').data("bg") === "white") {
+            $('body').removeClass('is-black');
+            $('body').addClass('is-white');
+          } else {
+            $('body').removeClass('is-white');
+            $('body').addClass('is-black');
+          }
+
+          $('.header').removeClass('is-bg-white');
+        } else if ($('.main-banner').length > 1 && $('.main-banner__item').length > 1) {
           if ($('.main-banner__item[data-bg="white"]').hasClass('swiper-slide-active')) {
             $('body').removeClass('is-white');
             $('body').addClass('is-black');
@@ -121,7 +140,7 @@ jQuery(function () {
         }
       }
 
-      if ($('.main-banner').length > 0 && $('.main-banner__item').length > 0) {
+      if ($('.main-banner').length > 1 && $('.main-banner__item').length > 1) {
         pagingOptionChange();
       }
     });
@@ -181,12 +200,22 @@ jQuery(function () {
           $('body').removeClass('is-black');
           $('body').addClass('is-white');
         } else {
-          if ($('.main-banner__item[data-bg="white"]').hasClass('swiper-slide-active')) {
-            $('body').removeClass('is-black');
-            $('body').addClass('is-white');
-          } else {
-            $('body').removeClass('is-white');
-            $('body').addClass('is-black');
+          if ($('.main-banner').length == 1 && $('.main-banner__item').length == 1) {
+            if ($('.main-banner__item').data("bg") === "white") {
+              $('body').removeClass('is-black');
+              $('body').addClass('is-white');
+            } else {
+              $('body').removeClass('is-white');
+              $('body').addClass('is-black');
+            }
+          } else if ($('.main-banner').length > 1 && $('.main-banner__item').length > 1) {
+            if ($('.main-banner__item[data-bg="white"]').hasClass('swiper-slide-active')) {
+              $('body').removeClass('is-black');
+              $('body').addClass('is-white');
+            } else {
+              $('body').removeClass('is-white');
+              $('body').addClass('is-black');
+            }
           }
         }
       }
