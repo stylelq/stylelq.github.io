@@ -293,19 +293,17 @@ jQuery(function () {
         var height = $(document).scrollTop();
         var headHeight = $('.header').scrollTop();
         if (height > headHeight) {
-          $('.fix-button').addClass('is-on');
-          //$('.detail-halloween').addClass('fixed');
+          $('.fix-button').addClass('is-on'); //$('.detail-halloween').addClass('fixed');
         } else {
-          $('.fix-button').removeClass('is-on');
-          //$('.detail-halloween').removeClass('fixed');
+          $('.fix-button').removeClass('is-on'); //$('.detail-halloween').removeClass('fixed');
         }
       });
 
       $('.cart-fix').addClass('is-up');
       $('.footer').addClass('bottom-fix');
     } //연관제품 슬라이드
-
     // 프로모션 - 스크롤 시 패럴랙스 효과
+
     if ($('.parallax-wrap').length > 0) {
       $(window).scroll(function () {
         $('.parallax-img').removeClass('animate__animated');
@@ -314,8 +312,8 @@ jQuery(function () {
         parallaxMove();
       });
     } // 말풍선 클릭 시 이벤트
-
     /////////////////////
+
     function parallaxMove() {
       var parallax01 = document.querySelector('.parallax-01');
       var parallax02 = document.querySelector('.parallax-02');
@@ -335,9 +333,8 @@ jQuery(function () {
         });
       };
       var scrollY = window.scrollY;
-      var calcScrollY = parseInt(scrollY / 1) - 25;
+      var calcScrollY = parseInt(scrollY / 1) - 25; //	var targetList = [ parallax01, parallax02, parallax03, parallax04, parallax05, parallax06, parallax07, parallax08, parallax09, parallax10 ];
 
-      //	var targetList = [ parallax01, parallax02, parallax03, parallax04, parallax05, parallax06, parallax07, parallax08, parallax09, parallax10 ];
       var targetList = [parallax01, parallax04, parallax03, parallax02, parallax05, parallax07, parallax06, parallax08, parallax10, parallax09];
       for (var i = 0; i < targetList.length; i++) {
         var gap = i * 30;
@@ -415,11 +412,9 @@ jQuery(function () {
         }
       }
       return product;
-    }
-
-    /////////////////////
-
+    } /////////////////////
     // 말풍선 클릭 시 이벤트
+
     function bubbleEvent() {
       var bubbleItem = $(this);
       setTimeout(function () {
@@ -923,16 +918,16 @@ jQuery(function () {
 
   if ($('.main-banner__item').length == 1) {
     // 슬라이드 배너 1개일 때
-    if ($('.main-banner__item[data-bg="white"]').hasClass('swiper-slide-active')) {
-      $('body').removeClass('is-white');
-      $('body').addClass('is-black');
-      $('.main-banner__pagination').removeClass('is-black');
-      $('.main-banner__pagination').addClass('is-white');
-    } else {
+    if ($('.main-banner__item').data("bg") === "white") {
       $('body').removeClass('is-black');
       $('body').addClass('is-white');
       $('.main-banner__pagination').removeClass('is-white');
       $('.main-banner__pagination').addClass('is-black');
+    } else {
+      $('body').removeClass('is-white');
+      $('body').addClass('is-black');
+      $('.main-banner__pagination').removeClass('is-black');
+      $('.main-banner__pagination').addClass('is-white');
     }
   }
   function pagingOptionChange() {
@@ -1202,9 +1197,8 @@ jQuery(function () {
     $('.cover-wrap').hide();
     $('body').removeClass('scroll-stop');
   }
-  $(document).on('click', '.js-home-link', mainMove);
+  $(document).on('click', '.js-home-link', mainMove); // 메인커버 노출
 
-  // 메인커버 노출
   $('.cover-wrap__swipe').fadeOut(2000);
   function coverShow() {
     $('.cover-wrap__swipe').addClass('is-hide');
@@ -1214,11 +1208,10 @@ jQuery(function () {
     $('body').addClass('scroll-stop');
   } else {
     $('body').removeClass('scroll-stop');
-  }
+  } // 메인커버 지우는 모션
 
-  // 메인커버 지우는 모션
   $('#cover1').eraser({
-    size: 150,
+    size: 70,
     completeRatio: .7,
     completeFunction: function completeFunction() {
       fadeMotion('#cover1');
@@ -1226,35 +1219,42 @@ jQuery(function () {
     }
   });
   $('#cover2').eraser({
-    size: 150,
+    size: 70,
     completeRatio: .7,
     completeFunction: function completeFunction() {
       fadeMotion('#cover2');
     }
   });
   $('#cover3').eraser({
-    size: 150,
+    size: 70,
     completeRatio: .7,
     completeFunction: function completeFunction() {
       fadeMotion('#cover3');
     }
   });
 
-  // $('body').addClass('scroll-stop');
+  // 221219 프로모션 스크래치 모션
+  $('.promotion-scratch__cover--img').eraser({
+    size: 30,
+    completeRatio: .6,
+    completeFunction: function completeFunction() {
+      fadeMotion('.promotion-scratch__cover--img');
+      $('.promotion-scratch__link--txt').fadeIn(500).text('쿠폰받기').css('text-decoration', 'underline');
+    }
+  });
   function fadeMotion(target) {
     if (target == '#cover1') {
       $('.cover-wrap').addClass('is-hide');
-      $('body').removeClass('scroll-stop');
-      // location.href='https://www.stylelq.com/';
+      $('body').removeClass('scroll-stop'); // location.href='https://www.stylelq.com/';
     } else {
       $(target).fadeOut(1000);
       $(target).eraser('disable');
     }
   }
-
   /*
   //Header Scroll Bg
   */
+
   $(document).ready(function () {
     // 헤더 스크롤 백그라운드
     var didScroll;
@@ -1529,7 +1529,7 @@ var copyBtn = document.querySelector('.js-url-copy');
 if (copyBtn) {
   copyBtn.addEventListener('click', CopyUrlToClipboard);
 } // --------------------------
-// [2021-01-25] 
+// [2021-01-25]
 // mobile 디바이스 브라우저 네비게이션 바 계산
 
 $('.page-main').each(function () {
