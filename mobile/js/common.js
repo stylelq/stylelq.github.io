@@ -1239,7 +1239,7 @@ jQuery(function () {
     completeRatio: .6,
     completeFunction: function completeFunction() {
       fadeMotion('.promotion-scratch__cover--img');
-      $('.promotion-scratch__link--txt').fadeIn(500).text('쿠폰받기').css('text-decoration', 'underline');
+      $('.promotion-scratch__link--txt').text('쿠폰받기').css('text-decoration', 'underline');
     }
   });
   function fadeMotion(target) {
