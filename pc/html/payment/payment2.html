@@ -1021,7 +1021,8 @@
             <!-- //item -->
 
             <!-- item -->
-            <div class="order-product__item">
+            <!-- 각인서비스 추가 -->
+            <div class="order-product__item engrave-item">
                 <a href="#;" class="order-product__thumb"><img class="order-product__img" src="../../images/dummy/detail-img1.jpg" alt=""></a>
                 <div class="order-product__info">
                     <div class="order-product__cont">
@@ -1052,24 +1053,34 @@
                     <ul class="order-product__meta--list">
                         <li class="order-product__meta--item">
                             <div class="form__checkbox form__checkbox--big-red">
-                                <input class="form__checkbox--input sr-only" type="checkbox" name="gift1" id="giftLabel1">
-                                <label class="form__checkbox--text" for="giftLabel1">선물 포장</label>
+                                <input class="form__checkbox--input sr-only" type="checkbox" name="engrave1" id="engraveLabel1">
+                                <label class="form__checkbox--text" for="engraveLabel1">각인서비스</label>
                             </div>
-                            <a href="#giftPop" class="order-product__meta--btn js-popup-open"><span class="sr-only">선물포장 설명</span></a>
-                        </li>
-                        <li class="order-product__meta--item">
-                            <div class="form__checkbox form__checkbox--big-red">
-                                <input class="form__checkbox--input sr-only" type="checkbox" name="message1" id="messageLabel1">
-                                <label class="form__checkbox--text js-open-message" for="messageLabel1">메세지 카드</label>
-                            </div>
-                            <a href="#messagePop" class="order-product__meta--btn js-popup-open"><span class="sr-only">선물포장 설명</span></a>
+                            <a href="#engravePop" class="order-product__meta--btn js-popup-open"><span class="sr-only">각인서비스 설명</span></a>
                         </li>
                     </ul>
                 </div>
                 <div class="order-product__message">
-                    <textarea class="form__input--textarea js-max-keyup" title="내용" placeholder="선물 메시지를 50자(공백 포함) 이내로 작성해 주세요."></textarea>
+                    <textarea class="form__input--textarea js-max-keyup" title="내용" placeholder="영문 대소문자 및 일부 특수문자만 가능 (공백 포함, 최대 8자)"></textarea>
+                </div>
+                <div class="order-product__character">
+                    <div class="special-character">
+                        <label class="special-character__label">특수문자 &nbsp;</label>
+                        <button class="special-character__button" onclick="">#</button>
+                        <button class="special-character__button" onclick="">@</button>
+                        <button class="special-character__button" onclick="">&</button>
+                        <button class="special-character__button" onclick="">.</button>
+                        <button class="special-character__button" onclick="">♥</button>
+                        <button class="special-character__button" onclick="">♣</button>
+                        <button class="special-character__button" onclick="">♠</button>
+                        <button class="special-character__button" onclick="">◆</button>
+                        <button class="special-character__button" onclick="">☺</button>
+                        <button class="special-character__button" onclick="">☻</button>
+                    </div>
+                    <p class="order-product__character--txt">각인 서비스 신청 시, <span>5,000원</span>이 추가 결제됩니다.</p>
                 </div>
             </div>
+            <!-- //각인서비스 추가 -->
             <!-- //item -->
 
 
