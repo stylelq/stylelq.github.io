@@ -1234,14 +1234,16 @@ jQuery(function () {
   });
 
   // 221219 프로모션 스크래치 모션
-  $('.promotion-scratch__cover--img').eraser({
-    size: 30,
-    completeRatio: .6,
-    completeFunction: function completeFunction() {
-      fadeMotion('.promotion-scratch__cover--img');
-      $('.promotion-scratch__link--txt').text('쿠폰받기').css('text-decoration', 'underline');
-    }
-  });
+
+  // $('.promotion-scratch__cover--img').eraser({
+  //     size: 30,
+  //     completeRatio: .6,
+  //     completeFunction: function completeFunction() {
+  //         fadeMotion('.promotion-scratch__cover--img');
+  //         $('.promotion-scratch__link--txt').text('쿠폰받기').css('text-decoration','underline');
+  //     }
+  // });
+
   function fadeMotion(target) {
     if (target == '#cover1') {
       $('.cover-wrap').addClass('is-hide');

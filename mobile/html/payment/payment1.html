@@ -743,22 +743,31 @@
             <ul class="order-product__meta--list">
                 <li class="order-product__meta--item">
                     <div class="form__checkbox form__checkbox--big-red">
-                        <input class="form__checkbox--input sr-only" type="checkbox" name="gift2" id="giftLabel2">
-                        <label class="form__checkbox--text" for="giftLabel2">선물 포장</label>
+                        <input class="form__checkbox--input sr-only" type="checkbox" name="engrave2" id="engraveLabel2">
+                        <label class="form__checkbox--text" for="engraveLabel2">각인서비스</label>
                     </div>
-                    <a href="#giftPop" class="order-product__meta--btn js-popup-open"><span class="sr-only">선물포장 설명</span></a>
-                </li>
-                <li class="order-product__meta--item">
-                    <div class="form__checkbox form__checkbox--big-red">
-                        <input class="form__checkbox--input sr-only" type="checkbox" name="message2" id="messageLabel2">
-                        <label class="form__checkbox--text js-open-message" for="messageLabel2">메세지 카드</label>
-                    </div>
-                    <a href="#messagePop" class="order-product__meta--btn js-popup-open"><span class="sr-only">선물포장 설명</span></a>
+                    <a href="#engravePop" class="order-product__meta--btn js-popup-open"><span class="sr-only">각인서비스 설명</span></a>
                 </li>
             </ul>
         </div>
         <div class="order-product__message">
-            <textarea class="form__input--textarea js-max-keyup" title="내용" placeholder="선물 메시지를 50자(공백 포함) 이내로 작성해 주세요."></textarea>
+            <textarea class="form__input--textarea js-max-keyup" title="내용" placeholder="영문 대소문자 및 일부 특수문자만 가능 (공백 포함, 최대 8자)"></textarea>
+        </div>
+        <div class="order-product__character">
+            <div class="special-character">
+                <label class="special-character__label">특수문자 &nbsp;</label>
+                <button class="special-character__button" onclick="">#</button>
+                <button class="special-character__button" onclick="">@</button>
+                <button class="special-character__button" onclick="">&</button>
+                <button class="special-character__button" onclick="">.</button>
+                <button class="special-character__button" onclick="">♥</button>
+                <button class="special-character__button" onclick="">♣</button>
+                <button class="special-character__button" onclick="">♠</button>
+                <button class="special-character__button" onclick="">◆</button>
+                <button class="special-character__button" onclick="">☺</button>
+                <button class="special-character__button" onclick="">☻</button>
+            </div>
+            <p class="order-product__character--txt">각인 서비스 신청 시, <span>5,000원</span>이 추가 결제됩니다.</p>
         </div>
     </div>
     <!-- .item -->
@@ -1783,6 +1792,58 @@
         </div>
     </section>
 </section>
+<!-- engrave popup -->
+<section id="engravePop" class="small-popup modal-pop">
+    <div class="small-popup__dim"></div>
+        <section class="small-popup__body engrave">
+            <div class="engrave-line">
+                <a class="small-popup__close js-popup-close" href="#;"><span class="sr-only">닫기</span></a>
+                <div class="small-popup__header">
+                    <h3 class="small-popup__header--title">각인 커스터마이징 서비스</h3>
+                </div>
+                <div class="small-popup__cont">
+                    <!-- engrave cont -->
+                    <div class="pop-engrave">
+                        <div class="phone-case">
+                            <!-- 기본(아이폰 14) -->
+                            <div class="phone-case__common">
+                                <img src="../../images/mypage/engrave/img_common.jpg" alt="" class="phone-case__common--img">
+                            </div>
+                            <!--// 기본(아이폰 14)-->
+
+                            <!-- 아이폰 14 plus -->
+                            <!--                            <div class="phone-case__plus">-->
+                            <!--                                <img src="../../images/mypage/engrave/img_plus.jpg" alt="" class="phone-case__common&#45;&#45;img">-->
+                            <!--                            </div>-->
+                            <!--// 아이폰 14 plus-->
+
+                            <!-- 아이폰 14 pro -->
+                            <!--                            <div class="phone-case__pro">-->
+                            <!--                                <img src="../../images/mypage/engrave/img_pro.jpg" alt="" class="phone-case__common&#45;&#45;img">-->
+                            <!--                            </div>-->
+                            <!--// 아이폰 14 pro -->
+
+                            <!-- 아이폰 14 pro Max -->
+                            <!--                            <div class="phone-case__promax">-->
+                            <!--                                <img src="../../images/mypage/engrave/img_promax.jpg" alt="" class="phone-case__common&#45;&#45;img">-->
+                            <!--                            </div>-->
+                            <!--// 아이폰 14 pro Max-->
+                        </div>
+                        <ul class="pop-engrave__list">
+                            <li class="pop-engrave__item">
+                                <p class="pop-bullet__text">주문이후 제품 준비과정에서는 각인 내용 변경이 어려울 수 있습니다.</p>
+                                <p class="pop-bullet__text">가죽 표면의 특성상 주름 부분에 금박 필름이 완벽하게 각인되지 않을 수  있습니다.</p>
+                                <p class="pop-bullet__text">각인 옵션이 적용된 상품은 기종변경, 단순변심 등의 이유로 교환 및 환불이 불가합니다. (제품 결함 사유 예외)</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- // engrave cont -->
+                </div>
+            </div>
+        </section>
+</section>
+<!-- engrave popup -->
+
 
 	<script src="../../js/libs/jquery-3.6.0.min.js"></script>
 	<script src="../../js/libs/gsap.min.js"></script>
