@@ -126,20 +126,20 @@ jQuery(function () {
           }
 
           $('.header').removeClass('is-bg-white');
-        } else if ($('.main-banner').length > 1 && $('.main-banner__item').length > 1) {
+        } else if ($('.main-banner').length >= 1 && $('.main-banner__item').length > 1) {
           if ($('.main-banner__item[data-bg="white"]').hasClass('swiper-slide-active')) {
-            $('body').removeClass('is-white');
-            $('body').addClass('is-black');
-          } else {
             $('body').removeClass('is-black');
             $('body').addClass('is-white');
+          } else {
+            $('body').removeClass('is-white');
+            $('body').addClass('is-black');
           }
 
           $('.header').removeClass('is-bg-white');
         }
       }
 
-      if ($('.main-banner').length > 1 && $('.main-banner__item').length > 1) {
+      if ($('.main-banner').length >= 1 && $('.main-banner__item').length > 1) {
         pagingOptionChange();
       }
     });
@@ -207,7 +207,7 @@ jQuery(function () {
               $('body').removeClass('is-white');
               $('body').addClass('is-black');
             }
-          } else if ($('.main-banner').length > 1 && $('.main-banner__item').length > 1) {
+          } else if ($('.main-banner').length >= 1 && $('.main-banner__item').length > 1) {
             if ($('.main-banner__item[data-bg="white"]').hasClass('swiper-slide-active')) {
               $('body').removeClass('is-black');
               $('body').addClass('is-white');
