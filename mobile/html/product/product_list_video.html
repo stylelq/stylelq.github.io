@@ -543,11 +543,14 @@
 <!-- .lnb -->
     <div class="site-main">
         <section class="product">
-            <div class="product-banner product-banner--video"><!-- 안에 이미지가 들어갈시 product-banner--img 클래스, 비디오 추가시 product-banner--video 클래스 추가 -->
-                <iframe class="product-banner__file"
-                        src="https://player.vimeo.com/video/543457353?autoplay=1&amp;loop=1&amp;quality=1080p&amp;muted=1"
-                        allow="autoplay; fullscreen" frameborder="0"
-                        id="vimeo_main_iframe" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+            <div class="product-banner"><!-- 안에 이미지가 들어갈시 product-banner--img 클래스, 비디오 추가시 product-banner--video 클래스 추가 -->
+                <!--비디오-->
+                <div class="product-banner__video">
+                    <video class="product-banner__video--src" src="https://mcdn.louisclub.com/static/mo/img/specialty/eudonchoi/mo_apparel_02.mp4?v=1"
+                           poster=""
+                           id="find-video" autoplay loop controls muted playsinline="" data-object-fit="cover"></video>
+                </div>
+                <!--//비디오-->
             </div>
             <!-- Product List Filter -->
 <div class="list-filter">
