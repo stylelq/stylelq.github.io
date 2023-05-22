@@ -1,5 +1,6 @@
 
 
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -30,8 +31,9 @@
     
     
     
-        <link rel="stylesheet" href="../../css/pages/fyl3.css">
     
+        <link rel="stylesheet" href="../../css/pages/promotion.css">
+        <link rel="stylesheet" href="../../css/animate.min.css">
     
     
     
@@ -467,276 +469,181 @@
 </div>
 
 <!-- contents start -->
-
 <div class="container">
-    <div class="site-project">
-        <div class="fyl3-wrap">
-            <!-- 섹션1(영상) -->
-            <section class="fyl-section fyl-section1">
-                <div class="fyl-section1__video">
-                    <!--<div class="fyl-section1__play is-hide js-replay-btn" id="replayVideo"></div>-->
-                    <video class="fyl-section1__video--source js-pause-btn" id="stopVideo" src="https://cdn.louisclub.com/static/fr/img/find3/kimjunsu/video_main.mp4?v=0002" poster="" controls loop autoplay muted playsinline data-object-fit="cover"></video>
+    <div class="site-promotion">
+        <!--프로모션 뷰 비주얼-->
+        <div class="promotion-view">
+            <div class="promotion-view__visual">
+                <!--비디오-->
+                <div class="promotion-view__video">
+                    <video class="promotion-view__video--src" src="https://cdn.louisclub.com/static/fr/img/specialty/20220429/pc_detail.mp4"
+                           poster="https://cdn.louisclub.com/static/fr/img/specialty/20220429/pc_thumbnail.jpg" loop=""
+                           autoplay="autoplay" controls muted="false" playsinline=""  data-object-fit="cover"></video>
                 </div>
-            </section>
-            <!-- //섹션1(영상) -->
+                <!--//비디오-->
+            </div>
 
-            <!-- 섹션2(타이핑) -->
-            <section class="fyl-section fyl-section2">
-                <div class="fyl-section2__wrap">
-                    <div class="fyl-section2__typography">
-                        <div class="fyl-section2__fix">
-                            <span class="fyl-section2__fix--word">find</span>
-                            <span class="fyl-section2__fix--word">your</span>
-                            <span class="fyl-section2__fix--word">light 3</span>
-                        </div>
-                        <div class="fyl-section2__moving move-txt">
-                            <p class="fyl-section2__moving--word">SHAPE.SHIFTER</p>
-                            <p class="fyl-section2__moving--word">SHAPE.SHIFTER</p>
-                            <p class="fyl-section2__moving--word">SHAPE.SHIFTER</p>
-                            <p class="fyl-section2__moving--word">SHAPE.SHIFTER</p>
-                            <p class="fyl-section2__moving--word">SHAPE.SHIFTER</p>
-                            <p class="fyl-section2__moving--word">SHAPE.SHIFTER</p>
-                            <p class="fyl-section2__moving--word">SHAPE.SHIFTER</p>
-                            <p class="fyl-section2__moving--word">SHAPE.SHIFTER</p>
-                            <p class="fyl-section2__moving--word">SHAPE.SHIFTER</p>
-                            <p class="fyl-section2__moving--word">SHAPE.SHIFTER</p>
-                            <p class="fyl-section2__moving--word">SHAPE.SHIFTER</p>
-                            <p class="fyl-section2__moving--word">SHAPE.SHIFTER</p>
-                            <p class="fyl-section2__moving--word">SHAPE.SHIFTER</p>
-                            <p class="fyl-section2__moving--word">SHAPE.SHIFTER</p>
-                            <p class="fyl-section2__moving--word">SHAPE.SHIFTER</p>
-                        </div>
-                    </div>
+            <!--상단 이미지영역-->
+            <div class="promotion-view__visual">
+                <img class="promotion-view__img" src="../../images/promotion/view/comment/img_banner_01.png" alt=""/>
+            </div>
+            <!--//상단 이미지영역-->
 
-                    <div class="fyl-section2__content">
-                        <div class="fyl-section2__box">
-                            <div class="fyl-section2__box--txt" id="contentText1"></div>
-                        </div>
+            <div class="event-notice">
+                <div class="event-notice__box new-item">
+                    <div class="event-notice__inner">
+                        <h3 class="event-notice__title new-item">루이까또즈에서 만나보고 싶은 신상품은?</h3>
+                        <form name="frm" id="frm">
+                            <input type="hidden" name="USER_ID" value="">
+                            <input type="hidden" name="PLN_MST_IDX" value="1718">
+                            <input type="hidden" name="cPage" value="">
+                            <textarea class="event-notice__area new-item" id="PLN_PTP_CONTENT" name="PLN_PTP_CONTENT" placeholder="ex) 형광색 카드지갑을 찾고있는데 어디에도 없더라구요. 루이까또즈에서 만나보고 싶어요!&#13;&#10;구름백같은 푹신푹신한 재질의 핸드백이 있으면 좋을 것 같아요~" onkeyup="javascript:_miniCaviar.fnChkByte(this,'500')"></textarea>
+                            <div class="event-notice__byte">
+                                (<span class="js-byte">0</span>/500byte)
+                            </div>
+                            <div class="event-notice__submit">
+                                <a onclick="_miniCaviar.submit();" class="event-notice__btn new-item" style="cursor: pointer;">등록</a>
+                            </div>
+                        </form>
                     </div>
                 </div>
-            </section>
-            <!-- //섹션2(타이핑) -->
+                <div class="event-notice__review">
+                    <ul class="event-notice__list">
+                        <li class="event-notice__item">
+                            <div class="event-notice__wrap">
+                                <p class="event-notice__txt">
+                                    미니캐비어 마이크로백은 든든한 동반자 라고 말하고 싶습니다! 제가 사회초년생이라 대학생 시절에는 아르바이트 면접, 졸업후에는 회사 면접을 다녔을 때 항상 저의 일상복과 오피스룩에도 같이 함께하는 동반자였습니다 지금도 함께 하고 있는 저의 앞날에 대한 도전 을 할 때 같이 함께 할 수 있는 소중한 동반자로 평생 옆에 두고 싶네요 그만큼 저에게 의미있고 같이 있으면 좋은 일이 일어나는 든든한 동반자 같은 존재이기 때문입니다❤️</p>
+                                <div class="event-notice__date">
+                                    <span class="event-notice__date--span">gjtnql***</span>
+                                    <span class="event-notice__date--span">2022.03.28</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="event-notice__item">
+                            <div class="event-notice__wrap">
+                                <p class="event-notice__txt">
+                                    미니캐비어 마이크로백은 ‘첫경험’이다.
+                                    입사한지 2개월차 사회 초년생 입니다.
+                                    사회 초년생으로서의 첫 면접, 첫 회사, 첫 월급
+                                    뿐만 아니라 첫 사랑, 첫 키스 등등 첫 경험은 무엇이든간에 긴장되고 설레기 마련이죠,, 마이크로백도 소비자들에게 그런 존재가 되었으면 좋겠습니다..!</p>
+                                <div class="event-notice__date">
+                                    <span class="event-notice__date--span">haa2***</span>
+                                    <span class="event-notice__date--span">2022.03.28</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="event-notice__item">
+                            <div class="event-notice__wrap">
+                                <p class="event-notice__txt">
+                                    '라일락'이다= '내 하루의 즐거움'이다
 
-            <!-- 섹션3(작가 리스트) -->
-            <section class="fyl-section fyl-section3">
-                <div class="fyl-section3__artist">
-                    <h3 class="fyl-section3__title">SHAPE.SHIFTERS :</h3>
-                    <ul class="fyl-section3__list">
-                        <li class="fyl-section3__item">
-                            <a href="fyl3_artist01.html" class="fyl-section3__link">YANG SEUNGBIN
-                                <span class="fyl-section3__item--ko">양승빈</span>
-                            </a>
+                                    라( = 나 ,나의)
+                                    일(=하루)
+                                    락(=즐거움,행복함)
+
+                                    아침부터 저녁까지 나와 하루종일 함께하며 즐거움을 선사할 가방이에용!  색감도 딱 라일락 보라빛으로 찰떡으로 어울려용♡
+                                </p>
+                                <div class="event-notice__date">
+                                    <span class="event-notice__date--span">heejin7***</span>
+                                    <span class="event-notice__date--span">2022.03.28</span>
+                                </div>
+                            </div>
                         </li>
-                        <li class="fyl-section3__item">
-                            <a href="fyl3_artist02.html" class="fyl-section3__link">CHOI SOOJIN
-                                <span class="fyl-section3__item--ko">최수진</span>
-                            </a>
+                        <li class="event-notice__item">
+                            <div class="event-notice__wrap">
+                                <p class="event-notice__txt">
+                                    미니캐비어 마이크로백은 휘뚜루마뚜루템이다.
+                                    격식있는곳은 물론~ 데일리하게도 착용가능!
+                                    어디에나 다 잘 어울릴 백이라 휘뚜루마뚜루템라고 지었습니다:)</p>
+                                <div class="event-notice__date">
+                                    <span class="event-notice__date--span">hyoo***</span>
+                                    <span class="event-notice__date--span">2022.03.28</span>
+                                </div>
+                            </div>
                         </li>
-                        <li class="fyl-section3__item">
-                            <a href="fyl3_artist03.html" class="fyl-section3__link">YEON JINYEONG
-                                <span class="fyl-section3__item--ko">연진영</span>
-                            </a>
-                        </li>
-                        <li class="fyl-section3__item">
-                            <a href="fyl3_artist04.html" class="fyl-section3__link">KANG JAEWON
-                                <span class="fyl-section3__item--ko">강재원</span>
-                            </a>
-                        </li>
-                        <li class="fyl-section3__item before-opening">
-                            <a href="" class="fyl-section3__link">KIM JUNSU
-                                <span class="fyl-section3__item--ko">김준수</span>
-                            </a>
-                        </li>
-                        <li class="fyl-section3__item before-opening">
-                            <a href="" class="fyl-section3__link">KIM EUNHA
-                                <span class="fyl-section3__item--ko">김은하</span>
-                            </a>
-                        </li>
-                        <li class="fyl-section3__item before-opening">
-                            <a href="" class="fyl-section3__link">HITENCHO
-                                <span class="fyl-section3__item--ko">조상현</span>
-                            </a>
-                        </li>
-                        <li class="fyl-section3__item before-opening">
-                            <a href="" class="fyl-section3__link">YOON HYANGRO
-                                <span class="fyl-section3__item--ko">윤향로</span>
-                            </a>
-                        </li>
-                        <li class="fyl-section3__item before-opening">
-                            <a href="" class="fyl-section3__link">JUNG HYUNJEE
-                                <span class="fyl-section3__item--ko">정현지</span>
-                            </a>
-                        </li>
-                        <li class="fyl-section3__item before-opening">
-                            <a href="" class="fyl-section3__link">YANG SIYOUNG
-                                <span class="fyl-section3__item--ko">양시영</span>
-                            </a>
+                        <li class="event-notice__item">
+                            <div class="event-notice__wrap">
+                                <p class="event-notice__txt">
+                                    미니캐비어 마이크로백은 설레임이다.</p>
+                                <div class="event-notice__date">
+                                    <span class="event-notice__date--span">yeonsr060***</span>
+                                    <span class="event-notice__date--span">2022.03.28</span>
+                                </div>
+                            </div>
                         </li>
                     </ul>
-                </div>
-            </section>
-            <!-- //섹션3(작가 리스트) -->
-
-            <!-- 섹션4(작품 리스트) -->
-            <section class="fyl-section fyl-section4">
-                <div class="fyl-section4__work">
-                    <div class="fyl-section4__list">
-                        <div class="fyl-section4__item floating1">
-                            <a href="fyl3_artist01.html" class="fyl-section4__link">
-                                <div class="fyl-section4__name">
-                                    <p class="fyl-section4__name--eng">yang seungbin </p>
-                                    <p class="fyl-section4__name--ko">양승빈</p>
-                                </div>
-                                <div class="fyl-section4__border">
-                                    <img src="../../images/project/fyl3/img_main01.jpg" alt="" class="fyl-section4__img" />
-                                </div>
-                            </a>
-                        </div>
-                        <div class="fyl-section4__item floating2">
-                            <a href="fyl3_artist02.html" class="fyl-section4__link">
-                                <div class="fyl-section4__name">
-                                    <p class="fyl-section4__name--eng">choi Soojin</p>
-                                    <p class="fyl-section4__name--ko">최수진</p>
-                                </div>
-                                <div class="fyl-section4__border">
-                                    <img src="../../images/project/fyl3/img_main02.jpg" alt="" class="fyl-section4__img" />
-                                    <!--<video class="fyl-section4__video" src="https://mcdn.louisclub.com/static/mo/img/find/find_video_211029.mp4" poster="" loop="" autoplay="" muted="muted" playsinline="" data-object-fit="cover"></video>-->
-                                </div>
-                            </a>
-                        </div>
-                        <div class="fyl-section4__item floating3">
-                            <a href="fyl3_artist03.html" class="fyl-section4__link">
-                                <div class="fyl-section4__name">
-                                    <p class="fyl-section4__name--eng">Yeon Jinyeong</p>
-                                    <p class="fyl-section4__name--ko">연진영</p>
-                                </div>
-                                <div class="fyl-section4__border">
-                                    <img src="https://cdn.louisclub.com/static/fr/img/find3/img_main03_2.jpg" alt="" class="fyl-section4__img yeonjinyoung" />
-                                </div>
-                            </a>
-                        </div>
-                        <div class="fyl-section4__item floating4">
-                            <div class="fyl-section4__dim"></div>
-                            <a href="" class="fyl-section4__link">
-                                <div class="fyl-section4__name">
-                                    <p class="fyl-section4__name--eng">Kim Eunha</p>
-                                    <p class="fyl-section4__name--ko">김은하</p>
-                                </div>
-                                <div class="fyl-section4__border">
-                                    <img src="../../images/project/fyl3/img_main08.jpg" alt="" class="fyl-section4__img" />
-                                </div>
-                            </a>
-                        </div>
-                        <div class="fyl-section4__item floating5">
-                            <div class="fyl-section4__dim"></div>
-                            <a href="" class="fyl-section4__link">
-                                <div class="fyl-section4__name">
-                                    <p class="fyl-section4__name--eng">Kim Junsu</p>
-                                    <p class="fyl-section4__name--ko">김준수</p>
-                                </div>
-                                <div class="fyl-section4__border">
-                                    <img src="../../images/project/fyl3/img_main04.jpg" alt="" class="fyl-section4__img" />
-                                </div>
-                            </a>
-                        </div>
-                        <div class="fyl-section4__item floating6">
-                            <a href="" class="fyl-section4__link">
-                                <div class="fyl-section4__name">
-                                    <p class="fyl-section4__name--eng">KANG JAEWON</p>
-                                    <p class="fyl-section4__name--ko">강재원</p>
-                                </div>
-                                <div class="fyl-section4__border">
-                                    <img src="../../images/project/fyl3/img_main05_2.jpg" alt="" class="fyl-section4__img kangjaewon" />
-                                </div>
-                            </a>
-                        </div>
-                        <div class="fyl-section4__item floating7">
-                            <div class="fyl-section4__dim"></div>
-                            <a href="" class="fyl-section4__link">
-                                <div class="fyl-section4__name">
-                                    <p class="fyl-section4__name--eng">hitencho</p>
-                                    <p class="fyl-section4__name--ko">조상현</p>
-                                </div>
-                                <div class="fyl-section4__border">
-                                    <img src="../../images/project/fyl3/img_main07.jpg" alt="" class="fyl-section4__img" />
-                                </div>
-                            </a>
-                        </div>
-                        <div class="fyl-section4__item floating8">
-                            <div class="fyl-section4__dim"></div>
-                            <a href="" class="fyl-section4__link">
-                                <div class="fyl-section4__name">
-                                    <p class="fyl-section4__name--eng">Yoon hyangRo</p>
-                                    <p class="fyl-section4__name--ko">윤향로</p>
-                                </div>
-                                <div class="fyl-section4__border">
-                                    <img src="../../images/project/fyl3/img_main06.jpg" alt="" class="fyl-section4__img" />
-                                </div>
-                            </a>
-                        </div>
-                        <div class="fyl-section4__item floating9">
-                            <div class="fyl-section4__dim"></div>
-                            <a href="" class="fyl-section4__link">
-                                <div class="fyl-section4__name">
-                                    <p class="fyl-section4__name--eng">Jung Hyunjee</p>
-                                    <p class="fyl-section4__name--ko">정현지</p>
-                                </div>
-                                <div class="fyl-section4__border">
-                                    <img src="../../images/project/fyl3/img_main10.jpg" alt="" class="fyl-section4__img" />
-                                </div>
-                            </a>
-                        </div>
-                        <div class="fyl-section4__item floating10">
-                            <a href="" class="fyl-section4__link">
-                                <div class="fyl-section4__name">
-                                    <p class="fyl-section4__name--eng">Yang siyoung</p>
-                                    <p class="fyl-section4__name--ko">양시영</p>
-                                </div>
-                                <div class="fyl-section4__border">
-                                    <img src="../../images/project/fyl3/img_main11.jpg" alt="" class="fyl-section4__img" />
-                                </div>
-                            </a>
-                        </div>
+                    <div class="paging">
+                        <ul class="paginng__list">
+                            <li class="paging__item paging__item--prev">
+                                <a href="javascript:;" onclick="{0}({1}); return false;" class="paging__link">
+                                    <span class="sr-only">이전</span>
+                                </a>
+                            </li>
+                            <li class="paging__item is-new">
+                                <span class="paging__link">1</span>
+                            </li>
+                            <li class="paging__item">
+                                <a href="javascript:;" onclick="goPage(2); return false;" class="paging__link">2</a>
+                            </li>
+                            <li class="paging__item">
+                                <a href="javascript:;" onclick="goPage(3); return false;" class="paging__link">3</a>
+                            </li>
+                            <li class="paging__item">
+                                <a href="javascript:;" onclick="goPage(4); return false;" class="paging__link">4</a>
+                            </li>
+                            <li class="paging__item">
+                                <a href="javascript:;" onclick="goPage(5); return false;" class="paging__link">5</a>
+                            </li>
+                            <li class="paging__item paging__item--next">
+                                <a href="javascript:;" onclick="goPage(11); return false;" class="paging__link">
+                                    <span class="sr-only">다음</span>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-            </section>
-            <!-- 섹션4(작품 리스트) -->
+            </div>
+        </div>
+        <!--//프로모션 뷰 비주얼-->
 
-            <!-- 섹션5(하단 소개) -->
-            <section class="fyl-section fyl-section5">
-                <div class="fyl-section5__content">
-                    <div class="fyl-section5__paragraph">
-                        <div class="fyl-section5__logo">
-                            <h3 class="fyl-section5__paragraph--title">ABOUT</h3>
-                        </div>
-                        <div class="fyl-section5__paragraph--txt about">
-                            글로벌 브랜드 루이까또즈는 2020년부터 젊은 아티스트와 함께 하는 ‘Find Your Light’ 프로젝트를 성공리에 이어가고 있습니다. ‘빛’이라는 큰 테마 아래 매년 새로운 주제를 선보이는 ‘Find Your Light’은 루이까또즈의 브랜드 네트워크와 인지도를 바탕으로 문화의 다양성과 에너지를 공유하는 기회의 장을 제공하고 있습니다.
-                        </div>
-                    </div>
 
-                    <div class="fyl-section5__paragraph">
-                        <div class="fyl-section5__logo">
-                            <img src="../../images/project/fyl3/img_contributors.png" alt="컨트리뷰터스" class="fyl-section5__logo--img" />
-                        </div>
-                        <div class="fyl-section5__paragraph--txt contributors">
-                            컨트리뷰터스는 공예인 김은학과 공예·디자인 연구자 이정은이 결성한 제작문화 콜렉티브로 공예·디자인과 연결된 사회 현상, 역사, 인물, 지역 등에 대한 포괄적인 리서치를 기반으로 기획, 제작, 연구 활동을 시작했습니다. 공예·디자인에 대한 아티스틱 리서치와 창작을 목표로 둘 사이를 매개하는 기획 활동을 진행 중입니다.
-                        </div>
+        <div class="promotion-wrap only-bottom">
+            <!--프로모션 배너 리스트-->
+            <div class="promotion-list">
+                <a class="promotion-list__link" href="promotion_view.html">
+                    <div class="promotion-list__box">
+                        <img class="promotion-list__img" src="https://mcdn.louisclub.com/static/upload/marketing/2021/11/17/becb0eb7-fa17-4ac9-9997-c266de64dde9.jpg" alt=""/>
                     </div>
+                    <div class="promotion-list__name">KAREL MARTENS BAG</div>
+                </a>
+            </div>
+            <!--//프로모션 배너 리스트-->
 
-                    <div class="fyl-section5__paragraph">
-                        <div class="fyl-section5__logo">
-                            <h3 class="fyl-section5__paragraph--title"><span>3</span>D ART</h3>
-                        </div>
-                        <div class="fyl-section5__paragraph--txt art">
-                            김정태는 비주얼 아티스트이자 스튜디오 개버딘(GABARDINE)의 디렉터입니다. 뮤지션의 앨범 커버와 프로모션 비주얼부터 다양한 브랜드와 매거진 영상에 이르기까지 모든 장르의 그래픽과 모션을 자유자재로 넘나듭니다. 3D 그래픽 작업에서 느껴지는 Uncanny Valley를 상쇄하는 다차원의 감각과 군더더기 없는 비주얼을 추구합니다.  Co-work: 이수진
-                        </div>
+            <!--프로모션 배너 리스트-->
+            <div class="promotion-list">
+                <a class="promotion-list__link" href="promotion_view.html">
+                    <div class="promotion-list__box">
+                        <img class="promotion-list__img" src="https://mcdn.louisclub.com/static/upload/marketing/2021/11/19/35143dfb-abad-4ac5-b3f5-183ffe2a0b71.jpg" alt=""/>
                     </div>
-                </div>
-            </section>
-            <!-- 섹션5(하단 소개) -->
+                    <div class="promotion-list__name">L-Quilting mini</div>
+                </a>
+            </div>
+            <!--//프로모션 배너 리스트-->
+
+            <!--프로모션 배너 리스트-->
+            <div class="promotion-list">
+                <a class="promotion-list__link" href="promotion_view.html">
+                    <div class="promotion-list__box">
+                        <img class="promotion-list__img" src="https://mcdn.louisclub.com/static/upload/marketing/2021/11/17/becb0eb7-fa17-4ac9-9997-c266de64dde9.jpg" alt=""/>
+                    </div>
+                    <div class="promotion-list__name">LALA WALLET</div>
+                </a>
+            </div>
+            <!--//프로모션 배너 리스트-->
         </div>
     </div>
 </div>
+
 <!-- //section끝 -->
 <!--footer시작-->
 <footer class="footer">
@@ -821,30 +728,15 @@
 
 
 
+
+
     <script src="../../js/libs/swiper-4.5.0.min.js"></script>
     <script src="../../js/libs/ScrollMagic.min.js"></script>
     <script src="../../js/libs/TweenMax.min.js"></script>
     <script src="../../js/libs/animation.gsap.js"></script>
-   <!-- <script src="https://www.youtube.com/player_api"></script>-->
-    <script src="../../js/menuFixed.js"></script>
-    <script src="../../js/fyl.js"></script>
-    <script src="../../js/gsap.min.js"></script>
-    <script src="../../js/ScrollToPlugin.min.js"></script>
-    <script type="text/javascript" src="../../EVGvzMuD34R4pVZWRaher4/orbitvu12/orbitvu.js"></script>
-    <script type="text/javascript">
-        inject_orbitvu(
-            'ov-mgGdFXoxiS6PPRrWC8k5gX',
-            '../../EVGvzMuD34R4pVZWRaher4/orbitvu12/',
-            '',
-            {
-                ovus_folder: "../../EVGvzMuD34R4pVZWRaher4/1030/",
-                width: "800",
-                content2: 'yes',
-                height: "814",
-                partial_load: "yes"
-            });
-    </script>
-
+    <script src="../../js/libs/html2canvas.min.js"></script>
+    <script src="../../js/promotion.js"></script>
+    <script src="../../js/jquery.eraser.js"></script>
 
 
 
