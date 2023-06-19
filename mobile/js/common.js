@@ -647,6 +647,30 @@ jQuery(function () {
       });
     } // 컬렉션,프로모션 비디오 재생버튼 액션추가
 
+    if ($('.promotion-model-slideGolf').length > 0) {
+      var promotionModelSlideSecond = new Swiper('.promotion-model__containerGolf', {
+        // effect: 'fade',
+        observer: true,
+        observeParents: true,
+        watchOverflow: true,
+        slidesPerView: 1,
+        loop: true,
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: false
+        },
+        pagination: {
+          el: '.promotion-slide-paginationGolf',
+          type: "fraction",
+          clickable: true
+        },
+        navigation: {
+          nextEl: ".model-next-btn",
+          prevEl: ".model-prev-btn"
+        }
+      });
+    } // 골프 기획전
+
     if ($('.promotion-model-pochebag').length > 0) {
       var promotionModelSlideSecond = new Swiper('.promotion-model__pochebag', {
         //effect: 'fade',
