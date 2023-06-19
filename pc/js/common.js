@@ -1156,6 +1156,31 @@ jQuery(function () {
   } //스토어 스페셜 슬라이드
 
 
+  if ($('.promotion-model-slideGolf').length > 0) {
+    var promotionModelSlideGolf = new Swiper('.promotion-model__containerGolf', {
+      effect: 'fade',
+      observer: true,
+      observeParents: true,
+      watchOverflow: true,
+      slidesPerView: 1,
+      loop: true,
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false
+      },
+      pagination: {
+        el: '.promotion-slide-paginationGolf',
+        type: "fraction",
+        clickable: true
+      },
+      navigation: {
+        nextEl: ".model-next-btn",
+        prevEl: ".model-prev-btn"
+      }
+    });
+  } //골프기획전
+
+
   if ($('.special-slide').length > 0) {
     var specialSlide = new Swiper('.special-slide__container', {
       observer: true,
