@@ -1216,46 +1216,43 @@ jQuery(function () {
   }
 });
 jQuery(function () {
-  // 커버 지우고 메인으로 이동
-  function mainMove() {
-    $('.cover-wrap').hide();
-    $('body').removeClass('scroll-stop');
-  }
-  $(document).on('click', '.js-home-link', mainMove); // 메인커버 노출
+  // 커버 지우개 이벤트
+  if ($('.cover-eraser').length > 0) {
+    $('.cover-eraser__swipe').fadeOut(2000);
+    $('body').addClass('scroll-lock');
 
-  $('.cover-wrap__swipe').fadeOut(2000);
-  function coverShow() {
-    $('.cover-wrap__swipe').addClass('is-hide');
-  }
-  $(document).on('click', '.js-cover-dim', coverShow);
-  if ($('.cover-wrap').length > 0) {
-    $('body').addClass('scroll-stop');
-  } else {
-    $('body').removeClass('scroll-stop');
-  } // 메인커버 지우는 모션
+    // 커버 클릭시 이벤트
+    $('[data-btn]').on('click', function () {
+      var btnData = $(this).data('btn');
+      if (btnData === 'swipe') {
+        // 딤 숨기기
+        $('.cover-eraser__swipe').addClass('is-hide');
+      } else if (btnData === 'home') {
+        // 메인으로 이동
+        $('.cover-eraser').hide();
+        $('body').removeClass('scroll-lock');
+      }
+    });
 
-  $('#cover1').eraser({
-    size: 70,
-    completeRatio: .7,
-    completeFunction: function completeFunction() {
-      fadeMotion('#cover1');
-      $('body').removeClass('scroll-stop');
-    }
-  });
-  $('#cover2').eraser({
-    size: 70,
-    completeRatio: .7,
-    completeFunction: function completeFunction() {
-      fadeMotion('#cover2');
-    }
-  });
-  $('#cover3').eraser({
-    size: 70,
-    completeRatio: .7,
-    completeFunction: function completeFunction() {
-      fadeMotion('#cover3');
-    }
-  });
+    // 커버 지우개
+    var coverImg = document.querySelectorAll('.cover-eraser__img');
+    coverImg.forEach(function (el, i, array) {
+      var elId = '#' + $(el).attr('id');
+      $(el).eraser({
+        size: 70,
+        completeRatio: .8,
+        completeFunction: function completeFunction() {
+          $(elId).fadeOut(1000);
+          $(elId).eraser('disable');
+          if (i === array.length - 1) {
+            $('.cover-eraser').addClass('is-hide');
+            $('body').removeClass('scroll-lock');
+          }
+        }
+      });
+    });
+  }
+  // 커버 지우개 이벤트
 
   // 221219 프로모션 스크래치 모션
 
@@ -1268,15 +1265,6 @@ jQuery(function () {
   //     }
   // });
 
-  function fadeMotion(target) {
-    if (target == '#cover1') {
-      $('.cover-wrap').addClass('is-hide');
-      $('body').removeClass('scroll-stop'); // location.href='https://www.stylelq.com/';
-    } else {
-      $(target).fadeOut(1000);
-      $(target).eraser('disable');
-    }
-  }
   /*
   //Header Scroll Bg
   */
