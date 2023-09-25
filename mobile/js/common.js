@@ -1240,7 +1240,7 @@ jQuery(function () {
       var elId = '#' + $(el).attr('id');
       $(el).eraser({
         size: 70,
-        completeRatio: .8,
+        completeRatio: .4,
         completeFunction: function completeFunction() {
           $(elId).fadeOut(1000);
           $(elId).eraser('disable');
