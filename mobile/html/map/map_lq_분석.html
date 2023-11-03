@@ -38,6 +38,9 @@
         $(".btn").on("click",function(){
             const btnText = $(this).text();
             const targetDivs = $(".cut[data-step*='" + btnText + "']");
+            if($(this).parent().siblings().hasClass("is-active")){
+                $(".cut[data-step]").removeClass("is-active");
+            }
             if (targetDivs.length > 0) {
                 if(targetDivs.hasClass("is-active")){
                     targetDivs.removeClass("is-active");
@@ -75,7 +78,8 @@
     .btn-list .btn{padding:3px 8px;border:1px solid #d9d9d9;border-radius:10px}
     .btn-list .btn:hover,
     .list-item.is-active .btn{color:#fff;border:1px solid red;background:red;}
-    .cut.is-active > .cut{color:#fff;background:#F11C25}
+    .cut.is-active > .cut{color:#fff;background:green}
+    .cut.is-active:hover > .cut{color:#fff;background:#F11C25}
 </style>
 </head>
 <body>
@@ -160,7 +164,7 @@
 					<td class="cut"></td>
 					<td class="cut">error</td>
 					<td class="cut"><a href="../error/error.html" target="_blank">error.html</a></td>				</tr>
-				<tr class="cut" data-step='[""]'>
+				<tr class="cut" data-step='["1-1","1-5"]'>
 					<td class="cut center"></td>
 					<td class="cut">에러페이지2</td>
 					<td class="cut"></td>
@@ -168,7 +172,7 @@
 					<td class="cut"></td>
 					<td class="cut">error</td>
 					<td class="cut"><a href="../error/failed.html" target="_blank">failed.html</a></td>				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","2-5","2-6"]'>
 					<td class="cut center"></td>
 					<td class="cut">메인</td>
 					<td class="cut">메인페이지</td>
@@ -176,7 +180,7 @@
 					<td class="cut"></td>
 					<td class="cut">main</td>
 					<td class="cut"><a href="../main/main.html" target="_blank">main.html</a></td>				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-5","2-2"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut">검색결과페이지</td>
@@ -184,7 +188,7 @@
 					<td class="cut"></td>
 					<td class="cut">main</td>
 					<td class="cut"><a href="../main/main_search.html" target="_blank">main_search.html</a></td>				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-5"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut">최근본상품페이지</td>
@@ -200,7 +204,7 @@
 					<td class="cut"></td>
 					<td class="cut">main</td>
 					<td class="cut"><a href="../main/main-event-eraser.html" target="_blank">main-event-eraser.html</a></td>				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-5","2-2"]'>
 					<td class="cut center"></td>
 					<td class="cut">회원가입</td>
 					<td class="cut">회원가입 홈</td>
@@ -208,7 +212,7 @@
 					<td class="cut"></td>
 					<td class="cut">join</td>
 					<td class="cut"><a href="../join/join_step_1.html" target="_blank">jon_step_1.html</a></td>				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-5"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut">SNS</td>
@@ -216,7 +220,7 @@
 					<td class="cut"></td>
 					<td class="cut">join</td>
 					<td class="cut"><a href="../join/join_step_2_1.html" target="_blank">jon_step_2_1.html</a></td>				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-5","2-2"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut"></td>
@@ -225,7 +229,7 @@
 					<td class="cut">join</td>
 					<td class="cut"><a href="../join/join_step_2_2.html" target="_blank">jon_step_2_2.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-5"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut">email</td>
@@ -234,7 +238,7 @@
 					<td class="cut">join</td>
 					<td class="cut"><a href="../join/join_step_3_1.html" target="_blank">jon_step_3_1.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-5","2-2"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut"></td>
@@ -243,7 +247,7 @@
 					<td class="cut">join</td>
 					<td class="cut"><a href="../join/join_step_3_2.html" target="_blank">jon_step_3_2.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-5"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut">회원가입 완료</td>
@@ -252,7 +256,7 @@
 					<td class="cut">join</td>
 					<td class="cut"><a href="../join/join_step_4.html" target="_blank">join_step_4.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-5","2-1"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut">기존회원정보 존재할경우</td>
@@ -261,7 +265,7 @@
 					<td class="cut">join</td>
 					<td class="cut"><a href="../join/join_step_5.html" target="_blank">join_step_5.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-5","2-2"]'>
 					<td class="cut center"></td>
 					<td class="cut">로그인</td>
 					<td class="cut">로그인 홈</td>
@@ -270,7 +274,7 @@
 					<td class="cut">join</td>
 					<td class="cut"><a href="../join/login_step_1.html" target="_blank">login_step_1.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-5","2-2"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut">로그인 홈</td>
@@ -279,7 +283,7 @@
 					<td class="cut">join</td>
 					<td class="cut"><a href="../join/login_step_1_0.html" target="_blank">login_step_1_0.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-5","2-2"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut">비회원 주문조회</td>
@@ -288,7 +292,7 @@
 					<td class="cut">join</td>
 					<td class="cut"><a href="../join/login_step_1_1.html" target="_blank">login_step_1_1.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-5"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut">비회원 주문하기</td>
@@ -297,7 +301,7 @@
 					<td class="cut">join</td>
 					<td class="cut"><a href="../join/login_step_2_1.html" target="_blank">login_step_2_1.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-5","2-2"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut">아이디 찾기</td>
@@ -306,7 +310,7 @@
 					<td class="cut">join</td>
 					<td class="cut"><a href="../join/id_find.html" target="_blank">id_find.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-5","2-1"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut">아이디 찾기 결과</td>
@@ -315,7 +319,7 @@
 					<td class="cut">join</td>
 					<td class="cut"><a href="../join/id_find_result.html" target="_blank">id_find_result.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["2-2"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut">비밀번호 찾기</td>
@@ -324,7 +328,7 @@
 					<td class="cut">join</td>
 					<td class="cut"><a href="../join/pw_find.html" target="_blank">pw_find.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-2"]'>
 					<td class="cut center"></td>
 					<td class="cut">카테고리</td>
 					<td class="cut">New arrival</td>
@@ -333,7 +337,7 @@
 					<td class="cut">product</td>
 					<td class="cut"><a href="../product/new_arrival_list.html" target="_blank">new_arrival_list.html</a></td>
                 </tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-5"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut">숄더백</td>
@@ -342,7 +346,7 @@
 					<td class="cut">product</td>
 					<td class="cut"><a href="../product/shoulder_bag_list.html" target="_blank">shoulder_bag_list.html</a></td>
                 </tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-5"'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut">이미지 있는버전</td>
@@ -351,7 +355,7 @@
 					<td class="cut">product</td>
 					<td class="cut"><a href="../product/product_list_img.html" target="_blank">product_list_img.html</a></td>
                 </tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-5"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut">비디오 있는버전</td>
@@ -360,7 +364,7 @@
 					<td class="cut">product</td>
 					<td class="cut"><a href="../product/product_list_video.html" target="_blank">product_list_video.html</a></td>
                 </tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-5","2-1","2-2","2-4","2-5"]'>
 					<td class="cut center"></td>
 					<td class="cut">상품 상세페이지</td>
 					<td class="cut">숄더백(리뷰, qna 전체 등록된 버전)</td>
@@ -369,7 +373,7 @@
 					<td class="cut">product</td>
 					<td class="cut"><a href="../product/product_single.html" target="_blank">product_single.html</a></td>
                 </tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-5","2-1","2-2","2-5"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut">숄더백(리뷰 미등록, 품절)</td>
@@ -378,7 +382,7 @@
 					<td class="cut">product</td>
 					<td class="cut"><a href="../product/product_single_2.html" target="_blank">product_single_2.html</a></td>
                 </tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut">네이버 제휴 할인</td>
@@ -387,7 +391,7 @@
 					<td class="cut">product</td>
 					<td class="cut"><a href="../product/product_single.html?PRD_MST_CD=LLSK2AL76FF7BL0010&CHN_CODE=10" target="_blank">product_single.html</a></td>
                 </tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","2-2","2-5"]'>
 					<td class="cut center"></td>
 					<td class="cut">장바구니</td>
 					<td class="cut">제품1개일때</td>
@@ -396,7 +400,7 @@
 					<td class="cut">cart</td>
 					<td class="cut"><a href="../cart/cart_product1.html" target="_blank">cart_product1.html</a></td>
                 </tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","2-2","2-5"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut">제품2개일때</td>
@@ -414,7 +418,7 @@
 					<td class="cut">cart</td>
 					<td class="cut"><a href="../cart/cart_product.html" target="_blank">cart_product.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","2-2","2-5"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut">비회원 장바구니 있을 경우</td>
@@ -423,7 +427,7 @@
 					<td class="cut">cart</td>
 					<td class="cut"><a href="../cart/cart_product0.html" target="_blank">cart_product0.html</a></td>
 				</tr>
-				<tr class="cut" data-step='["1-1"]'>
+				<tr class="cut" data-step='["1-1","1-3","1-4","1-5","2-1","2-2","2-5"]'>
 					<td class="cut center"></td>
 					<td class="cut">주문결제</td>
 					<td class="cut">배송지정보 없을경우</td>
@@ -432,7 +436,7 @@
 					<td class="cut">payment</td>
 					<td class="cut"><a href="../payment/payment1.html" target="_blank">payment1.html</a></td>
 				</tr>
-				<tr class="cut" data-step='["1-1"]'>
+				<tr class="cut" data-step='["1-1","1-3","1-4","1-5","2-1","2-2"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut">배송지정보 있을경우/쿠폰적용 후</td>
@@ -441,7 +445,7 @@
 					<td class="cut">payment</td>
 					<td class="cut"><a href="../payment/payment2.html" target="_blank">payment2.html</a></td>
 				</tr>
-				<tr class="cut" data-step='["1-1"]'>
+				<tr class="cut" data-step='["1-1","1-3","1-4","1-5","2-1","2-2"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut">비회원 주문시</td>
@@ -450,7 +454,7 @@
 					<td class="cut">payment</td>
 					<td class="cut"><a href="../payment/payment3.html" target="_blank">payment3.html</a></td>
 				</tr>
-				<tr class="cut" data-step='["1-1"]'>
+				<tr class="cut" data-step='["1-1","1-3","1-5","2-1"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut">주문완료</td>
@@ -459,7 +463,7 @@
 					<td class="cut">payment</td>
 					<td class="cut"><a href="../payment/payment4.html" target="_blank">payment4.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","2-3","2-5"]'>
 					<td class="cut center"></td>
 					<td class="cut">프로젝트</td>
 					<td class="cut">FIND YOUR RIGHT - SPECTRUM</td>
@@ -468,7 +472,7 @@
 					<td class="cut">project</td>
 					<td class="cut"><a href="../project/project.html" target="_blank">project.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-2","1-8","2-2","2-3","2-4"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut"></td>
@@ -477,7 +481,7 @@
 					<td class="cut">project</td>
 					<td class="cut"><a href="../project/project1.html" target="_blank">project1.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-2","1-8","2-2","2-3","2-4"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut"></td>
@@ -486,7 +490,7 @@
 					<td class="cut">project</td>
 					<td class="cut"><a href="../project/project2.html" target="_blank">project2.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-2","1-8","2-2","2-3","2-4"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut"></td>
@@ -495,7 +499,7 @@
 					<td class="cut">project</td>
 					<td class="cut"><a href="../project/project3.html" target="_blank">project3.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-2","1-8","2-2","2-3","2-4"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut"></td>
@@ -504,7 +508,7 @@
 					<td class="cut">project</td>
 					<td class="cut"><a href="../project/project4.html" target="_blank">project4.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-2","1-8","2-2","2-3","2-4"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut"></td>
@@ -513,7 +517,7 @@
 					<td class="cut">project</td>
 					<td class="cut"><a href="../project/project5.html" target="_blank">project5.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-2","1-8","2-2","2-3","2-4"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut"></td>
@@ -522,7 +526,7 @@
 					<td class="cut">project</td>
 					<td class="cut"><a href="../project/project6.html" target="_blank">project6.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-2","1-8","2-2","2-3","2-4"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut"></td>
@@ -531,7 +535,7 @@
 					<td class="cut">project</td>
 					<td class="cut"><a href="../project/project7.html" target="_blank">project7.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-2","1-8","2-2","2-3","2-4"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut"></td>
@@ -540,7 +544,7 @@
 					<td class="cut">project</td>
 					<td class="cut"><a href="../project/project8.html" target="_blank">project8.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-2","1-8","2-2","2-3","2-4"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut"></td>
@@ -549,7 +553,7 @@
 					<td class="cut">project</td>
 					<td class="cut"><a href="../project/project9.html" target="_blank">project9.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-2","1-8","2-3","2-4"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut"></td>
@@ -558,16 +562,16 @@
 					<td class="cut">project</td>
 					<td class="cut"><a href="../project/project10.html" target="_blank">project10.html</a></td>
                 </tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","2-2","2-3","2-4"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut"></td>
 					<td class="cut">강영민</td>
 					<td class="cut"></td>
 					<td class="cut">project</td>
-					<td class="cut"><a href="../project/project10.html" target="_blank">project11.html</a></td>
+					<td class="cut"><a href="../project/project11.html" target="_blank">project11.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-8","2-3"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut">FIND YOUR LIGHT - GROOVYROOM</td>
@@ -576,16 +580,34 @@
 					<td class="cut">project</td>
 					<td class="cut"><a href="../project/project_groovyroom.html" target="_blank">project_groovyroom.html</a></td>
 				</tr>
-				<tr class="cut">
+                <tr class="cut" data-step='["1-1","1-5","2-5"]'>
+                    <td class="cut center"></td>
+                    <td class="cut">Find Your Light3</td>
+                    <td class="cut">FIND YOUR LIGHT - SHAPE.SHIFTER </td>
+                    <td class="cut">리스트</td>
+                    <td class="cut"></td>
+                    <td class="cut">fyl3</td>
+                    <td class="cut"><a href="../fyl3/fyl3_list.html" target="_blank">fyl3_list.html</a></td>
+                </tr>
+				<tr class="cut" data-step='["1-1","1-2","2-3","2-5"]'>
 					<td class="cut center"></td>
-					<td class="cut">Find Your Light3</td>
-					<td class="cut">FIND YOUR LIGHT - SHAPE.SHIFTER </td>
+					<td class="cut"></td>
+					<td class="cut"></td>
 					<td class="cut">메인</td>
 					<td class="cut"></td>
 					<td class="cut">fyl3</td>
 					<td class="cut"><a href="../fyl3/fyl3_main.html" target="_blank">fyl3_main.html</a></td>
 				</tr>
-				<tr class="cut">
+                <tr class="cut" data-step='["1-1","1-5","2-3","2-4","2-5"]'>
+                    <td class="cut center"></td>
+                    <td class="cut"></td>
+                    <td class="cut"></td>
+                    <td class="cut"></td>
+                    <td class="cut"></td>
+                    <td class="cut">fyl3</td>
+                    <td class="cut"><a href="../fyl3/fyl3_artist00.html" target="_blank">fyl3_artist00.html</a></td>
+                </tr>
+				<tr class="cut" data-step='["1-1","1-2","1-5","2-3","2-4","2-5"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut"></td>
@@ -594,7 +616,7 @@
 					<td class="cut">fyl3</td>
 					<td class="cut"><a href="../fyl3/fyl3_artist01.html" target="_blank">fyl3_artist01.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-2","1-5","2-5"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut"></td>
@@ -603,7 +625,7 @@
 					<td class="cut">fyl3</td>
 					<td class="cut"><a href="../fyl3/fyl3_artist02.html" target="_blank">fyl3_artist02.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-2","1-5","2-5"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut"></td>
@@ -612,7 +634,7 @@
 					<td class="cut">fyl3</td>
 					<td class="cut"><a href="../fyl3/fyl3_artist03.html" target="_blank">fyl3_artist03.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-2","1-5","2-5"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut"></td>
@@ -621,7 +643,7 @@
 					<td class="cut">fyl3</td>
 					<td class="cut"><a href="../fyl3/fyl3_artist04.html" target="_blank">fyl3_artist04.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-2","1-5","2-5"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut"></td>
@@ -630,7 +652,7 @@
 					<td class="cut">fyl3</td>
 					<td class="cut"><a href="../fyl3/fyl3_artist05.html" target="_blank">fyl3_artist05.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-2","1-5","2-5"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut"></td>
@@ -639,7 +661,7 @@
 					<td class="cut">fyl3</td>
 					<td class="cut"><a href="../fyl3/fyl3_artist06.html" target="_blank">fyl3_artist06.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-2","1-5","2-5"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut"></td>
@@ -648,7 +670,7 @@
 					<td class="cut">fyl3</td>
 					<td class="cut"><a href="../fyl3/fyl3_artist07.html" target="_blank">fyl3_artist07.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-2","1-5","2-5"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut"></td>
@@ -657,7 +679,7 @@
 					<td class="cut">fyl3</td>
 					<td class="cut"><a href="../fyl3/fyl3_artist08.html" target="_blank">fyl3_artist08.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-2","1-5","2-5"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut"></td>
@@ -666,7 +688,16 @@
 					<td class="cut">fyl3</td>
 					<td class="cut"><a href="../fyl3/fyl3_artist09.html" target="_blank">fyl3_artist09.html</a></td>
 				</tr>
-				<tr class="cut">
+                <tr class="cut" data-step='["1-1","1-5","2-5"]'>
+                    <td class="cut center"></td>
+                    <td class="cut"></td>
+                    <td class="cut"></td>
+                    <td class="cut">양시영</td>
+                    <td class="cut"></td>
+                    <td class="cut">fyl3</td>
+                    <td class="cut"><a href="../fyl3/fyl3_artist10.html" target="_blank">fyl3_artist10.html</a></td>
+                </tr>
+				<tr class="cut" data-step='["1-1","1-5"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut">COLLABORATION</td>
@@ -675,7 +706,7 @@
 					<td class="cut">project</td>
 					<td class="cut"><a href="../project/collaboration.html" target="_blank">collaboration.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-2"]'>
 					<td class="cut center"></td>
 					<td class="cut">고객센터</td>
 					<td class="cut">공지사항</td>
@@ -684,7 +715,7 @@
 					<td class="cut">center</td>
 					<td class="cut"><a href="../center/center.html" target="_blank">center.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-2"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut"></td>
@@ -693,7 +724,7 @@
 					<td class="cut">center</td>
 					<td class="cut"><a href="../center/center_single.html" target="_blank">center_single.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-2"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut">FAQ</td>
@@ -702,7 +733,7 @@
 					<td class="cut">center</td>
 					<td class="cut"><a href="../center/faq.html" target="_blank">faq.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-2"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut">1:1문의</td>
@@ -711,7 +742,7 @@
 					<td class="cut">center</td>
 					<td class="cut"><a href="../center/inquiry.html" target="_blank">inquiry.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-2"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut"></td>
@@ -720,7 +751,7 @@
 					<td class="cut">center</td>
 					<td class="cut"><a href="../center/inquiry_single.html" target="_blank">inquiry_single.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-2","1-5","2-2"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut"></td>
@@ -729,7 +760,7 @@
 					<td class="cut">center</td>
 					<td class="cut"><a href="../center/inquiry_write.html" target="_blank">inquiry_write.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-2","1-5","2-2"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut"></td>
@@ -738,7 +769,7 @@
 					<td class="cut">center</td>
 					<td class="cut"><a href="../center/inquiry_write1.html" target="_blank">inquiry_write1.html</a></td>
 				</tr>
-				<tr class="cut" data-step='["1-1"]'>
+				<tr class="cut" data-step='["1-1","1-2"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut">멤버쉽</td>
@@ -747,7 +778,7 @@
 					<td class="cut">center</td>
 					<td class="cut"><a href="../center/membership.html" target="_blank">membership.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-2","2-2"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut">대량구매/입점문의</td>
@@ -756,7 +787,7 @@
 					<td class="cut">center</td>
 					<td class="cut"><a href="../center/center_store_inquiry.html" target="_blank">center_store_inquiry.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-2","2-2","2-4"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut">STORES</td>
@@ -765,7 +796,7 @@
 					<td class="cut">center</td>
 					<td class="cut"><a href="../center/center_stores.html" target="_blank">center_stores.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-2","2-5"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut"></td>
@@ -774,7 +805,7 @@
 					<td class="cut">center</td>
 					<td class="cut"><a href="../center/center_special_single1.html" target="_blank">center_special_single1.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-2","2-4","2-5"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut"></td>
@@ -783,7 +814,7 @@
 					<td class="cut">center</td>
 					<td class="cut"><a href="../center/center_special_single2.html" target="_blank">center_special_single2.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-2","2-3","2-5"]'>
 					<td class="cut center"></td>
 					<td class="cut">콜렉션</td>
 					<td class="cut">메인</td>
@@ -792,7 +823,7 @@
 					<td class="cut">collection</td>
 					<td class="cut"><a href="../collection/collection.html" target="_blank">collection.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-2","2-3","2-5"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut">상세(룩북포함)</td>
@@ -801,7 +832,7 @@
 					<td class="cut">collection</td>
 					<td class="cut"><a href="../collection/collection_detail.html" target="_blank">collection_detail.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-2","2-3","2-5"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut"></td>
@@ -810,7 +841,7 @@
 					<td class="cut">collection</td>
 					<td class="cut"><a href="../collection/collection_monogram.html" target="_blank">collection_monogram.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-2","2-3","2-5"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut"></td>
@@ -819,7 +850,7 @@
 					<td class="cut">collection</td>
 					<td class="cut"><a href="../collection/collection_dquilting.html" target="_blank">collection_dquilting.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-2","2-3","2-5"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut"></td>
@@ -828,7 +859,7 @@
 					<td class="cut">collection</td>
 					<td class="cut"><a href="../collection/collection_boldsymbol.html" target="_blank">collection_boldsymbol.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-2","2-3","2-5"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut"></td>
@@ -837,7 +868,7 @@
 					<td class="cut">collection</td>
 					<td class="cut"><a href="../collection/collection_graphic.html" target="_blank">collection_graphic.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-2","2-3","2-5"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut"></td>
@@ -846,7 +877,7 @@
 					<td class="cut">collection</td>
 					<td class="cut"><a href="../collection/collection_cheesebag.html" target="_blank">collection_cheesebag.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-2","2-3","2-5"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut"></td>
@@ -855,7 +886,7 @@
 					<td class="cut">collection</td>
 					<td class="cut"><a href="../collection/collection_lquilting.html" target="_blank">collection_lquilting.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-2","2-5"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut"></td>
@@ -864,7 +895,7 @@
 					<td class="cut">collection</td>
 					<td class="cut"><a href="../collection/collection_classic.html" target="_blank">collection_classic.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-2","2-3","2-5"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut"></td>
@@ -873,7 +904,7 @@
 					<td class="cut">collection</td>
 					<td class="cut"><a href="../collection/collection_montebag.html" target="_blank">collection_montebag.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-2","2-3","2-5"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut"></td>
@@ -882,7 +913,7 @@
 					<td class="cut">collection</td>
 					<td class="cut"><a href="../collection/collection_lquiltingmini.html" target="_blank">collection_lquiltingmini.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-2","2-3","2-5"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut"></td>
@@ -891,7 +922,7 @@
 					<td class="cut">collection</td>
 					<td class="cut"><a href="../collection/collection_dquilting2.html" target="_blank">collection_dquilting2.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-2","2-5"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut"></td>
@@ -900,7 +931,7 @@
 					<td class="cut">collection</td>
 					<td class="cut"><a href="../collection/collection_theflot.html" target="_blank">collection_theflot.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-2","2-3","2-5"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut"></td>
@@ -909,7 +940,7 @@
 					<td class="cut">collection</td>
 					<td class="cut"><a href="../collection/collection_heritage.html" target="_blank">collection_heritage.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-2","2-3","2-5"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut"></td>
@@ -918,7 +949,7 @@
 					<td class="cut">collection</td>
 					<td class="cut"><a href="../collection/collection_parismens.html" target="_blank">collection_parismens.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-2","2-3"]'>
 					<td class="cut center"></td>
 					<td class="cut">프로모션</td>
 					<td class="cut">리스트</td>
@@ -927,7 +958,7 @@
 					<td class="cut">promotion</td>
 					<td class="cut"><a href="../promotion/promotion_list.html" target="_blank">promotion_list.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-2","2-3"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut">상세(예시)</td>
@@ -936,7 +967,16 @@
 					<td class="cut">promotion</td>
 					<td class="cut"><a href="../promotion/promotion_view.html" target="_blank">promotion_view.html</a></td>
 				</tr>
-				<tr class="cut">
+                <tr class="cut" data-step='["1-1","1-9","2-2","2-3"]'>
+                    <td class="cut center"></td>
+                    <td class="cut"></td>
+                    <td class="cut">상세(예시)</td>
+                    <td class="cut"></td>
+                    <td class="cut"></td>
+                    <td class="cut">promotion</td>
+                    <td class="cut"><a href="../promotion/promotion_view2.html" target="_blank">promotion_view.html</a></td>
+                </tr>
+				<tr class="cut" data-step='["1-1","1-2","2-3","2-4"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut">Comment</td>
@@ -945,7 +985,7 @@
 					<td class="cut">promotion</td>
 					<td class="cut"><a href="../promotion/promotion-comment-01.html" target="_blank">promotion-comment-01.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-2","2-2","2-3"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut"></td>
@@ -954,7 +994,7 @@
 					<td class="cut">promotion</td>
 					<td class="cut"><a href="../promotion/promotion-comment-02.html" target="_blank">promotion-comment-02.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-2","2-2","2-3","2-4"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut"></td>
@@ -963,7 +1003,7 @@
 					<td class="cut">promotion</td>
 					<td class="cut"><a href="../promotion/promotion-comment-03.html" target="_blank">promotion-comment-03.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-2","2-5"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut">gift</td>
@@ -972,7 +1012,7 @@
 					<td class="cut">promotion</td>
 					<td class="cut"><a href="../promotion/promotion_may.html" target="_blank">promotion_may.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-2","1-5","2-3"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut">mini bag</td>
@@ -981,7 +1021,7 @@
 					<td class="cut">promotion</td>
 					<td class="cut"><a href="../promotion/promotion_minibag.html" target="_blank">promotion_minibag.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut">mini caviar</td>
@@ -990,7 +1030,7 @@
 					<td class="cut">promotion</td>
 					<td class="cut"><a href="../promotion/promotion_minicaviar.html" target="_blank">promotion_minicaviar.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-2","2-3"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut">best review</td>
@@ -1008,7 +1048,7 @@
 					<td class="cut">promotion</td>
 					<td class="cut"><a href="../promotion/promotion_shoppingguide.html" target="_blank">promotion_shoppingguide.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-2","2-3"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut">reward</td>
@@ -1017,7 +1057,7 @@
 					<td class="cut">promotion</td>
 					<td class="cut"><a href="../promotion/promotion_reward.html" target="_blank">promotion_reward.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-2","2-3","2-5"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut">golf</td>
@@ -1035,7 +1075,7 @@
 					<td class="cut">promotion</td>
 					<td class="cut"><a href="../promotion/promotion-coupon-event-01.html" target="_blank">promotion-coupon-event-01.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-2"]'>
 					<td class="cut center"></td>
 					<td class="cut">플랫폼L</td>
 					<td class="cut">All Works</td>
@@ -1044,7 +1084,7 @@
 					<td class="cut">platform</td>
 					<td class="cut"><a href="../platform/platform1.html" target="_blank">platform1.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-2","2-2"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut">L Edition</td>
@@ -1053,7 +1093,7 @@
 					<td class="cut">platform</td>
 					<td class="cut"><a href="../platform/platform2.html" target="_blank">platform2.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-2"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut">Art Furniture</td>
@@ -1062,7 +1102,7 @@
 					<td class="cut">platform</td>
 					<td class="cut"><a href="../platform/platform3.html" target="_blank">platform3.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-2"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut">Art Object</td>
@@ -1071,7 +1111,7 @@
 					<td class="cut">platform</td>
 					<td class="cut"><a href="../platform/platform4.html" target="_blank">platform4.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-2"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut">Textile & Fashion</td>
@@ -1080,7 +1120,7 @@
 					<td class="cut">platform</td>
 					<td class="cut"><a href="../platform/platform5.html" target="_blank">platform5.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-2"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut">Printed Matter</td>
@@ -1089,7 +1129,7 @@
 					<td class="cut">platform</td>
 					<td class="cut"><a href="../platform/platform6.html" target="_blank">platform6.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-2"]'>
 					<td class="cut center"></td>
 					<td class="cut">마이페이지</td>
 					<td class="cut">MY LOUIS</td>
@@ -1098,7 +1138,7 @@
 					<td class="cut">mypage</td>
 					<td class="cut"><a href="../mypage/myLouis.html" target="_blank">myLouis.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-2","1-5","1-6","2-1"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut"></td>
@@ -1107,7 +1147,7 @@
 					<td class="cut">mypage</td>
 					<td class="cut"><a href="../mypage/myLouis_not_member.html" target="_blank">myLouis_not_member.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-5","2-1"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut">멤버쉽 전환</td>
@@ -1116,7 +1156,7 @@
 					<td class="cut">mypage</td>
 					<td class="cut"><a href="../mypage/membershipJoinResult.html" target="_blank">membershipJoinResult.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-5","2-1"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut"></td>
@@ -1125,7 +1165,7 @@
 					<td class="cut">mypage</td>
 					<td class="cut"><a href="../mypage/membershipJoin.html" target="_blank">membershipJoin.html</a></td>
 				</tr>
-				<tr class="cut" data-step='["1-1"]'>
+				<tr class="cut" data-step='["1-1","2-2"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut">주문배송 조회</td>
@@ -1134,7 +1174,7 @@
 					<td class="cut">mypage</td>
 					<td class="cut"><a href="../mypage/myPage_orderList.html" target="_blank">myPage_orderList.html</a></td>
 				</tr>
-				<tr class="cut" data-step='["1-1"]'>
+				<tr class="cut" data-step='["1-1","1-2","1-3","1-5","2-2","2-5"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut">주문배송 조회 상세</td>
@@ -1143,7 +1183,7 @@
 					<td class="cut">mypage</td>
 					<td class="cut"><a href="../mypage/myPage_orderList_detail.html" target="_blank">myPage_orderList_detail.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-2","1-5","2-2"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut">취소/반품</td>
@@ -1152,7 +1192,7 @@
 					<td class="cut">mypage</td>
 					<td class="cut"><a href="../mypage/myPage_returnOrder.html" target="_blank">myPage_returnOrder.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-2","2-2","2-5"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut">쿠폰</td>
@@ -1161,7 +1201,7 @@
 					<td class="cut">mypage</td>
 					<td class="cut"><a href="../mypage/myPage_coupon.html" target="_blank">myPage_coupon.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-2","1-5","1-7","2-2"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut">적립금</td>
@@ -1170,7 +1210,7 @@
 					<td class="cut">mypage</td>
 					<td class="cut"><a href="../mypage/myPage_reserves.html" target="_blank">myPage_reserves.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-2","1-5","2-4","2-5"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut">상품리뷰</td>
@@ -1179,7 +1219,7 @@
 					<td class="cut">mypage</td>
 					<td class="cut"><a href="../mypage/myPage_review.html" target="_blank">myPage_review.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-2","2-5"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut">Wish List</td>
@@ -1188,7 +1228,7 @@
 					<td class="cut">mypage</td>
 					<td class="cut"><a href="../mypage/wishList.html" target="_blank">wishList.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-2","1-5","2-2"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut">상품 Q&A</td>
@@ -1197,7 +1237,7 @@
 					<td class="cut">mypage</td>
 					<td class="cut"><a href="../mypage/myPage_qna.html" target="_blank">myPage_qna.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-2","1-5","2-2"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut">재입고 알림 신청내역</td>
@@ -1206,7 +1246,7 @@
 					<td class="cut">mypage</td>
 					<td class="cut"><a href="../mypage/myPage_allim.html" target="_blank">myPage_allim.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-2","1-5","2-2"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut">이벤트 참여현황</td>
@@ -1215,7 +1255,7 @@
 					<td class="cut">mypage</td>
 					<td class="cut"><a href="../mypage/myPage_event.html" target="_blank">myPage_event.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-2","1-5","2-2"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut">회원정보수정</td>
@@ -1224,7 +1264,7 @@
 					<td class="cut">mypage</td>
 					<td class="cut"><a href="../mypage/myPage_myInfo.html" target="_blank">myPage_myInfo.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-2","1-5","2-1","2-2"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut"></td>
@@ -1233,7 +1273,7 @@
 					<td class="cut">mypage</td>
 					<td class="cut"><a href="../mypage/myPage_myInfoModify.html" target="_blank">myPage_myInfoModify.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-2"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut">배송지관리</td>
@@ -1242,7 +1282,7 @@
 					<td class="cut">mypage</td>
 					<td class="cut"><a href="../mypage/myPage_address.html" target="_blank">myPage_address.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-2","1-5","2-2"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut"></td>
@@ -1251,7 +1291,7 @@
 					<td class="cut">mypage</td>
 					<td class="cut"><a href="../mypage/myPage_addressModify.html" target="_blank">myPage_addressModify.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-2","1-5","2-2"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut"></td>
@@ -1260,7 +1300,7 @@
 					<td class="cut">mypage</td>
 					<td class="cut"><a href="../mypage/myPage_addressWrite.html" target="_blank">myPage_addressWrite.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-2","2-2"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut">회원탈퇴</td>
@@ -1269,7 +1309,7 @@
 					<td class="cut">mypage</td>
 					<td class="cut"><a href="../mypage/myPage_memberRemove.html" target="_blank">myPage_memberRemove.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-2","1-5","2-2"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut">비밀번호 변경</td>
@@ -1278,7 +1318,7 @@
 					<td class="cut">mypage</td>
 					<td class="cut"><a href="../mypage/myPage_myPassword.html" target="_blank">myPage_myPassword.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-2","1-5","2-2"]'>
 					<td class="cut center"></td>
 					<td class="cut">데이터 없는 페이지들</td>
 					<td class="cut">주문배송조회</td>
@@ -1287,7 +1327,7 @@
 					<td class="cut">mypage</td>
 					<td class="cut"><a href="../mypage/myPage_orderList_not.html" target="_blank">myPage_orderList_not.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-2","1-5","2-2"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut">취소/반품</td>
@@ -1296,7 +1336,7 @@
 					<td class="cut">mypage</td>
 					<td class="cut"><a href="../mypage/myPage_returnOrder_not.html" target="_blank">myPage_returnOrder_not.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-2","2-2"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut">쿠폰</td>
@@ -1305,7 +1345,7 @@
 					<td class="cut">mypage</td>
 					<td class="cut"><a href="../mypage/myPage_coupon_not.html" target="_blank">myPage_coupon_not.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-2","1-5","1-7","2-2"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut">적립금</td>
@@ -1314,7 +1354,7 @@
 					<td class="cut">mypage</td>
 					<td class="cut"><a href="../mypage/myPage_reserves_not.html" target="_blank">myPage_reserves_not.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-2"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut">1:1문의</td>
@@ -1323,7 +1363,7 @@
 					<td class="cut">mypage</td>
 					<td class="cut"><a href="../center/inquiry_not.html" target="_blank">inquiry_not.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-2","2-5"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut">wishList</td>
@@ -1332,7 +1372,7 @@
 					<td class="cut">mypage</td>
 					<td class="cut"><a href="../mypage/wishList_not.html" target="_blank">wishList_not.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-2"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut">상품Q&A</td>
@@ -1341,7 +1381,7 @@
 					<td class="cut">mypage</td>
 					<td class="cut"><a href="../mypage/myPage_qna_not.html" target="_blank">myPage_qna_not.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-2"]'>
 					<td class="cut center"></td>
 					<td class="cut">GIFT</td>
 					<td class="cut">기프트페이지</td>
@@ -1377,7 +1417,7 @@
 					<td class="cut">sample</td>
 					<td class="cut"><a href="../sample/sample_margin.html" target="_blank">sample_margin.html</a></td>
 				</tr>
-				<tr class="cut">
+				<tr class="cut" data-step='["1-1","1-5"]'>
 					<td class="cut center"></td>
 					<td class="cut">LIVE</td>
 					<td class="cut">라이브페이지</td>
