@@ -47,6 +47,8 @@
                 }else{
                     $("tr.cut").removeClass("is-active")
                     targetDivs.addClass("is-active");
+                    const offsetTop = $("tr.cut.is-active").first().offset().top;
+                    $("html,body").stop().animate({scrollTop : offsetTop - 125}, 500);
                 }
             }
             if($(this).parent().hasClass('is-active')){
@@ -724,7 +726,7 @@
 					<td class="cut">center</td>
 					<td class="cut"><a href="../center/center_single.html" target="_blank">center_single.html</a></td>
 				</tr>
-				<tr class="cut" data-step='["1-1","1-2"]'>
+				<tr class="cut hhh" data-step='["1-1","1-2"]'>
 					<td class="cut center"></td>
 					<td class="cut"></td>
 					<td class="cut">FAQ</td>
