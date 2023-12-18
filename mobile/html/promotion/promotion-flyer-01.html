@@ -16,6 +16,7 @@
     <link rel="icon" type="image/png" href="../../images/logo/favicon_32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="../../images/logo/favicon_192.png" sizes="192x192">
     <link rel="stylesheet" href="../../css/pages/promotion-flyer.css">
+    <script src="../../js/libs/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <section class="promotion-flyer__wrap flyer-20240101">
@@ -318,13 +319,13 @@
     <!-- popup - 할인 쿠폰(24.01.08~14) -->
     <div class="popup-promotion-flyer is-active">
         <div class="popup-promotion-flyer__inner">
-            <div class="popup-promotion-flyer__content">
-                <div class="popup-promotion-flyer__img">
+            <div class="popup-content">
+                <div class="img__box">
                     <img src="https://cdn.louisclub.com/static/mo/img/curation/flyer/20240101/img_popup_01.jpg" alt="SURPRISE COUPON, 5%, -5% 추가할인 쿠폰-, 발급기간:2024.01.08-01.14, LOUIS QUATORZE PARIS">
                 </div>
             </div>
-            <div class="popup-promotion-flyer__btn-wrap">
-                <button type="button" class="popup-promotion-flyer__btn">
+            <div class="popup-btn__wrap">
+                <button type="button" class="popup-btn__close">
                     <span class="blind">팝업 닫기</span>
                 </button>
             </div>
@@ -334,18 +335,25 @@
     <!-- popup - 기프트 쿠폰(24.01.22~28) -->
     <div class="popup-promotion-flyer">
         <div class="popup-promotion-flyer__inner">
-            <div class="popup-promotion-flyer__content">
-                <div class="popup-promotion-flyer__img">
+            <div class="popup-content">
+                <div class="img__box">
                     <img src="https://cdn.louisclub.com/static/mo/img/curation/flyer/20240101/img_popup_02.jpg" alt="SURPRISE COUPON, GIFT, -가죽 지갑 증정-, 발급기간:2024.01.22-01.28, LOUIS QUATORZE PARIS">
                 </div>
             </div>
-            <div class="popup-promotion-flyer__btn-wrap">
-                <button type="button" class="popup-promotion-flyer__btn">
+            <div class="popup-btn__wrap">
+                <button type="button" class="popup-btn__close">
                     <span class="blind">팝업 닫기</span>
                 </button>
             </div>
         </div>
     </div>
     <!-- //popup - 기프트 쿠폰(24.01.22~28) -->
+    <!-- 임시 스크립트 삭제 필요 -->
+    <script>
+        $(".popup-btn__close").click(function(){
+            $(this).closest(".popup-promotion-flyer").removeClass("is-active");
+        })
+    </script>
+    <!-- 임시 스크립트 삭제 필요 -->
 </body>
 </html>
