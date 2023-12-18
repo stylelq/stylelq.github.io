@@ -317,7 +317,8 @@
         <span class="footer__copy">COPYRIGHT LOUIS QUATORZE. ALL RIGHTS RESERVED.</span>
     </footer>
     <!-- popup - 할인 쿠폰(24.01.08~14) -->
-    <div class="popup-promotion-flyer is-active">
+    <!-- [D] 팝업 노출시 .popup-promotion-flyer 클래스에 is-active 클래스 추가 -->
+    <div class="popup-promotion-flyer">
         <div class="popup-promotion-flyer__inner">
             <div class="popup-content">
                 <div class="img__box">
@@ -333,6 +334,7 @@
     </div>
     <!-- //popup - 할인 쿠폰(24.01.08~14) -->
     <!-- popup - 기프트 쿠폰(24.01.22~28) -->
+    <!-- [D] 팝업 노출시 .popup-promotion-flyer 클래스에 is-active 클래스 추가 -->
     <div class="popup-promotion-flyer">
         <div class="popup-promotion-flyer__inner">
             <div class="popup-content">
@@ -348,12 +350,5 @@
         </div>
     </div>
     <!-- //popup - 기프트 쿠폰(24.01.22~28) -->
-    <!-- 임시 스크립트 삭제 필요 -->
-    <script>
-        $(".popup-btn__close").click(function(){
-            $(this).closest(".popup-promotion-flyer").removeClass("is-active");
-        })
-    </script>
-    <!-- 임시 스크립트 삭제 필요 -->
 </body>
 </html>
