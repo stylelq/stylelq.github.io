@@ -50,6 +50,8 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
         this.el.tabBtn = this.el.section.querySelectorAll('.product__btn');
         this.el.visualIntro = this.el.section.querySelector('.visual__intro');
         this.el.visualDesc = this.el.section.querySelector('.visual__desc');
+        this.el.descVideo = this.el.section.querySelector('.visual__desc-video');
+        this.el.descBtn = this.el.section.querySelector('.visual__desc-btn--text');
       }
     }, {
       key: "bindEvents",
@@ -61,6 +63,7 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
         this.el.tabBtn.forEach(function (btn) {
           btn.addEventListener('click', function () {
             var tabBtnData = btn.parentNode.getAttribute('data-tab-menu');
+            var tabProductData = btn.getAttribute('data-product');
             btn.parentNode.classList.add('is-active');
             _this.el.tabBtn.forEach(function (otherBtn) {
               if (btn !== otherBtn) {
@@ -109,10 +112,21 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
         var _this2 = this;
         setTimeout(function () {
           _this2.el.visualIntro.classList.add('is-motion');
+          // setTimeout(()=>{
+          //     this.el.visualDesc.classList.add('is-motion');
+          // },5000)
           setTimeout(function () {
-            _this2.el.visualDesc.classList.add('is-motion');
-          }, 5000);
+            _this2.el.descVideo.play();
+          });
         }, 5000);
+        if (!this.el.descVideo.ended === true) {
+          this.el.descVideo.addEventListener('ended', function () {
+            _this2.el.descVideo.parentNode.style.display = 'none';
+          });
+        }
+        this.el.descBtn.addEventListener('click', function () {
+          _this2.el.descVideo.parentNode.style.display = 'none';
+        });
       }
     }], [{
       key: "createSelector",
