@@ -120,7 +120,7 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
           setTimeout(function () {
             _this2.el.descVideo.play();
           });
-        }, 5000);
+        }, 3000);
         if (!this.el.descVideo.ended === true) {
           this.el.descVideo.addEventListener('ended', function () {
             _this2.el.descVideo.parentNode.style.display = 'none';
