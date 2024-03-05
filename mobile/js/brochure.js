@@ -244,10 +244,11 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
     }
     modal.closeModal();
   };
-  document.addEventListener('DOMContentLoaded', function () {
+  document.addEventListener('DOMContentLoaded', function () {});
+  window.onload = function () {
     init();
     initModal();
-  });
+  };
   window.Brochure = {
     init: init,
     initModal: initModal,
