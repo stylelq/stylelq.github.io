@@ -52,6 +52,7 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
         this.el.visualDesc = this.el.section.querySelector('.visual__desc');
         this.el.descVideo = this.el.section.querySelector('.visual__desc-video');
         this.el.descBtn = this.el.section.querySelector('.visual__desc-btn--text');
+        this.el.visualProduct = this.el.section.querySelector('.visual__product');
       }
     }, {
       key: "bindEvents",
@@ -110,6 +111,7 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
       key: "motionEvents",
       value: function motionEvents() {
         var _this2 = this;
+        this.el.visualProduct.style.display = 'none';
         setTimeout(function () {
           _this2.el.visualIntro.classList.add('is-motion');
           // setTimeout(()=>{
@@ -122,10 +124,12 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
         if (!this.el.descVideo.ended === true) {
           this.el.descVideo.addEventListener('ended', function () {
             _this2.el.descVideo.parentNode.style.display = 'none';
+            _this2.el.visualProduct.style.display = 'block';
           });
         }
         this.el.descBtn.addEventListener('click', function () {
           _this2.el.descVideo.parentNode.style.display = 'none';
+          _this2.el.visualProduct.style.display = 'block';
         });
       }
     }], [{
