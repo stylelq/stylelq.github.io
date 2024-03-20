@@ -1,26 +1,34 @@
 "use strict";
 
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
 function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
 function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
 function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+
 function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
-function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+
 (function () {
   window.Brochure = window.Brochure || {};
   var select = {
     section: '.brochure',
     layerPopup: '.popup'
   };
+
   var Brochure = /*#__PURE__*/function () {
     function Brochure(element) {
       _classCallCheck(this, Brochure);
+
       this.el = {
         section: element
       };
@@ -33,6 +41,7 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
       Brochure.instances.set(element, this);
       this.init();
     }
+
     _createClass(Brochure, [{
       key: "init",
       value: function init() {
@@ -62,18 +71,23 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
       key: "tabEvent",
       value: function tabEvent() {
         var _this = this;
+
         this.el.tabBtn.forEach(function (btn) {
           btn.addEventListener('click', function () {
             var tabBtnData = btn.parentNode.getAttribute('data-tab-menu');
             btn.parentNode.classList.add('is-active');
+
             _this.el.tabBtn.forEach(function (otherBtn) {
               if (btn !== otherBtn) {
                 otherBtn.parentNode.classList.remove('is-active');
               }
             });
+
             _this.el.tabCont = btn.closest('[data-tab]').querySelectorAll('[data-tab-content]');
+
             _this.el.tabCont.forEach(function (el) {
               var tabContData = el.getAttribute('data-tab-content');
+
               if (tabBtnData === tabContData) {
                 el.classList.add('is-active');
               } else {
@@ -113,11 +127,11 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
             renderBullet: function renderBullet(index, className) {
               // className이 기본값이 들어가게 필수 설정
               return '<span class="' + className + '">' + '<span class="blind">' + (index + 1) + '</span>' + '</span>';
-            }
-            // renderFraction: function (currentClass, totalClass) { // type이 fraction일 때 사용
+            } // renderFraction: function (currentClass, totalClass) { // type이 fraction일 때 사용
             //     return '<span class="' + currentClass + '"></span>' +
             //         '<span class="' + totalClass + '"></span>';
             // }
+
           }
         });
       }
@@ -125,12 +139,14 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
       key: "motionEvents",
       value: function motionEvents() {
         var _this2 = this;
-        this.el.visualProduct.style.display = 'none';
+
         setTimeout(function () {
           _this2.el.visualIntro.classList.add('is-motion');
-          // setTimeout(()=>{
+
+          _this2.el.visualDesc.style.display = 'block'; // setTimeout(()=>{
           //     this.el.visualDesc.classList.add('is-motion');
           // },5000)
+
           setTimeout(function () {
             _this2.el.descVideo.play();
           });
@@ -152,11 +168,14 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
         }
       }
     }]);
+
     return Brochure;
   }();
+
   var Modal = /*#__PURE__*/function () {
     function Modal(element) {
       _classCallCheck(this, Modal);
+
       this.el = {
         section: element
       };
@@ -169,6 +188,7 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
       Modal.instances.set(element, this);
       this.init();
     }
+
     _createClass(Modal, [{
       key: "init",
       value: function init() {
@@ -178,8 +198,7 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
     }, {
       key: "setElements",
       value: function setElements() {
-        this.el.closeBtn = this.el.section.querySelector('.popup__btn');
-        // this.el.tabMenu = this.el.section.querySelector('[data-tab-menu]')
+        this.el.closeBtn = this.el.section.querySelector('.popup__btn'); // this.el.tabMenu = this.el.section.querySelector('[data-tab-menu]')
       }
     }, {
       key: "bindEvents",
@@ -215,21 +234,22 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
         });
       }
     }]);
+
     return Modal;
   }();
-  Brochure.instances = new WeakMap();
-  Modal.instances = new WeakMap();
 
-  // Brochure
+  Brochure.instances = new WeakMap();
+  Modal.instances = new WeakMap(); // Brochure
+
   var init = function init() {
     _toConsumableArray(document.querySelectorAll(select.section)).forEach(function (el) {
       if (!Brochure.instances.has(el)) {
         new Brochure(el);
       }
     });
-  };
+  }; // Modal
 
-  // Modal
+
   var initModal = function initModal() {
     _toConsumableArray(document.querySelectorAll(select.layerPopup)).forEach(function (el) {
       if (!Modal.instances.has(el)) {
@@ -240,31 +260,40 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
       }
     });
   };
+
   var openModal = function openModal(target) {
     var el = Brochure.createSelector(target);
     var modal;
+
     if (Modal.instances.has(el)) {
       modal = Modal.instances.get(el);
     } else {
       modal = new Modal(el);
     }
+
     modal.openModal();
   };
+
   var closeModal = function closeModal(target) {
     var el = Brochure.createSelector(target);
     var modal;
+
     if (Modal.instances.has(el)) {
       modal = Modal.instances.get(el);
     } else {
       modal = new Modal(el);
     }
+
     modal.closeModal();
   };
+
   document.addEventListener('DOMContentLoaded', function () {});
+
   window.onload = function () {
     init();
     initModal();
   };
+
   window.Brochure = {
     init: init,
     initModal: initModal,
