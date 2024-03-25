@@ -953,27 +953,6 @@
                 </div>
             </section>
             <!-- .배송정보 -->
-            <!-- 24.01.01 - [선물하기] 기능 추가 -->
-            <section class="myOrderListDetail-info">
-                <div class="myOrderListDetail-info__box">
-                    <strong class="myOrderListDetail-info__title">배송정보 (받으시는 분)</strong>
-                    <a class="myOrderListDetail-info__more js-popup-open" href="#giftInfoModifyPopup"><span class="myOrderListDetail-info__more-text">정보 변경</span></a>
-                </div>
-                <div class="myOrderListDetail-cont__box">
-                    <div class="user-address">
-                        <div class="user-address__meta">
-                            <span class="user-address__meta--name">홍길동</span>/<span class="user-address__meta--position">회사</span>
-                        </div>
-                        <span class="user-address__tel">010-1234-5678</span>
-                    </div>
-                    <div class="gift-share__wrap">
-                        <button type="button" class="gift-share__btn btn-v1 btn-v1--small type-white">
-                            <span class="gift-share__text">공유하기</span>
-                        </button>
-                    </div>
-                </div>
-            </section>
-            <!-- //24.01.01 - [선물하기] 기능 추가 -->
 
             <!-- 최종결제금액 -->
             <section class="myOrderListDetail-payment bg-gray">
@@ -1248,61 +1227,6 @@
         </div>
     </section>
 </section>
-
-
-<!-- giftInfoModify popup -->
-<section id="giftInfoModifyPopup" class="popup type-write">
-    <header class="popup__header">
-        <h3 class="popup__tit">선물 받는분 정보 변경</h3>
-        <button class="popup__close js-popup-close">close</button>
-    </header>
-    <section class="popup__body">
-        <div class="wrap">
-            <div class="address-modify">
-                <div class="address-info__form">
-                    <!-- item -->
-                    <div class="address-info__item">
-                        <input type="text" class="form__input--text" title="받는사람" placeholder="" value="홍길동">
-                    </div>
-                    <!-- item -->
-                    <!-- item -->
-                    <div class="address-info__item">
-                        <!-- inner -->
-                        <div class="address-info__inner">
-                            <ul class="address-info__inner--list">
-                                <li class="address-info__inner--item">
-                                    <select name="wirteOption" id="addressSelect1" class="form__select js-placeholder" title="핸드폰 앞자리 번호 선택">
-                                        <option value="" disabled="">선택</option>
-                                        <option value="010" selected>010</option>
-                                        <option value="011">011</option>
-                                        <option value="016">016</option>
-                                        <option value="017">017</option>
-                                        <option value="018">018</option>
-                                        <option value="019">019</option>
-                                    </select>
-                                </li>
-                                <li class="address-info__inner--item">
-                                    <input type="number" class="form__input--text" title="핸드폰 중간 번호" placeholder="" value="1234" maxlength="4">
-                                </li>
-                                <li class="address-info__inner--item">
-                                    <input type="number" class="form__input--text" title="핸드폰 마지막 번호" value="5678" maxlength="4">
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- .inner -->
-                    </div>
-                    <!-- item -->
-                </div>
-            </div>
-        </div>
-        <div class="popup-confirm__footer">
-            <ul class="popup-confirm__list">
-                <li class="popup-confirm__item"><a class="popup-confirm__link" href="javascript:void(0);">수정 완료</a></li>
-            </ul>
-        </div>
-    </section>
-</section>
-<!-- //giftInfoModify popup -->
 
 
 <!-- terms popup -->

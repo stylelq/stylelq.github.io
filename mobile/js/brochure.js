@@ -125,9 +125,9 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
       key: "motionEvents",
       value: function motionEvents() {
         var _this2 = this;
-        this.el.visualProduct.style.display = 'none';
         setTimeout(function () {
           _this2.el.visualIntro.classList.add('is-motion');
+          _this2.el.visualDesc.style.display = 'block';
           // setTimeout(()=>{
           //     this.el.visualDesc.classList.add('is-motion');
           // },5000)

@@ -508,19 +508,107 @@
             <!-- 배송지 정보 -->
             <section class="payment-section bor--bottom">
                 <h2 class="payment-section__title">배송지 정보</h2>
+                <p class="payment-section__text">등록된 배송지 정보가 없습니다. 배송지 정보를 입력하세요.</p>
                 <div class="payment-section__cont">
                     <!-- 배송지 정보 -->
-<div class="user-address">
-    <div class="user-address__header">
-        <a href="#shippingPop" class="user-address__link js-popup-open">
-            <div class="user-address__meta">
-                <span class="user-address__meta--name">홍길동</span>/<span class="user-address__meta--position">회사</span>
-            </div>
-            <div class="user-address__tel">010-1234-5678</div>
-            <div class="user-address__address">(02586) 서울시 동대문구 하정로 26 (신설동) 3F</div>
-        </a>
+<div class="address-info__form">
+    <!-- item -->
+    <div class="address-info__item">
+        <input type="text" class="form__input--text" title="받는분" placeholder="받는 분">
     </div>
-    <div class="user-address__select">
+    <!-- item -->
+    <!-- item -->
+    <div class="address-info__item">
+        <!-- inner -->
+        <div class="address-info__inner">
+            <ul class="address-info__inner--list">
+                <li class="address-info__inner--item">
+                    <select name="wirteOption" id="addressSelect1" class="form__select js-placeholder" title="선택">
+                        <option value="" disabled="">선택</option>
+                        <option value="010" selected="">010</option>
+                        <option value="011">011</option>
+                        <option value="016">016</option>
+                        <option value="017">017</option>
+                        <option value="018">018</option>
+                        <option value="019">019</option>
+                    </select>
+                </li>
+                <li class="address-info__inner--item">
+                    <input type="number" class="form__input--text" title="연락처1 중간 번호" placeholder="연락처1" maxlength="4">
+                </li>
+                <li class="address-info__inner--item">
+                    <input type="number" class="form__input--text" title="연락처1 마지막 번호" maxlength="4">
+                </li>
+            </ul>
+        </div>
+        <!-- .inner -->
+        <!-- inner -->
+        <div class="address-info__inner">
+            <ul class="address-info__inner--list">
+                <li class="address-info__inner--item">
+                    <select name="wirteOption" id="addressSelect2" class="form__select js-placeholder" title="선택">
+                        <option value="" disabled="">선택</option>
+                        <option value="02">02</option>
+                        <option value="031">031</option>
+                        <option value="032">032</option>
+                        <option value="033">033</option>
+                        <option value="041">041</option>
+                        <option value="042">042</option>
+                        <option value="043">043</option>
+                        <option value="044">044</option>
+                        <option value="051">051</option>
+                        <option value="052">052</option>
+                        <option value="053">053</option>
+                        <option value="054">054</option>
+                        <option value="055">055</option>
+                        <option value="061">061</option>
+                        <option value="062">062</option>
+                        <option value="063">063</option>
+                        <option value="064">064</option>
+                        <option value="070">070</option>
+                    </select>
+                </li>
+                <li class="address-info__inner--item">
+                    <input type="number" class="form__input--text" title="연락처2 중간 번호" placeholder="연락처2" maxlength="4">
+                </li>
+                <li class="address-info__inner--item">
+                    <input type="number" class="form__input--text" title="연락처2 마지막 번호" maxlength="4">
+                </li>
+            </ul>
+        </div>
+        <!-- .inner -->
+    </div>
+    <!-- item -->
+    <!-- item -->
+    <div class="address-info__item">
+        <!-- inner -->
+        <div class="address-info__inner address-info__inner--btn">
+            <input type="text" class="form__input--text" title="우편번호"  placeholder="우편번호" readonly>
+            <a href="#addressPop" class="form__input--btn js-popup-open">주소검색</a>
+        </div>
+        <!-- .inner -->
+        <!-- inner -->
+        <div class="address-info__inner">
+            <input type="text" class="form__input--text" title="중간 주소" readonly>
+        </div>
+        <!-- .inner -->
+        <!-- inner -->
+        <div class="address-info__inner">
+            <input type="text" class="form__input--text" title="상세 주소">
+        </div>
+        <!-- .inner -->
+        <!-- inner -->
+        <div class="address-info__inner">
+            <div class="form__checkbox">
+                <input class="form__checkbox--input sr-only" type="checkbox" name="addressList" id="addressList">
+                <label class="form__checkbox--text" for="addressList">배송지목록에 추가</label>
+            </div>
+        </div>
+        <!-- .inner -->
+    </div>
+    <!-- .item -->
+    <!-- item -->
+    <div class="address-info__item address-info__item--message">
         <select name="wirteOption" id="addressSelect2" class="form__select js-placeholder js-custom-message" title="배송 메세지 선택">
             <option value="1">메시지를 선택해주세요</option>
             <option value="2">부재시 경비실/관리실에 맡겨주세요.</option>
@@ -533,9 +621,10 @@
             <input type="text" class="form__input--text js-max-keyup" placeholder="최대 50자 이내 입력 가능합니다.">
         </div>
     </div>
-    <p class="address-info--text">배송 메시지는 배송 상황 및 요청 내용에 따라 반영되지 않을 수도 있습니다.</p>
+    <!-- item -->
 </div>
-<!-- 배송지 정보 -->
+<p class="address-info--text">배송 메시지는 배송 상황 및 요청 내용에 따라 반영되지 않을 수도 있습니다.</p>
+<!-- .배송지 정보 -->
                 </div>
             </section>
             <!-- .배송지 정보 -->
@@ -700,17 +789,9 @@
                 <dt class="coupon-info__list--total">전체 사용 가능한 쿠폰 : <span class="coupon-info__list--count">2</span>장</dt>
                 <dd class="coupon-info__list--cont">
                     <ul class="coupon-info__price">
-                        <li class="coupon-info__price--item">
-                            <span class="coupon-info__price--title">상품쿠폰 할인 금액</span>
-                            <span class="coupon-info__price--text">-38,710원</span>
-                        </li>
-                        <li class="coupon-info__price--item">
-                            <span class="coupon-info__price--title">더블쿠폰 할인 금액</span>
-                            <span class="coupon-info__price--text">-12,000원</span>
-                        </li>
                         <li class="coupon-info__price--item coupon-info__price--item-total">
-                            <span class="coupon-info__price--title">총 쿠폰 할인 금액</span>
-                            <span class="coupon-info__price--text">-12,000원</span>
+                            <span class="coupon-info__price--title">상품쿠폰 자동 할인 적용</span>
+                            <span class="coupon-info__price--text">-38,710원</span>
                         </li>
                     </ul>
                 </dd>
@@ -1592,474 +1673,6 @@
     </section>
 </section>
 <!-- .qna write popup -->
-<!-- shipping popup -->
-<section id="shippingPop" class="popup type-tab">
-    <header class="popup__header">
-        <h3 class="popup__tit">배송지 정보</h3>
-        <button class="popup__close js-popup-close">close</button>
-    </header>
-    <!-- tab -->
-    <!-- shipping tab -->
-    <div class="shipping-tab">
-        <ul class="shipping-tab__fix">
-            <li class="shipping-tab__item is-current">
-                <a href="#;" class="shipping-tab__link js-pop-tab-link">내주소록</a>
-            </li>
-            <li class="shipping-tab__item">
-                <a href="#;" class="shipping-tab__link js-pop-tab-link">새로운 주소</a>
-            </li>
-            <li class="shipping-tab__item">
-                <a href="#;" class="shipping-tab__link js-pop-tab-link">최근 배송지</a>
-            </li>
-            <li class="shipping-tab__item">
-                <a href="#;" class="shipping-tab__link js-pop-tab-link">주문자 정보</a>
-            </li>
-        </ul>
-    </div>
-    <!-- shipping tab -->
-    <section class="popup__body">
-        <div class="wrap">
-            <!-- shipping Tab content -->
-            <div class="shipping-tab__cont">
-                <!-- 내주소록 -->
-                <div class="shipping-tab__info js-pop-tab-cont is-current">
-                    <!-- 내주소록 -->
-<div class="my-address">
-    <ul class="my-address__list">
-        <li class="my-address__item">
-            <div class="radio-address">
-                <div class="form__radio">
-                    <input class="form__radio--input sr-only" type="radio" name="myAddress" id="myAddress1" checked>
-                    <label class="form__radio--text" for="myAddress1">홍길동 / 회사</label>
-                </div>
-                <div class="radio-address__meta">
-                    <div class="radio-address__text">(02586) 서울시 동대문구 하정로 26 (신설동) 3F</div>
-                    <div class="radio-address__tel">010-1234-5678</div>
-                </div>
-            </div>
-        </li>
-        <li class="my-address__item">
-            <div class="radio-address">
-                <div class="form__radio">
-                    <input class="form__radio--input sr-only" type="radio" name="myAddress" id="myAddress2">
-                    <label class="form__radio--text" for="myAddress2">홍길동 / 회사<span class="form__radio--select">[기본배송지]</span></label>
-                </div>
-                <div class="radio-address__meta">
-                    <div class="radio-address__text">(02586) 서울시 동대문구 하정로 26 (신설동) 3F</div>
-                    <div class="radio-address__tel">010-1234-5678</div>
-                </div>
-            </div>
-        </li>
-        
-
-        <!-- test -->
-        <li class="my-address__item">
-            <div class="radio-address">
-                <div class="form__radio">
-                    <input class="form__radio--input sr-only" type="radio" name="myAddress" id="myAddress2">
-                    <label class="form__radio--text" for="myAddress2">홍길동 / 회사<span class="form__radio--select">[기본배송지]</span></label>
-                </div>
-                <div class="radio-address__meta">
-                    <div class="radio-address__text">(02586) 서울시 동대문구 하정로 26 (신설동) 3F</div>
-                    <div class="radio-address__tel">010-1234-5678</div>
-                </div>
-            </div>
-        </li>
-        <li class="my-address__item">
-            <div class="radio-address">
-                <div class="form__radio">
-                    <input class="form__radio--input sr-only" type="radio" name="myAddress" id="myAddress2">
-                    <label class="form__radio--text" for="myAddress2">홍길동 / 회사<span class="form__radio--select">[기본배송지]</span></label>
-                </div>
-                <div class="radio-address__meta">
-                    <div class="radio-address__text">(02586) 서울시 동대문구 하정로 26 (신설동) 3F</div>
-                    <div class="radio-address__tel">010-1234-5678</div>
-                </div>
-            </div>
-        </li>
-        <li class="my-address__item">
-            <div class="radio-address">
-                <div class="form__radio">
-                    <input class="form__radio--input sr-only" type="radio" name="myAddress" id="myAddress2">
-                    <label class="form__radio--text" for="myAddress2">홍길동 / 회사<span class="form__radio--select">[기본배송지]</span></label>
-                </div>
-                <div class="radio-address__meta">
-                    <div class="radio-address__text">(02586) 서울시 동대문구 하정로 26 (신설동) 3F</div>
-                    <div class="radio-address__tel">010-1234-5678</div>
-                </div>
-            </div>
-        </li>
-        <li class="my-address__item">
-            <div class="radio-address">
-                <div class="form__radio">
-                    <input class="form__radio--input sr-only" type="radio" name="myAddress" id="myAddress2">
-                    <label class="form__radio--text" for="myAddress2">홍길동 / 회사<span class="form__radio--select">[기본배송지]</span></label>
-                </div>
-                <div class="radio-address__meta">
-                    <div class="radio-address__text">(02586) 서울시 동대문구 하정로 26 (신설동) 3F</div>
-                    <div class="radio-address__tel">010-1234-5678</div>
-                </div>
-            </div>
-        </li>
-        <li class="my-address__item">
-            <div class="radio-address">
-                <div class="form__radio">
-                    <input class="form__radio--input sr-only" type="radio" name="myAddress" id="myAddress2">
-                    <label class="form__radio--text" for="myAddress2">홍길동 / 회사<span class="form__radio--select">[기본배송지]</span></label>
-                </div>
-                <div class="radio-address__meta">
-                    <div class="radio-address__text">(02586) 서울시 동대문구 하정로 26 (신설동) 3F</div>
-                    <div class="radio-address__tel">010-1234-5678</div>
-                </div>
-            </div>
-        </li>
-        <li class="my-address__item">
-            <div class="radio-address">
-                <div class="form__radio">
-                    <input class="form__radio--input sr-only" type="radio" name="myAddress" id="myAddress2">
-                    <label class="form__radio--text" for="myAddress2">홍길동 / 회사<span class="form__radio--select">[기본배송지]</span></label>
-                </div>
-                <div class="radio-address__meta">
-                    <div class="radio-address__text">(02586) 서울시 동대문구 하정로 26 (신설동) 3F</div>
-                    <div class="radio-address__tel">010-1234-5678</div>
-                </div>
-            </div>
-        </li>
-        <li class="my-address__item">
-            <div class="radio-address">
-                <div class="form__radio">
-                    <input class="form__radio--input sr-only" type="radio" name="myAddress" id="myAddress2">
-                    <label class="form__radio--text" for="myAddress2">홍길동 / 회사<span class="form__radio--select">[기본배송지]</span></label>
-                </div>
-                <div class="radio-address__meta">
-                    <div class="radio-address__text">(02586) 서울시 동대문구 하정로 26 (신설동) 3F</div>
-                    <div class="radio-address__tel">010-1234-5678</div>
-                </div>
-            </div>
-        </li>
-        <li class="my-address__item">
-            <div class="radio-address">
-                <div class="form__radio">
-                    <input class="form__radio--input sr-only" type="radio" name="myAddress" id="myAddress2">
-                    <label class="form__radio--text" for="myAddress2">홍길동 / 회사<span class="form__radio--select">[기본배송지]</span></label>
-                </div>
-                <div class="radio-address__meta">
-                    <div class="radio-address__text">(02586) 서울시 동대문구 하정로 26 (신설동) 3F</div>
-                    <div class="radio-address__tel">010-1234-5678</div>
-                </div>
-            </div>
-        </li>
-        <li class="my-address__item">
-            <div class="radio-address">
-                <div class="form__radio">
-                    <input class="form__radio--input sr-only" type="radio" name="myAddress" id="myAddress2">
-                    <label class="form__radio--text" for="myAddress2">홍길동 / 회사<span class="form__radio--select">[기본배송지]</span></label>
-                </div>
-                <div class="radio-address__meta">
-                    <div class="radio-address__text">(02586) 서울시 동대문구 하정로 26 (신설동) 3F</div>
-                    <div class="radio-address__tel">010-1234-5678</div>
-                </div>
-            </div>
-        </li>
-        <li class="my-address__item">
-            <div class="radio-address">
-                <div class="form__radio">
-                    <input class="form__radio--input sr-only" type="radio" name="myAddress" id="myAddress2">
-                    <label class="form__radio--text" for="myAddress2">홍길동 / 회사<span class="form__radio--select">[기본배송지]</span></label>
-                </div>
-                <div class="radio-address__meta">
-                    <div class="radio-address__text">(02586) 서울시 동대문구 하정로 26 (신설동) 3F</div>
-                    <div class="radio-address__tel">010-1234-5678</div>
-                </div>
-            </div>
-        </li>
-        <li class="my-address__item">
-            <div class="radio-address">
-                <div class="form__radio">
-                    <input class="form__radio--input sr-only" type="radio" name="myAddress" id="myAddress2">
-                    <label class="form__radio--text" for="myAddress2">홍길동 / 회사<span class="form__radio--select">[기본배송지]</span></label>
-                </div>
-                <div class="radio-address__meta">
-                    <div class="radio-address__text">(02586) 서울시 동대문구 하정로 26 (신설동) 3F</div>
-                    <div class="radio-address__tel">010-1234-5678</div>
-                </div>
-            </div>
-        </li>
-        <li class="my-address__item">
-            <div class="radio-address">
-                <div class="form__radio">
-                    <input class="form__radio--input sr-only" type="radio" name="myAddress" id="myAddress2">
-                    <label class="form__radio--text" for="myAddress2">홍길동 / 회사<span class="form__radio--select">[기본배송지]</span></label>
-                </div>
-                <div class="radio-address__meta">
-                    <div class="radio-address__text">(02586) 서울시 동대문구 하정로 26 (신설동) 3F</div>
-                    <div class="radio-address__tel">010-1234-5678</div>
-                </div>
-            </div>
-        </li>
-        <!-- //test -->
-    </ul>
-</div>
-<!-- .내주소록 -->
-                </div>
-                <!-- .내주소록 -->
-                <!-- 새로운 주소 -->
-                <div class="shipping-tab__info js-pop-tab-cont">
-                    <!-- 새로운 주소 -->
-<div class="new-address">
-    <div class="address-info__form">
-        <!-- item -->
-        <div class="address-info__item">
-            <input type="text" class="form__input--text" title="받는분" placeholder="받는 분">
-        </div>
-        <!-- item -->
-        <!-- item -->
-        <div class="address-info__item">
-            <!-- inner -->
-            <div class="address-info__inner">
-                <ul class="address-info__inner--list">
-                    <li class="address-info__inner--item">
-                        <select name="newAddressOption1" id="popAddressSelect1" class="form__select js-placeholder" title="선택">
-                            <option value="" disabled="">선택</option>
-                            <option value="010" selected="">010</option>
-                            <option value="011">011</option>
-                            <option value="016">016</option>
-                            <option value="017">017</option>
-                            <option value="018">018</option>
-                            <option value="019">019</option>
-                        </select>
-                    </li>
-                    <li class="address-info__inner--item">
-                        <input type="number" class="form__input--text" title="연락처1 중간 번호" placeholder="연락처1" maxlength="4">
-                    </li>
-                    <li class="address-info__inner--item">
-                        <input type="number" class="form__input--text" title="연락처1 마지막 번호" maxlength="4">
-                    </li>
-                </ul>
-            </div>
-            <!-- .inner -->
-            <!-- inner -->
-            <div class="address-info__inner">
-                <ul class="address-info__inner--list">
-                    <li class="address-info__inner--item">
-                        <select name="newAddressOption2" id="popAddressSelect2" class="form__select js-placeholder" title="선택">
-                            <option value="" disabled="">선택</option>
-                            <option value="02">02</option>
-                            <option value="031">031</option>
-                            <option value="032">032</option>
-                            <option value="033">033</option>
-                            <option value="041">041</option>
-                            <option value="042">042</option>
-                            <option value="043">043</option>
-                            <option value="044">044</option>
-                            <option value="051">051</option>
-                            <option value="052">052</option>
-                            <option value="053">053</option>
-                            <option value="054">054</option>
-                            <option value="055">055</option>
-                            <option value="061">061</option>
-                            <option value="062">062</option>
-                            <option value="063">063</option>
-                            <option value="064">064</option>
-                            <option value="070">070</option>
-                        </select>
-                    </li>
-                    <li class="address-info__inner--item">
-                        <input type="number" class="form__input--text" title="연락처2 중간 번호" placeholder="연락처2" maxlength="4">
-                    </li>
-                    <li class="address-info__inner--item">
-                        <input type="number" class="form__input--text" title="연락처2 마지막 번호" maxlength="4">
-                    </li>
-                </ul>
-            </div>
-            <!-- .inner -->
-        </div>
-        <!-- item -->
-        <!-- item -->
-        <div class="address-info__item">
-            <!-- inner -->
-            <div class="address-info__inner address-info__inner--btn">
-                <input type="text" class="form__input--text" title="우편번호"  placeholder="우편번호" readonly>
-                <a href="#addressPop" class="form__input--btn js-popup-open">주소검색</a>
-            </div>
-            <!-- .inner -->
-            <!-- inner -->
-            <div class="address-info__inner">
-                <input type="text" class="form__input--text" title="중간 주소" readonly>
-            </div>
-            <!-- .inner -->
-            <!-- inner -->
-            <div class="address-info__inner">
-                <input type="text" class="form__input--text" title="상세 주소">
-            </div>
-            <!-- .inner -->
-            <!-- inner -->
-            <div class="address-info__inner">
-                <div class="form__checkbox">
-                    <input class="form__checkbox--input sr-only" type="checkbox" name="popAddressList" id="popAddressList">
-                    <label class="form__checkbox--text" for="popAddressList">배송지목록에 추가</label>
-                </div>
-            </div>
-            <!-- .inner -->
-        </div>
-        <!-- .item -->
-    </div>
-</div>
-<!-- .새로운 주소 -->
-                </div>
-                <!-- .새로운 주소 -->
-                <!-- 최근 배송지 -->
-                <div class="shipping-tab__info js-pop-tab-cont">
-                    <!-- 내주소록 -->
-<div class="my-address">
-    <ul class="my-address__list">
-        <li class="my-address__item">
-            <div class="radio-address">
-                <div class="form__radio">
-                    <input class="form__radio--input sr-only" type="radio" name="nowAddress" id="nowAddress1" checked>
-                    <label class="form__radio--text" for="nowAddress1">홍길동 / 회사</label>
-                </div>
-                <div class="radio-address__meta">
-                    <div class="radio-address__text">(02586) 서울시 동대문구 하정로 26 (신설동) 3F</div>
-                    <div class="radio-address__tel">010-1234-5678</div>
-                </div>
-            </div>
-        </li>
-        <li class="my-address__item">
-            <div class="radio-address">
-                <div class="form__radio">
-                    <input class="form__radio--input sr-only" type="radio" name="nowAddress" id="nowAddress2">
-                    <label class="form__radio--text" for="nowAddress2">홍길동 / 회사<span class="form__radio--select">[기본배송지]</span></label>
-                </div>
-                <div class="radio-address__meta">
-                    <div class="radio-address__text">(02586) 서울시 동대문구 하정로 26 (신설동) 3F</div>
-                    <div class="radio-address__tel">010-1234-5678</div>
-                </div>
-            </div>
-        </li>
-    </ul>
-</div>
-<!-- .내주소록 -->
-                </div>
-                <!-- .최근 배송지 -->
-                <!-- 주문자 정보 -->
-                <div class="shipping-tab__info js-pop-tab-cont">
-                    <!-- 주문자 정보 -->
-<div class="orderer-information">
-    <div class="address-info__form">
-        <!-- item -->
-        <div class="address-info__item">
-            <input type="text" class="form__input--text" title="받는분" placeholder="받는 분" value="홍길동">
-        </div>
-        <!-- item -->
-        <!-- item -->
-        <div class="address-info__item">
-            <!-- inner -->
-            <div class="address-info__inner">
-                <ul class="address-info__inner--list">
-                    <li class="address-info__inner--item">
-                        <select name="ordererOption1" id="popAddressSelect1" class="form__select fix-value" title="선택">
-                            <option value="" disabled="">선택</option>
-                            <option value="010" selected="">010</option>
-                            <option value="011">011</option>
-                            <option value="016">016</option>
-                            <option value="017">017</option>
-                            <option value="018">018</option>
-                            <option value="019">019</option>
-                        </select>
-                    </li>
-                    <li class="address-info__inner--item">
-                        <input type="number" class="form__input--text" title="연락처1 중간 번호" placeholder="연락처1" maxlength="4" value="1234">
-                    </li>
-                    <li class="address-info__inner--item">
-                        <input type="number" class="form__input--text" title="연락처1 마지막 번호" maxlength="4" value="5678">
-                    </li>
-                </ul>
-            </div>
-            <!-- .inner -->
-            <!-- inner -->
-            <div class="address-info__inner">
-                <ul class="address-info__inner--list">
-                    <li class="address-info__inner--item">
-                        <select name="ordererOption2" id="popAddressSelect2" class="form__select js-placeholder" title="선택">
-                            <option value="" disabled="">선택</option>
-                            <option value="02">02</option>
-                            <option value="031">031</option>
-                            <option value="032">032</option>
-                            <option value="033">033</option>
-                            <option value="041">041</option>
-                            <option value="042">042</option>
-                            <option value="043">043</option>
-                            <option value="044">044</option>
-                            <option value="051">051</option>
-                            <option value="052">052</option>
-                            <option value="053">053</option>
-                            <option value="054">054</option>
-                            <option value="055">055</option>
-                            <option value="061">061</option>
-                            <option value="062">062</option>
-                            <option value="063">063</option>
-                            <option value="064">064</option>
-                            <option value="070">070</option>
-                        </select>
-                    </li>
-                    <li class="address-info__inner--item">
-                        <input type="number" class="form__input--text" title="연락처2 중간 번호" placeholder="연락처2" maxlength="4">
-                    </li>
-                    <li class="address-info__inner--item">
-                        <input type="number" class="form__input--text" title="연락처2 마지막 번호" maxlength="4">
-                    </li>
-                </ul>
-            </div>
-            <!-- .inner -->
-        </div>
-        <!-- item -->
-        <!-- item -->
-        <div class="address-info__item">
-            <!-- inner -->
-            <div class="address-info__inner address-info__inner--btn">
-                <input type="text" class="form__input--text" title="우편번호"  placeholder="우편번호" readonly value="12345">
-                <a href="#addressPop" class="form__input--btn js-popup-open">주소검색</a>
-            </div>
-            <!-- .inner -->
-            <!-- inner -->
-            <div class="address-info__inner">
-                <input type="text" class="form__input--text" title="중간 주소" readonly value="서울시 동대문구 하정로 26 (신설동)">
-            </div>
-            <!-- .inner -->
-            <!-- inner -->
-            <div class="address-info__inner">
-                <input type="text" class="form__input--text" title="상세 주소" value="3F">
-            </div>
-            <!-- .inner -->
-            <!-- inner -->
-            <div class="address-info__inner">
-                <div class="form__checkbox">
-                    <input class="form__checkbox--input sr-only" type="checkbox" name="popInfoAddressList" id="popInfoAddressList">
-                    <label class="form__checkbox--text" for="popInfoAddressList">배송지목록에 추가</label>
-                </div>
-            </div>
-            <!-- .inner -->
-        </div>
-        <!-- .item -->
-    </div>
-</div>
-<!-- .주문자 정보 -->
-                </div>
-                <!-- .주문자 정보 -->
-            </div>
-            <!-- .shipping Tab content -->
-        </div>
-        <!-- confirm Footer -->
-        <div class="popup-confirm__footer">
-            <ul class="popup-confirm__list">
-                <li class="popup-confirm__item"><a class="popup-confirm__link" href="javascript:void(0);">선택 주소 사용</a></li>
-            </ul>
-        </div>
-        <!-- .confirm Footer -->
-    </section>
-</section>
-<!-- .shipping popup -->
 <!-- terms popup -->
 <section id="addressPop" class="popup">
     <header class="popup__header">
@@ -2184,6 +1797,58 @@
         </div>
     </section>
 </section>
+<!-- engrave popup -->
+<section id="engravePop" class="small-popup modal-pop">
+    <div class="small-popup__dim"></div>
+        <section class="small-popup__body engrave">
+            <div class="engrave-line">
+                <a class="small-popup__close js-popup-close" href="#;"><span class="sr-only">닫기</span></a>
+                <div class="small-popup__header">
+                    <h3 class="small-popup__header--title">각인 커스터마이징 서비스</h3>
+                </div>
+                <div class="small-popup__cont">
+                    <!-- engrave cont -->
+                    <div class="pop-engrave">
+                        <div class="phone-case">
+                            <!-- 기본(아이폰 14) -->
+                            <div class="phone-case__common">
+                                <img src="../../images/mypage/engrave/img_common.jpg" alt="" class="phone-case__common--img">
+                            </div>
+                            <!--// 기본(아이폰 14)-->
+
+                            <!-- 아이폰 14 plus -->
+                            <!--                            <div class="phone-case__plus">-->
+                            <!--                                <img src="../../images/mypage/engrave/img_plus.jpg" alt="" class="phone-case__common&#45;&#45;img">-->
+                            <!--                            </div>-->
+                            <!--// 아이폰 14 plus-->
+
+                            <!-- 아이폰 14 pro -->
+                            <!--                            <div class="phone-case__pro">-->
+                            <!--                                <img src="../../images/mypage/engrave/img_pro.jpg" alt="" class="phone-case__common&#45;&#45;img">-->
+                            <!--                            </div>-->
+                            <!--// 아이폰 14 pro -->
+
+                            <!-- 아이폰 14 pro Max -->
+                            <!--                            <div class="phone-case__promax">-->
+                            <!--                                <img src="../../images/mypage/engrave/img_promax.jpg" alt="" class="phone-case__common&#45;&#45;img">-->
+                            <!--                            </div>-->
+                            <!--// 아이폰 14 pro Max-->
+                        </div>
+                        <ul class="pop-engrave__list">
+                            <li class="pop-engrave__item">
+                                <p class="pop-bullet__text">주문이후 제품 준비과정에서는 각인 내용 변경이 어려울 수 있습니다.</p>
+                                <p class="pop-bullet__text">가죽 표면의 특성상 주름 부분에 금박 필름이 완벽하게 각인되지 않을 수  있습니다.</p>
+                                <p class="pop-bullet__text">각인 옵션이 적용된 상품은 기종변경, 단순변심 등의 이유로 교환 및 환불이 불가합니다. (제품 결함 사유 예외)</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- // engrave cont -->
+                </div>
+            </div>
+        </section>
+</section>
+<!-- engrave popup -->
+
 
 	<script src="../../js/libs/jquery-3.6.0.min.js"></script>
 	<script src="../../js/libs/gsap.min.js"></script>

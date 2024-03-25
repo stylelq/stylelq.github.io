@@ -776,6 +776,143 @@
                 </div>
             </section>
             <!-- .주문 상품정보 -->
+            <!-- 24.01.01 - [선물하기] 기능 추가 -->
+            <section class="payment-section bor--bottom">
+                <h2 class="payment-section__title">선물 메시지</h2>
+                <div class="payment-section__cont">
+                    <!-- 선물하기 메시지 -->
+<div class="gift-message-card">
+    <div class="gift-message-card__content">
+        <div class="gift-message-card__item">
+            <!-- 선물 메시지 이미지 선택 -->
+            <div class="gift-message-card__img">
+                <ul class="gift-message-card__img-list">
+                    <li class="gift-message-card__img-item">
+                        <div class="gift-message-card__img-box">
+                            <img src="../../images/giftmessagecard/img_thumbnail_gift_message_card_01.jpg">
+                        </div>
+                        <button type="button" class="gift-message-card__img-btn">
+                            <span class="blind">선물 메시지 이미지 선택</span>
+                        </button>
+                    </li>
+                    <li class="gift-message-card__img-item">
+                        <div class="gift-message-card__img-box">
+                            <img src="../../images/giftmessagecard/img_thumbnail_gift_message_card_02.jpg">
+                        </div>
+                        <button type="button" class="gift-message-card__img-btn">
+                            <span class="blind">선물 메시지 이미지 선택</span>
+                        </button>
+                    </li>
+                    <li class="gift-message-card__img-item">
+                        <div class="gift-message-card__img-box">
+                            <img src="../../images/giftmessagecard/img_thumbnail_gift_message_card_03.jpg">
+                        </div>
+                        <button type="button" class="gift-message-card__img-btn">
+                            <span class="blind">선물 메시지 이미지 선택</span>
+                        </button>
+                    </li>
+                    <li class="gift-message-card__img-item">
+                        <div class="gift-message-card__img-box">
+                            <img src="../../images/giftmessagecard/img_thumbnail_gift_message_card_04.jpg">
+                        </div>
+                        <button type="button" class="gift-message-card__img-btn">
+                            <span class="blind">선물 메시지 이미지 선택</span>
+                        </button>
+                    </li>
+                    <li class="gift-message-card__img-item">
+                        <div class="gift-message-card__img-box">
+                            <img src="../../images/giftmessagecard/img_thumbnail_gift_message_card_05.jpg">
+                        </div>
+                        <button type="button" class="gift-message-card__img-btn">
+                            <span class="blind">선물 메시지 이미지 선택</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <!-- //선물 메시지 이미지 선택 -->
+            <!-- 선물 메시지 입력 -->
+            <div class="gift-message-card__textarea">
+                <div class="gift-message-card__textarea-img">
+                    <img src="../../images/giftmessagecard/img_gift_message_card_01.jpg">
+                </div>
+                <div class="gift-message-card__textarea-box">
+                    <textarea class="gift-message-card__textarea-item" title="선물 메시지 내용을 입력해 주세요." placeholder="선물 메시지 내용을 입력해 주세요.">고마운 마음을 담아 드립니다.</textarea>
+                    <span class="gift-message-card__textarea-unit"><em>2</em>/200</span>
+                </div>
+            </div>
+            <!-- //선물 메시지 입력 -->
+            <!-- 선물 메시지 유의 사항 -->
+            <div class="gift-message-card__desc">
+                <ul class="gift-message-card__desc-list">
+                    <li class="gift-message-card__desc-item">상품 옵션 및 배송지 정보는 받는 분이 직접 입력합니다.</li>
+                    <li class="gift-message-card__desc-item">선물을 거절하거나 기한 내에 수락하지 않으시면 주문이 자동으로 취소됩니다. (수락 기한 : 72시간)</li>
+                </ul>
+            </div>
+            <!-- //선물 메시지 유의 사항 -->
+        </div>
+        <div class="gift-message-card__select-item">
+            <div class="gift-message-card__tab-list" data-tab="tab-list">
+                <div class="gift-message-card__tab-item">
+                    <div class="form__radio form__radio--red">
+                        <input class="form__radio--input sr-only" type="radio" name="gift-radio" id="gift-message-card__radio-01" checked>
+                        <label class="form__radio--text" for="gift-message-card__radio-01">카카오톡으로 선물</label>
+                    </div>
+                </div>
+                <div class="gift-message-card__tab-item">
+                    <div class="form__radio form__radio--red">
+                        <input class="form__radio--input sr-only" type="radio" name="gift-radio" id="gift-message-card__radio-02">
+                        <label class="form__radio--text" for="gift-message-card__radio-02">문자로 선물</label>
+                    </div>
+                </div>
+            </div>
+            <div class="gift-message-card__tab-contents" data-tab="tab-contents">
+                <!-- 카카오톡으로 선물 하기 -->
+                <div class="gift-message-card__tab-content kakao is-active" data-tab="tab-content">
+                    <div class="gift-message-card__input-box">
+                        <input type="number" class="form__input--text" placeholder="받는 분" title="받는 분 성함">
+                    </div>
+                    <div class="gift-message-card__info">
+                        <p class="gift-message-card__info--text">결제를 완료하신 후에 카카오톡 친구 목록에서 받는 분을 선택해주세요.</p>
+                    </div>
+                </div>
+                <!-- //카카오톡으로 선물 하기 -->
+                <!-- 문자로 선물 하기 -->
+                <div class="gift-message-card__tab-content sms" data-tab="tab-content">
+                    <div class="gift-message-card__input-box">
+                        <input type="number" class="form__input--text" placeholder="받는 분" title="받는 분 성함">
+                    </div>
+                    <div class="gift-message-card__input-group">
+                        <div class="gift-message-card__select-box">
+                            <select class="form__select js-placeholder" title="전화 번호 앞자리">
+                                <option disabled selected>선택</option>
+                                <option>010</option>
+                                <option>011</option>
+                                <option>016</option>
+                                <option>017</option>
+                                <option>018</option>
+                                <option>019</option>
+                            </select>
+                        </div>
+                        <div class="gift-message-card__input-box">
+                            <input type="number" class="form__input--text" placeholder="연락처" title="전화 번호 중간 자리">
+                        </div>
+                        <div class="gift-message-card__input-box">
+                            <input type="number" class="form__input--text" title="전화 번호 마지막 자리">
+                        </div>
+                    </div>
+                    <div class="gift-message-card__info">
+                        <p class="gift-message-card__info--text">받는 분의 이름과 휴대폰 번호를 정확히 입력해 주세요.</p>
+                    </div>
+                </div>
+                <!-- //문자로 선물 하기 -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //선물하기 메시지 -->
+                </div>
+            </section>
+            <!-- //24.01.01 - [선물하기] 기능 추가 -->
             <!-- 쿠폰/할인 정보-->
             <section class="payment-section bor--bottom">
                 <h2 class="payment-section__title">쿠폰/할인 정보</h2>
@@ -847,16 +984,17 @@
                     <!-- 쿠폰/할인 정보 -->
 <!-- 탭 헤더 -->
 <div class="payment-tool">
+    <!-- 24.01.01 - [선물하기] 기능 수정 및 개발 현행화 -->
     <ul class="payment-tool__list">
         <li class="payment-tool__item is-current"><!-- 현재값에 is-current -->
             <a href="#ceditCard" class="payment-tool__link js-payment-open"><span class="payment-tool__text">신용카드</span></a>
         </li>
+<!--        <li class="payment-tool__item">-->
+<!--            <a href="#noBankbook" class="payment-tool__link js-payment-open"><span class="payment-tool__text">무통장 입금</span></a>-->
+<!--        </li>-->
         <li class="payment-tool__item">
-            <a href="#noBankbook" class="payment-tool__link js-payment-open"><span class="payment-tool__text">무통장 입금</span></a>
-        </li>
-        <!--<li class="payment-tool__item">
             <a href="javascript:void(0)" class="payment-tool__link payment-tool__link--naverpay js-payment-open"><span class="payment-tool__text sr-only">naver pay</span></a>
-        </li>-->
+        </li>
         <li class="payment-tool__item">
             <a href="#payco" class="payment-tool__link payment-tool__link--payco js-payment-open"><span class="payment-tool__text sr-only">payco</span></a>
         </li>
@@ -864,9 +1002,13 @@
             <a href="javascript:void(0)" class="payment-tool__link js-payment-open"><span class="payment-tool__text">실시간 계좌이체</span></a>
         </li>
         <li class="payment-tool__item">
-            <a href="javascript:void(0)" class="payment-tool__link payment-tool__link--kakaopay js-payment-open"><span class="payment-tool__text sr-only">naver pay</span></a>
+            <a href="javascript:void(0)" class="payment-tool__link payment-tool__link--kakaopay js-payment-open"><span class="payment-tool__text sr-only">카카오페이</span></a>
+        </li>
+        <li class="payment-tool__item">
+            <a href="javascript:void(0)" class="payment-tool__link js-payment-open"><span class="payment-tool__text">삼성페이</span></a>
         </li>
     </ul>
+    <!-- 24.01.01 - [선물하기] 기능 수정 및 개발 현행화 -->
 </div>
 <!-- 탭 헤더 -->
 <!-- 탭 컨텐츠 -->
