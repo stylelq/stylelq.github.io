@@ -514,13 +514,18 @@
                     <div class="gift-message-card__content">
                         <div class="gift-message-card__item">
                             <!-- 선물 메시지 입력 -->
-                            <div class="gift-message-card__textarea">
-                                <div class="gift-message-card__textarea-img">
+                            <!-- [D] .gift-message-card__box 클래스에 이미지에 맞는 클래스 추가
+                                     type01 - 생일축하 케이크
+                                     type02 - 선물
+                                     type03 - 리본
+                                     type04 - 클로버
+                                     type05 - 풍선 -->
+                            <div class="gift-message-card__box type01">
+                                <div class="gift-message-card__img">
                                     <img src="../../images/giftmessagecard/img_gift_message_card_01.jpg">
                                 </div>
-                                <div class="gift-message-card__textarea-box">
-                                    <textarea class="gift-message-card__textarea-item" title="선물 메시지 내용을 입력해 주세요." placeholder="선물 메시지 내용을 입력해 주세요.">고마운 마음을 담아 드립니다.</textarea>
-                                    <span class="gift-message-card__textarea-unit"><em>2</em>/200</span>
+                                <div class="gift-message-card__textarea">
+                                    <textarea class="gift-message-card__textarea-item" title="선물 메시지 내용을 입력해 주세요." readonly>고마운 마음을 담아 드립니다.</textarea>
                                 </div>
                                 <a href="#none" class="gift-message-card__link">
                                     <span class="gift-message-card__link-text">받은 선물 상세보기</span>
@@ -534,7 +539,7 @@
                 <div class="gift-receive__certify">
                     <strong class="gift-receive__certify-title">선물 확인 번호</strong>
                     <div class="gift-receive__input-box">
-                        <input type="number" class="input-v1" placeholder="확인번호 숫자 4자리 입력">
+                        <input type="number" class="input-v1" placeholder="인증코드 8자리를 입력해주세요.">
                     </div>
                     <div class="gift-receive__date-box">
                         <strong class="gift-receive__date-title">선물받기 기한</strong>
@@ -613,7 +618,7 @@
         COPYRIGHT LOUIS QUATORZE. ALL RIGHTS RESERVED.
     </div>
 </footer>
-<!-- 24.01.01 [선물하기] 팝업 창 -->
+<!-- 24.04.01 [선물하기] 팝업 창 -->
 <section id="giftPopup" class="small-popup modal-pop gift-popup">
     <div class="small-popup__dim" aria-hidden="true"></div>
     <section class="small-popup__body">
@@ -637,7 +642,7 @@
         </div>
     </section>
 </section>
-<!-- //24.01.01 [선물하기] 팝업 창 -->
+<!-- //24.04.01 [선물하기] 팝업 창 -->
 
 
 	<script src="../../js/libs/jquery-3.6.0.min.js"></script>

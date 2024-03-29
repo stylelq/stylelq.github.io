@@ -1214,6 +1214,43 @@ jQuery(function () {
       bestSlide.slideTo(num);
     });
   }
+
+  // 24.04.01 선물하기
+  if ($('.gift-message-card').length >= 1) {
+    //선물 카드 Img
+    var thumbnailBtn = $('.gift-message-card__thumbnail-btn');
+    var imgBox = $('.gift-message-card__box');
+    var imgClassAttr = imgBox.attr('class');
+    var cardImg = $('.gift-message-card__img > img');
+    var cardImgAttr = cardImg.attr('src');
+    thumbnailBtn.on('click', function () {
+      var btnIndex = $(this).closest('.gift-message-card__thumbnail-item').index() + 1;
+      var cardNumber = ('0' + btnIndex).slice(-2);
+      var imgSrcSetting = cardImgAttr.replace(/\d+/, cardNumber);
+      var imgType = imgClassAttr.replace(/type\d+/, 'type' + ('0' + btnIndex).slice(-2));
+      cardImg.attr('src', imgSrcSetting);
+      imgBox.attr('class', imgType);
+    });
+
+    //선물 카드 textarea
+    var textItem = $('.gift-message-card__textarea-item');
+    var textUnit = $('.gift-message-card__textarea-unit');
+    textItem.on('input', function () {
+      $(this).siblings(textUnit).find('.unit-number').addClass('is-active');
+    });
+
+    //카카오톡 & 문자 라디오 버튼
+    var tab = $('[data-tab]');
+    var tabAttr = tab.attr('data');
+    var tabItem = $('.gift-message-card__tab-item');
+    var tabContents = $('[data-tab="tab-contents"]');
+    var tabCont = $('[data-tab="tab-content"]');
+    $('.form__radio--input[type=radio]').on('change', function () {
+      var tabIndex = $(this).closest(tabItem).index();
+      $(this).closest(tab).siblings(tabContents).find(tabCont).removeClass('is-active');
+      $(this).closest(tab).siblings(tabContents).find(tabCont).eq(tabIndex).addClass('is-active');
+    });
+  }
 });
 jQuery(function () {
   // 커버 지우개 이벤트
