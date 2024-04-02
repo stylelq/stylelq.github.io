@@ -101,11 +101,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       key: "changeImages",
       value: function changeImages() {
         var detailImg = document.querySelectorAll('.product-detail__img > img');
-        this.el.tabBtn.forEach(function (btn, index) {
+        this.el.tabBtn.forEach(function (btn) {
           btn.addEventListener('click', function () {
             var productData = btn.getAttribute('data-product');
-            var productIndex = String(index + 1).padStart(2, '0');
-            detailImg.forEach(function (el) {
+            detailImg.forEach(function (el, index) {
+              var productIndex = String(index + 1).padStart(2, '0');
               el.src = "https://cdn.louisclub.com/static/mo/img/brochure/monogram/".concat(productData, "/dummy_detail_").concat(productIndex, ".jpg");
             });
           });
