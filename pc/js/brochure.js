@@ -106,7 +106,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             var productData = btn.getAttribute('data-product');
             detailImg.forEach(function (el, index) {
               var productIndex = String(index + 1).padStart(2, '0');
-              el.src = "https://cdn.louisclub.com/static/mo/img/brochure/monogram/".concat(productData, "/dummy_detail_").concat(productIndex, ".jpg");
+              el.src = "https://cdn.louisclub.com/static/mo/img/brochure/monogram/".concat(productData, "/img_product_detail_").concat(productIndex, ".jpg");
             });
           });
         });
