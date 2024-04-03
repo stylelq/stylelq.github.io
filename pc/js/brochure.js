@@ -116,6 +116,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       value: function swiperEvent() {
         var productSwiper = new Swiper(this.swiperName.productSwiper, {
           slidesPerView: 'auto',
+          slidesPerGroup: 4,
           loop: false,
           watchOverflow: true,
           freeMode: false,

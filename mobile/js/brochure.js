@@ -102,6 +102,7 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
       value: function swiperEvent() {
         var productSwiper = new Swiper(this.swiperName.productSwiper, {
           slidesPerView: 'auto',
+          slidesPerGroup: 4,
           loop: false,
           watchOverflow: true,
           freeMode: false,
