@@ -92,7 +92,7 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
             var productData = btn.getAttribute('data-product');
             detailImg.forEach(function (el, index) {
               var productIndex = String(index + 1).padStart(2, '0');
-              el.src = "https://cdn.louisclub.com/static/mo/img/brochure/monogram/".concat(productData, "/img_product_detail_").concat(productIndex, ".jpg");
+              el.src = "https://cdn.louisclub.com/static/mo/img/brochure/monogram/".concat(productData, "/img_product_detail_").concat(productIndex, ".jpg?v=20240403");
             });
           });
         });
