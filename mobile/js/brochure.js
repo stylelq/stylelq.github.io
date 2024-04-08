@@ -92,8 +92,40 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
             var productData = btn.getAttribute('data-product');
             detailImg.forEach(function (el, index) {
               var productIndex = String(index + 1).padStart(2, '0');
-              el.src = "https://cdn.louisclub.com/static/mo/img/brochure/monogram/".concat(productData, "/img_product_detail_").concat(productIndex, ".jpg?v=20240403");
+              el.src = "https://cdn.louisclub.com/static/mo/img/brochure/monogram/".concat(productData, "/img_product_detail_").concat(productIndex, ".jpg");
             });
+            var popDetailText = {
+              LLHS1MG01FA5BE0191: ['르퐁 쇼퍼백', '소가죽, PVC 가죽', '숄더백 및 트래블백으로 착용 가능', '33 x 27 x 14 cm', '내부 지퍼칸 1개<br>내부 오픈칸 1개<br>탈부착 파우치 1개'],
+              LLHS1MG02FB2BE0191: ['르퐁 백백', '소가죽, PVC 가죽', '백백 및 트래블백으로 착용 가능', '22 x 23.5 x 11 cm', '내부 오픈칸 1개'],
+              LLHS1MG03FA0BE0191: ['르퐁 호보백', '소가죽, PVC 가죽', '숄더백 및 크로스백으로 착용 가능', '27.5 x 26 x 9 cm', '내부 오픈칸 1개', '탈부착 스트랩 2개'],
+              LLHS1MG04FA0BE0191: ['르퐁 호보백', '소가죽, PVC 가죽', '숄더백 및 크로스백으로 착용 가능', '25 x 19 x 8 cm', '내부 오픈칸 1개', '탈부착 스트랩 2개'],
+              LLHS1MG05FA0BE0191: ['르퐁 호보백', '소가죽, PVC 가죽', '숄더백 및 크로스백으로 착용 가능', '22 x 13 x 6.5 cm', '내부 오픈칸 1개', '탈부착 스트랩 2개'],
+              LLHS1MG06FA4BE0191: ['르퐁 토트백', '소가죽, PVC 가죽', '토트백 및 크로스백으로 착용 가능', '25 x 27.5 x 12 cm', '내부 지퍼칸 1개', '내부 오픈칸 1개', '탈부착 스트랩 1개'],
+              LLHS1MG07FA4BE0191: ['르퐁 토트백', '소가죽, PVC 가죽', '토트백 및 크로스백으로 착용 가능', '20 x 22 x 9 cm', '내부 지퍼칸 1개', '내부 오픈칸 1개', '탈부착 스트랩 1개']
+            };
+            var text = popDetailText[productData];
+            var popDetailInfo = document.querySelector('.popup__content .product-detail__info-list');
+            var popInfoItem = document.querySelectorAll('.product-detail__info-list .product-detail__info-item');
+            popInfoItem.forEach(function (el, index) {
+              if (text[index]) {
+                el.innerHTML = text[index];
+              } else {
+                el.innerHTML = '';
+              }
+            });
+
+            // popInfoItem 추가
+            for (var i = popInfoItem.length; i < text.length; i++) {
+              var addInfoItem = document.createElement('li');
+              addInfoItem.innerHTML = text[i];
+              addInfoItem.classList.add('product-detail__info-item');
+              popDetailInfo.appendChild(addInfoItem);
+            }
+
+            // popInfoItem 삭제
+            for (var _i = popInfoItem.length; _i > text.length; _i--) {
+              popDetailInfo.removeChild(popInfoItem[_i - 1]);
+            }
           });
         });
       }
