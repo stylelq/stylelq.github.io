@@ -32,9 +32,6 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       this.el = {
         section: element
       };
-      this.className = {
-        visualIntro: 'visual__intro'
-      };
       this.swiperName = {
         productSwiper: '#product-swiper'
       };
@@ -57,7 +54,6 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }, {
       key: "setElements",
       value: function setElements() {
-        this.el.visualIntro = this.el.section.querySelector('.visual__intro');
         this.el.visualVideoBox = this.el.section.querySelector('.visual__video-box');
         this.el.visualVideo = this.el.section.querySelector('.visual__video');
         this.el.visualDescBox = this.el.section.querySelector('.visual__desc-box');
@@ -76,7 +72,6 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           btn.addEventListener('click', function () {
             var tabBtnData = btn.parentNode.getAttribute('data-tab-menu');
             _this.el.visualVideoBox.style.display = 'none';
-            _this.el.visualIntro.style.display = 'none';
             _this.el.visualDescBox.style.display = 'none';
             _this.el.visualProduct.style.display = 'block';
 
@@ -179,8 +174,6 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       value: function motionEvents() {
         var _this2 = this;
 
-        this.el.visualIntro.classList.add('is-motion');
-        this.el.visualVideoBox.style.display = 'block';
         setTimeout(function () {
           _this2.el.visualVideo.play();
         });
