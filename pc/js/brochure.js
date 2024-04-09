@@ -178,7 +178,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           _this2.el.visualVideo.play();
         });
         this.el.visualVideo.addEventListener('ended', function () {
-          _this2.el.visualVideo.parentNode.style.display = 'none';
+          _this2.el.visualVideo.parentNode.classList.add('is-motion');
+
           _this2.el.visualDescBox.style.display = 'block';
         });
       }
