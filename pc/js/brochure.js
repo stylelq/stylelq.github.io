@@ -255,7 +255,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           slidesPerView: 1,
           loop: false,
           watchOverflow: true,
-          freeMode: true,
+          freeMode: false,
           navigation: {
             nextEl: '.product-detail__btn--next',
             prevEl: '.product-detail__btn--prev'

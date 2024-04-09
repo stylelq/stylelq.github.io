@@ -50,10 +50,9 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
       value: function setElements() {
         this.el.tabBtn = this.el.section.querySelectorAll('.product__btn');
         this.el.visualIntro = this.el.section.querySelector('.visual__intro');
-        this.el.visualDesc = this.el.section.querySelector('.visual__desc');
+        this.el.visualDesc = this.el.section.querySelector('.visual__video-box');
         this.el.visualProduct = this.el.section.querySelector('.visual__product');
-        this.el.descVideo = this.el.section.querySelector('.visual__desc-video');
-        this.el.descBtn = this.el.section.querySelector('.visual__desc-btn--text');
+        this.el.descVideo = this.el.section.querySelector('.visual__video');
       }
     }, {
       key: "bindEvents",
@@ -169,10 +168,6 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
           });
         }, 3000);
         this.el.descVideo.addEventListener('ended', function () {
-          _this2.el.descVideo.parentNode.style.display = 'none';
-          _this2.el.visualProduct.style.display = 'block';
-        });
-        this.el.descBtn.addEventListener('click', function () {
           _this2.el.descVideo.parentNode.style.display = 'none';
           _this2.el.visualProduct.style.display = 'block';
         });
