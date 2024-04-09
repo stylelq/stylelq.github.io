@@ -79,6 +79,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             _this.el.visualIntro.style.display = 'none';
             _this.el.visualDescBox.style.display = 'none';
             _this.el.visualProduct.style.display = 'block';
+
+            _this.el.visualVideo.pause();
+
             btn.parentNode.classList.add('is-active');
 
             _this.el.tabBtn.forEach(function (otherBtn) {
@@ -176,14 +179,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       value: function motionEvents() {
         var _this2 = this;
 
+        this.el.visualIntro.classList.add('is-motion');
+        this.el.visualVideoBox.style.display = 'block';
         setTimeout(function () {
-          _this2.el.visualIntro.classList.add('is-motion');
-
-          _this2.el.visualVideoBox.style.display = 'block';
-          setTimeout(function () {
-            _this2.el.visualVideo.play();
-          });
-        }, 500);
+          _this2.el.visualVideo.play();
+        });
         this.el.visualVideo.addEventListener('ended', function () {
           _this2.el.visualVideo.parentNode.style.display = 'none';
           _this2.el.visualDescBox.style.display = 'block';
@@ -255,7 +255,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           slidesPerView: 1,
           loop: false,
           watchOverflow: true,
-          freeMode: false,
+          freeMode: true,
           navigation: {
             nextEl: '.product-detail__btn--next',
             prevEl: '.product-detail__btn--prev'
