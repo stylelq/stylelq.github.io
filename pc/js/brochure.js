@@ -57,12 +57,12 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }, {
       key: "setElements",
       value: function setElements() {
-        this.el.tabBtn = this.el.section.querySelectorAll('.product__btn');
         this.el.visualIntro = this.el.section.querySelector('.visual__intro');
-        this.el.visualDesc = this.el.section.querySelector('.visual__desc');
+        this.el.visualVideoBox = this.el.section.querySelector('.visual__video-box');
+        this.el.visualVideo = this.el.section.querySelector('.visual__video');
+        this.el.visualDescBox = this.el.section.querySelector('.visual__desc-box');
         this.el.visualProduct = this.el.section.querySelector('.visual__product');
-        this.el.descVideo = this.el.section.querySelector('.visual__desc-video');
-        this.el.descBtn = this.el.section.querySelector('.visual__desc-btn--text');
+        this.el.tabBtn = this.el.section.querySelectorAll('.product__btn');
       }
     }, {
       key: "bindEvents",
@@ -75,6 +75,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         this.el.tabBtn.forEach(function (btn) {
           btn.addEventListener('click', function () {
             var tabBtnData = btn.parentNode.getAttribute('data-tab-menu');
+            _this.el.visualVideoBox.style.display = 'none';
+            _this.el.visualIntro.style.display = 'none';
+            _this.el.visualDescBox.style.display = 'none';
+            _this.el.visualProduct.style.display = 'block';
             btn.parentNode.classList.add('is-active');
 
             _this.el.tabBtn.forEach(function (otherBtn) {
@@ -175,21 +179,14 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         setTimeout(function () {
           _this2.el.visualIntro.classList.add('is-motion');
 
-          _this2.el.visualDesc.style.display = 'block'; // setTimeout(()=>{
-          //     this.el.visualDesc.classList.add('is-motion');
-          // },5000)
-
+          _this2.el.visualVideoBox.style.display = 'block';
           setTimeout(function () {
-            _this2.el.descVideo.play();
+            _this2.el.visualVideo.play();
           });
-        }, 3000);
-        this.el.descVideo.addEventListener('ended', function () {
-          _this2.el.descVideo.parentNode.style.display = 'none';
-          _this2.el.visualProduct.style.display = 'block';
-        });
-        this.el.descBtn.addEventListener('click', function () {
-          _this2.el.descVideo.parentNode.style.display = 'none';
-          _this2.el.visualProduct.style.display = 'block';
+        }, 500);
+        this.el.visualVideo.addEventListener('ended', function () {
+          _this2.el.visualVideo.parentNode.style.display = 'none';
+          _this2.el.visualDescBox.style.display = 'block';
         });
       }
     }], [{
