@@ -24,9 +24,6 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
       this.el = {
         section: element
       };
-      this.className = {
-        visualIntro: 'visual__intro'
-      };
       this.swiperName = {
         productSwiper: '#product-swiper'
       };
@@ -48,11 +45,12 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
     }, {
       key: "setElements",
       value: function setElements() {
-        this.el.tabBtn = this.el.section.querySelectorAll('.product__btn');
-        this.el.visualIntro = this.el.section.querySelector('.visual__intro');
-        this.el.visualDesc = this.el.section.querySelector('.visual__video-box');
+        this.el.visualVideoBox = this.el.section.querySelector('.visual__video-box');
+        this.el.visualVideo = this.el.section.querySelector('.visual__video');
+        this.el.visualDescBox = this.el.section.querySelector('.visual__desc-box');
         this.el.visualProduct = this.el.section.querySelector('.visual__product');
-        this.el.descVideo = this.el.section.querySelector('.visual__video');
+        this.el.visualLink = this.el.section.querySelector('.visual__link');
+        this.el.tabBtn = this.el.section.querySelectorAll('.product__btn');
       }
     }, {
       key: "bindEvents",
@@ -64,6 +62,10 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
         this.el.tabBtn.forEach(function (btn) {
           btn.addEventListener('click', function () {
             var tabBtnData = btn.parentNode.getAttribute('data-tab-menu');
+            _this.el.visualVideoBox.style.display = 'none';
+            _this.el.visualDescBox.style.display = 'none';
+            _this.el.visualProduct.style.display = 'block';
+            _this.el.visualVideo.pause();
             btn.parentNode.classList.add('is-active');
             _this.el.tabBtn.forEach(function (otherBtn) {
               if (btn !== otherBtn) {
@@ -85,22 +87,40 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
     }, {
       key: "changeImages",
       value: function changeImages() {
+        var _this2 = this;
         var detailImg = document.querySelectorAll('.product-detail__img > img');
         this.el.tabBtn.forEach(function (btn) {
           btn.addEventListener('click', function () {
             var productData = btn.getAttribute('data-product');
+            _this2.el.visualLink.href = "https://m.stylelq.com/mo/product/productView.do?PRD_MST_CD=".concat(productData);
             detailImg.forEach(function (el, index) {
               var productIndex = String(index + 1).padStart(2, '0');
               el.src = "https://cdn.louisclub.com/static/mo/img/brochure/monogram/".concat(productData, "/img_product_detail_").concat(productIndex, ".jpg");
             });
+
+            // 제품 디테일
+            var bagInfo_01 = '르퐁 쇼퍼백';
+            var bagInfo_02 = '르퐁 백백';
+            var bagInfo_03 = '르퐁 호보백';
+            var bagInfo_04 = '르퐁 토트백';
+            var materialInfo_01 = '소가죽, PVC 가죽';
+            var itemDesc_01 = '숄더백 및 트래블백으로 착용 가능';
+            var itemDesc_02 = '백백 및 트래블백으로 착용 가능';
+            var itemDesc_03 = '숄더백 및 크로스백으로 착용 가능';
+            var itemDesc_04 = '토트백 및 크로스백으로 착용 가능';
+            var point_01 = '내부 지퍼칸 1개';
+            var point_02 = '내부 오픈칸 1개';
+            var point_03 = '탈부착 파우치 1개';
+            var point_04 = '탈부착 스트랩 1개';
+            var point_05 = '탈부착 스트랩 2개';
             var popDetailText = {
-              LLHS1MG01FA5BE0191: ['르퐁 쇼퍼백', '소가죽, PVC 가죽', '숄더백 및 트래블백으로 착용 가능', '33 x 27 x 14 cm', '내부 지퍼칸 1개<br>내부 오픈칸 1개<br>탈부착 파우치 1개'],
-              LLHS1MG02FB2BE0191: ['르퐁 백백', '소가죽, PVC 가죽', '백백 및 트래블백으로 착용 가능', '22 x 23.5 x 11 cm', '내부 오픈칸 1개'],
-              LLHS1MG03FA0BE0191: ['르퐁 호보백', '소가죽, PVC 가죽', '숄더백 및 크로스백으로 착용 가능', '27.5 x 26 x 9 cm', '내부 오픈칸 1개', '탈부착 스트랩 2개'],
-              LLHS1MG04FA0BE0191: ['르퐁 호보백', '소가죽, PVC 가죽', '숄더백 및 크로스백으로 착용 가능', '25 x 19 x 8 cm', '내부 오픈칸 1개', '탈부착 스트랩 2개'],
-              LLHS1MG05FA0BE0191: ['르퐁 호보백', '소가죽, PVC 가죽', '숄더백 및 크로스백으로 착용 가능', '22 x 13 x 6.5 cm', '내부 오픈칸 1개', '탈부착 스트랩 2개'],
-              LLHS1MG06FA4BE0191: ['르퐁 토트백', '소가죽, PVC 가죽', '토트백 및 크로스백으로 착용 가능', '25 x 27.5 x 12 cm', '내부 지퍼칸 1개', '내부 오픈칸 1개', '탈부착 스트랩 1개'],
-              LLHS1MG07FA4BE0191: ['르퐁 토트백', '소가죽, PVC 가죽', '토트백 및 크로스백으로 착용 가능', '20 x 22 x 9 cm', '내부 지퍼칸 1개', '내부 오픈칸 1개', '탈부착 스트랩 1개']
+              LLHS1MG01FA5BE0191: [bagInfo_01, materialInfo_01, itemDesc_01, '33 x 27 x 14 cm', "".concat(point_01, "<br>").concat(point_02, "<br>").concat(point_03)],
+              LLHS1MG02FB2BE0191: [bagInfo_02, materialInfo_01, itemDesc_02, '22 x 23.5 x 11 cm', "".concat(point_02)],
+              LLHS1MG03FA0BE0191: [bagInfo_03, materialInfo_01, itemDesc_03, '27.5 x 26 x 9 cm', "".concat(point_02, "<br>").concat(point_05)],
+              LLHS1MG04FA0BE0191: [bagInfo_03, materialInfo_01, itemDesc_03, '25 x 19 x 8 cm', "".concat(point_02, "<br>").concat(point_05)],
+              LLHS1MG05FA0BE0191: [bagInfo_03, materialInfo_01, itemDesc_03, '22 x 13 x 6.5 cm', "".concat(point_02, "<br>").concat(point_05)],
+              LLHS1MG06FA4BE0191: [bagInfo_04, materialInfo_01, itemDesc_04, '25 x 27.5 x 12 cm', "".concat(point_01, "<br>").concat(point_02, "<br>").concat(point_04)],
+              LLHS1MG07FA4BE0191: [bagInfo_04, materialInfo_01, itemDesc_04, '20 x 22 x 9 cm', "".concat(point_01, "<br>").concat(point_02, "<br>").concat(point_04)]
             };
             var text = popDetailText[productData];
             var popDetailInfo = document.querySelector('.popup__content .product-detail__info-list');
@@ -156,20 +176,13 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
     }, {
       key: "motionEvents",
       value: function motionEvents() {
-        var _this2 = this;
+        var _this3 = this;
         setTimeout(function () {
-          _this2.el.visualIntro.classList.add('is-motion');
-          _this2.el.visualDesc.style.display = 'block';
-          // setTimeout(()=>{
-          //     this.el.visualDesc.classList.add('is-motion');
-          // },5000)
-          setTimeout(function () {
-            _this2.el.descVideo.play();
-          });
-        }, 3000);
-        this.el.descVideo.addEventListener('ended', function () {
-          _this2.el.descVideo.parentNode.style.display = 'none';
-          _this2.el.visualProduct.style.display = 'block';
+          _this3.el.visualVideo.play();
+        });
+        this.el.visualVideo.addEventListener('ended', function () {
+          _this3.el.visualVideo.parentNode.classList.add('is-motion');
+          _this3.el.visualDescBox.style.display = 'block';
         });
       }
     }], [{
