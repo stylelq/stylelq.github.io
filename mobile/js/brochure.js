@@ -49,6 +49,8 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
         this.el.visualVideo = this.el.section.querySelector('.visual__video');
         this.el.visualDescBox = this.el.section.querySelector('.visual__desc-box');
         this.el.visualProduct = this.el.section.querySelector('.visual__product');
+        this.el.visualLinkWrap = this.el.section.querySelector('.visual__product-link-wrap');
+        this.el.visualBtnWrap = this.el.section.querySelector('.visual__btn-wrap');
         this.el.visualLink = this.el.section.querySelector('.visual__link');
         this.el.tabBtn = this.el.section.querySelectorAll('.product__btn');
       }
@@ -65,6 +67,8 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
             _this.el.visualVideoBox.style.display = 'none';
             _this.el.visualDescBox.style.display = 'none';
             _this.el.visualProduct.style.display = 'block';
+            _this.el.visualLinkWrap.style.display = 'block';
+            _this.el.visualBtnWrap.style.display = 'block';
             _this.el.visualVideo.pause();
             btn.parentNode.classList.add('is-active');
             _this.el.tabBtn.forEach(function (otherBtn) {
