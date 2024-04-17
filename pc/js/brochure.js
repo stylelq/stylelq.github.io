@@ -75,7 +75,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           btn.addEventListener('click', function () {
             var tabBtnData = btn.parentNode.getAttribute('data-tab-menu');
             _this.el.visualVideoBox.style.display = 'none';
-            _this.el.visualDescBox.style.display = 'none';
+
+            _this.el.visualDescBox.classList.remove('is-active');
+
             _this.el.visualProduct.style.display = 'block';
             _this.el.visualLinkWrap.style.display = 'block';
             _this.el.visualBtnWrap.style.display = 'block';
@@ -203,7 +205,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         this.el.visualVideo.addEventListener('ended', function () {
           _this3.el.visualVideo.parentNode.classList.add('is-motion');
 
-          _this3.el.visualDescBox.style.display = 'block';
+          _this3.el.visualDescBox.classList.add('is-active');
         });
       }
     }], [{
