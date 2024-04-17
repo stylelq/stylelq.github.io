@@ -78,6 +78,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
             _this.el.visualDescBox.classList.remove('is-active');
 
+            _this.el.visualDescBox.style.display = 'none';
             _this.el.visualProduct.style.display = 'block';
             _this.el.visualLinkWrap.style.display = 'block';
             _this.el.visualBtnWrap.style.display = 'block';
