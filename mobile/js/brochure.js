@@ -100,13 +100,13 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
             _this2.el.visualLink.href = "https://m.stylelq.com/mo/product/productView.do?PRD_MST_CD=".concat(productData);
             detailImg.forEach(function (el, index) {
               var productIndex = String(index + 1).padStart(2, '0');
-              el.src = "https://cdn.louisclub.com/static/mo/img/brochure/monogram/".concat(productData, "/img_product_detail_").concat(productIndex, ".jpg");
+              el.src = "https://cdn.louisclub.com/static/mo/img/brochure/monogram/".concat(productData, "/img_product_detail_").concat(productIndex, ".jpg?=v20240424");
             });
 
             // 제품 디테일
             var bagInfo_01 = '르퐁 쇼퍼백';
             var bagInfo_02 = '르퐁 백백';
-            var bagInfo_03 = '르퐁 호보백';
+            var bagInfo_03 = '르퐁 숄더백';
             var bagInfo_04 = '르퐁 토트백';
             var materialInfo_01 = '소가죽, PVC 가죽';
             var itemDesc_01 = '숄더백 및 트래블백으로 착용 가능';
