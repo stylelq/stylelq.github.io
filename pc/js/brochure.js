@@ -119,7 +119,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             _this2.el.visualLink.href = "https://www.stylelq.com/fr/product/productView.do?PRD_MST_CD=".concat(productData);
             detailImg.forEach(function (el, index) {
               var productIndex = String(index + 1).padStart(2, '0');
-              el.src = "https://cdn.louisclub.com/static/fr/img/brochure/monogram/".concat(productData, "/img_product_detail_").concat(productIndex, ".jpg?=v20240424");
+              el.src = "https://cdn.louisclub.com/static/fr/img/brochure/monogram/".concat(productData, "/img_product_detail_").concat(productIndex, ".jpg?=v1");
             }); // 제품 디테일
 
             var bagInfo_01 = '르퐁 쇼퍼백';

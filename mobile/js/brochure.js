@@ -100,7 +100,7 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
             _this2.el.visualLink.href = "https://m.stylelq.com/mo/product/productView.do?PRD_MST_CD=".concat(productData);
             detailImg.forEach(function (el, index) {
               var productIndex = String(index + 1).padStart(2, '0');
-              el.src = "https://cdn.louisclub.com/static/mo/img/brochure/monogram/".concat(productData, "/img_product_detail_").concat(productIndex, ".jpg?=v20240424");
+              el.src = "https://cdn.louisclub.com/static/mo/img/brochure/monogram/".concat(productData, "/img_product_detail_").concat(productIndex, ".jpg?=v1");
             });
 
             // 제품 디테일
