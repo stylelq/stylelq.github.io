@@ -100,14 +100,17 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
             _this2.el.visualLink.href = "https://m.stylelq.com/mo/product/productView.do?PRD_MST_CD=".concat(productData);
             detailImg.forEach(function (el, index) {
               var productIndex = String(index + 1).padStart(2, '0');
-              el.src = "https://cdn.louisclub.com/static/mo/img/brochure/monogram/".concat(productData, "/img_product_detail_").concat(productIndex, ".jpg?=v1");
+              el.src = "https://cdn.louisclub.com/static/mo/img/brochure/monogram/".concat(productData, "/img_product_detail_").concat(productIndex, ".jpg?=v2");
             });
 
             // 제품 디테일
             var bagInfo_01 = '르퐁 쇼퍼백';
             var bagInfo_02 = '르퐁 백백';
-            var bagInfo_03 = '르퐁 숄더백';
+            var bagInfo_03_S = '르퐁 숄더백(S)';
+            var bagInfo_03_M = '르퐁 숄더백(M)';
+            var bagInfo_03_L = '르퐁 숄더백(L)';
             var bagInfo_04 = '르퐁 토트백';
+            var bagInfo_04_mini = '르퐁 토트백 미니';
             var materialInfo_01 = '소가죽, PVC 가죽';
             var itemDesc_01 = '숄더백 및 트래블백으로 착용 가능';
             var itemDesc_02 = '백백 및 트래블백으로 착용 가능';
@@ -121,11 +124,11 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
             var popDetailText = {
               LLHS1MG01FA5BE0191: [bagInfo_01, materialInfo_01, itemDesc_01, '33 x 27 x 14 cm', "".concat(point_01, "<br>").concat(point_02, "<br>").concat(point_03)],
               LLHS1MG02FB2BE0191: [bagInfo_02, materialInfo_01, itemDesc_02, '22 x 23.5 x 11 cm', "".concat(point_02)],
-              LLHS1MG03FA0BE0191: [bagInfo_03, materialInfo_01, itemDesc_03, '27.5 x 26 x 9 cm', "".concat(point_02, "<br>").concat(point_05)],
-              LLHS1MG04FA0BE0191: [bagInfo_03, materialInfo_01, itemDesc_03, '25 x 19 x 8 cm', "".concat(point_02, "<br>").concat(point_05)],
-              LLHS1MG05FA0BE0191: [bagInfo_03, materialInfo_01, itemDesc_03, '22 x 13 x 6.5 cm', "".concat(point_02, "<br>").concat(point_05)],
+              LLHS1MG03FA0BE0191: [bagInfo_03_S, materialInfo_01, itemDesc_03, '27.5 x 26 x 9 cm', "".concat(point_02, "<br>").concat(point_05)],
+              LLHS1MG04FA0BE0191: [bagInfo_03_M, materialInfo_01, itemDesc_03, '25 x 19 x 8 cm', "".concat(point_02, "<br>").concat(point_05)],
+              LLHS1MG05FA0BE0191: [bagInfo_03_L, materialInfo_01, itemDesc_03, '22 x 13 x 6.5 cm', "".concat(point_02, "<br>").concat(point_05)],
               LLHS1MG06FA4BE0191: [bagInfo_04, materialInfo_01, itemDesc_04, '25 x 27.5 x 12 cm', "".concat(point_01, "<br>").concat(point_02, "<br>").concat(point_04)],
-              LLHS1MG07FA4BE0191: [bagInfo_04, materialInfo_01, itemDesc_04, '20 x 22 x 9 cm', "".concat(point_01, "<br>").concat(point_02, "<br>").concat(point_04)]
+              LLHS1MG07FA4BE0191: [bagInfo_04_mini, materialInfo_01, itemDesc_04, '20 x 22 x 9 cm', "".concat(point_01, "<br>").concat(point_02, "<br>").concat(point_04)]
             };
             var text = popDetailText[productData];
             var popDetailInfo = document.querySelector('.popup__content .product-detail__info-list');
