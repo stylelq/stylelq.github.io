@@ -124,9 +124,9 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
             var popDetailText = {
               LLHS1MG01FA5BE0191: [bagInfo_01, materialInfo_01, itemDesc_01, '33 x 27 x 14 cm', "".concat(point_01, "<br>").concat(point_02, "<br>").concat(point_03)],
               LLHS1MG02FB2BE0191: [bagInfo_02, materialInfo_01, itemDesc_02, '22 x 23.5 x 11 cm', "".concat(point_02)],
-              LLHS1MG03FA0BE0191: [bagInfo_03_S, materialInfo_01, itemDesc_03, '27.5 x 26 x 9 cm', "".concat(point_02, "<br>").concat(point_05)],
+              LLHS1MG03FA0BE0191: [bagInfo_03_L, materialInfo_01, itemDesc_03, '27.5 x 26 x 9 cm', "".concat(point_02, "<br>").concat(point_05)],
               LLHS1MG04FA0BE0191: [bagInfo_03_M, materialInfo_01, itemDesc_03, '25 x 19 x 8 cm', "".concat(point_02, "<br>").concat(point_05)],
-              LLHS1MG05FA0BE0191: [bagInfo_03_L, materialInfo_01, itemDesc_03, '22 x 13 x 6.5 cm', "".concat(point_02, "<br>").concat(point_05)],
+              LLHS1MG05FA0BE0191: [bagInfo_03_S, materialInfo_01, itemDesc_03, '22 x 13 x 6.5 cm', "".concat(point_02, "<br>").concat(point_05)],
               LLHS1MG06FA4BE0191: [bagInfo_04, materialInfo_01, itemDesc_04, '25 x 27.5 x 12 cm', "".concat(point_01, "<br>").concat(point_02, "<br>").concat(point_04)],
               LLHS1MG07FA4BE0191: [bagInfo_04_mini, materialInfo_01, itemDesc_04, '20 x 22 x 9 cm', "".concat(point_01, "<br>").concat(point_02, "<br>").concat(point_04)]
             };
