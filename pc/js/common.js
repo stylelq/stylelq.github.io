@@ -1103,8 +1103,8 @@ jQuery(function () {
     });
     var galleryTop = new Swiper('.gallery-top', {
       navigation: {
-        nextEl: ".thumb-prev-btn",
-        prevEl: ".thumb-next-btn"
+        nextEl: ".thumb-next-btn",
+        prevEl: ".thumb-prev-btn"
       },
       thumbs: {
         swiper: galleryThumbs
