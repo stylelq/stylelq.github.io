@@ -145,6 +145,8 @@ jQuery(function () {
 
     $('.gnb-1depth__item').on('mouseenter', function () {
       var depth = $(this).attr('data-depth');
+      var rightAlign = $(this).hasClass('right-align');
+      var rightValue = $(this).find('.gnb-2depth__item:last-child').width() / -2;
       mouseEnterCheck = true;
 
       if ($('body').hasClass('is-black')) {
@@ -155,12 +157,17 @@ jQuery(function () {
       if (depth != 1) {
         $('.dim').addClass('is-active');
         $('.gnb').addClass('is-active');
+
+        if (rightAlign) {
+          $(this).find('.gnb-2depth__list').css('right', rightValue);
+        }
       }
 
       $(this).addClass('is-active');
       $('.header').addClass('is-active');
     }).on('mouseleave', function () {
       var depth = $(this).attr('data-depth');
+      var rightAlign = $(this).hasClass('right-align');
       $(this).removeClass('is-active');
       mouseEnterCheck = false;
 
@@ -170,6 +177,10 @@ jQuery(function () {
         if (depth != 1) {
           $('.dim').removeClass('is-active');
           $('.gnb').removeClass('is-active');
+
+          if (rightAlign) {
+            $(this).find('.gnb-2depth__list').css('right', '');
+          }
         }
         /*if($('body').hasClass('is-black')){
             $('body').addClass('is-black');

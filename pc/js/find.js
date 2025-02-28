@@ -23,7 +23,14 @@ findSlide.on('slideChange', function () {
 window.addEventListener('DOMContentLoaded', function () {
   //해쉬값으로 이동
   var hash = window.location.hash.substr(1);
-  var location = document.querySelector(".js-target-move").offsetTop;
+  var location = document.querySelector(".js-target-move") || "";
+
+  if (location === "") {
+    location = 1;
+  } else {
+    location = location.offsetTop;
+  }
+
   var headerH = 100; //gnb높이
 
   var scrollMove = location - headerH;
