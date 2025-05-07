@@ -1,0 +1,283 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no, address=no, email=no">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="루이까또즈">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="">
+    <title>루이까또즈 StyleLQ</title>
+    <style>
+        html,body{
+            margin:0;
+            padding:0;
+            word-break: keep-all;
+            color:#000;
+            font-family: 'futura-pt','noto-kr', Sans-Serif, 'Malgun Gothic', '맑은 고딕', '맑은고딕', 'Dotum', '돋움';
+        }
+        html,body.no-scroll{
+            position:fixed;
+            overflow:hidden;
+            width:100%;
+            height:100%;
+        }
+
+        html{
+            height:100%;
+            font-size:16px;
+            -webkit-font-smoothing:antialiased;
+            -moz-osx-font-smoothing:grayscale;
+            text-size-adjust :none;
+            -webkit-text-size-adjust:none;
+            -moz-text-size-adjust:none;
+
+            @media screen and (max-width: 359px) and (min-width: 1px) {
+                font-size:14px;
+            }
+        }
+
+        body{
+            display: flex;
+            flex-direction: column;
+            min-height:100%;
+            padding-bottom:0;
+            box-sizing: border-box;
+            background:#ffffff;
+            word-wrap:break-word;
+            word-break:keep-all;
+            font-weight:400;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        input[type="submit"],
+        input[type="reset"],
+        input[type="tel"],
+        input[type="password"],
+        input[type="url"],
+        input[type="search"],
+        input[type="file"],
+        button,
+        textarea {
+            border-radius:0;
+            font-family:'futura-pt','noto-kr', Sans-Serif, 'Malgun Gothic', '맑은 고딕', '맑은고딕', 'Dotum', '돋움';
+            box-sizing: border-box;
+        }
+
+        input[type="number"]::-webkit-outer-spin-button,
+        input[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        ol,
+        ul {
+            list-style:none;
+        }
+
+        blockquote,
+        q {
+            quotes:none;
+        }
+
+        table {
+            border-spacing:0;
+        }
+
+        ul,
+        ol,
+        li {
+            margin:0;
+            padding:0;
+        }
+
+        li {
+            list-style:none;
+        }
+
+        a:focus {
+            outline:none !important;
+        }
+
+        a {
+            color:inherit;
+            text-decoration:none;
+        }
+
+        a:invalid {
+            box-shadow:none;
+        }
+
+        a:-moz-submit-invalid {
+            box-shadow:none;
+        }
+
+        a:-moz-ui-invalid {
+            box-shadow:none;
+        }
+
+        button::-moz-focus-inner {
+            margin-top:-2px;
+            margin-bottom:-2px;
+            padding:0;
+            border:0;
+        }
+
+        input::-moz-focus-inner {
+            margin-top:-2px;
+            margin-bottom:-2px;
+            padding:0;
+            border:0;
+        }
+
+        img {
+            max-width:100%;
+            height:auto;
+        }
+
+        button:hover {
+            cursor:pointer;
+        }
+
+        button {
+            background:transparent;
+            border:none;
+        }
+
+        textarea:focus {
+            outline:none;
+        }
+        input[type=text]::-ms-clear,
+        input[type=email]::-ms-clear,
+        input[type=number]::-ms-clear{
+            display:none;
+        }
+
+        sup{
+            font-size:0.75em;
+            vertical-align: top;
+        }
+
+        sub{
+            font-size:0.75em;
+            vertical-align: bottom;
+        }
+
+        select{
+            margin:0;
+            padding:0;
+            border:none;
+            border-radius:0;
+            background:none;
+            font-size:100%;
+            box-sizing: border-box;
+            font-family: 'futura-pt','noto-kr', Sans-Serif, 'Malgun Gothic', '맑은 고딕', '맑은고딕', 'Dotum', '돋움';
+        }
+
+        select::-ms-expand {
+            display: none;
+        }
+
+        select::-webkit-file-upload-button {
+            cursor:pointer;
+        }
+        .btn-v1 {
+            display: block;
+            width: 100%;
+            padding: 0.625rem 0.625rem 0.5rem;
+            background-color: transparent;
+            border: 1px solid #fff;
+            outline: none;
+            font-size:0.875rem;
+            line-height:1.5714;
+            letter-spacing: 0.06em;
+            font-weight:500;
+            box-sizing: border-box;
+            cursor: pointer;
+            color: #484848;
+            text-align: center;
+        }
+        .btn-v1.type-primary{
+            background-color:#9B192F;
+            color:#fff;
+            border-color:#9B192F;
+        }
+        .error-404{
+            width:100%;
+            min-height:100vh;
+            padding:1.25rem 0;
+            display: flex;
+            align-items: center;
+            box-sizing: border-box;
+        }
+        .error-404__inner{
+                width:100%;
+                padding:0 1.25rem;
+                text-align: center;
+            }
+
+        .error-404__icon{
+                line-height:0;
+                width:5.25rem;
+                margin:0 auto 1.25rem;
+            }
+
+        .error-404__title{
+                margin:0;
+            font-size:1.0625rem;
+            line-height:1.4117;
+            letter-spacing: 0.06em;
+            font-weight:500;
+            }
+
+        .error-404__text{
+            margin:0.625rem 0 0;
+            font-size:0.875rem;
+            line-height:1.5714;
+            letter-spacing: 0.06em;
+            font-weight:400;
+        }
+
+        .error-404__info{
+            padding-top:1.5625rem;
+            margin:1.5625rem 0 0;
+            border-top:dashed 1px #CBCBCB;
+            font-size:0.75rem;
+            line-height:1.5;
+            letter-spacing: 0.06em;
+            font-weight: 400;
+        }
+
+        .error-404__info--point{
+                font-weight: 500;
+                color:#9B192F;
+            }
+        .error-404__btn{
+                margin-top:2.5rem;
+            }
+
+    </style>
+</head>
+<body class="page-main">
+    <div class="error-404">
+        <div class="error-404__inner">
+            <h2 class="error-404__title">서버 점검안내</h2>
+            <p class="error-404__text">일시 : 2025.04.30 (수) 01시 ~ 03시 까지</p>
+            <p class="error-404__info">항상 루이까또즈 직영몰을 이용해 주셔서 감사드립니다.<br/>
+                더욱 안정된 서비스를 제공하고자 아래와 같이 서버 정기점검을 실시합니다.<br/>
+                서버 점검 시간동안 서비스 이용이 불가능하오니 이점 양해 부탁드립니다.<br/>
+                점검기간 중 구매를 원하시면 네이버 STYLELQ 스마트스토어를 이용 부탁드립니다.</p>
+            <div class="error-404__btn">
+                <a href="https://brand.naver.com/stylelq" class="btn-v1 type-primary">스마트스토어 바로가기</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
