@@ -1,0 +1,723 @@
+
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="format-detection" content="telephone=no, address=no, email=no">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="루이까또즈">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="">
+    <title>루이까또즈 StyleLQ</title>
+    <!-- icon/favicon -->
+    <link rel="shortcut icon" href="../../images/logo/favicon.ico">
+    <link rel="icon" type="image/png"  href="../../images/logo/favicon_32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="../../images/logo/favicon_192.png" sizes="192x192">
+
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../css/common.css">
+    <script src="../../js/libs/gsap.min.js"></script>
+    <script src="../../js/ScrollToPlugin.min.js"></script>
+
+    
+    <link rel="stylesheet" href="../../css/pages/promotion.css">
+    <link rel="stylesheet" href="../../css/pages/promotion-game.css">
+    
+
+</head>
+
+
+<body class="">
+
+<!-- header -->
+<div class="dim"></div>
+    <div class="header is-bg-white">
+        <div class="header-wrap">
+            <div class="header-wrap__top">
+            <!--로고-->
+            <a href="../main/main.html" class="header-wrap__logo">
+                <!--<h2 class="header-wrap__background">louisquatorze</h2>-->
+                <img src="../../images/common/logo.png" alt="louis quatorze" class="header__black">
+                <img src="../../images/common/logo_white.png" alt="louis quatorze" class="header__white">
+            </a>
+            <!--//로고-->
+
+            <!--우측메뉴-->
+
+            <div class="header-wrap__right">
+                <ul class="header-wrap__List">
+                    <li class="header-wrap__item type-search">
+                        <a href="#;" class="header-wrap__link js-search-open">
+                            <img src="../../images/common/icon_search_blk.svg" alt="louis quatorze" class="header__black search-btn">
+                            <img src="../../images/common/icon_search_white.svg" alt="louis quatorze" class="header__white search-btn">
+
+                            <img src="../../images/common/icon_close2.png" alt="louis quatorze" class="header__black close-btn">
+                        </a>
+                    </li>
+                    <li class="header-wrap__item type-login">
+                        <a href="#;" class="header-wrap__link js-mypage">
+                            <img src="../../images/common/icon_mypage.svg" alt="louis quatorze" class="header__black">
+                            <img src="../../images/common/icon_mypage_white.svg" alt="louis quatorze" class="header__white">
+                        </a>
+
+                        <div class="header-mypage">
+                            <ul class="header-mypage__list">
+                                <li class="header-mypage__item">
+                                    <a href="https://www.stylelq.com/fr/mylouis/mylouisSubMain.do?site=1" class="header-mypage__link">my page</a>
+                                </li>
+                                <li class="header-mypage__item">
+                                    <a href="https://www.stylelq.com/fr/mylouis/contents/wishList.do?searchType=wish" class="header-mypage__link">wish list</a>
+                                </li>
+                                <li class="header-mypage__item">
+                                    <a href="https://www.stylelq.com/fr/manager/logout.do?site=1" class="header-mypage__link">logout</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="header-wrap__item type-cart">
+                        <a href="#;" class="header-wrap__link">
+                            <img src="../../images/common/icon_basket.svg" alt="louis quatorze" class="header__black" />
+                            <img src="../../images/common/icon_basket_white.png" alt="louis quatorze" class="header__white" />
+                            <span class="header-wrap__count">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!--//우측메뉴-->
+            </div>
+
+            <!--네비게이션-->
+            <div class="gnb">
+                <ul class="gnb-1depth__list">
+                    <li class="gnb-1depth__item" data-depth="1">
+                        <a href="" class="gnb-1depth__inner" style="color: #ff0000 !important;">LQ LIVE</a>
+                    </li>
+                    <li class="gnb-1depth__item" data-depth="1">
+                        <a href="" class="gnb-1depth__inner">NEW</a>
+                    </li>
+                    <li class="gnb-1depth__item" data-depth="2">
+                        <a href="" class="gnb-1depth__inner">WOMEN</a>
+                        <ul class="gnb-2depth__list">
+                            <li class="gnb-2depth__item">
+                                <a href="" class="gnb-2depth__inner">BAG</a>
+                                <ul class="gnb-3depth__list">
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">ALL</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">숄더백</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">토트백</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">크로스백</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">미니백/클러치백</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">백백</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="gnb-2depth__item">
+                                <a href="" class="gnb-2depth__inner">WALLET</a>
+                                <ul class="gnb-3depth__list">
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">ALL</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">장지갑</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">중지갑</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">반지갑</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">카드, 명함지갑</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">멀티지갑</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="gnb-2depth__item">
+                                <a href="" class="gnb-2depth__inner">ACC</a>
+                                <ul class="gnb-3depth__list">
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">ALL</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">헤어</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">벨트</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="gnb-1depth__item" data-depth="2">
+                        <a href="" class="gnb-1depth__inner">MEN</a>
+                        <ul class="gnb-2depth__list">
+                            <li class="gnb-2depth__item">
+                                <a href="" class="gnb-2depth__inner">BAG</a>
+                                <ul class="gnb-3depth__list">
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">ALL</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">서류가방</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">토트백/클러치백</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">크로스백</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">백팩</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="gnb-2depth__item">
+                                <a href="" class="gnb-2depth__inner">WALLET</a>
+                                <ul class="gnb-3depth__list">
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">ALL</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">장지갑</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">중지갑</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">반지갑</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">머니클립</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">카드, 명함지갑</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="gnb-2depth__item">
+                                <a href="" class="gnb-2depth__inner">ACC</a>
+                                <ul class="gnb-3depth__list">
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">ALL</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">헤어</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">벨트</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="gnb-1depth__item" data-depth="3">
+                        <a href="" class="gnb-1depth__inner">ACC</a>
+                        <ul class="gnb-2depth__list">
+                            <li class="gnb-2depth__item">
+                                <a href="" class="gnb-2depth__inner">SEASON ITEM</a>
+                                <ul class="gnb-3depth__list">
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">ALL</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">스카프</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">머플러</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">넥타이</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">우양산</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="gnb-2depth__item">
+                                <a href="" class="gnb-2depth__inner">BELT</a>
+                                <ul class="gnb-3depth__list">
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">ALL</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">벨트</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">서스펜더</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="gnb-2depth__item">
+                                <a href="" class="gnb-2depth__inner">ETC</a>
+                                <ul class="gnb-3depth__list">
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">ALL</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">키링</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">키지갑</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">휴대폰케이스</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">루이까또즈 리빙</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">기타지갑</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">기타상품</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="gnb-1depth__item" data-depth="1">
+                        <a href="" class="gnb-1depth__inner">EUDON CHOI</a>
+                    </li>
+                    <li class="gnb-1depth__item" data-depth="2">
+                        <a href="" class="gnb-1depth__inner">OÀLC</a>
+                        <ul class="gnb-2depth__list">
+                            <li class="gnb-2depth__item">
+                                <a href="" class="gnb-2depth__inner">BAG</a>
+                                <ul class="gnb-3depth__list">
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">ALL</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">서류가방</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">토트백/클러치백</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">크로스백</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">백팩</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="gnb-2depth__item">
+                                <a href="" class="gnb-2depth__inner">WALLET</a>
+                                <ul class="gnb-3depth__list">
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">ALL</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">장지갑</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">중지갑</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">반지갑</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">머니클립</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">카드, 명함지갑</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="gnb-1depth__item" data-depth="1">
+                        <a href="" class="gnb-1depth__inner">COLLECTION</a>
+                    </li>
+                    <li class="gnb-1depth__item" data-depth="2">
+                        <a href="" class="gnb-1depth__inner">PLATFORM L</a>
+                        <ul class="gnb-2depth__list">
+                            <li class="gnb-2depth__item">
+                                <a href="" class="gnb-2depth__inner">ALL Works</a>
+                                <ul class="gnb-3depth__list">
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">L Edition</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">Art Furniture</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">Art Object</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">Textile & Fashion</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">Printed Matter</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="gnb-2depth__item">
+                                <a href="" class="gnb-2depth__inner">Exhibition</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="gnb-1depth__item" data-depth="1">
+                        <a href="" class="gnb-1depth__inner">PROMOTION</a>
+                    </li>
+                    <li class="gnb-1depth__item" data-depth="1">
+                        <a href="" class="gnb-1depth__inner">PROJECT</a>
+                        <ul class="gnb-2depth__list">
+                            <li class="gnb-2depth__item only-project">
+                                <a href="https://www.stylelq.com/fr/specialtyshop/planView.do?PLN_MST_IDX=1557" class="gnb-2depth__inner">FYL1 - GROOVYROOM</a><br /><br />
+                                <a href="https://www.stylelq.com/fr/find/findYourLight.do?cate=F" class="gnb-2depth__inner">FYL2 - SPECTRUM</a><br/><br />
+                                <a href="" class="gnb-2depth__inner">COLLABORATION</a>
+                                <!--<ul class="gnb-3depth__list">
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">L Edition</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">Art Furniture</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">Art Object</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">Textile & Fashion</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">Printed Matter</a>
+                                    </li>
+                                </ul>-->
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!--//네비게이션-->
+
+            <div class="search">
+                <div class="search__wrap">
+                    <!-- <a href="" class="search__close js-search-close">close</a> -->
+                    <form id="" name="" class="form-inline" method="post" action="">
+                        <div class="search__group">
+                            <label class="sr-only" for="keyword">검색</label>
+                            <input type="text" class="search__input" name="keyword" id="keyword" autocomplete="off" placeholder="Search"
+                                   required="">
+                            <button type="submit" class="search__btn type-submit">검색</button>
+                        </div>
+                    </form>
+                    <div class="search__box">
+                        <p class="search__tit">TREND</p>
+                        <ul class="search__list">
+                            <li class="search__item"><a href="" class="search__link">여성반지갑</a></li>
+                            <li class="search__item"><a href="" class="search__link">남성반지갑</a></li>
+                            <li class="search__item"><a href="" class="search__link">카드지갑</a></li>
+                            <li class="search__item"><a href="" class="search__link">남성가방</a></li>
+                        </ul>
+                    </div>
+                    <div class="search__box">
+                        <p class="search__tit">RECOMMEND</p>
+                        <ul class="search__list">
+                            <li class="search__item"><a href="" class="search__link">쥬쥬백</a></li>
+                            <li class="search__item"><a href="" class="search__link">라라지갑</a></li>
+                            <li class="search__item"><a href="" class="search__link">몬트백</a></li>
+                            <li class="search__item"><a href="" class="search__link">치즈백</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>
+<!-- //header -->
+
+<div class="loading">
+    <div class="loading-box">
+        <div class="loading-box__img"><img src="../../images/common/loading.png" alt=""></div>
+        <div class="loading-box__text">
+            데이터 로딩중입니다<br>잠시만 기다려주세요
+        </div>
+    </div>
+</div>
+
+<!-- contents start -->
+
+<div class="container">
+    <div class="promotion-view">
+        <!-- 2025-09-08 ~ 30 - Game event -->
+        <div class="promotion-game-event game-20250908">
+            <div class="promotion-game-event__inner">
+                <!-- 비쥬얼 영역 -->
+                <div class="promotion-game-event__item visual">
+                    <div class="promotion-game-event__item-inner">
+                        <div class="promotion-game-event__visual">
+                            <div class="promotion-game-event__img">
+                                <img src="https://cdn.louisclub.com/static/fr/img/specialty/20250908/img_visual_01.png" alt="다음 글 참고">
+                                <div class="promotion-game-event__img-ir blind">
+                                    <span>텍스트</span>
+                                    <strong>텍스트</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 비쥬얼 영역 -->
+                <!-- 이벤트 및 참여 방법 소개 영역 -->
+                <div class="promotion-game-event__item event-info">
+                    <div class="promotion-game-event__item-inner">
+                        <div class="promotion-game-event__info">
+                            <p class="promotion-game-event__text">루이까또즈 베스트셀러 제품의<br>퍼즐을 맞추고 쿠폰 받으세요</p>
+                            <span class="promotion-game-event__info-text">랜덤으로 보여지는 퍼즐을 60초안에 맞추면 <em class="promotion-game-event__text--impt">할인쿠폰 발급</em></span>
+                        </div>
+                        <div class="promotion-game-event__coupon">
+                            <div class="promotion-game-event__coupon-img">
+                                <img src="https://cdn.louisclub.com/static/fr/img/specialty/20250908/img_coupon_01.png" alt="더블할인 쿠폰 20%">
+                            </div>
+                            <span class="promotion-game-event__coupon-info">* 쿠폰 사용기간 : 09.08 - 09.30</span>
+                        </div>
+                        <div class="promotion-game-event__game-info">
+                            <strong class="promotion-game-event__game-title">60초 안에 랜덤 퍼즐을 맞추세요!</strong>
+                            <div class="promotion-game-event__game-img">
+                                <img src="https://cdn.louisclub.com/static/fr/img/specialty/20250908/img_puzzle_game_01.png" alt="">
+                            </div>
+                            <div class="promotion-game-event__game-btn-wrap">
+                                <button type="button" id="eventGame-btn" class="promotion-game-event__game-btn">도전하기</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //이벤트 및 참여 방법 소개 영역 -->
+                <!-- 이벤트 공지 영역 -->
+                <div class="promotion-game-event__item notice">
+                    <div class="promotion-game-event__item-inner">
+                        <div class="promotion-game-event__notice">
+                            <ul class="promotion-game-event__notice-list">
+                                <li class="promotion-game-event__notice-item">본 프로모션은 공식몰 회원만 참여 가능합니다.</li>
+                                <li class="promotion-game-event__notice-item">쿠폰받고 응모하기는 ID당 1회 참여 가능합니다.</li>
+                                <li class="promotion-game-event__notice-item">쿠폰사용은 특정 상품 제외 될 수 있습니다.</li>
+                                <li class="promotion-game-event__notice-item">쿠폰은 09/30일까지 사용 가능하며, 취소 및 반품으로 소멸된 쿠폰은
+                                    재발급 불가합니다.</li>
+                                <li class="promotion-game-event__notice-item">본 이벤트는 당사 사정에 따라 사전고지 없이 변경 및 종료 될 수 있습니다.</li>
+                                <li class="promotion-game-event__notice-item">쿠폰은 'MY LOUIS > 쿠폰'에서 확인 가능합니다.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- //이벤트 공지 영역 -->
+            </div>
+        </div>
+        <!-- 퍼즐 게임 영역 -->
+        <div class="promotion-game-event__item game-box">
+            <div class="promotion-game-event__inner">
+                <div class="promotion-game-event__game">
+                    <div class="promotion-game-event__info">
+                        <strong class="promotion-game-event__info-title">PUZZLE MISSION</strong>
+                        <span class="promotion-game-event__info-text">주어진 시간은 <em>단 1분!</em></span>
+                        <span class="promotion-game-event__info-time">00:00:00</span>
+                    </div>
+                    <div class="promotion-game-event__box">
+                        <canvas id="puzzleCanvas"></canvas>
+                    </div>
+                    <div class="promotion-game-event__btn-wrap">
+                        <button type="button" class="promotion-game-event__btn">시작하기</button>
+                    </div>
+                </div>
+                <div class="promotion-game-event__item notice">
+                    <div class="promotion-game-event__item-inner">
+                        <div class="promotion-game-event__notice">
+                            <ul class="promotion-game-event__notice-list">
+                                <li class="promotion-game-event__notice-item">본 프로모션은 공식몰 회원만 참여 가능합니다.</li>
+                                <li class="promotion-game-event__notice-item">쿠폰받고 응모하기는 ID당 1회 참여 가능합니다.</li>
+                                <li class="promotion-game-event__notice-item">쿠폰사용은 특정 상품 제외 될 수 있습니다.</li>
+                                <li class="promotion-game-event__notice-item">쿠폰은 09/30일까지 사용 가능하며, 취소 및 반품으로 소멸된 쿠폰은
+                                    재발급 불가합니다.</li>
+                                <li class="promotion-game-event__notice-item">본 이벤트는 당사 사정에 따라 사전고지 없이 변경 및 종료 될 수 있습니다.</li>
+                                <li class="promotion-game-event__notice-item">쿠폰은 'MY LOUIS > 쿠폰'에서 확인 가능합니다.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //퍼즐 게임 영역 -->
+        <!-- //2025-09-08 ~ 30 - Game event -->
+    </div>
+</div>
+
+<!-- [D] 게임 클리어 / is-active 클래스 추가시에 팝업 on -->
+<div class="popup popup-game game-alert">
+    <div class="popup-game__inner">
+        <div class="popup-game__content">
+            <div class="popup-game__desc">
+                <p class="popup-game__text">이미 쿠폰이 발급되었습니다.</p>
+            </div>
+            <div class="popup-game__btn-wrap">
+                <button type="button" class="popup-game__btn js-popup-close">확인</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //[D] 게임 클리어 -->
+
+<!-- [D] 게임 클리어 / is-active 클래스 추가시에 팝업 on -->
+<div class="popup popup-game game-clear">
+    <div class="popup-game__inner">
+        <div class="popup-game__content">
+            <div class="popup-game__info">
+                <p class="popup-game__title">Mission Clear<span>Congratulation!</span></p>
+            </div>
+            <div class="popup-game__img">
+                <img src="https://cdn.louisclub.com/static/fr/img/specialty/20250908/img_coupon_02.png" alt="더블할인 쿠폰 20%">
+            </div>
+            <div class="popup-game__desc">
+                <p class="popup-game__text">- 더블 할인 20% 쿠폰이 발급되었습니다.</p>
+                <p class="popup-game__text">- 쿠폰은 'MY LOUIS > 쿠폰'에서 확인 가능합니다.</p>
+            </div>
+        </div>
+        <div class="popup-game__close-wrap">
+            <button type="button" class="popup-game__close js-popup-close">
+                <span class="blind">닫기</span>
+            </button>
+        </div>
+    </div>
+</div>
+<!-- //[D] 게임 클리어 -->
+
+<!-- [D] 게임 실패 / is-active 클래스 추가시에 팝업 on -->
+<div class="popup popup-game game-over">
+    <div class="popup-game__inner">
+        <div class="popup-game__content">
+            <div class="popup-game__info">
+                <p class="popup-game__title">Mission Failed<span>Try Again!</span></p>
+            </div>
+            <div class="popup-game__img">
+                <img src="https://cdn.louisclub.com/static/fr/img/specialty/20250908/img_alert_01.png" alt="더블할인 쿠폰 20%">
+            </div>
+        </div>
+        <div class="popup-game__close-wrap">
+            <button type="button" class="popup-game__close js-popup-close">
+                <span class="blind">닫기</span>
+            </button>
+        </div>
+    </div>
+</div>
+<!-- //[D] 게임 실패 -->
+
+<!-- //section끝 -->
+<!--footer시작-->
+<footer class="footer">
+    <div class="footer__layout">
+        <div class="footer__wrap">
+            <!--왼쪽 영역-->
+            <div class="footer__left">
+                <img src="../../images/common/icon_footer_logo.png" class="footer__logo" alt="루이까또즈">
+                <p class="footer__info">
+                    (주)크리에이션엘  ㅣ  대표이사 전상우 신경민 ㅣ  서울시 동대문구 하정로 26<br>
+                    국내사업자등록번호 211-81063749  사업자 정보 확인  ㅣ 통신판매업신고 제 2011-서울동대문구-0019호<br>
+                    고객센터 080-599-1414   A/S문의 080-725-7272<br>
+                    월-금 10:00 -18:00 (공휴일 휴무)  점심 12:00-13:00<br>
+                    소비자피해 보상법 고객님은 안전거래를 위해 현금 결제시 저희사이트에서 가입한 구매안전 서비스를 이용하실 수 있습니다.
+                    <span class="footer__info--underline">
+                        <a href="#;" class="footer__info--link">서울보증보험 가입 확인</a>
+                    </span>
+                </p>
+            </div>
+            <!--//왼쪽 영역-->
+
+            <!--오른쪽 영역-->
+            <div class="footer__right">
+                <ul class="footer__list">
+                    <li class="footer__item">
+                        <a href="#termsPop" class="footer__link js-popup-open">이용약관</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#termsPop2" class="footer__link js-popup-open">개인정보처리방침</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="" class="footer__link">고객센터</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="" class="footer__link">STORES</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="" class="footer__link">MEMBERSHIP</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="" class="footer__link">ABOUT</a>
+                    </li>
+                </ul>
+            </div>
+            <!--오른쪽 영역-->
+        </div>
+        <!--sns채널-->
+        <div class="footer-sns">
+            <ul class="footer-sns__list">
+                <li class="footer-sns__item type-facebook">
+                    <a href="" class="footer-sns__link">facebook</a>
+                </li>
+                <li class="footer-sns__item type-post">
+                    <a href="" class="footer-sns__link">post</a>
+                </li>
+                <li class="footer-sns__item type-instagram">
+                    <a href="" class="footer-sns__link">instagram</a>
+                </li>
+                <li class="footer-sns__item type-youtube">
+                    <a href="" class="footer-sns__link">youtube</a>
+                </li>
+                <li class="footer-sns__item type-talk">
+                    <a href="" class="footer-sns__link">talk</a>
+                </li>
+            </ul>
+        </div>
+        <!--//sns채널-->
+
+        <div class="footer__copy">
+            COPYRIGHT LOUIS QUATORZE. ALL RIGHTS RESERVED.
+        </div>
+    </div>
+</footer>
+<!-- cart-fix -->
+<div class="cart-fix">
+    <a href="#;" class="cart-fix__add"><span class="cart-fix__add--count">2</span></a>
+    <div class="cart-fix__top js-scrollTop"><span class="sr-only">맨위로</span></div>
+</div>
+<!-- .cart-fix -->
+
+<script src="../../js/libs/jquery-3.6.0.min.js"></script>
+
+
+
+
+
+    <script src="../../js/libs/swiper-4.5.0.min.js"></script>
+    <script src="../../js/libs/html2canvas.min.js"></script>
+    <script src="../../js/promotion.js"></script>
+    <script src="../../js/jquery.eraser.js"></script>
+    <script src="../../js/eventGame.js"></script>
+
+
+<script src="../../js/common.js"></script>
+
+
+    <script src="../../js/popup.js"></script>
+
+
+
+
+
+
+
+</body>
+</html>
+<!--footer끝-->
