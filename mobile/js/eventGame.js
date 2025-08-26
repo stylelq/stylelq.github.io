@@ -1,9 +1,5 @@
 "use strict";
 
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
 function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
 function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
@@ -19,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var htmlBody = document.documentElement;
 
   // 이미지 리스트
-  var imagePaths = ["https://cdn.louisclub.com/static/mo/img/specialty/20250908/img_puzzle_game_01.png", "https://cdn.louisclub.com/static/mo/img/specialty/20250908/img_puzzle_game_02.png", "https://cdn.louisclub.com/static/mo/img/specialty/20250908/img_puzzle_game_03.png"];
+  var imagePaths = ["https://cdn.louisclub.com/static/mo/img/specialty/20250908/img_puzzle_game_01.png"];
   var originalImage = new Image();
   var puzzlePieces = [];
   var rows = 3;
@@ -55,9 +51,13 @@ document.addEventListener("DOMContentLoaded", function () {
     var _getEventPos = getEventPos(e),
       x = _getEventPos.x,
       y = _getEventPos.y;
-    for (var i = puzzlePieces.length - 1; i >= 0; i--) {
-      var piece = puzzlePieces[i];
-      if (piece.isCorrectlyPlaced) continue;
+
+    // 수정된 부분: 아직 맞춰지지 않은 조각들 중에서만 드래그 시작
+    var unplacedPieces = puzzlePieces.filter(function (piece) {
+      return !piece.isCorrectlyPlaced;
+    });
+    for (var i = unplacedPieces.length - 1; i >= 0; i--) {
+      var piece = unplacedPieces[i];
       ctx.beginPath();
       piece.pathFn(ctx, piece.currentX, piece.currentY);
       ctx.closePath();
@@ -66,7 +66,10 @@ document.addEventListener("DOMContentLoaded", function () {
         offsetX = x - piece.currentX;
         offsetY = y - piece.currentY;
         puzzleCanvas.style.cursor = "grabbing";
-        puzzlePieces.splice(i, 1);
+
+        // 드래그 중인 조각을 맨 위(가장 나중에 그려지도록)로 옮김
+        var index = puzzlePieces.indexOf(draggedPiece);
+        puzzlePieces.splice(index, 1);
         puzzlePieces.push(draggedPiece);
         drawPuzzle();
         break;
@@ -111,6 +114,20 @@ document.addEventListener("DOMContentLoaded", function () {
   // --- 퍼즐 조각 생성 및 섞기 ---
   function createPuzzlePieces() {
     puzzlePieces = [];
+
+    // 각 조각의 면 타입(탭/홈)을 미리 결정할 그리드
+    var horizontalEdges = Array.from({
+      length: rows + 1
+    }, function () {
+      return Array(cols).fill(0);
+    });
+    var verticalEdges = Array.from({
+      length: rows
+    }, function () {
+      return Array(cols + 1).fill(0);
+    });
+
+    // 각 조각 객체 생성 및 면 타입 할당
     for (var r = 0; r < rows; r++) {
       var _loop = function _loop(c) {
         var piece = {
@@ -124,13 +141,59 @@ document.addEventListener("DOMContentLoaded", function () {
           currentX: 0,
           currentY: 0,
           isCorrectlyPlaced: false,
-          snapPoints: {}
+          snapPoints: {} // 각 면의 스냅 지점 (relative to piece top-left)
         };
-        piece.topType = r === 0 ? 0 : Math.random() > 0.5 ? 1 : -1;
-        piece.rightType = c === cols - 1 ? 0 : Math.random() > 0.5 ? 1 : -1;
-        piece.bottomType = r === rows - 1 ? 0 : piece.topType * -1;
-        piece.leftType = c === 0 ? 0 : piece.rightType * -1;
+
+        // 면 타입 할당 (정확히 반대되도록)
+        // 경계면은 0 (평평)으로 설정, 내부 면은 기존 무작위 또는 수동 지정 값 사용
+        piece.topType = r === 0 ? 0 : horizontalEdges[r][c];
+        piece.rightType = c === cols - 1 ? 0 : verticalEdges[r][c + 1];
+        piece.bottomType = r === rows - 1 ? 0 : horizontalEdges[r + 1][c] * -1;
+        piece.leftType = c === 0 ? 0 : verticalEdges[r][c] * -1;
+
+        // **************** 사용자 요청: 특정 조각에 대한 수동 설정 ****************
+        // 루프 안에서 직접 조각 (0,0)과 (0,1)의 엣지 타입을 수정합니다.
+        if (r === 0 && c === 0) {
+          // 조각 (0,0)
+          piece.rightType = 1; // 조각 (0,0)의 오른쪽 면을 탭으로 (돌출)
+          piece.bottomType = -1; // 조각 (0,0)의 하단 면을 홈으로 (함몰)
+        } else if (r === 0 && c === 1) {
+          piece.leftType = 1; // 조각 (0,1)의 왼쪽 면을 홈으로 (함몰)
+          piece.rightType = -1; // 조각 (0,1)의 오른쪽 면을 홈으로 (함몰)
+          piece.bottomType = 1; // 조각 (0,1)의 하단 면을 탭으로 (돌출)
+        } else if (r === 0 && c === 2) {
+          piece.leftType = -1; // 조각 (0,1)의 왼쪽 면을 홈으로 (함몰)
+          piece.bottomType = -1; // 조각 (0,1)의 하단 면을 탭으로 (돌출)
+        } else if (r === 1 && c === 0) {
+          piece.topType = -1;
+          piece.rightType = 1;
+          piece.bottomType = 1;
+        } else if (r === 1 && c === 1) {
+          piece.topType = 1;
+          piece.leftType = 1;
+          piece.rightType = -1;
+          piece.bottomType = -1;
+        } else if (r === 1 && c === 2) {
+          piece.topType = -1;
+          piece.leftType = -1;
+          piece.bottomType = -1;
+        } else if (r === 2 && c === 0) {
+          piece.topType = 1;
+          piece.rightType = -1;
+        } else if (r === 2 && c === 1) {
+          piece.topType = -1;
+          piece.leftType = -1;
+          piece.rightType = -1;
+        } else if (r === 2 && c === 2) {
+          piece.topType = -1;
+          piece.leftType = -1;
+        }
+        // ************************************************************************
+
+        // 각 면의 스냅 지점 계산 및 저장 (조각의 좌상단 기준 상대 좌표)
         updatePieceSnapPoints(piece);
+
+        // 최종적으로 이 조각의 pathFn을 할당
         piece.pathFn = function (ctx, x, y) {
           var p = {
             tl: {
@@ -162,6 +225,8 @@ document.addEventListener("DOMContentLoaded", function () {
         _loop(c);
       }
     }
+    // 이전에 특정 조각의 면 타입을 하드코딩으로 변경했던 부분은 제거합니다.
+    // 이제 사용자가 UI를 통해 직접 설정할 수 있습니다.
   }
 
   // --- 기타 헬퍼 함수 (기존 코드와 동일) ---
@@ -256,30 +321,43 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     ctx.clearRect(0, 0, puzzleCanvas.width, puzzleCanvas.height);
     if (!originalImage.src || puzzlePieces.length === 0) return;
-    var piecesToDraw = _toConsumableArray(puzzlePieces);
-    if (draggedPiece) {
-      var index = piecesToDraw.indexOf(draggedPiece);
-      if (index > -1) {
-        piecesToDraw.splice(index, 1);
-        piecesToDraw.push(draggedPiece);
-      }
-    }
-    var scale = Math.min(puzzleCanvas.width / originalImage.width, puzzleCanvas.height / originalImage.height);
-    var imgWidth = originalImage.width * scale;
-    var imgHeight = originalImage.height * scale;
-    var offsetX_img = (puzzleCanvas.width - imgWidth) / 2;
-    var offsetY_img = (puzzleCanvas.height - imgHeight) / 2;
-    piecesToDraw.forEach(function (piece) {
+
+    // 수정된 부분: 맞춘 조각과 맞추지 않은 조각을 분리하여 그리기 순서를 제어
+    var correctlyPlacedPieces = puzzlePieces.filter(function (piece) {
+      return piece.isCorrectlyPlaced;
+    });
+    var unplacedPieces = puzzlePieces.filter(function (piece) {
+      return !piece.isCorrectlyPlaced;
+    });
+
+    // 맞춘 조각은 먼저 그려서 맨 아래에 깔리게 합니다.
+    correctlyPlacedPieces.forEach(function (piece) {
       ctx.save();
       ctx.beginPath();
       piece.pathFn(ctx, piece.currentX, piece.currentY);
       ctx.closePath();
       ctx.clip();
-      ctx.drawImage(originalImage, piece.originalX / scale, piece.originalY / scale, piece.width / scale, piece.height / scale, piece.currentX, piece.currentY, piece.width, piece.height);
+      ctx.drawImage(originalImage, piece.currentX - piece.originalX, piece.currentY - piece.originalY, originalImage.width, originalImage.height);
       ctx.restore();
       ctx.beginPath();
       piece.pathFn(ctx, piece.currentX, piece.currentY);
-      ctx.strokeStyle = piece.isCorrectlyPlaced ? "#28a745" : "#666";
+      ctx.strokeStyle = "#28a745"; // 맞춘 조각은 초록색 테두리
+      ctx.lineWidth = 2;
+      ctx.stroke();
+    });
+
+    // 맞추지 않은 조각을 그립니다.
+    unplacedPieces.forEach(function (piece) {
+      ctx.save();
+      ctx.beginPath();
+      piece.pathFn(ctx, piece.currentX, piece.currentY);
+      ctx.closePath();
+      ctx.clip();
+      ctx.drawImage(originalImage, piece.currentX - piece.originalX, piece.currentY - piece.originalY, originalImage.width, originalImage.height);
+      ctx.restore();
+      ctx.beginPath();
+      piece.pathFn(ctx, piece.currentX, piece.currentY);
+      ctx.strokeStyle = "#666"; // 맞추지 않은 조각은 회색 테두리
       ctx.lineWidth = 2;
       ctx.stroke();
     });
