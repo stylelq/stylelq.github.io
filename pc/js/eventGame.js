@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var overPopup = document.querySelector(".popup.game-over");
   var htmlBody = document.documentElement; // 이미지 리스트
 
-  var imagePaths = ["https://cdn.louisclub.com/static/fr/img/specialty/20250908/img_puzzle_game_01.png"];
+  var imagePaths = ["https://cdn.louisclub.com/static/fr/img/specialty/20250908/img_puzzle_test_01.jpeg"];
   var originalImage = new Image();
   var puzzlePieces = [];
   var rows = 3;

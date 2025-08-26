@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var htmlBody = document.documentElement;
 
   // 이미지 리스트
-  var imagePaths = ["https://cdn.louisclub.com/static/mo/img/specialty/20250908/img_puzzle_game_01.png"];
+  var imagePaths = ["https://cdn.louisclub.com/static/mo/img/specialty/20250908/img_puzzle_test_01.jpeg"];
   var originalImage = new Image();
   var puzzlePieces = [];
   var rows = 3;
@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // --- 퍼즐 크기 및 변수 동적 설정 ---
   function setPuzzleSize() {
-    var puzzleSize = Math.min(window.innerWidth, window.innerHeight) * 0.7;
+    var puzzleSize = 300;
     puzzleCanvas.width = puzzleSize;
     puzzleCanvas.height = puzzleSize;
     pieceWidth = puzzleCanvas.width / cols;
