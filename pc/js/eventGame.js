@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function setPuzzleSize() {
     // PC 버전에 맞게 캔버스 크기를 고정 값으로 설정 (예: 500px)
-    var puzzleSize = 850;
+    var puzzleSize = 650;
     puzzleCanvas.width = puzzleSize;
     puzzleCanvas.height = puzzleSize;
     pieceWidth = puzzleCanvas.width / cols;
